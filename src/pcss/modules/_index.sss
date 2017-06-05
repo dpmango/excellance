@@ -1,3 +1,38 @@
 // INDEX PAGE
 .hero
-  opacity: 1
+  position: relative
+  margin-top: 255px
+  &__slide
+    position: relative
+  &__bg
+    position: absolute 0 0 0 0
+    z-index: 2
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    img
+      display: none
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-right: auto
+    min-height: 100vh
+    max-width: 550px
+    text-align: center
+    position: relative
+    z-index: 2
+
+  &__title
+    font-size: 36px
+    line-height: 1.2
+    letter-spacing: 5px
+    color: $colorPrimary
+    text-transform: uppercase
+  &__subtitle
+    margin-top: 25px
+    font-size: 24px
+    letter-spacing: 2.67px
+  &__cta
+    margin-top: 60px

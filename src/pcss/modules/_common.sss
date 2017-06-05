@@ -7,10 +7,53 @@
   background: white
   left: 0
   right: 0
-  height: 50px
-  &__wrapper
+  z-index: 9
+  color: $colorPrimary
+  font-family: 'Roboto', sans-serif
+  font-weight: 600
+  font-size: 17px
+  text-transform: uppercase
+  border-bottom: 1px solid $colorPrimary
+  &__top
     display: flex
     justify-content: space-between
+    align-items: center
+    padding-top: 50px
+  &__lang
+    flex: 0 1 310px
+    a
+      display: inline-block
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+      &.active
+        font-weight: 400
+        color: $colorPrimaryLight
+  &__cta
+    flex: 0 1 310px
+    a
+      display: inline-block
+      margin-right: 25px
+  &__cart
+    color: $colorGray
+  &__search
+    display: inline-block
+    margin-right: 0
+
+  &__navi
+    margin: 85px 0 30px 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    margin-left: auto
+    margin-right: auto
+    li
+      display: inline-block
+      a
+        transition: all $transitionSpeed $ease
+        padding: 10px
+        &:hover
+          color: $colorPrimaryLight
 
   &--transformed
     position: fixed
@@ -26,3 +69,39 @@
 // FOOTER
 .footer
   flex: 0
+
+
+// SLICK
+.dots
+  &--center
+    .slick-dots
+      position: absolute
+      bottom: 35px
+      left: 50%
+      transform: translateX(-50%)
+      margin: 0
+      padding: 0
+      li
+        display: inline-block
+        position: relative
+        margin-right: 10px
+        cursor: pointer
+        &:last-child
+          margin-right: 0
+        &::after
+          display: block
+          content: ''
+          size: 12px
+          border-radius: 50%
+          background: white
+          box-shadow: 0px 0px 10px color(black a(30%))
+          transition: all $transitionSpeed $ease
+        &.slick-active
+          &::after
+            background: $colorPrimary
+        &:hover
+          &::after
+            box-shadow: 0px 0px 10px color(black a(10%))
+
+      button
+        display: none

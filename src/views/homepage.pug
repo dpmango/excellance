@@ -7,7 +7,31 @@ doctype html
   body
     include shared/header.pug
 
-    // SECTION::START
-    section.section
-
+    // HERO ::START
+    .hero
+      .hero__slider.dots--center
+        .hero__slide
+          .hero__bg
+            // image is optional - it's used to set .hero__bg background-image property
+            img(src='images/homepageBanner.png' srcset='images/homepageBanner@2x.png' 2x)
+          .container
+            .hero__content
+              .hero__title Роскошный уход <br> для молодости кожи
+              .hero__subtitle Основан на научном подходе
+              .hero__cta
+                a(href='#').btn.btn--primary 
+                  span Подробнее
+        // slide
+        .hero__slide
+          .hero__bg
+            // image is optional - it's used to set .hero__bg background-image property
+            img(src='images/homepageBanner.png' srcset='images/homepageBanner@2x.png' 2x)
+          .container
+            .hero__content
+              .hero__title Роскошный уход <br> для молодости кожи
+              .hero__subtitle Основан на научном подходе
+              .hero__cta
+                a(href='#').btn.btn--primary 
+                  span Подробнее
+                            
     include shared/footer.pug

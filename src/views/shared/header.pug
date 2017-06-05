@@ -1,10 +1,29 @@
 // HEADER::START
-- var list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
-
 header.header
-  .section
-    .row
-      .col-sm-12
-        ul
-          each item in list
-            li= item
+  .container.container--fluid
+    .header__top
+      .header__lang
+        a(href='#').active Ru
+        a(href='#') En
+        a(href='#') Ch
+      a.header__logo(href='#')
+        i.icon.icon-logo
+      .header__cta
+        a(href='#') мой аккаунт
+        a(href='#').header__cart Корзина (0)
+        .header__search
+          i.icon.icon-search
+  .container
+    ul.header__navi
+      li
+        a(href='#') Каталог товаров
+      li
+        a(href='#') Профессиональный уход 
+      li
+        a(href='#') инновация Cellexon 
+      li
+        a(href='#') О компании
+      li
+        a(href='#') СМИ о нас
+      li
+        a(href='#') Адреса

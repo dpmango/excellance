@@ -10,3 +10,24 @@ button
   transition: all $transitionSpeed ease-in-out
   &:focus, &:active
     outline: none
+  &--primary
+    color: white
+    background: $colorPrimary
+    font-size: 12px
+    padding: 15px 60px
+    border-radius: 30px
+    text-transform: uppercase
+    span
+      position: relative
+      z-index: 2
+    &::after
+      display: block
+      content: ' '
+      position: absolute 50%
+      background: $colorPrimaryLight
+      border-radius: 30px
+      z-index: 1
+      transition: all $transitionSpeed ease-in-out
+    &:hover
+      &::after
+        position: absolute 0 0 0 0

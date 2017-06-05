@@ -54,15 +54,21 @@ $(document).ready(function () {
   // SLIDERS
   //////////
 
-  $('.trending__wrapper').slick({
+  $('.hero__slider').slick({
     autoplay: true,
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true
+    centerMode: false,
+    variableWidth: false
+  });
+
+  // hero slider bg
+  $('.hero__bg').each(function (i, val) {
+    var bg = $(val).find('img').attr('src');
+    $(val).css('background-image', 'url(' + bg + ')');
   });
 
   //////////
