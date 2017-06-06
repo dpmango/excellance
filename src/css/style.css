@@ -2,6 +2,7 @@
 /* LAYOUT */
 /* COLORS */
 /* OPTIONS */
+/* SOCIALS */
 
 /* 1. Layout */
 /* Fonts */
@@ -562,7 +563,12 @@ body, html {
     display: none !important;
 }
 /* buttons */
-button {}
+button {
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: pointer;
+}
 button:focus {
     outline: none;
 }
@@ -796,11 +802,21 @@ button:focus {
     display: block;
     padding: 12px 15px;
     width: 100%;
-    border: 1px solid $borderColor;
-    border-radius: 4px;
+    border: 2px solid transparent;
+    border-radius: 30px;
     background: white;
+    -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
     color: $grayColor;
+    font-size: 14px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     -webkit-appearance: none;
+}
+.ui-input:focus {
+    border-color: #7E6884;
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
 }
 .js-datepicker {
     background-image: svg-load('../../images/svg/calendar.svg');
@@ -903,8 +919,6 @@ button:focus {
 }
 
 /* 3. Modules */
-/* THIS MIGHT INCLUDE HEADER, FOOTER AND OTHER */
-/* COMMON ELEMENTS ACROSS THE SITE */
 /* HEADER */
 .header {
     position: absolute;
@@ -913,6 +927,8 @@ button:focus {
     z-index: 9;
     border-bottom: 1px solid #410C50;
     background: white;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     color: #410C50;
     text-transform: uppercase;
     font-weight: 600;
@@ -1260,13 +1276,201 @@ button:focus {
         margin-left: auto;
     }
 }
+/* COMMON ELEMENTS ACROSS THE SITE */
 /* FOOTER */
 .footer {
-    -webkit-flex: 0;
-        -ms-flex: 0;
-            flex: 0 1 0%;
-    height: 500px;
+    margin: 0 -10px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    background: white;
+    color: #410C50;
+}
+.footer__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    max-width: 1400px;
+}
+.footer__heading {
+    letter-spacing: 1.76px;
+    font-size: 16px;
+}
+.footer__links-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 700px;
+        -ms-flex: 0 1 700px;
+            flex: 0 1 700px;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
     -webkit-box-flex: 0;
+}
+.footer__links {
+    -webkit-flex: 0 1 350px;
+        -ms-flex: 0 1 350px;
+            flex: 0 1 350px;
+    padding: 0 10px;
+    -webkit-box-flex: 0;
+}
+.footer__links-list {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Roboto';
+}
+.footer__links-list a {
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+.footer__links-list a:hover {
+    color: #7E6884;
+    text-decoration: none;
+}
+.footer__content {
+    -webkit-flex: 0 1 600px;
+        -ms-flex: 0 1 600px;
+            flex: 0 1 600px;
+    margin-left: auto;
+    padding: 0 10px;
+    -webkit-box-flex: 0;
+}
+.footer__subscribe {}
+.footer__subscribe__note {
+    margin-top: 17px;
+    max-width: 380px;
+    color: #939393;
+    font-size: 12px;
+    font-family: 'Roboto';
+}
+.footer__subscribe__form {
+    margin-top: 30px;
+}
+.footer__subscribe__form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.footer__subscribe__form input {
+    margin-right: 32px;
+}
+.footer__subscribe__form-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.footer__socials {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    margin-top: 45px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.footer__socials .footer__heading {
+    margin-right: 60px;
+}
+.footer__socials a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 28px;
+}
+.footer__socials a .icon {
+    -webkit-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+.footer__socials a .icon-facebook {}
+.footer__socials a .icon-facebook:hover {
+    color: #3b5998;
+}
+.footer__socials a .icon-instagram {}
+.footer__socials a .icon-instagram:hover {
+    color: #bc2a8d;
+}
+.footer__contacts {
+    margin-top: 45px;
+}
+.footer__contacts a {
+    -webkit-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+.footer__contacts a:hover {
+    color: #7E6884;
+}
+.footer__phone {
+    display: block;
+    margin-top: 15px;
+    letter-spacing: 5px;
+    font-size: 32px;
+}
+.footer__email {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+@media(max-width: 992px) {
+    .footer {}
+    .footer__wrapper {
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+    }
+    .footer__links-wrapper {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+    .footer__links {
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        -webkit-box-flex: 0;
+    }
+    .footer__links:last-child {
+        margin-top: 70px;
+    }
+    .footer__subscribe {}
+    .footer__subscribe__form-container {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+    .footer__subscribe__form-container input {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .footer__subscribe__form-container .btn {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+        max-width: 190px;
+        text-align: center;
+    }
+}
+@media(max-width: 640px) {
+    .footer {}
+    .footer__links-wrapper {
+        display: none;
+    }
 }
 /* SLICK */
 .dots {}

@@ -1,269 +1,132 @@
-// THIS MIGHT INCLUDE HEADER, FOOTER AND OTHER
 // COMMON ELEMENTS ACROSS THE SITE
-
-// HEADER
-.header
-  position: absolute
-  background: white
-  left: 0
-  right: 0
-  z-index: 9
-  color: $colorPrimary
-  font-family: 'Roboto', sans-serif
-  font-weight: 600
-  font-size: 17px
-  text-transform: uppercase
-  border-bottom: 1px solid $colorPrimary
-  &__top
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding-top: 50px
-    margin-bottom: 65px
-  &__lang
-    flex: 0 1 310px
-    margin-top: -32px
-    a
-      display: inline-block
-      margin-right: 20px
-      transition: color $transitionSpeed $ease
-      &:last-child
-        margin-right: 0
-      &.active
-        font-weight: 400
-        color: $colorPrimaryLight
-      &:hover
-        color: $colorPrimaryLight
-
-  &__hamburger
-    display: none
-    flex: 0 0 auto
-
-  &__logo
-    flex: 0 0 auto
-    &--small
-      margin-right: 3%
-      .icon-logo
-        size: 173px 37px
-
-  &__cta
-    flex: 0 1 310px
-    margin-top: -32px
-    text-align: right
-    &.searching
-      .header__account
-        transform: translate3d(0, 45px, 0)
-      .header__cart
-        transform: translate3d(10px, 45px, 0)
-
-    &--sticky
-      margin-top: 0
-      flex: 0 0 auto
-      margin-left: 3%
-      .icon-account
-        color: $colorGray
-        transition: all $transitionSpeed $ease
-        &:hover
-          color: $colorPrimary
-      .header__account
-        .icon
-          display: inline-block
-      .header__cart
-        .icon
-          display: inline-block
-      &.searching
-        .header__account
-          transform: translate3d(0, 0px, 0)
-        .header__cart
-          transform: translate3d(0px, 0px, 0)
-        .header__search
-          &.active
-            input
-              margin-top: -3px
-
-  &__account
-    display: inline-block
-    margin-right: 30px
-    transition: transform $transitionSpeed $ease
-    .icon
-      font-size: 30px
-      display: none
-
-  &__cart
-    display: inline-block
-    color: $colorGray
-    margin-right: 25px
-    transition: transform $transitionSpeed $ease
-    .icon
-      display: none
-    &__counter
-      display: inline-block
-
-  &__search
-    display: inline-block
-    position: relative
-    margin-right: 0
-    .icon
-      font-size: 18px
-      cursor: pointer
-      transition: all $transitionSpeed $ease
-      &:hover
-        color: $colorPrimaryLight
-    .icon-close
-      font-size: 0
-      opacity: 0
-    input
-      position: absolute
-      right: 20px
-      top: 50%
-      padding: 7px 0px
-      display: inline-block
-      -webkit-apperance: none
-      border: none
-      border-radius: 20px
-      box-shadow: inset 0px 0px 5px color(black a(20%))
-      font-size: 14px
-      margin-right: 15px
-      transform: translate3d(100%, -50%, 0)
-      width: 0
-      opacity: 0
-      pointer-events: none
-      overflow: hidden
-      transition: all $transitionSpeed $ease
-
-    &.active
-      .icon-search
-        font-size: 0px
-        opacity: 0
-
-      .icon-close
-        font-size: 18px
-        opacity: 1
-
-      input
-        pointer-events: all
-        width: 270px
-        padding-left: 15px
-        padding-right: 15px
-        opacity: 1
-        transform: translate3d(0, -50%, 0)
-
-  &__navi
-    margin: 0
-    margin-bottom: 10px
-    .header__navi
-      margin: 0 -10px
-      padding: 0
-      display: flex
-      justify-content: space-between
-      overflow-x: scroll
-      white-space: nowrap
-      padding: 20px 0
-    &--sticky
-      flex: 0 1 100%
-      margin-bottom: 0
-      min-width: 0
-      max-width: 100%
-
-    li
-      display: inline-block
-      a
-        transition: all $transitionSpeed $ease
-        padding: 10px
-        &:hover
-          color: $colorPrimaryLight
-
-  &--sticky
-    position: fixed
-    opacity: 0
-    transform: translate3d(0, -100%, 0)
-    transition: all $transitionSpeed $ease
-
-  &--transformed
-    opacity: 1
-    transform: translate3d(0, 0px, 0)
-
-  &__line
-    padding: 20px 0
-    display: flex
-    align-items: center
-    justify-content: space-between
-    width: 100%
-
-@media(height <= 800px)
-  .header
-    &__top
-      padding-top: 35px
-      margin-bottom: 30px
-
-
-@media($hd)
-  .header
-    &__navi
-      &--sticky
-        font-size: 15px
-
-@media($wide)
-  .header
-    font-size: 15px
-    &__cta
-      font-size: 17px
-
-
-@media(width <= 1050px)
-  .header
-    &__cart
-      .icon
-        display: inline-block
-      span
-        display: none
-        span
-          font-size:
-          display: inline-block
-    &__account
-      .icon
-        display: inline-block
-      span
-        display: none
-
-
-@media($tablet)
-  .header
-    &__logo
-      .icon-logo
-        size: 200px 45px
-      &--small
-        .icon-logo
-          size: 173px 37px
-
-    &__cta
-      margin-top: 0
-    &__lang
-      margin-top: 0
-
-@media($mobile)
-  .header
-    &__top
-      padding-top: 15px
-      margin-bottom: 10px
-
-    &__logo
-      .icon-logo
-        size: 173px 37px
-    &__lang
-      display: none
-    &__hamburger
-      display: block
-    &__navi, .scrollbar-macosx
-      display: none !important
-    &__cta--sticky
-      margin-left: auto
-
 
 // FOOTER
 .footer
-  flex: 0
-  height: 500px
+  padding-top: 70px
+  background: white
+  padding-bottom: 60px
+  color: $colorPrimary
+  margin: 0 -10px
+  &__wrapper
+    max-width: 1400px
+    margin-left: auto
+    margin-right: auto
+    padding: 0 20px
+    display: flex
+  &__heading
+    font-size: 16px
+    letter-spacing: 1.76px
+  &__links-wrapper
+    display: flex
+    justify-content: space-between
+    flex: 0 1 700px
+  &__links
+    flex: 0 1 350px
+    padding: 0 10px
+  &__links-list
+    margin-top: 30px
+    font-family: 'Roboto'
+    font-size: 12px
+    font-weight: 600
+    a
+      display: block
+      text-decoration: underline
+      margin-bottom: 15px
+      &:hover
+        text-decoration: none
+        color: $colorPrimaryLight
+  &__content
+    margin-left: auto
+    flex: 0 1 600px
+    padding: 0 10px
+  &__subscribe
+    &__note
+      font-family: 'Roboto'
+      font-size: 12px
+      margin-top: 17px
+      color: $colorGray
+      max-width: 380px
+    &__form
+      margin-top: 30px
+      &-container
+        display: flex
+
+      label
+        display: block
+        font-size: 16px
+        margin-bottom: 10px
+      input
+        margin-right: 32px
+
+  &__socials
+    margin-top: 45px
+    display: flex
+    align-items: center
+    .footer__heading
+      margin-right: 60px
+    a
+      display: inline-block
+      padding: 10px
+      font-size: 28px
+      .icon
+        transition: color $transitionSpeed $ease
+      .icon-facebook
+        &:hover
+          color: $facebook
+      .icon-instagram
+        &:hover
+          color: $instagram
+
+  &__contacts
+    margin-top: 45px
+    a
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $colorPrimaryLight
+
+  &__phone
+    display: block
+    font-size: 32px
+    letter-spacing: 5px
+    margin-top: 15px
+  &__email
+    display: block
+    font-size: 16px
+    margin-top: 20px
+    margin-bottom: 30px
+
+
+@media($desktop)
+  .footer
+    &__wrapper
+      align-items: flex-start
+    &__links-wrapper
+      flex-direction: column
+
+    &__links
+      flex: 0 0 auto
+      &:last-child
+        margin-top: 70px
+
+    &__subscribe
+      &__form-container
+        flex-direction: column
+        input
+          margin-right: 0
+          margin-bottom: 15px
+        .btn
+          max-width: 190px
+          margin-left: auto
+          margin-right: auto
+          text-align: center
+          padding-left: 20px
+          padding-right: 20px
+
+@media($mobile)
+  .footer
+    &__links-wrapper
+      display: none
+      
 
 // SLICK
 .dots

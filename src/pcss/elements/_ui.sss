@@ -43,9 +43,15 @@
   -webkit-appearance: none
   background: white
   color: $grayColor
-  border: 1px solid $borderColor
-  border-radius: 4px
+  border: 2px solid transparent
+  border-radius: 30px
   padding: 12px 15px
+  box-shadow: inset 0px 0px 5px color(black a(20%))
+  font-size: 14px
+  transition: all $transitionSpeed $ease
+  &:focus
+    box-shadow: 0
+    border-color: $colorPrimaryLight
 
 .js-datepicker
   background-image: svg-load('../../images/svg/calendar.svg')

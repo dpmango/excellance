@@ -2,6 +2,7 @@
 /* LAYOUT */
 /* COLORS */
 /* OPTIONS */
+/* SOCIALS */
 
 /* 2. Elements */
 @font-face {
@@ -33,14 +34,20 @@
 .icon-close:before {
     content: "\EA03";
 }
-.icon-logo:before {
+.icon-facebook:before {
     content: "\EA04";
 }
-.icon-play-btn:before {
+.icon-instagram:before {
     content: "\EA05";
 }
-.icon-search:before {
+.icon-logo:before {
     content: "\EA06";
+}
+.icon-play-btn:before {
+    content: "\EA07";
+}
+.icon-search:before {
+    content: "\EA08";
 }
 /* ICONS */
 .icon {
@@ -61,7 +68,12 @@
     display: none !important;
 }
 /* buttons */
-button {}
+button {
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: pointer;
+}
 button:focus {
     outline: none;
 }
@@ -295,11 +307,21 @@ button:focus {
     display: block;
     padding: 12px 15px;
     width: 100%;
-    border: 1px solid $borderColor;
-    border-radius: 4px;
+    border: 2px solid transparent;
+    border-radius: 30px;
     background: white;
+    -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
     color: $grayColor;
+    font-size: 14px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     -webkit-appearance: none;
+}
+.ui-input:focus {
+    border-color: #7E6884;
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
 }
 .js-datepicker {
     background-image: svg-load('../../images/svg/calendar.svg');
