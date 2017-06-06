@@ -1856,9 +1856,9 @@ button:focus {
             transform: translate3d(0, 0px, 0);
 }
 .bestsellers__card:hover .bestsellers__card__image {
-    -webkit-transform: scale(1.03);
-        -ms-transform: scale(1.03);
-            transform: scale(1.03);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 .bestsellers__card:hover:after {
     background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FBFBFB));
