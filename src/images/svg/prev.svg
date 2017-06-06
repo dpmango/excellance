@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="19px" viewBox="0 0 11 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>prev</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MAIN-НАведенный-1920" transform="translate(-373.000000, -1894.000000)" fill="#DBDEE0">
+            <path d="M387.342649,1898.87948 C387.099572,1898.62483 386.704502,1898.62483 386.461994,1898.87948 L378.719784,1907.00588 L370.962962,1898.87948 C370.719696,1898.62483 370.324625,1898.62483 370.082308,1898.87948 C369.839231,1899.13334 369.839231,1899.54722 370.082308,1899.80207 L378.263991,1908.37336 C378.385625,1908.50059 378.537619,1908.5644 378.704224,1908.5644 C378.856218,1908.5644 379.023013,1908.50059 379.144646,1908.37336 L387.327089,1899.80207 C387.584967,1899.54722 387.584967,1899.13334 387.342649,1898.87948 Z" id="prev" transform="translate(378.711244, 1903.626447) rotate(-270.000000) translate(-378.711244, -1903.626447) "></path>
+        </g>
+    </g>
+</svg>

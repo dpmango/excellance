@@ -1,11 +1,19 @@
 $(document).ready(function(){
 
   //////////
-  // Global variables
+  // Global variables & helper functions
   //////////
 
   const _window = $(window);
   const _document = $(document);
+
+  function isRetinaDisplay() {
+    if (window.matchMedia) {
+        var mq = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
+        return (mq && mq.matches || (window.devicePixelRatio > 1));
+    }
+  }
+  // isRetinaDisplay()
 
   //////////
   // COMMON
@@ -58,7 +66,8 @@ $(document).ready(function(){
 
   // Hamburger
   $('.hamburger').on('click', function(){
-    $(this).toggleClass('active');
+    $('.hamburger').toggleClass('active');
+    $('.mobile-navi').toggleClass('active');
   });
 
   //////////
@@ -94,6 +103,13 @@ $(document).ready(function(){
     var bg = $(val).find('img').attr('src');
     $(val).css('background-image', 'url(' + bg + ')')
   });
+
+  // VIDEO PLAY
+  $('.promo-video .icon').on('click', function(){
+    $(this).closest('.promo-video').toggleClass('playing');
+    $(this).closest('.promo-video').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
+  });
+
 
   //////////
   // MODALS
@@ -216,31 +232,35 @@ $(document).ready(function(){
   }
 
   // STICKY MAP RESULTS
-  _window.scrolled(10, function () {
-    var stickyEl = $('.results__map');
-    var windowBottomScroll = _window.scrollTop() + _window.height();
-    var stopPoint = _document.height() - $('footer').outerHeight();
-
-    if (windowBottomScroll >= stopPoint) {
-      stickyEl.addClass('results__map--stop');
-    } else if (windowBottomScroll < stopPoint) {
-      stickyEl.removeClass('results__map--stop');
-    }
-  });
+  // _window.scrolled(10, function () {
+  //   var stickyEl = $('.results__map');
+  //   var windowBottomScroll = _window.scrollTop() + _window.height();
+  //   var stopPoint = _document.height() - $('footer').outerHeight();
+  //
+  //   if (windowBottomScroll >= stopPoint) {
+  //     stickyEl.addClass('results__map--stop');
+  //   } else if (windowBottomScroll < stopPoint) {
+  //     stickyEl.removeClass('results__map--stop');
+  //   }
+  // });
 
   // OPTIONAL
-  // hero parallax on mousemove
+  ////////////
 
-  var movementStrength = 50;
-  var height = movementStrength / _window.height();
-  var width = movementStrength / _window.width();
-  $(".hero").mousemove(function(e){
-    var pageX = e.pageX - (_window.width() / 2);
-    var pageY = e.pageY - (_window.height() / 2);
-    var newvalueX = width * pageX * -1 - 25;
-    var newvalueY = height * pageY * -1 - 50;
-    $('.hero-bg').css("background-position", newvalueX+"px     "+newvalueY+"px");
-  });
+
+
+  // hero parallax on mousemove
+  //
+  // var movementStrength = 50;
+  // var height = movementStrength / _window.height();
+  // var width = movementStrength / _window.width();
+  // $(".hero").mousemove(function(e){
+  //   var pageX = e.pageX - (_window.width() / 2);
+  //   var pageY = e.pageY - (_window.height() / 2);
+  //   var newvalueX = width * pageX * -1 - 25;
+  //   var newvalueY = height * pageY * -1 - 50;
+  //   $('.hero-bg').css("background-position", newvalueX+"px     "+newvalueY+"px");
+  // });
 
   // INPUTS FOCUS
 

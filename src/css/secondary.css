@@ -43,11 +43,17 @@
 .icon-logo:before {
     content: "\EA06";
 }
-.icon-play-btn:before {
+.icon-next:before {
     content: "\EA07";
 }
-.icon-search:before {
+.icon-play-btn:before {
     content: "\EA08";
+}
+.icon-prev:before {
+    content: "\EA09";
+}
+.icon-search:before {
+    content: "\EA0A";
 }
 /* ICONS */
 .icon {

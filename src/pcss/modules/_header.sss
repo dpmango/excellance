@@ -256,3 +256,52 @@
       display: none !important
     &__cta--sticky
       margin-left: auto
+
+
+// MOBILE NAVI
+.mobile-navi
+  position: fixed 0 0 0 0
+  z-index: 8
+  background: white
+  display: none
+  flex-direction: column
+  padding: 140px 20px 50px 20px
+  transform: translate3d(0, -100%, 0)
+  transition: transform $transitionSpeed $ease
+  &__list
+    flex: 1 0 auto
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    font-size: 22px
+    margin-bottom: 30px
+    overflow-y: scroll
+    color: $colorPrimary
+    li
+      flex: 1 1 auto
+      display: block
+      a
+        display: inline-block
+        padding: 10px
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorPrimaryLight
+  .header__lang
+    flex: 0 0 auto
+    margin-top: auto
+    text-align: center
+    display: block
+    font-family: 'Roboto'
+    text-transform: uppercase
+
+
+  &.active
+    transform: translate3d(0, 0%, 0)
+
+
+@media($mobile)
+  .mobile-navi
+    display: flex

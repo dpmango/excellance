@@ -91,31 +91,163 @@
 // BESTSELLERS
 .bestsellers
   padding-top: 55px
+  position: relative
   &__slider
     margin-top: 25px
     .slick-track
       display: flex
       align-items: stretch
+    .slick-slide
+      height: auto !important
+    &__nav
+      .icon
+        position: absolute
+        top: 50%
+        z-index: 8
+        cursor: pointer
+        color: #DBDEE0
+        font-size: 18px
+      .icon-prev
+        left: 20px
+      .icon-next
+        right: 20px
+
+
   &__card
-    padding: 10px
+    position: relative
+    flex: 1 1 100%
+    display: flex
+    flex-direction: column
+    padding: 10px 0
     text-align: center
-    transition: background $transitionSpeed $ease
+    cursor: pointer !important
+    &.slick-active
+      display: flex !important
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0
+      background: white
+      z-index: 1
+      transition: background $transitionSpeed $ease
     &__image
+      position: relative
+      z-index: 2
       margin-top: auto
+      transition: transform $transitionSpeed $ease
       img
         display: inline-block
-        max-width: 100px
+        max-width: 100%
     &__description
+      position: relative
+      z-index: 2
       font-size: 12px
       letter-spacing: 1.5px
       margin-top: 10px
     &__cta
-      margin: 10px auto
+      position: relative
+      z-index: 2
+      margin: 10px auto 0px auto
       opacity: 0
       transform: translate3d(0, 20px, 0)
       transition: all $transitionSpeed $ease
     &:hover
-      background: linear-gradient(to bottom, #FFF 0%, #FBFBFB 100%)
+      &::after
+        background: linear-gradient(to bottom, #FFF 0%, #FBFBFB 100%)
       .bestsellers__card__cta
         opacity: 1
         transform: translate3d(0, 0px, 0)
+      .bestsellers__card__image
+        transform: scale(1.03)
+
+
+// EVENT PROMO
+.event-promo
+  margin-top: 20px
+  padding: 75px 0
+  background: url('../images/promoEvents.png') no-repeat center
+  background-size: cover
+  &__content
+    max-width: 800px
+  &__text
+    font-size: 16px
+    letter-spacing: 1.78px
+    margin-top: 55px
+    margin-bottom: 60px
+    text-transform: uppercase
+
+
+.promo
+  margin-top: 20px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    padding: 0 20px
+    margin-left: -10px
+    margin-right: -10px
+  &__card
+    flex: 0 1 25%
+    padding: 0 10px
+    color: $colorPrimary
+    &__image
+      transition: all $transitionSpeed $ease
+      font-size: 0
+      img
+        max-width: 100%
+
+    &__text
+      margin-top: 25px
+      font-size: 16px
+      text-transform: uppercase
+      letter-spacing: 1.78px
+
+    &:hover
+      .promo__card__image
+        box-shadow: 0px 0px 15px color(black a(20%))
+
+
+  &-video
+    margin-top: 110px
+    background: url('../images/video_BG.png') no-repeat center
+    background-size: cover
+    &__video
+      position: relative
+      max-width: 1160px
+      margin-left: auto
+      margin-right: auto
+      img
+        position: relative
+        z-index: 3
+        max-width: 100%
+      iframe
+        opacity: 0
+        position: absolute 0
+        z-index: 2
+
+      .icon
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 4
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        color: #DBDEE0
+        border-radius: 50%
+        size: 60px
+        border: 2px solid #DBDEE0
+        font-size: 23px
+        transition: all $transitionSpeed $ease
+        &::before
+          position: absolute
+          top: 50%
+          left: 55%
+          transform: translate(-50%, -50%)
+        &:hover
+          background: #DBDEE0
+          color: $colorPrimary
+      &.playing
+        iframe
+          opacity: 1
+          z-index: 3
+        img
+          z-index: 2
