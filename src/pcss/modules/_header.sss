@@ -18,6 +18,7 @@
     align-items: center
     padding-top: 50px
     margin-bottom: 65px
+
   &__lang
     flex: 0 1 310px
     margin-top: -32px
@@ -144,32 +145,58 @@
         padding-left: 15px
         padding-right: 15px
         opacity: 1
+        border: 2px solid transparent
         transform: translate3d(0, -50%, 0)
+        &:focus
+          box-shadow: 0
+          border-color: $colorPrimaryLight
+
 
   &__navi
     margin: 0
-    margin-bottom: 10px
+    margin-bottom: 0px
     .header__navi
       margin: 0 -10px
       padding: 0
       display: flex
       justify-content: space-between
       overflow-x: scroll
+      overflow-y: hidden
       white-space: nowrap
-      padding: 20px 0
+      padding: 20px 0 30px 0
     &--sticky
       flex: 0 1 100%
       margin-bottom: 0
       min-width: 0
       max-width: 100%
+      .header__navi
+        padding: 20px 0
+      li
+        &::after
+          display: none
 
     li
+      position: relative
       display: inline-block
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        bottom: -30px
+        left: 10px
+        right: 10px
+        height: 1px
+        background: $colorPrimary
+        transform: translate3d(0, 1px,0 )
+        transition: all $transitionSpeed $ease
+      &:hover
+        &::after
+          transform: translate3d(0, 0px,0 )
+        a
+          color: $colorPrimaryLight
       a
         transition: all $transitionSpeed $ease
         padding: 10px
-        &:hover
-          color: $colorPrimaryLight
 
   &--sticky
     position: fixed
@@ -254,9 +281,35 @@
       display: block
     &__navi, .scrollbar-macosx
       display: none !important
-    &__cta--sticky
-      margin-left: auto
+    &__account
+      margin-right: 15px
+      .icon
+        font-size: 25px
+    &__cart
+      margin-right: 15px
 
+    &__cta
+      &.searching
+        .header__account
+          transform: translate3d(0, 0px, 0)
+        .header__cart
+          transform: translate3d(0px, 0px, 0)
+        .header__search
+          &.active
+            input
+              margin-top: -2px
+      &--sticky
+        margin-left: auto
+
+@media($mobile-s)
+  .header
+    &__account
+      display: none
+
+@media(width <= 374px)
+  .header
+    &__cart
+      display: none
 
 // MOBILE NAVI
 .mobile-navi

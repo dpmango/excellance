@@ -62,7 +62,13 @@ $(document).ready(function () {
 
   // scrollbars
   $('.scrollbar-dynamic').scrollbar();
-  $('.scrollbar-macosx').scrollbar();
+  $('.scrollbar-macosx').scrollbar({
+    // "onScroll": function(y, x, e){
+    //   if(y.scroll){
+    //     e.preventDefault();
+    //   }
+    // }
+  });
 
   // Hamburger
   $('.hamburger').on('click', function () {
@@ -93,7 +99,31 @@ $(document).ready(function () {
     speed: 300,
     slidesToShow: 5,
     centerMode: false,
-    variableWidth: false
+    variableWidth: false,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 568,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 414,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
   });
 
   // hero slider bg

@@ -17,11 +17,13 @@
     justify-content: center
     align-items: center
     margin-right: auto
-    min-height: 100vh
+    min-height: 500px
+    height: 100vh
     max-width: 550px
     text-align: center
     position: relative
     z-index: 2
+    transform: translate3d(0,-4vh,0)
 
   &__title
     font-size: 36px
@@ -37,9 +39,57 @@
     margin-top: 60px
 
 
+@media($desktop)
+  .hero
+    &__content
+      max-width: 470px
+    &__title
+      font-size: 32px
+      letter-spacing: 3px
+
+@media($tablet)
+  .hero
+    &__content
+      max-width: 400px
+    &__title
+      font-size: 28px
+      letter-spacing: 2px
+    &__subtitle
+      font-size: 20px
+      letter-spacing: 1.8px
+    &__cta
+      margin-top: 40px
+
+@media($mobile)
+  .hero
+    &__bg
+      background-position: 60% bottom
+    &__content
+      max-width: 340px
+      justify-content: flex-start
+      padding-top: 100px
+    &__title
+      font-size: 25px
+      letter-spacing: 1.67px
+    &__subtitle
+      font-size: 18px
+
+@media($mobile-s)
+  .hero
+    &__content
+      text-align: left
+      max-width: 240px
+      align-items: flex-start
+
+    &__subtitle
+      display: none
+    &__cta
+      margin-top: 30px
+
 // BANNERS
 
 .banners
+  margin-top: 20px
   &__wrapper
     display: flex
     margin-left: -10px
@@ -48,45 +98,155 @@
     padding-right: 20px
   &__card
     position: relative
+    overflow: hidden
     flex: 0 1 33%
-    margin: 20px 10px
+    margin: 0px 10px 20px 10px
     font-size: 0
+    height: 500px
     transition: all $transitionSpeed $ease
     img
-      max-width: 100%
+      position: absolute
+      top: 50%
+      min-width: 100%
+      min-height: 100%
+      height: auto
+      width: auto
+      transform: translateY(-50%)
     &__content
       position: absolute 0
-      z-index: 1
-      padding: 35px 20px 20vh 20px
+      z-index: 2
+      padding: 35px 30px 20vh 30px
       color: white
       &--right
         text-align: right
+        .banners__card__subtitle
+          text-align: left
+          float: right
+          margin-right: 15%
       &--dark
+        .banners__card__subtitle
+          color: white
+      &--white
         color: $colorPrimary
+        padding-left: 30%
+        .banners__card__subtitle
+          margin-top: 20px
+
     &__title
       font-size: 36px
       line-height: 1.2
       letter-spacing: 5px
       text-transform: uppercase
     &__subtitle
-      margin-top: 30px
-      font-size: 24px
+      color: $colorPrimary
+      margin-top: 40px
+      font-size: 16px
       letter-spacing: 2.67px
     &:hover
       transform: scale(1.02)
       box-shadow: 0px 0px 10px color(black a(30%))
 
+@media($hd-x)
+  .banners
+    &__card
+      height: 430px
+      &__content
+        padding: 30px 30px 20vh 30px
+        &--right
+          .banners__card__subtitle
+            margin-right: 10%
+        &--white
+          padding-left: 15%
+          .banners__card__subtitle
+            margin-top: 10px
+      &__title
+        font-size: 32px
+        letter-spacing: 4px
+      &__subtitle
+        margin-top: 25px
+
+@media($hd)
+  .banners
+    &__card
+      height: 400px
+      &__content
+        padding: 25px 25px 20vh 25px
+        &--right
+          .banners__card__subtitle
+            margin-right: 0%
+        &--white
+          padding-left: 15%
+          .banners__card__subtitle
+            margin-top: 10px
+      &__title
+        font-size: 28px
+        letter-spacing: 3px
+      &__subtitle
+        margin-top: 20px
+
 @media($wide)
   .banners
     &__card
+      height: 350px
       &__content
         padding: 25px 15px 20vh 15px
+        &--white
+          padding-left: 15px
       &__title
-        font-size: 30px
-        letter-spacing: 4px
+        font-size: 26px
+        letter-spacing: 2.5px
       &__subtitle
-        font-size: 20px
-        letter-spacing: 2px
+        font-size: 18px
+        letter-spacing: 1.5px
+
+@media($desktop)
+  .banners
+    &__wrapper
+      flex-wrap: wrap
+      justify-content: center
+    &__card
+      flex-basis: calc(50% - 20px)
+      &__content
+        padding: 25px 20px 20vh 20px
+        &--white
+          padding-left: 25%
+
+@media($tablet)
+  .banners
+    &__card
+      flex-basis: 100%
+      &__content
+        &--white
+          padding-left: 25%
+        &--right
+          .banners__card__subtitle
+            margin-right: 10%
+
+@media($mobile)
+  .banners
+    &__card
+      height: 300px
+
+@media($mobile-s)
+  .banners
+    &__wrapper
+      margin-left: -7px
+      margin-right: -7px
+    &__card
+      margin-left: 7px
+      margin-right: 7px
+      &:nth-child(3)
+        img
+          top: 75%
+      &__content
+        padding: 20px 15px 0 15px
+        &--white
+          padding-left: 15px
+        &--right
+          .banners__card__subtitle
+            margin-right: 0%
+
+
 
 // BESTSELLERS
 .bestsellers
@@ -176,6 +336,33 @@
     margin-bottom: 60px
     text-transform: uppercase
 
+@media($wide)
+  .event-promo
+    background-position: 60% center
+
+@media($desktop)
+  .event-promo
+    background-position: 70% center
+    &__content
+      max-width: 600px
+    &__text
+      margin-top: 45px
+      margin-bottom: 40px
+
+@media($tablet)
+  .event-promo
+    &__content
+      max-width: 450px
+    &__text
+      font-size: 14px
+      margin-top: 25px
+      margin-bottom: 30px
+
+@media($mobile)
+  .event-promo
+    background-position: 75% center
+    &__content
+      max-width: 300px
 
 .promo
   margin-top: 20px
@@ -194,60 +381,85 @@
       font-size: 0
       img
         max-width: 100%
-
     &__text
       margin-top: 25px
       font-size: 16px
       text-transform: uppercase
       letter-spacing: 1.78px
-
     &:hover
       .promo__card__image
         box-shadow: 0px 0px 15px color(black a(20%))
 
+@media($wide)
+  .promo
+    &__card
+      &__text
+        font-size: 15px
+        letter-spacing: 1px
 
-  &-video
-    margin-top: 110px
-    background: url('../images/video_BG.png') no-repeat center
-    background-size: cover
-    &__video
+@media($desktop)
+  .promo
+    &__wrapper
+      flex-wrap: wrap
+    &__card
+      flex: 0 1 50%
+      &__text
+        margin-bottom: 40px
+        font-size: 16px
+
+@media($mobile-s)
+  .promo
+    &__card
+      flex-basis: 100%
+
+// PROMO VIDEO
+.promo-video
+  margin-top: 110px
+  background: url('../images/video_BG.png') no-repeat center
+  background-size: cover
+  &__video
+    position: relative
+    max-width: 1160px
+    margin-left: auto
+    margin-right: auto
+    img
       position: relative
-      max-width: 1160px
-      margin-left: auto
-      margin-right: auto
-      img
-        position: relative
-        z-index: 3
-        max-width: 100%
-      iframe
-        opacity: 0
-        position: absolute 0
-        z-index: 2
+      z-index: 3
+      max-width: 100%
+    iframe
+      opacity: 0
+      position: absolute 0
+      z-index: 2
 
-      .icon
+    .icon
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 4
+      transform: translate(-50%, -50%)
+      cursor: pointer
+      color: #DBDEE0
+      border-radius: 50%
+      size: 60px
+      border: 2px solid #DBDEE0
+      font-size: 23px
+      transition: all $transitionSpeed $ease
+      &::before
         position: absolute
         top: 50%
-        left: 50%
-        z-index: 4
+        left: 55%
         transform: translate(-50%, -50%)
-        cursor: pointer
-        color: #DBDEE0
-        border-radius: 50%
-        size: 60px
-        border: 2px solid #DBDEE0
-        font-size: 23px
-        transition: all $transitionSpeed $ease
-        &::before
-          position: absolute
-          top: 50%
-          left: 55%
-          transform: translate(-50%, -50%)
-        &:hover
-          background: #DBDEE0
-          color: $colorPrimary
-      &.playing
-        iframe
-          opacity: 1
-          z-index: 3
-        img
-          z-index: 2
+      &:hover
+        background: #DBDEE0
+        color: $colorPrimary
+    &.playing
+      iframe
+        opacity: 1
+        z-index: 3
+      img
+        z-index: 2
+
+@media($desktop)
+  .promo-video
+    margin-top: 80px
+    
