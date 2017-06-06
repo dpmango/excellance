@@ -14,28 +14,235 @@
 <body>
   <!-- HEADER::START-->
   <header class="header">
-    <div class="section">
-      <div class="row">
-        <div class="col-sm-12">
-          <ul>
-            <li>Uno</li>
-            <li>Dos</li>
-            <li>Tres</li>
-            <li>Cuatro</li>
-            <li>Cinco</li>
-            <li>Seis</li>
-          </ul>
+    <div class="container container--fluid">
+      <div class="header__top">
+        <div class="header__hamburger">
+          <div class="hamburger hamburger--collapse">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div><a class="header__logo" href="#"><i class="icon icon-logo"></i></a>
+        <div class="header__cta"><a class="header__account" href="#"><i class="icon icon-account"></i><span>мой аккаунт</span></a><a class="header__cart" href="#"><i class="icon icon-cart"></i><span>Корзина</span>
+            <div class="header__cart__counter">(0)</div></a>
+          <form class="header__search" action="#">
+            <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="header__navi scrollbar-macosx">
+        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="#">Профессиональный уход </a></li>
+        <li><a href="#">инновация Cellexon </a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">СМИ о нас</a></li>
+        <li><a href="#">Адреса</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- Sticky Header-->
+  <header class="header header--sticky">
+    <div class="container container--fluid">
+      <div class="header__line">
+        <div class="header__hamburger">
+          <div class="hamburger hamburger--collapse">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div><a class="header__logo header__logo--small" href="#"><i class="icon icon-logo"></i></a>
+        <ul class="header__navi header__navi--sticky scrollbar-macosx">
+          <li><a href="#">Каталог товаров</a></li>
+          <li><a href="#">Профессиональный уход </a></li>
+          <li><a href="#">инновация Cellexon </a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">СМИ о нас</a></li>
+          <li><a href="#">Адреса</a></li>
+        </ul>
+        <div class="header__cta header__cta--sticky"><a class="header__account" href="#"><i class="icon icon-account"></i></a><a class="header__cart" href="#"><i class="icon icon-cart"></i>
+            <div class="header__cart__counter">(0)</div></a>
+          <form class="header__search" action="#">
+            <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
+          </form>
         </div>
       </div>
     </div>
   </header>
-  <!-- SECTION::START-->
-  <section class="section"></section>
+  <!-- Mobile navi-->
+  <div class="mobile-navi">
+    <ul class="mobile-navi__list">
+      <li><a href="#">Каталог товаров</a></li>
+      <li><a href="#">Профессиональный уход </a></li>
+      <li><a href="#">инновация Cellexon </a></li>
+      <li><a href="#">О компании</a></li>
+      <li><a href="#">СМИ о нас</a></li>
+      <li><a href="#">Адреса</a></li>
+    </ul>
+    <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div>
+  </div>
+  <div class="page">
+    <!-- HERO ::START-->
+    <div class="hero">
+      <div class="hero__slider dots--center">
+        <div class="hero__slide">
+          <div class="hero__bg">
+            <!-- image is optional - it's used to set .hero__bg background-image property--><img src="images/homepageBanner.png" srcset="images/homepageBanner@2x.png" 2x>
+          </div>
+          <div class="container">
+            <div class="hero__content">
+              <div class="hero__title">Роскошный уход <br> для молодости кожи</div>
+              <div class="hero__subtitle">Основан на научном подходе</div>
+              <div class="hero__cta"><a class="btn btn--primary" href="#"> <span>Подробнее</span></a></div>
+            </div>
+          </div>
+        </div>
+        <!-- slide-->
+        <div class="hero__slide">
+          <div class="hero__bg">
+            <!-- image is optional - it's used to set .hero__bg background-image property--><img src="images/homepageBanner.png" srcset="images/homepageBanner@2x.png" 2x>
+          </div>
+          <div class="container">
+            <div class="hero__content">
+              <div class="hero__title">Роскошный уход <br> для молодости кожи</div>
+              <div class="hero__subtitle">Основан на научном подходе</div>
+              <div class="hero__cta"><a class="btn btn--primary" href="#"> <span>Подробнее</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BANNERS :: START-->
+    <div class="banners">
+      <div class="banners__wrapper"><a class="banners__card" href="#"><img src="images/banner_1.png">
+          <div class="banners__card__content banners__card__content--right">
+            <div class="banners__card__title">Скидка 10%</div>
+            <div class="banners__card__subtitle">Зарегистрируйтесь на сайте <br> и получите скидку 10% <br> на всю продукцию Excellance</div>
+          </div></a><a class="banners__card" href="#"><img src="images/banner_2.png">
+          <div class="banners__card__content banners__card__content--dark">
+            <div class="banners__card__title">АКция!</div>
+            <div class="banners__card__subtitle">При заказе <br> в интернет магазине <br> скидка 5%</div>
+          </div></a><a class="banners__card" href="#"><img src="images/banner_3.png">
+          <div class="banners__card__content banners__card__content--white">
+            <div class="banners__card__title">Excellance <br> дарит подарки!</div>
+            <div class="banners__card__subtitle">Приобретите товар в интернет <br> магазине на сумму от 1500р <br> и получите подарок</div>
+          </div></a></div>
+    </div>
+    <!-- BESTSELLERS :: START-->
+    <div class="bestsellers">
+      <div class="container">
+        <div class="heading text-center">Наши Бестселлеры</div>
+        <div class="bestsellers__slider__nav"><i class="icon icon-prev"></i><i class="icon icon-next"></i></div>
+        <div class="bestsellers__slider">
+          <!-- card-->
+          <div class="bestsellers__card" data-href="#">
+            <div class="bestsellers__card__image"><img src="images/goods/goods_1.png" srcset="images/goods/goods_1@2x.png" 2x></div>
+            <div class="bestsellers__card__description">Крем-сияние <br> для обезвоженной кожи SPF15 <br> «Клеточное восстановление»</div>
+            <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину</span></a></div>
+          </div>
+          <!-- card-->
+          <div class="bestsellers__card" data-href="#">
+            <div class="bestsellers__card__image"><img src="images/goods/goods_2.png" srcset="images/goods/goods_2@2x.png" 2x></div>
+            <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+            <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину</span></a></div>
+          </div>
+          <!-- card-->
+          <div class="bestsellers__card" data-href="#">
+            <div class="bestsellers__card__image"><img src="images/goods/goods_3.png" srcset="images/goods/goods_3@2x.png" 2x></div>
+            <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+            <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину  </span></a></div>
+          </div>
+          <!-- card-->
+          <div class="bestsellers__card" data-href="#">
+            <div class="bestsellers__card__image"><img src="images/goods/goods_4.png" srcset="images/goods/goods_4@2x.png" 2x></div>
+            <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+            <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину </span></a></div>
+          </div>
+          <!-- card-->
+          <div class="bestsellers__card" data-href="#">
+            <div class="bestsellers__card__image"><img src="images/goods/goods_5.png" srcset="images/goods/goods_5@2x.png" 2x></div>
+            <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+            <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину</span></a></div>
+          </div>
+          <!-- card-->
+          <div class="bestsellers__card" data-href="#">
+            <div class="bestsellers__card__image"><img src="images/goods/goods_5.png" srcset="images/goods/goods_5@2x.png" 2x></div>
+            <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+            <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EVENTS PROMO :: START-->
+    <div class="event-promo">
+      <div class="container container--1400">
+        <div class="event-promo__content">
+          <div class="heading">Мероприятия EXCELLANCE</div>
+          <div class="event-promo__text">Идейные соображения высшего порядка, а также консультация с широким активом требуют определения и уточнения модели развития. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение дальнейших направлений развития. </div><a class="btn btn--primary" href="#"> <span>Подробнее</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- PROMO :: START-->
+    <div class="promo">
+      <div class="promo__wrapper"><a class="promo__card" href="#">
+          <div class="promo__card__image"><img src="images/promo_1.png" srcset="images/promo_1@2x.png 2x"></div>
+          <div class="promo__card__text">Акции рив гош</div></a><a class="promo__card" href="#">
+          <div class="promo__card__image"><img src="images/promo_2.png" srcset="images/promo_2@2x.png 2x"></div>
+          <div class="promo__card__text">Акции Artocoly</div></a><a class="promo__card" href="#">
+          <div class="promo__card__image"><img src="images/promo_1.png" srcset="images/promo_1@2x.png 2x"></div>
+          <div class="promo__card__text"> 
+            <p>Купите подарочный набор уже сейчас!</p>
+            <p>Решаете что подприть на новый год любимой женщине?</p>
+            <p>Купите подарочный сертификат на 10 000, 20 000 или 30 000 рублей в наших фирменных магазинах  уже сейчас!</p>
+          </div></a><a class="promo__card" href="#">
+          <div class="promo__card__image"><img src="images/promo_2.png" srcset="images/promo_2@2x.png 2x"></div>
+          <div class="promo__card__text">Акции Artocoly</div></a></div>
+    </div>
+    <!-- PROMO VIDEO :: START-->
+    <div class="promo-video">
+      <div class="promo-video__video"><img src="images/video.png" srcset="images/video@2x.png 2x">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ve0V1wQAZOU" frameborder="0" autoplay="0" allowfullscreen=""></iframe><i class="icon icon-play-btn"></i>
+      </div>
+    </div>
+  </div>
   <!-- FOOTER::START-->
   <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12"></div>
+    <div class="footer__wrapper">
+      <div class="footer__links-wrapper">
+        <div class="footer__links">
+          <div class="footer__heading">Категории товаров</div>
+          <div class="footer__links-list"><a href="#">Очищение и тонизирование</a><a href="#">Увлажнение и баланс</a><a href="#">Клеточное восстановление  и защита</a><a href="#">Защита вокруг глаз</a><a href="#">Уход для тела</a></div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__heading">Категории товаров</div>
+          <div class="footer__links-list"><a href="#">Доставка и оплата</a><a href="#">Правила возврата товара</a><a href="#">Новости</a><a href="#">Адреса магазинов</a><a href="#">Адреса салонов</a></div>
+        </div>
+      </div>
+      <!-- content col-->
+      <div class="footer__content">
+        <div class="footer__subscribe">
+          <div class="footer__heading">Подписаться на рассылку</div>
+          <div class="footer__subscribe__note">Подпишитесь на новостную рассылку и получайте бонусы и эксклюзивные предложения от Excellance Moscow!</div>
+          <form class="footer__subscribe__form" action="#">
+            <label>Ваш e-mail:</label>
+            <div class="footer__subscribe__form-container">
+              <input class="ui-input" type="email">
+              <button class="btn btn--primary" type="submit"> <span>Подписаться</span></button>
+            </div>
+          </form>
+        </div>
+        <!-- socials-->
+        <div class="footer__socials">
+          <div class="footer__heading">Присоединяйтесь!</div><a href="#"><i class="icon icon-facebook"></i></a><a href="#"><i class="icon icon-instagram"></i></a>
+        </div>
+        <!-- contacts-->
+        <div class="footer__contacts">
+          <div class="footer__heading">Служба поддержки клиентов</div><a class="footer__phone" href="tel:84953800353">+7 495 380 03 53</a><a class="footer__email" href="mailto:EMAIL@EXCELLANCE.RU">EMAIL@EXCELLANCE.RU</a>
+          <p>Служба поддержки работает с пн по пт с 10 до 18</p>
+          <p>ООО «Мирани», 121357, Москва, ул. Верейская, д.29, <br> стр. 134, БЦ «Верейская плаза III» </p>
+        </div>
       </div>
     </div>
   </footer>
