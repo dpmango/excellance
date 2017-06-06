@@ -2,6 +2,11 @@
 header.header
   .container.container--fluid
     .header__top
+      .header__hamburger
+        .hamburger.hamburger--collapse
+          .hamburger-box
+            .hamburger-inner
+              
       .header__lang
         a(href='#').active Ru
         a(href='#') En
@@ -40,6 +45,10 @@ header.header
 header.header.header--sticky
   .container.container--fluid
     .header__line
+      .header__hamburger
+        .hamburger.hamburger--collapse
+          .hamburger-box
+            .hamburger-inner
       a.header__logo.header__logo--small(href='#')
         i.icon.icon-logo
     
@@ -62,7 +71,8 @@ header.header.header--sticky
           i.icon.icon-account
         a(href='#').header__cart
           i.icon.icon-cart
-          span 
           .header__cart__counter (0)
-        .header__search
+        form(action='#').header__search
+          input(type='text' autofill='0' placeholder='поиск...')
           i.icon.icon-search
+          i.icon.icon-close

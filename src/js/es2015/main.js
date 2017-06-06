@@ -55,6 +55,12 @@ $(document).ready(function(){
   $('.scrollbar-dynamic').scrollbar();
   $('.scrollbar-macosx').scrollbar();
 
+
+  // Hamburger
+  $('.hamburger').on('click', function(){
+    $(this).toggleClass('active');
+  });
+
   //////////
   // SLIDERS
   //////////

@@ -34,3 +34,25 @@ body, html
   padding-right: 20px
   &--fluid
     max-width: 100%
+
+@media($mobile)
+  .container
+    padding-left: 15px
+    padding-right: 15px
+
+//header offset
+.page
+  margin-top: 255px
+
+@media(height <= 800px)
+  .page
+    margin-top: 200px
+
+@media($tablet)
+  .page
+    margin-top: 170px
+
+
+@media($mobile)
+  .page
+    margin-top: 80px
