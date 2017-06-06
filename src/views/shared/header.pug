@@ -9,12 +9,20 @@ header.header
       a.header__logo(href='#')
         i.icon.icon-logo
       .header__cta
-        a(href='#') мой аккаунт
-        a(href='#').header__cart Корзина (0)
-        .header__search
+        a(href='#').header__account
+          i.icon.icon-account
+          span мой аккаунт
+        a(href='#').header__cart
+          i.icon.icon-cart
+          span Корзина
+          .header__cart__counter (0)
+        form(action='#').header__search
+          input(type='text' autofill='0' placeholder='поиск...')
           i.icon.icon-search
+          i.icon.icon-close
+            
   .container
-    ul.header__navi
+    ul.header__navi.scrollbar-macosx
       li
         a(href='#') Каталог товаров
       li
@@ -27,3 +35,34 @@ header.header
         a(href='#') СМИ о нас
       li
         a(href='#') Адреса
+        
+// Sticky Header
+header.header.header--sticky
+  .container.container--fluid
+    .header__line
+      a.header__logo.header__logo--small(href='#')
+        i.icon.icon-logo
+    
+      ul.header__navi.header__navi--sticky.scrollbar-macosx
+        li
+          a(href='#') Каталог товаров
+        li
+          a(href='#') Профессиональный уход 
+        li
+          a(href='#') инновация Cellexon 
+        li
+          a(href='#') О компании
+        li
+          a(href='#') СМИ о нас
+        li
+          a(href='#') Адреса
+      
+      .header__cta.header__cta--sticky
+        a(href='#').header__account
+          i.icon.icon-account
+        a(href='#').header__cart
+          i.icon.icon-cart
+          span 
+          .header__cart__counter (0)
+        .header__search
+          i.icon.icon-search

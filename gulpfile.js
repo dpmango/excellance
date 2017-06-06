@@ -1,5 +1,7 @@
 // DECLARE VARIABLES
 var gulp          = require('gulp');
+// var watch        = require('gulp-watch');
+var async         = require('async');
 var rename        = require('gulp-rename');
 var sourcemaps    = require('gulp-sourcemaps');
 var pug           = require('gulp-pug');
@@ -28,6 +30,9 @@ var useref        = require('gulp-useref');
 var uglify        = require('gulp-uglify');
 var gulpIf        = require('gulp-if');
 var imagemin      = require('gulp-imagemin');
+var iconfont      = require('gulp-iconfont');
+var consolidate   = require('gulp-consolidate');
+var runTimestamp  = Math.round(Date.now()/1000);
 var cache         = require('gulp-cache');
 var del           = require('del');
 var runSequence   = require('run-sequence');
@@ -48,6 +53,7 @@ gulp.task('watch', function(){
   gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug-watch']);
   gulp.watch('./src/js/es2015/*.js', ['babel']);
+  gulp.watch('src/images/svg/*.svg', {cwd:'./'}, ['iconfont']);
   gulp.watch('./src/js/**/*.js', browserSync.reload);
 })
 
@@ -144,6 +150,41 @@ gulp.task('babel', function() {
         stream: true
       }));
 });
+
+
+
+gulp.task('iconfont', function(done){
+  var iconStream = gulp.src(['./src/images/svg/*.svg'])
+      .pipe(iconfont({
+        fontName: 'IconFont',
+        prependUnicode: false,
+        normalize: true,
+        formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+        timestamp: runTimestamp, // recommended to get consistent builds when watching files
+      }))
+
+  async.parallel([
+    function handleGlyphs (cb) {
+      iconStream.on('glyphs', function(glyphs, options) {
+        gulp.src('./src/pcss/tpl/_iconfont.sss')
+          .pipe(consolidate('lodash', {
+            glyphs: glyphs,
+            fontName: 'IconFont',
+            fontPath: '../fonts/',
+            className: 'icon'
+          }))
+          .pipe(gulp.dest('./src/pcss/elements'))
+          .on('finish', cb);
+      });
+    },
+    function handleFonts (cb) {
+      iconStream
+        .pipe(gulp.dest('./src/fonts/'))
+        .on('finish', cb);
+    }
+  ], done);
+});
+
 
 /////
 // OPTIMIZATION TASKS

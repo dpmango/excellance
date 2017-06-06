@@ -36,3 +36,90 @@
     letter-spacing: 2.67px
   &__cta
     margin-top: 60px
+
+@media(height <= 800px)
+  .hero
+    margin-top: 200px
+
+// BANNERS
+
+.banners
+  &__wrapper
+    display: flex
+    margin-left: -10px
+    margin-right: -10px
+    padding-left: 20px
+    padding-right: 20px
+  &__card
+    position: relative
+    flex: 0 1 33%
+    margin: 20px 10px
+    font-size: 0
+    transition: all $transitionSpeed $ease
+    img
+      max-width: 100%
+    &__content
+      position: absolute 0
+      z-index: 1
+      padding: 35px 20px 20vh 20px
+      color: white
+      &--right
+        text-align: right
+      &--dark
+        color: $colorPrimary
+    &__title
+      font-size: 36px
+      line-height: 1.2
+      letter-spacing: 5px
+      text-transform: uppercase
+    &__subtitle
+      margin-top: 30px
+      font-size: 24px
+      letter-spacing: 2.67px
+    &:hover
+      transform: scale(1.02)
+      box-shadow: 0px 0px 10px color(black a(30%))
+
+@media($wide)
+  .banners
+    &__card
+      &__content
+        padding: 25px 15px 20vh 15px
+      &__title
+        font-size: 30px
+        letter-spacing: 4px
+      &__subtitle
+        font-size: 20px
+        letter-spacing: 2px
+
+// BESTSELLERS
+.bestsellers
+  padding-top: 55px
+  &__slider
+    margin-top: 25px
+    .slick-track
+      display: flex
+      align-items: stretch
+  &__card
+    padding: 10px
+    text-align: center
+    transition: background $transitionSpeed $ease
+    &__image
+      margin-top: auto
+      img
+        display: inline-block
+        max-width: 100px
+    &__description
+      font-size: 12px
+      letter-spacing: 1.5px
+      margin-top: 10px
+    &__cta
+      margin: 10px auto
+      opacity: 0
+      transform: translate3d(0, 20px, 0)
+      transition: all $transitionSpeed $ease
+    &:hover
+      background: linear-gradient(to bottom, #FFF 0%, #FBFBFB 100%)
+      .bestsellers__card__cta
+        opacity: 1
+        transform: translate3d(0, 0px, 0)

@@ -21,13 +21,16 @@
     <div class="container container--fluid">
       <div class="header__top">
         <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div><a class="header__logo" href="#"><i class="icon icon-logo"></i></a>
-        <div class="header__cta"><a href="#">мой аккаунт</a><a class="header__cart" href="#">Корзина (0)</a>
-          <div class="header__search"><i class="icon icon-search"></i></div>
+        <div class="header__cta"><a class="header__account" href="#"><i class="icon icon-account"></i><span>мой аккаунт</span></a><a class="header__cart" href="#"><i class="icon icon-cart"></i><span>Корзина</span>
+            <div class="header__cart__counter">(0)</div></a>
+          <form class="header__search" action="#">
+            <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
+          </form>
         </div>
       </div>
     </div>
     <div class="container">
-      <ul class="header__navi">
+      <ul class="header__navi scrollbar-macosx">
         <li><a href="#">Каталог товаров</a></li>
         <li><a href="#">Профессиональный уход </a></li>
         <li><a href="#">инновация Cellexon </a></li>
@@ -35,6 +38,25 @@
         <li><a href="#">СМИ о нас</a></li>
         <li><a href="#">Адреса</a></li>
       </ul>
+    </div>
+  </header>
+  <!-- Sticky Header-->
+  <header class="header header--sticky">
+    <div class="container container--fluid">
+      <div class="header__line"><a class="header__logo header__logo--small" href="#"><i class="icon icon-logo"></i></a>
+        <ul class="header__navi header__navi--sticky scrollbar-macosx">
+          <li><a href="#">Каталог товаров</a></li>
+          <li><a href="#">Профессиональный уход </a></li>
+          <li><a href="#">инновация Cellexon </a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">СМИ о нас</a></li>
+          <li><a href="#">Адреса</a></li>
+        </ul>
+        <div class="header__cta header__cta--sticky"><a class="header__account" href="#"><i class="icon icon-account"></i></a><a class="header__cart" href="#"><i class="icon icon-cart"></i><span> </span>
+            <div class="header__cart__counter">(0)</div></a>
+          <div class="header__search"><i class="icon icon-search"></i></div>
+        </div>
+      </div>
     </div>
   </header>
   <!-- HERO ::START-->
@@ -63,6 +85,60 @@
             <div class="hero__subtitle">Основан на научном подходе</div>
             <div class="hero__cta"><a class="btn btn--primary" href="#"> <span>Подробнее</span></a></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- BANNERS :: START-->
+  <div class="banners">
+    <div class="banners__wrapper"><a class="banners__card" href="#"><img src="images/banner_1.png" srcset="images/banner_1@2x.png" 2x>
+        <div class="banners__card__content banners__card__content--right">
+          <div class="banners__card__title">Скидка 10%</div>
+          <div class="banners__card__subtitle">Зарегистрируйтесь на сайте <br> и получите скидку 10% <br> на всю продукцию Excellance</div>
+        </div></a><a class="banners__card" href="#"><img src="images/banner_2.png" srcset="images/banner_2@2x.png" 2x>
+        <div class="banners__card__content">
+          <div class="banners__card__title">АКция!</div>
+          <div class="banners__card__subtitle">При заказе <br> в интернет магазине <br> скидка 5%</div>
+        </div></a><a class="banners__card" href="#"><img src="images/banner_3.png" srcset="images/banner_3@2x.png" 2x>
+        <div class="banners__card__content banners__card__content--dark">
+          <div class="banners__card__title">Excellance <br> дарит подарки!</div>
+          <div class="banners__card__subtitle">Приобретите товар в интернет <br> магазине на сумму от 1500р <br> и получите подарок</div>
+        </div></a></div>
+  </div>
+  <!-- BESTSELLERS :: START-->
+  <div class="bestsellers">
+    <div class="container">
+      <div class="heading text-center">Наши Бестселлеры</div>
+      <div class="bestsellers__slider">
+        <!-- card-->
+        <div class="bestsellers__card">
+          <div class="bestsellers__card__image"><img src="images/goods/goods_1.png" srcset="images/goods/goods_1@2x.png" 2x></div>
+          <div class="bestsellers__card__description">Крем-сияние <br> для обезвоженной кожи SPF15 <br> «Клеточное восстановление»</div>
+          <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину</span></a></div>
+        </div>
+        <!-- card-->
+        <div class="bestsellers__card">
+          <div class="bestsellers__card__image"><img src="images/goods/goods_2.png" srcset="images/goods/goods_2@2x.png" 2x></div>
+          <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+          <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину</span></a></div>
+        </div>
+        <!-- card-->
+        <div class="bestsellers__card">
+          <div class="bestsellers__card__image"><img src="images/goods/goods_3.png" srcset="images/goods/goods_3@2x.png" 2x></div>
+          <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+          <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину  </span></a></div>
+        </div>
+        <!-- card-->
+        <div class="bestsellers__card">
+          <div class="bestsellers__card__image"><img src="images/goods/goods_4.png" srcset="images/goods/goods_4@2x.png" 2x></div>
+          <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+          <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину </span></a></div>
+        </div>
+        <!-- card-->
+        <div class="bestsellers__card">
+          <div class="bestsellers__card__image"><img src="images/goods/goods_5.png" srcset="images/goods/goods_5@2x.png" 2x></div>
+          <div class="bestsellers__card__description">«Экспресс-пилинг <br> для чувствительной  и нормальной кожи</div>
+          <div class="bestsellers__card__cta"><a class="btn btn--cart" href="#"><i class="icon icon-cart"></i><span>В корзину     </span></a></div>
         </div>
       </div>
     </div>

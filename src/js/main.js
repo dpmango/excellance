@@ -30,25 +30,31 @@ $(document).ready(function () {
   _window.scrolled(10, function () {
     // scrolled is a constructor for scroll delay listener
     var vScroll = _window.scrollTop();
-    var header = $('.header').not('.header--static');
+    var header = $('.header').not('.header--sticky');
+    var headerSticky = $('.header--sticky');
     var headerHeight = header.height();
-    var heroHeight = $('.hero').outerHeight() - headerHeight;
 
     if (vScroll > headerHeight) {
-      header.addClass('header--transformed');
+      headerSticky.addClass('header--transformed');
     } else {
-      header.removeClass('header--transformed');
+      headerSticky.removeClass('header--transformed');
     }
+  });
 
-    if (vScroll > heroHeight) {
-      header.addClass('header--fixed');
-    } else {
-      header.removeClass('header--fixed');
-    }
+  // HEADER SEARCH
+  $('.header__search .icon-search').on('click', function () {
+    $(this).parent().addClass('active');
+    $(this).closest('.header__cta').addClass('searching');
+  });
+
+  $('.header__search .icon-close').on('click', function () {
+    $(this).parent().removeClass('active');
+    $(this).closest('.header__cta').removeClass('searching');
   });
 
   // scrollbars
   $('.scrollbar-dynamic').scrollbar();
+  $('.scrollbar-macosx').scrollbar();
 
   //////////
   // SLIDERS
@@ -61,6 +67,17 @@ $(document).ready(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
+    centerMode: false,
+    variableWidth: false
+  });
+
+  $('.bestsellers__slider').slick({
+    autoplay: false,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 5,
     centerMode: false,
     variableWidth: false
   });

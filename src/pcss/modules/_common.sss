@@ -19,34 +19,117 @@
     justify-content: space-between
     align-items: center
     padding-top: 50px
+    margin-bottom: 65px
   &__lang
     flex: 0 1 310px
     a
       display: inline-block
       margin-right: 20px
+      transition: color $transitionSpeed $ease
       &:last-child
         margin-right: 0
       &.active
         font-weight: 400
         color: $colorPrimaryLight
+      &:hover
+        color: $colorPrimaryLight
+
+  &__logo
+    &--small
+      margin-right: 3%
+      .icon-logo
+        size: 173px 37px
+
   &__cta
     flex: 0 1 310px
-    a
-      display: inline-block
-      margin-right: 25px
+    text-align: right
+    &--sticky
+      flex: 0 0 auto
+      margin-left: 3%
+      .icon-account
+        color: $colorGray
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorPrimary
+
+    &.searching
+      .header__account, .header__cart
+        transform: translate3d(0, -30px, 0)
+
+  &__account
+    margin-right: 25px
+    transition: transform $transitionSpeed $ease
+    .icon
+      font-size: 32px
+      display: none
+
   &__cart
     color: $colorGray
+    margin-right: 10px
+    transition: transform $transitionSpeed $ease
+    .icon
+      display: none
+    &__counter
+      display: inline-block
+
   &__search
     display: inline-block
     margin-right: 0
+    .icon
+      font-size: 18px
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $colorPrimaryLight
+    .icon-close
+      font-size: 0
+      opacity: 0
+    input
+      padding: 7px 0px
+      display: inline-block
+      -webkit-apperance: none
+      border: none
+      border-radius: 20px
+      box-shadow: inset 0px 0px 5px color(black a(20%))
+      font-size: 14px
+      margin-right: 15px
+      transform: translate3d(100%, 0, 0)
+      width: 0
+      opacity: 0
+      pointer-events: none
+      overflow: hidden
+      transition: all $transitionSpeed $ease
+
+    &.active
+      .icon-search
+        font-size: 0px
+        opacity: 0
+
+      .icon-close
+        font-size: 18px
+        opacity: 1
+
+      input
+        pointer-events: all
+        width: 270px
+        padding-left: 15px
+        padding-right: 15px
+        opacity: 1
+        transform: translate3d(0, 0, 0)
 
   &__navi
-    margin: 85px 0 30px 0
-    padding: 0
-    display: flex
-    justify-content: space-between
-    margin-left: auto
-    margin-right: auto
+    margin: 0
+    margin-bottom: 10px
+    .header__navi
+      margin: 0 -10px
+      padding: 0
+      display: flex
+      justify-content: space-between
+      overflow: auto
+      white-space: nowrap
+      padding: 20px 0
+    &--sticky
+      flex: 0 1 auto
     li
       display: inline-block
       a
@@ -55,21 +138,63 @@
         &:hover
           color: $colorPrimaryLight
 
-  &--transformed
+  &--sticky
     position: fixed
     opacity: 0
-    transform: translate3d(0, -80px, 0)
-    .header__search
-      transform: translate3d(0, 0px, 0)
-  &--fixed
+    transform: translate3d(0, -100%, 0)
+    transition: all $transitionSpeed $ease
+
+  &--transformed
     opacity: 1
     transform: translate3d(0, 0px, 0)
+
+  &__line
+    padding: 20px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+@media(height <= 800px)
+  .header
+    &__top
+      padding-top: 35px
+      margin-bottom: 30px
+
+
+@media($hd)
+  .header
+    &__navi
+      &--sticky
+        font-size: 15px
+
+@media($wide)
+  .header
+    font-size: 15px
+    &__cta
+      font-size: 17px
+
+
+@media($desktop)
+  .header
+    &__cart
+      .icon
+        display: inline-block
+      span
+        display: none
+        span
+          font-size:
+          display: inline-block
+    &__account
+      .icon
+        display: inline-block
+      span
+        display: none
 
 
 // FOOTER
 .footer
   flex: 0
-
+  height: 500px
 
 // SLICK
 .dots

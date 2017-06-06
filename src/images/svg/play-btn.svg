@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="26px" viewBox="0 0 24 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>play-btn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MAIN-НАведенный-1920" transform="translate(-951.000000, -3606.000000)" fill="#DBDEE0">
+            <g id="Playbutton" transform="translate(930.000000, 3588.000000)">
+                <g id="play-btn" transform="translate(21.000000, 18.000000)">
+                    <g id="Capa_1">
+                        <path d="M23.579196,12.4612027 L0.999781638,0.122797297 C0.739116625,-0.0220765766 0.515136476,-0.0387072072 0.328138958,0.0727297297 C0.141141439,0.184108108 0.0477617866,0.38472973 0.0477617866,0.674477477 L0.0477617866,25.2844144 C0.0477617866,25.5743964 0.141200993,25.7751937 0.328138958,25.8866306 C0.515136476,25.998009 0.739116625,25.9816126 0.999781638,25.8365631 L23.579196,13.4980991 C23.8400993,13.352991 23.9705211,13.1798919 23.9705211,12.9795045 C23.9705211,12.7788829 23.8400397,12.6061351 23.579196,12.4612027 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

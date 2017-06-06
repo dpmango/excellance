@@ -33,5 +33,75 @@ doctype html
               .hero__cta
                 a(href='#').btn.btn--primary 
                   span Подробнее
-                            
+                  
+    // BANNERS :: START
+    .banners
+      .banners__wrapper
+        a(href='#').banners__card
+          img(src='images/banner_1.png' srcset='images/banner_1@2x.png' 2x)
+          .banners__card__content.banners__card__content--right
+            .banners__card__title Скидка 10%
+            .banners__card__subtitle Зарегистрируйтесь на сайте <br> и получите скидку 10% <br> на всю продукцию Excellance
+        a(href='#').banners__card
+          img(src='images/banner_2.png' srcset='images/banner_2@2x.png' 2x)
+          .banners__card__content
+            .banners__card__title АКция!
+            .banners__card__subtitle При заказе <br> в интернет магазине <br> скидка 5%
+        a(href='#').banners__card
+          img(src='images/banner_3.png' srcset='images/banner_3@2x.png' 2x)
+          .banners__card__content.banners__card__content--dark
+            .banners__card__title Excellance <br> дарит подарки!
+            .banners__card__subtitle Приобретите товар в интернет <br> магазине на сумму от 1500р <br> и получите подарок
+                    
+    // BESTSELLERS :: START
+    .bestsellers
+      .container
+        .heading.text-center Наши Бестселлеры
+        .bestsellers__slider
+          // card
+          .bestsellers__card
+            .bestsellers__card__image
+              img(src='images/goods/goods_1.png' srcset='images/goods/goods_1@2x.png' 2x)
+            .bestsellers__card__description Крем-сияние <br> для обезвоженной кожи SPF15 <br> «Клеточное восстановление»
+            .bestsellers__card__cta
+              a(href='#').btn.btn--cart
+                i.icon.icon-cart
+                span В корзину
+          // card
+          .bestsellers__card
+            .bestsellers__card__image
+              img(src='images/goods/goods_2.png' srcset='images/goods/goods_2@2x.png' 2x)
+            .bestsellers__card__description «Экспресс-пилинг <br> для чувствительной  и нормальной кожи
+            .bestsellers__card__cta
+              a(href='#').btn.btn--cart
+                i.icon.icon-cart
+                span В корзину
+          // card
+          .bestsellers__card
+            .bestsellers__card__image
+              img(src='images/goods/goods_3.png' srcset='images/goods/goods_3@2x.png' 2x)
+            .bestsellers__card__description «Экспресс-пилинг <br> для чувствительной  и нормальной кожи
+            .bestsellers__card__cta
+              a(href='#').btn.btn--cart
+                i.icon.icon-cart
+                span В корзину  
+          // card
+          .bestsellers__card
+            .bestsellers__card__image
+              img(src='images/goods/goods_4.png' srcset='images/goods/goods_4@2x.png' 2x)
+            .bestsellers__card__description «Экспресс-пилинг <br> для чувствительной  и нормальной кожи
+            .bestsellers__card__cta
+              a(href='#').btn.btn--cart
+                i.icon.icon-cart
+                span В корзину 
+          // card
+          .bestsellers__card
+            .bestsellers__card__image
+              img(src='images/goods/goods_5.png' srcset='images/goods/goods_5@2x.png' 2x)
+            .bestsellers__card__description «Экспресс-пилинг <br> для чувствительной  и нормальной кожи
+            .bestsellers__card__cta
+              a(href='#').btn.btn--cart
+                i.icon.icon-cart
+                span В корзину     
+                
     include shared/footer.pug

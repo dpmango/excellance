@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>account</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu-mini-1920" transform="translate(-1660.000000, -33.000000)">
+            <g id="account" transform="translate(1658.000000, 33.000000)">
+                <circle id="Oval" fill="#999999" cx="18" cy="16" r="16"></circle>
+                <g id="user-black-close-up-shape" stroke-width="1" transform="translate(12.000000, 8.000000)" fill="#FFFFFF">
+                    <g id="Capa_1">
+                        <path d="M7.89888384,6.58539045 C8.87324729,5.94905899 9.52017678,4.84070476 9.52017678,3.57676012 C9.52017678,1.60152055 7.94401453,0 6.0005236,0 C4.05615438,0 2.4803637,1.60152055 2.4803637,3.57679444 C2.4803637,4.84073908 3.1272932,5.94929926 4.10169043,6.58542477 C1.80600448,6.79418295 0,8.75919399 0,11.145497 L0,14.8578024 L0.00925584472,14.9158098 L0.261156699,14.9957159 C2.63240953,15.7484055 4.69298352,16 6.38896505,16 C9.70107112,16 11.6210846,15.0399595 11.7400594,14.9791032 L11.9752727,14.8578024 L12,14.8578024 L12,11.1454627 C12.0002702,8.75936561 10.1948738,6.79466349 7.89888384,6.58539045 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

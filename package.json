@@ -19,6 +19,8 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cache": "^0.4.5",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^8.0.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-postcss": "^6.2.0",
     "gulp-pug": "^3.2.0",
@@ -28,6 +30,7 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
+    "gulp-watch": "^4.3.11",
     "pixrem": "^3.0.2",
     "postcss-color-function": "^2.0.1",
     "postcss-color-rgba-fallback": "^2.2.0",
@@ -46,6 +49,7 @@
     "sugarss": "^0.2.0"
   },
   "dependencies": {
+    "async": "^2.4.1",
     "postcss-use": "^2.3.0"
   }
 }
