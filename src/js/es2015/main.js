@@ -60,8 +60,8 @@ $(document).ready(function(){
 
 
   // scrollbars
-  // $('.scrollbar-dynamic').scrollbar();
-  // $('.scrollbar-macosx').scrollbar();
+  $('.scrollbar-dynamic').scrollbar();
+  $('.scrollbar-macosx').scrollbar();
 
 
   // Hamburger
