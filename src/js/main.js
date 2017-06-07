@@ -61,14 +61,9 @@ $(document).ready(function () {
   });
 
   // scrollbars
-  $('.scrollbar-dynamic').scrollbar();
-  $('.scrollbar-macosx').scrollbar({
-    // "onScroll": function(y, x, e){
-    //   if(y.scroll){
-    //     e.preventDefault();
-    //   }
-    // }
-  });
+  // $('.scrollbar-dynamic').scrollbar();
+  // $('.scrollbar-macosx').scrollbar();
+
 
   // Hamburger
   $('.hamburger').on('click', function () {
