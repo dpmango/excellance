@@ -1,0 +1,69 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page
+      
+      // GOOGLE API
+      script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdDq67GS9ongMkjzokPsC5fTxdvEKidfI')
+      
+      script(type='text/javascript', src='js/map.js')
+      
+      // CONTACTS
+      .contacts
+        .contacts__map
+          .js-googleMap
+        .container
+          .contacts__sidebar
+            .contacts__sidebar__heading КОНТАКТЫ
+            .ui-group
+              label Выберите город
+              .ui-select.ui-select--right
+                input(type='hidden')
+                .ui-select__visible
+                  span Москва
+                  i.icon.icon-dropdown
+                .ui-select__dropdown
+                  span(data-val='Москва').active Москва
+                  span(data-val='Санкт-Петербург') Санкт-Петербург
+                  span(data-val='Волгоград') Волгоград
+                  span(data-val='Екатеринбург') Екатеринбург
+                  span(data-val='Казань') Казань
+                  span(data-val='Мурманск') Мурманск
+                  span(data-val='Нижний Новгород') Нижний Новгород
+                  span(data-val='Пятигорск') Пятигорск
+                  span(data-val='Ростов-на-дону') Ростов-на-дону
+                  span(data-val='Саратов') Саратов
+                  span(data-val='Сочи') Сочи
+                  span(data-val='Тюмень') Тюмень
+                  span(data-val='Хабаровск') Хабаровск
+            
+            .contacts__sidebar__group
+              .contacts__sidebar__group-title Бьюти-центр EXCELLANCE Moscow: 
+              span Москва, 121357, ул. Верейская, д.29, стр.134-33, <br> БЦ «Верейская Плаза 3»
+              span 
+                a(href='tel:+79037071402') Тел.: +7 (903) 707 14 02
+              span ПН-ПТ 10:00 – 19:00
+              span СБ-ВС - выходной
+              
+            .contacts__sidebar__group
+              .contacts__sidebar__group-title АДРЕСА точек продаж средств  и проведения процедур  EXCELLANCE Moscow:
+              p Интернет-магазин ARTICOLI   
+                a(href='https://articoli.ru/') https://articoli.ru/
+              p Интернет-магазин РИВ ГОШ 
+                a(href='https://shop.rivegauche.ru/store/ru/')  https://shop.rivegauche.ru/store/ru/
+                
+            .contacts__sidebar__group
+              .contacts__sidebar__group-title TRAVEL RETAIL:
+              p Aerofirst Duty Free - Международный Аэропорт Шереметьево (SVO), Terminal F, International Flights Imperial/Heinemann 
+              p Duty Paid - Международный Аэропорт Шереметьево (SVO), Terminal D, Domestic Flights
+              p Магазин на борту на всех рейсах авиакомпании “Aeroflot” (sales-on-board) - Skyshop AEROFLOT
+              p Магазин на борту на всех рейсах авиакомпании “Rossiya” (sales-on-board) - Skyshop Rossiya
+              p Магазин на борту на всех рейсах авиакомпании “UTair” (sales-on-board) - Skyshop UTair
+            
+
+    include shared/scripts.pug

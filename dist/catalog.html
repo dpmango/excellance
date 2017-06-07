@@ -1,0 +1,252 @@
+<!DOCTYPE html><!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Site name</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content=""><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+  <!-- HEADER::START-->
+  <div class="header">
+    <div class="container container--fluid">
+      <div class="header__top">
+        <div class="header__hamburger">
+          <div class="hamburger hamburger--collapse">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div><a class="header__logo" href="#"><i class="icon icon-logo"></i></a>
+        <div class="header__cta"><a class="header__account" href="#"><i class="icon icon-account"></i><span>мой аккаунт</span></a><a class="header__cart" href="#"><i class="icon icon-cart"></i><span>Корзина</span>
+            <div class="header__cart__counter">(0)</div></a>
+          <form class="header__search" action="#">
+            <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="header__navi scrollbar-macosx">
+        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="#">Профессиональный уход </a></li>
+        <li><a href="#">инновация Cellexon </a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">СМИ о нас</a></li>
+        <li><a href="#">Адреса</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Sticky Header-->
+  <header class="header header--sticky">
+    <div class="container container--fluid">
+      <div class="header__line">
+        <div class="header__hamburger">
+          <div class="hamburger hamburger--collapse">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div><a class="header__logo header__logo--small" href="#"><i class="icon icon-logo"></i></a>
+        <ul class="header__navi header__navi--sticky scrollbar-macosx">
+          <li><a href="#">Каталог товаров</a></li>
+          <li><a href="#">Профессиональный уход </a></li>
+          <li><a href="#">инновация Cellexon </a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">СМИ о нас</a></li>
+          <li><a href="#">Адреса</a></li>
+        </ul>
+        <div class="header__cta header__cta--sticky"><a class="header__account" href="#"><i class="icon icon-account"></i></a><a class="header__cart" href="#"><i class="icon icon-cart"></i>
+            <div class="header__cart__counter">(0)</div></a>
+          <form class="header__search" action="#">
+            <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile navi-->
+  <div class="mobile-navi">
+    <ul class="mobile-navi__list">
+      <li><a href="#">Каталог товаров</a></li>
+      <li><a href="#">Профессиональный уход </a></li>
+      <li><a href="#">инновация Cellexon </a></li>
+      <li><a href="#">О компании</a></li>
+      <li><a href="#">СМИ о нас</a></li>
+      <li><a href="#">Адреса</a></li>
+    </ul>
+    <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div>
+  </div>
+  <div class="page">
+    <!-- CATALOG :: START-->
+    <div class="catalog">
+      <div class="container">
+        <div class="catalog__wrapper">
+          <div class="catalog__card catalog__card--filter">
+            <!-- group-->
+            <div class="ui-group">
+              <label>Линия ухода</label>
+              <div class="ui-select">
+                <input type="hidden">
+                <div class="ui-select__visible"><span>Очищение и тонизирование</span><i class="icon icon-dropdown"></i></div>
+                <div class="ui-select__dropdown"><span data-val="очищение и тонизирование">очищение и тонизирование</span><span data-val="увлажнение и баланс">увлажнение и баланс</span><span data-val="клеточное восстановление">клеточное восстановление</span><span data-val="уход вокруг глаз">уход вокруг глаз</span><span data-val="уход для тела">уход для тела</span></div>
+              </div>
+            </div>
+            <!-- group-->
+            <div class="ui-group">
+              <label>Тип средства</label>
+              <div class="ui-select">
+                <input type="hidden">
+                <div class="ui-select__visible"><span>Все средства</span><i class="icon icon-dropdown"></i></div>
+                <div class="ui-select__dropdown"><span data-val="очищение и тонизирование">очищение и тонизирование</span><span data-val="увлажнение и баланс">увлажнение и баланс</span><span data-val="клеточное восстановление">клеточное восстановление</span><span data-val="уход вокруг глаз">уход вокруг глаз</span><span data-val="уход для тела">уход для тела</span></div>
+              </div>
+            </div>
+            <!-- group-->
+            <div class="ui-group">
+              <label>Тип кожи</label>
+              <div class="ui-select">
+                <input type="hidden">
+                <div class="ui-select__visible"><span>Сухая и нормальная</span><i class="icon icon-dropdown"></i></div>
+                <div class="ui-select__dropdown"><span data-val="очищение и тонизирование">очищение и тонизирование</span><span data-val="увлажнение и баланс">увлажнение и баланс</span><span data-val="клеточное восстановление">клеточное восстановление</span><span data-val="уход вокруг глаз">уход вокруг глаз</span><span data-val="уход для тела">уход для тела</span></div>
+              </div>
+            </div>
+            <div class="catalog__card__tip">Индивидуальный подбор препаратов</div><a class="btn btn--white" href="#"><span>Онлайн консультант</span></a>
+          </div>
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info">
+              <div class="catalog__card__name">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</div>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta">
+                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+              </div>
+            </div>
+            <div class="catalog__card__image"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></div>
+          </div>
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info">
+              <div class="catalog__card__name">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ</div>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta">
+                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+              </div>
+            </div>
+            <div class="catalog__card__image catalog__card__image--vertical"><img src="images/goods/productImg_2.png" srcset="images/goods/productImg_2@2x.png 2x"></div>
+          </div>
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info">
+              <div class="catalog__card__name">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</div>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta">
+                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+              </div>
+            </div>
+            <div class="catalog__card__image catalog__card__image--vertical"><img src="images/goods/productImg_3.png" srcset="images/goods/productImg_3@2x.png 2x"></div>
+          </div>
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info">
+              <div class="catalog__card__name">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</div>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta">
+                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+              </div>
+            </div>
+            <div class="catalog__card__image catalog__card__image--vertical"><img src="images/goods/productImg_4.png" srcset="images/goods/productImg_4@2x.png 2x"></div>
+          </div>
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info">
+              <div class="catalog__card__name">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</div>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta">
+                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+              </div>
+            </div>
+            <div class="catalog__card__image"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></div>
+          </div>
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info">
+              <div class="catalog__card__name">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</div>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta">
+                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+              </div>
+            </div>
+            <div class="catalog__card__image"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></div>
+          </div>
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info">
+              <div class="catalog__card__name">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</div>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta">
+                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+              </div>
+            </div>
+            <div class="catalog__card__image"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER::START-->
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__links-wrapper">
+        <div class="footer__links">
+          <div class="footer__heading">Категории товаров</div>
+          <div class="footer__links-list"><a href="#">Очищение и тонизирование</a><a href="#">Увлажнение и баланс</a><a href="#">Клеточное восстановление  и защита</a><a href="#">Защита вокруг глаз</a><a href="#">Уход для тела</a></div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__heading">Категории товаров</div>
+          <div class="footer__links-list"><a href="#">Доставка и оплата</a><a href="#">Правила возврата товара</a><a href="#">Новости</a><a href="#">Адреса магазинов</a><a href="#">Адреса салонов</a></div>
+        </div>
+      </div>
+      <!-- content col-->
+      <div class="footer__content">
+        <div class="footer__subscribe">
+          <div class="footer__heading">Подписаться на рассылку</div>
+          <div class="footer__subscribe__note">Подпишитесь на новостную рассылку и получайте бонусы и эксклюзивные предложения от Excellance Moscow!</div>
+          <form class="footer__subscribe__form" action="#">
+            <label>Ваш e-mail:</label>
+            <div class="footer__subscribe__form-container">
+              <input class="ui-input" type="email">
+              <button class="btn btn--primary" type="submit"> <span>Подписаться</span></button>
+            </div>
+          </form>
+        </div>
+        <!-- socials-->
+        <div class="footer__socials">
+          <div class="footer__heading">Присоединяйтесь!</div><a href="#"><i class="icon icon-facebook"></i></a><a href="#"><i class="icon icon-instagram"></i></a>
+        </div>
+        <!-- contacts-->
+        <div class="footer__contacts">
+          <div class="footer__heading">Служба поддержки клиентов</div><a class="footer__phone" href="tel:84953800353">+7 495 380 03 53</a><a class="footer__email" href="mailto:EMAIL@EXCELLANCE.RU">EMAIL@EXCELLANCE.RU</a>
+          <p>Служба поддержки работает с пн по пт с 10 до 18</p>
+          <p>ООО «Мирани», 121357, Москва, ул. Верейская, д.29, <br> стр. 134, БЦ «Верейская плаза III» </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- SECONDARY STYLES-->
+  <link rel="stylesheet" href="css/secondary.css">
+  <!-- SCRIPTS-->
+  <script src="js/scripts.min.js"></script>
+</body>

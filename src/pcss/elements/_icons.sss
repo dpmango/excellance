@@ -8,7 +8,28 @@
   background-size: contain
   vertical-align: middle
   &-logo
-    background-image: svg-load('../../images/svg/logo.svg')
+    background-image: svg-load('../../images/svg/logo.svg', fill=#421D6A)
     size: 329px 71px
+    &::before
+      display: none !important
+  &-benefit-1
+    background-image: svg-load('../../images/svg/benefit-1.svg')
+    size: 30px 28px
+    &::before
+      display: none !important
+  &-benefit-2
+    background-image: svg-load('../../images/svg/benefit-2.svg')
+    size: 26px
+    &::before
+      display: none !important
+  &-benefit-3
+    background-image: svg-load('../../images/svg/benefit-3.svg')
+    size: 29px
+    &::before
+      display: none !important
+  &-account
+    background-image: svg-load('../../images/svg/account.svg')
+    size: 32px
+    border-radius: 50%
     &::before
       display: none !important

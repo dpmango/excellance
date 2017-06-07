@@ -1,1 +1,461 @@
 // SOME INNER PAGES CONTENT
+
+// CATALOG
+.catalog
+  padding: 20px 0
+  background: #F6F6F6 url('../images/catalog_BG.png') no-repeat right center
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    margin-left: -3px
+    margin-right: -3px
+    max-width: 1100px
+  &__card
+    position: relative
+    flex: 0 1 calc(33.3% - 6px)
+    min-height: 360px
+    display: flex
+    flex-direction: column
+    margin: 0 3px 6px 3px
+    background: white
+    border-radius: 4px
+    padding: 40px 15px 10px 25px
+    box-shadow: 0px 0px 12px color(black a(20%))
+    transition: transform $transitionSpeed $ease
+    &--filter
+      padding: 30px 35px 25px 35px
+      .btn
+        max-width: 165px
+    &__tip
+      font-size: 10px
+      margin-bottom: 10px
+    &__info
+      position: absolute
+      top: 35px
+      left: 25px
+      z-index: 2
+      padding-right: 15px
+    &__name
+      font-size: 16px
+      letter-spacing: 2px
+      text-transform: uppercase
+    &__short
+      font-size: 12px
+      color: #939393
+      margin-top: 8px
+    &__cta
+      margin-top: 5px
+      display: flex
+      .icon
+        font-size: 20px
+        color: $colorPrimary
+        margin-left: 8px
+        transition: color $transitionSpeed $ease
+        &:hover
+          color: $colorPrimaryLight
+
+    &__price
+      font-size: 16px
+      letter-spacing: 2px
+      padding-right: 8px
+      border-right: 1px solid $borderColor
+
+    &__image
+      text-align: right
+      margin-top: auto
+      margin-left: auto
+      &--vertical
+        margin-right: 15%
+
+    &:hover:not(.catalog__card--filter)
+      transform: scale(1.03)
+
+
+@media($desktop)
+  .catalog
+    &__card
+      &--filter
+        padding: 25px 25px 25px 25px
+      &__name
+        font-size: 15px
+      &__info
+        left: 20px
+        top: 30px
+
+@media(width <= 850px)
+  .catalog
+    &__card
+      flex: 0 1 calc(50% - 6px)
+
+
+@media(width <= 520px)
+  .catalog
+    &__card
+      flex: 0 1 calc(100% - 6px)
+
+
+// TEXT PAGE
+.text
+  padding-top: 20px
+  padding-bottom: 20px
+  background: #F6F6F6 url('../images/text_BG_1.png') no-repeat center bottom
+  background-size: contain
+  &--about
+    background-image: url('../images/text_BG_2.png')
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    max-width: 1100px
+  &__sidebar
+    flex: 0 1 365px
+    display: flex
+    flex-direction: column
+  &__card
+    font-family: 'Tenor Sans', sans-serif
+    position: relative
+    min-height: 360px
+    display: flex
+    flex-direction: column
+    margin: 0 3px 6px 3px
+    background: white
+    border-radius: 4px
+    padding: 0px 0px 0px 30px
+    box-shadow: 0px 0px 12px color(black a(20%))
+    font-size: 0
+    transition: transform $transitionSpeed $ease
+    &__info
+      position: absolute
+      top: 40px
+      left: 30px
+      z-index: 2
+      padding-right: 15px
+    &__name
+      font-size: 16px
+      text-transform: uppercase
+    &__short
+      font-size: 12px
+      color: #939393
+      margin-top: 20px
+      max-width: 190px
+
+    &__image
+      text-align: right
+      margin-top: auto
+      margin-left: auto
+      img
+        max-width: 100%
+
+
+    &:hover:not(.catalog__card--filter)
+      transform: scale(1.03)
+
+  &__content
+    flex: 0 2 610px
+    margin-left: auto
+    padding-left: 20px
+    font-family: 'Tenor Sans', sans-serif
+    padding-top: 35px
+    .heading
+      padding-right: 15%
+      span
+        text-transform: none
+    &__paragraph
+      padding-top: 45px
+      padding-bottom: 20px
+      margin-bottom: 35px
+      &--white
+        background: white
+        padding-left: 25px
+        padding-right: 10px
+        border-radius: 4px
+        box-shadow: 0px 0px 14px color(black a(5%))
+        &.text__content__paragraph--small
+          padding-top: 25px
+          padding-bottom: 10px
+          margin-bottom: 0
+          margin-left: -25px
+      p
+        font-size: 12px
+        line-height: 1.2
+
+    &__benefits
+      margin-top: 30px
+      &__row
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        margin-right: 15%
+        span
+          display: inline-block
+          margin-left: 30px
+          font-size: 12px
+          color: $colorPrimary
+          text-transform: lowercase
+      &__icon
+        position: relative
+        flex: 0 0 48px
+        border-radius: 50%
+        background: white
+        size: 48px
+        color: $colorPrimary
+        font-size: 27px
+        box-shadow: 0px 0px 14px color(black a(5%))
+        .icon
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+  .subheading
+    font-size: 16px
+    margin-bottom: 25px
+    letter-spacing: 1.6px
+    &.text-center
+      padding-right: 15%
+
+  &__centred
+    text-align: center
+    max-width: 590px
+    margin-left: auto
+    margin-right: auto
+    p
+      font-size: 12px
+
+
+@media(width <= 1100px)
+  .text
+    &__content
+      &__paragraph
+        &--white
+          &.text__content__paragraph--small
+            margin-left: 0
+
+@media($tablet)
+  .text
+    &__wrapper
+      flex-direction: column
+    &__sidebar
+      padding-top: 40px
+      order: 2
+      flex: 1 1 auto
+      flex-direction: row
+    &__card
+      flex: 0 1 350px
+      margin-right: 7px
+      &:last-child
+        margin-right: 0
+    &__content
+      order: 1
+      flex: 1 1 auto
+
+@media($mobile)
+  .text
+    &__content
+      padding-left: 0
+      padding-top: 20px
+      .heading
+        padding-right: 0
+      &__paragraph
+        padding-top: 35px
+        margin-bottom: 25px
+      &__benefits
+        &__row
+          margin-right: 0
+          margin-bottom: 25px
+
+
+@media($mobile-s)
+  .text
+    &__sidebar
+      flex-direction: column
+    &__card
+      flex: 1 1 auto
+      margin-right: 0
+      min-height: 340px
+      &__info
+        top: 30px
+        left: 20px
+      &__name
+        font-size: 15px
+
+
+// TEXT DOCS
+.text-docs
+  border-top: 1px solid $borderColor
+  border-bottom: 1px solid $borderColor
+  background: #F6F6F6
+  &__head
+    text-align: center
+    max-width: 590px
+    margin-left: auto
+    margin-right: auto
+    padding: 45px 0 0 45px
+    .subheading
+      span
+        display: inline-block
+        position: relative
+      .icon-dropdown
+        opacity: 0
+        color: #939393
+        position: absolute
+        right: -30px
+        top: 50%
+        transform: translateY(-50%) rotate(180deg)
+        display: inline-block
+        font-size: 10px
+        margin-left: 10px
+  &__bottom
+    text-align: center
+    padding-bottom: 45px
+    .btn
+      &.active
+        background: white
+        color: $colorPrimary
+
+  .subheading
+    font-size: 16px
+    margin-bottom: 30px
+    letter-spacing: 1.6px
+    transition: color $transitionSpeed $ease
+  p
+    font-size: 12px
+    line-height: 1.2
+    margin-bottom: 30px
+    transition: color $transitionSpeed $ease
+  &__content
+    .docs-list
+      height: 0
+      overflow: hidden
+
+  &.active
+    background: #313131
+    .text-docs__head
+      color: white
+      .subheading
+        .icon-dropdown
+          opacity: 1
+    .docs-list
+      height: auto
+
+
+
+
+
+// DOCS
+.docs-list
+  margin-top: 20px
+  display: flex
+  flex-wrap: wrap
+  margin-left: -7px
+  margin-right: -7px
+  transition: all $transitionSpeed $ease
+  &__card
+    flex: 0 1 calc(20% - 14px)
+    color: white
+    margin: 0 7px 45px 7px
+    transition: transform $transitionSpeed $ease
+    &__image
+      border-radius: 4px
+      overflow: hidden
+      box-shadow: 0px 0px 12px color(black a(20%))
+      transition: box-shadow $transitionSpeed $ease
+      img
+        max-width: 100%
+    &__title
+      font-size: 16px
+      letter-spacing: 1.67px
+      margin-top: 20px
+    &__meta
+      font-size: 12px
+      margin-top: 10px
+    &:hover
+      transform: scale(1.05)
+      .docs-list__card__image
+        box-shadow: 0px 0px 17px color(black a(99%))
+
+@media($desktop)
+  .docs-list
+    &__card
+      flex: 0 1 calc(25% - 14px)
+
+@media(width <= 800px)
+  .docs-list
+    &__card
+      flex: 0 1 calc(33% - 14px)
+
+@media(width <= 600px)
+  .docs-list
+    &__card
+      flex: 0 1 calc(50% - 14px)
+
+@media($mobile-s)
+  .docs-list
+    justify-content: center
+    &__card
+      flex: 0 1 260px
+      margin-left: auto
+      margin-right: auto
+
+
+// MEDIA
+.media
+  background: linear-gradient(-45deg, #131313 0%, #151515 10%, #3A3A3A 100%)
+  color: white
+  padding-top: 20px
+  &__head
+    text-align: center
+    padding-top: 20px
+    font-size: 36px
+    letter-spacing: 5px
+    border-bottom: 1px solid white
+    padding-bottom: 30px
+    margin-bottom: 45px
+
+
+
+// CONTACTS
+.contacts
+  position: relative
+  min-height: calc(100vh - 200px)
+  padding-top: 5px
+  padding-bottom: 10px
+  &__map
+    position: absolute 0
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    .js-googleMap
+      flex: 1
+  &__sidebar
+    margin-top: 20px
+    position: relative
+    z-index: 8
+    max-width: 400px
+    background: white
+    padding: 40px 20px 30px 35px
+    overflow: visible
+    border-radius: 4px
+    box-shadow: 0px 0px 12px color(black a(20%))
+    &__heading
+      font-size: 16px
+      letter-spacing: 2px
+      margin-bottom: 25px
+    &__group
+      margin-top: 40px
+      &-title
+        font-size: 14px
+        margin-bottom: 12px
+      span
+        display: block
+      p, span
+        color: #939393
+        font-size: 12px
+        margin: 0
+        padding: 0
+        margin-bottom: 15px
+      a
+        display: block
+        color: #353535
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorPrimary

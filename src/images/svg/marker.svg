@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="29px" viewBox="0 0 26 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>marker</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Combined-Shape" fill="#421D6A">
+            <path d="M12.8331269,29 C12.7358026,29 0,19.7700749 0,12.7361136 C0,5.70215227 5.70215227,0 12.7361136,0 C19.7700749,0 25.4722271,5.70215227 25.4722271,12.7361136 C25.4722271,19.7700749 12.9304512,29 12.8331269,29 Z M12.7361136,18.125 C16.0728339,18.125 18.7777802,15.4200537 18.7777802,12.0833333 C18.7777802,8.74661297 16.0728339,6.04166667 12.7361136,6.04166667 C9.3993932,6.04166667 6.6944469,8.74661297 6.6944469,12.0833333 C6.6944469,15.4200537 9.3993932,18.125 12.7361136,18.125 Z" id="marker"></path>
+        </g>
+    </g>
+</svg>

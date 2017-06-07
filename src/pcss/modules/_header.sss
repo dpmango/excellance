@@ -49,6 +49,8 @@
     flex: 0 1 310px
     margin-top: -32px
     text-align: right
+    display: flex
+    align-items: center
     &.searching
       .header__account
         transform: translate3d(0, 45px, 0)
@@ -60,10 +62,9 @@
       flex: 0 0 auto
       margin-left: 3%
       .icon-account
-        color: $colorGray
         transition: all $transitionSpeed $ease
         &:hover
-          color: $colorPrimary
+          background-color: $colorPrimary
       .header__account
         .icon
           display: inline-block
@@ -81,12 +82,17 @@
               margin-top: -3px
 
   &__account
+    margin-left: auto
     display: inline-block
     margin-right: 30px
     transition: transform $transitionSpeed $ease
     .icon
+      background-color: #999999
       font-size: 30px
       display: none
+      transition: all $transitionSpeed $ease
+      &:hover
+        background-color: $colorPrimary
 
   &__cart
     display: inline-block
@@ -95,6 +101,8 @@
     transition: transform $transitionSpeed $ease
     .icon
       display: none
+      font-size: 18px
+      vertical-align: -2px
     &__counter
       display: inline-block
 
@@ -201,6 +209,7 @@
   &--sticky
     position: fixed
     opacity: 0
+    z-index: 7
     transform: translate3d(0, -100%, 0)
     transition: all $transitionSpeed $ease
 
@@ -305,16 +314,21 @@
   .header
     &__account
       display: none
+    &__cart
+      margin-left: auto
 
 @media(width <= 374px)
   .header
     &__cart
       display: none
+    &__search
+      margin-left: auto
 
 // MOBILE NAVI
 .mobile-navi
   position: fixed 0 0 0 0
-  z-index: 8
+  z-index: 6
+  opacity: 0
   background: white
   display: none
   flex-direction: column
@@ -352,6 +366,7 @@
 
 
   &.active
+    opacity: 1
     transform: translate3d(0, 0%, 0)
 
 

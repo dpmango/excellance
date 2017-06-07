@@ -24,36 +24,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-acount:after{
-  content: "\e900";
-}
-.icon-account:before {
-  content: "\e901";
-}
 .icon-cart:before {
-  content: "\e902";
-}
-.icon-close:before {
-  content: "\e903";
-}
-.icon-facebook:before {
-  content: "\e904";
-}
-.icon-instagram:before {
-  content: "\e905";
-}
-.icon-logo:before {
-  content: "\e906";
-}
-.icon-next:before {
-  content: "\e907";
-}
-.icon-play-btn:before {
-  content: "\e908";
-}
-.icon-prev:before {
   content: "\e909";
 }
-.icon-search:before {
+.icon-close:before {
   content: "\e90a";
+}
+.icon-dropdown:before {
+  content: "\e90b";
+}
+.icon-facebook:before {
+  content: "\e90c";
+}
+.icon-instagram:before {
+  content: "\e90d";
+}
+.icon-next:before {
+  content: "\e910";
+}
+.icon-play-btn:before {
+  content: "\e911";
+}
+.icon-prev:before {
+  content: "\e912";
+}
+.icon-search:before {
+  content: "\e913";
 }

@@ -47,3 +47,17 @@ button
     .icon
       font-size: 20px
       margin-right: 25px
+      vertical-align: -3px
+  &--white
+    font-size: 10px
+    padding: 10px 22px
+    background: #DBDEE0
+    border: 1px solid transparent
+    &::after
+      background: white
+    &:hover
+      border-color: #999999
+  &--shadow
+    box-shadow: 0px 2px 4px color(black a(50%))
+    &:hover
+      box-shadow: none

@@ -1,0 +1,130 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page
+      
+      // TEXT PAGE :: START
+      .text.text--about
+        .container
+          .text__wrapper
+            // sidebar
+            .text__sidebar
+              a(href='#').text__card
+                .text__card__info
+                  .text__card__name ИННОВАЦИЯ  EXCELLANCE MOSCOW:
+                  .text__card__short Первый российский бренд инновационной косметики…
+                .text__card__image
+                  img(src='images/textcard_Innovation.png' srcset='images/textcard_Innovation@2x.png 2x')
+              a(href='#').text__card
+                .text__card__info
+                  .text__card__name Новости и публикации  в прессе
+                  .text__card__short Последние упоминания о бренде в средствах массовой информации.
+                .text__card__image
+                  img(src='images/textcardNews.png' srcset='images/textcardNews@2x.png 2x')
+            
+            // content
+            .text__content
+              .heading.text-center EXCELLANCE 
+                span Moscow
+              .text__content__paragraph.text__content__paragraph--white.text__content__paragraph--small.mt45
+                p.ttu Первый премиальный бренд  пептидной косметики с клинически доказанной эффективностью в области восстановления красоты и молодости кожи - созданный на базе разработок выдающихся российских ученых из компании  “Фарм-Синтез”.
+            
+              .text__content__paragraph
+                .subheading АБСОЛЮТНАЯ ИННОВАЦИЯ В МИРЕ КОСМЕТОЛОГИИ: 
+                p Не имеющий аналогов в мире белково-пептидный комплекс Cellexon, восстанавливающий  молодость и здоровье кожи на клеточном уровне, – ключевой компонент EXCELLANCE Moscow. 
+                p Проникая глубоко в кожу, Cellexon® восстанавливает ее молодость на клеточном уровне: продлевает жизненный цикл клеток. Обладает пролонгированным эффектом, не вызывает аллергии.
+                p Принцип действия Cellexon®: Ученые доказали, что в клетках кожи содержится скрытый резерв жизненной энергии, необходимой для естественного сохранения ее молодости. Cellexon® дает сигнал к пробуждению этого резерва, преумножает природный иммунитет клеток, насыщает кожу энергией молодости.
+                .subheading.mt45 ВЫСОЧАЙШЕЕ КАЧЕСТВО ФАРМАЦЕВТИЧЕСКОГО УРОВНЯ: 
+                p Активные компоненты произведены в ведущих лабораториях Франции, Германии, Швейцарии, Австрии. Ключевой компонент средств EXCELLANCE — белково-пептидный комплекс Cellexon — производится в фармацевтической лаборатории «Фарм-Синтез» с учетом всех требований, предъявляемых к производству лекарственных препаратов.
+                p На каждом этапе производства, включая упаковку и транспортировку, косметические средства EXCELLANCE Moscow проходят контроль качества компании «Фарм-Синтез» – лидера в производстве высокоэффективных препаратов в различных отраслях медицины. 
+                .subheading.mt45 ИНТЕНСИВНОЕ ВОССТАНОВЛЕНИЕ ПОСЛЕ ВСЕХ ВИДОВ ЭСТЕТИЧЕСКИХ ПРОЦЕДУР, В ТОМ ЧИСЛЕ ПИЛИНГОВ, МЕЗОТЕРАПИИ, ПЛАСТИЧЕСКИХ ОПЕРАЦИЙ
+                p Восстанавливающие средства EXCELLANCE представляют собой новое поколение косметических препаратов для ухода за поврежденной кожей и/или кожей с ослабленными барьерными структурами. Это совместная разработка фармацевтической компании ЗАО «Фарм-Синтез» (Россия) и ООО «Мирани» (Россия), в которой учтены ключевые моменты и нюансы восстановительного процесса в кожной ткани. 
+          
+          .text__centred
+            .subheading НЕ СОДЕРЖИТ ПАРАБЕНОВ, КРАСИТЕЛЕЙ И ОТДУШЕК
+            .subheading КОМПЛЕКСНЫЕ ПРОГРАММЫ УХОДА: 
+            p Линии средств как для домашнего, так и для профессионального применения представлены в ведущих retail-сетях, салонах и клиниках страны. 
+      
+      // RESEARCES & DOCS :: STARS
+      .text-docs
+        .container
+          .text-docs__head
+            .subheading 
+              span ЗАМЕТНЫЙ РЕЗУЛЬТАТ, КОТОРЫЙ ДОКАЗАН КЛИНИЧЕСКИ: 
+                i.icon.icon-dropdown
+            p Развернутый отчет о беспрецедентных по масштабности испытаниях – в открытом доступе  
+          .text-docs__content
+            .docs-list
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_1.png' srcset='images/docs/docsImg_1@2x.png 2x')
+                .docs-list__card__title Журнал <br> Эстетическая медицина
+                .docs-list__card__meta №2 2015
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_2.png' srcset='images/docs/docsImg_2@2x.png 2x')
+                .docs-list__card__title Исследование Клиническая  эффективность Excellance <br> после лазерных процедур
+                .docs-list__card__meta №2 2015
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_3.png' srcset='images/docs/docsImg_3@2x.png 2x')
+                .docs-list__card__title Клиническое исследование <br> «Изучение эффективности, <br> безопасности
+                .docs-list__card__meta 2014
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_4.png' srcset='images/docs/docsImg_4@2x.png 2x')
+                .docs-list__card__title Журнал <br> Эстетическая медицина
+                .docs-list__card__meta 2014
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_5.png' srcset='images/docs/docsImg_5@2x.png 2x')
+                .docs-list__card__title Журнал <br> Косметика и медицина
+                .docs-list__card__meta 2014
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_6.png' srcset='images/docs/docsImg_6@2x.png 2x')
+                .docs-list__card__title Журнал <br> Эстетическая медицина
+                .docs-list__card__meta №2 2015
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_7.png' srcset='images/docs/docsImg_7@2x.png 2x')
+                .docs-list__card__title Исследование Клиническая  эффективность Excellance <br> после лазерных процедур
+                .docs-list__card__meta №2 2015
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_8.png' srcset='images/docs/docsImg_8@2x.png 2x')
+                .docs-list__card__title Клиническое исследование <br> «Изучение эффективности, <br> безопасности
+                .docs-list__card__meta 2014
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_9.png' srcset='images/docs/docsImg_9@2x.png 2x')
+                .docs-list__card__title Журнал <br> Эстетическая медицина
+                .docs-list__card__meta 2014
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_10.png' srcset='images/docs/docsImg_10@2x.png 2x')
+                .docs-list__card__title Журнал <br> Косметика и медицина
+                .docs-list__card__meta 2014  
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_11.png' srcset='images/docs/docsImg_11@2x.png 2x')
+                .docs-list__card__title Журнал <br> Эстетическая медицина
+                .docs-list__card__meta 2014
+              a(href='#').docs-list__card
+                .docs-list__card__image
+                  img(src='images/docs/docsImg_12.png' srcset='images/docs/docsImg_12@2x.png 2x')
+                .docs-list__card__title Журнал <br> Косметика и медицина
+                .docs-list__card__meta 2014  
+          
+          .text-docs__bottom
+            a(href='#').btn.btn--primary.btn--shadow.js-toggleDocsSection
+              span Подробнее
+            
+    include shared/footer.pug
+    include shared/scripts.pug
+    

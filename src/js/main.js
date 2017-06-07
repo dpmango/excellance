@@ -42,7 +42,7 @@ $(document).ready(function () {
     var headerSticky = $('.header--sticky');
     var headerHeight = header.height();
 
-    if (vScroll > headerHeight) {
+    if (vScroll > headerHeight + 20) {
       headerSticky.addClass('header--transformed');
     } else {
       headerSticky.removeClass('header--transformed');
@@ -120,6 +120,14 @@ $(document).ready(function () {
     }]
   });
 
+  // bestseller slider navi
+  $('.bestsellers__slider__nav .icon-prev').on('click', function () {
+    $('.bestsellers__slider').slick('prev');
+  });
+  $('.bestsellers__slider__nav .icon-next').on('click', function () {
+    $('.bestsellers__slider').slick('next');
+  });
+
   // hero slider bg
   $('.hero__bg').each(function (i, val) {
     var bg = $(val).find('img').attr('src');
@@ -130,6 +138,18 @@ $(document).ready(function () {
   $('.promo-video .icon').on('click', function () {
     $(this).closest('.promo-video').toggleClass('playing');
     $(this).closest('.promo-video').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
+  });
+
+  $('.js-toggleDocsSection').on('click', function () {
+    $(this).closest('.text-docs').toggleClass('active');
+
+    if ($(this).find('span').text() == 'Подробнее') {
+      $(this).find('span').text('скрыть');
+      $(this).addClass('active');
+    } else {
+      $(this).find('span').text('Подробнее');
+      $(this).removeClass('active');
+    }
   });
 
   //////////
@@ -247,6 +267,24 @@ $(document).ready(function () {
     // docs on noUiSlider
     // https://refreshless.com/nouislider/slider-read-write/
   }
+
+  // UI
+  $('.ui-select__visible').on('click', function () {
+    $(this).parent().toggleClass('active');
+  });
+
+  $('.ui-select__dropdown span').on('click', function () {
+    // parse value and toggle active
+    var value = $(this).data('val');
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    // set visible
+    $(this).closest('.ui-select').removeClass('active');
+    $(this).closest('.ui-select').find('input').val(value);
+
+    $(this).closest('.ui-select').find('.ui-select__visible span').text(value);
+  });
 
   // STICKY MAP RESULTS
   // _window.scrolled(10, function () {
