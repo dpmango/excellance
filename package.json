@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "async": "^2.4.1",
+    "gulp-svgmin": "^1.2.4",
     "postcss-use": "^2.3.0"
   }
 }

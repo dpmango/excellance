@@ -26,6 +26,7 @@ ul li {
     display: inline-block;
 }
 body, html {
+    position: relative;
     overflow-x: hidden;
     margin: 0;
     min-width: 320px;

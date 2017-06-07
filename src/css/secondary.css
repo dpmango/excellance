@@ -5,56 +5,7 @@
 /* SOCIALS */
 
 /* 2. Elements */
-@font-face {
-    font-weight: 400;
-    font-style: normal;
-    font-family: "IconFont";
-    src: url('../fonts/IconFont.eot');
-    src: url('../fonts/IconFont.eot?#iefix') format('eot'),
-    url('../fonts/IconFont.woff2') format('woff2'),
-    url('../fonts/IconFont.woff') format('woff'),
-    url('../fonts/IconFont.ttf') format('truetype'),
-    url('../fonts/IconFont.svg#IconFont') format('svg');
-}
-.icon:before {
-    display: inline-block;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "IconFont";
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.icon-account:before {
-    content: "\EA01";
-}
-.icon-cart:before {
-    content: "\EA02";
-}
-.icon-close:before {
-    content: "\EA03";
-}
-.icon-facebook:before {
-    content: "\EA04";
-}
-.icon-instagram:before {
-    content: "\EA05";
-}
-.icon-logo:before {
-    content: "\EA06";
-}
-.icon-next:before {
-    content: "\EA07";
-}
-.icon-play-btn:before {
-    content: "\EA08";
-}
-.icon-prev:before {
-    content: "\EA09";
-}
-.icon-search:before {
-    content: "\EA0A";
-}
+/* @import "elements/_iconfont.sss" */
 /* ICONS */
 .icon {
     display: inline-block;

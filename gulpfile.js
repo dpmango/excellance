@@ -31,6 +31,7 @@ var uglify        = require('gulp-uglify');
 var gulpIf        = require('gulp-if');
 var imagemin      = require('gulp-imagemin');
 var iconfont      = require('gulp-iconfont');
+var svgmin        = require('gulp-svgmin');
 var consolidate   = require('gulp-consolidate');
 var runTimestamp  = Math.round(Date.now()/1000);
 var cache         = require('gulp-cache');
@@ -152,14 +153,35 @@ gulp.task('babel', function() {
 });
 
 
+gulp.task('svg-min', function () {
+  return gulp.src(['./src/images/svg/*.svg'])
+    .pipe(svgmin({
+        plugins: [{
+            removeDoctype: false
+        }, {
+            removeComments: false
+        }, {
+            cleanupNumericValues: {
+                floatPrecision: 2
+            }
+        }, {
+            convertColors: {
+                names2hex: false,
+                rgb2hex: false
+            }
+        }]
+    }))
+    .pipe(gulp.dest('./src/images/svg/min'));
+});
 
 gulp.task('iconfont', function(done){
-  var iconStream = gulp.src(['./src/images/svg/*.svg'])
+  var iconStream = gulp.src(['./src/images/svg/min/*.svg'])
       .pipe(iconfont({
         fontName: 'IconFont',
         prependUnicode: false,
         normalize: true,
-        formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+        fontHeight: 1001,
+        formats: ['ttf', 'eot', 'woff', 'svg'],
         timestamp: runTimestamp, // recommended to get consistent builds when watching files
       }))
 
