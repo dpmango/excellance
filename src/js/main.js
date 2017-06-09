@@ -256,8 +256,14 @@ $(document).ready(function () {
     $(this).toggleClass('active');
   }
 
+  // Testimonials - show more
+  );$('.testimonials__more-items__toggler').on('click', function () {
+    $(this).hide();
+    $('.testimonials__more-items').slideDown();
+  });
+
   // Masked input
-  );$("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
+  $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
   $("input[name='phone']").mask("9 (999) 999-9999");
   $("#tin").mask("99-9999999");
   $("#ssn").mask("999-99-9999");

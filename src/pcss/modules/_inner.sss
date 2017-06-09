@@ -5,7 +5,10 @@
   padding: 20px 0
   background: #F6F6F6 url('../images/catalog_BG.png') no-repeat right center
   &--similar
-    background: #F6F6F6
+    > .container
+      position: relative
+      z-index: 5
+    background: transparent
     .catalog__wrapper
       max-width: 1400px
       margin-top: 40px

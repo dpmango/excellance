@@ -6,7 +6,7 @@ doctype html
 
   body
     include shared/header.pug
-    .page
+    .page.page--light-bg
       // PRODUCT
       .product
         .container.container--1000
@@ -22,6 +22,10 @@ doctype html
               .product__key
                 span 50 ml
                 span Арт. ma-1233 
+              .product__tags
+                .product__tag Только для проффесионального использования
+                
+                
               .product__cta
                 .product__cta__price 4 050 ₽
                 a(href='#').btn.btn--cart
@@ -43,7 +47,18 @@ doctype html
                   .product__tab__content 
                     p На предварительно очищенную кожу нанести эмульсию, распределяя массажными движениями до полного впитывания.
               
-      
+          .product__navi
+            .container
+              a(href='#')
+                i.icon.icon-prev
+              a(href='#')
+                i.icon.icon-next
+                
+            a(href='#').product__prev
+              img(src='images/goods/productMute_1.png' srcset='images/goods/productMute_1@2x.png 2x')
+            a(href='#').product__next
+              img(src='images/goods/productMute_2.png' srcset='images/goods/productMute_2@2x.png 2x')
+            
       // CATALOG :: START
       .catalog.catalog--similar
         .container.container--1400
@@ -151,8 +166,53 @@ doctype html
                 .testimonials__item__small Москва
               .testimonials__item__content
                 p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
-                                  
-                
+            
+            .testimonials__more-items__toggler
+              span Показать все отзывы
+              i.icon.icon-next
+            
+            .testimonials__more-items
+              // item
+              .testimonials__item
+                .testimonials__item__meta
+                  .testimonials__item__small 02.01.2017
+                  .testimonials__item__name Марина
+                  .testimonials__item__small 32 года
+                  .testimonials__item__small Москва
+                .testimonials__item__content
+                  p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+              // item
+              .testimonials__item
+                .testimonials__item__meta
+                  .testimonials__item__small 02.01.2017
+                  .testimonials__item__name ЮЛИЯ
+                  .testimonials__item__small 32 года
+                  .testimonials__item__small Москва
+                .testimonials__item__content
+                  p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+              // item
+              .testimonials__item
+                .testimonials__item__meta
+                  .testimonials__item__small 02.01.2017
+                  .testimonials__item__name НАТАЛЬЯ
+                  .testimonials__item__small 32 года
+                  .testimonials__item__small Москва
+                .testimonials__item__content
+                  p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+              // item
+              .testimonials__item
+                .testimonials__item__meta
+                  .testimonials__item__small 02.01.2017
+                  .testimonials__item__name АЛЕКСАНДРА
+                  .testimonials__item__small 32 года
+                  .testimonials__item__small Москва
+                .testimonials__item__content
+                  p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+                                              
+              .testimonials__pagination
+                a(href='#').active 1
+                a(href='#') 2
+                a(href='#') СЛЕДУЮЩАЯ  
               
             
                     
