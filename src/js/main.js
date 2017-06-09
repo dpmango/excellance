@@ -71,8 +71,9 @@ $(document).ready(function () {
   });
 
   // SET ACTIVE CLASS FOR HEADING
+
   $('.header__navi li').each(function (i, val) {
-    if ($(val).find('a').attr('href') == window.location.pathname.substring(1)) {
+    if ($(val).find('a').attr('href') == window.location.pathname.split('/').pop()) {
       $(val).addClass('active');
     } else {
       $(val).removeClass('active');
