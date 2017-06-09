@@ -1,0 +1,54 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.page--light-bg.header-static
+      
+      // PROFILE PAGE
+      .profile
+        .container.container--1000
+          .heading.heading--mute Личный кабинет
+          
+          // cabinet
+          .profile__cabinet
+            .profile__cabinet-nav
+              a(href='#').active Личные данные
+              a(href='profile-orders.html') Заказы
+              a(href='profile-adress.html') Адреса
+              a(href='#') Выход
+              
+            .profile__box
+              form(action='#')
+                .ui-group.ui-group--labeled
+                  label Фамилия
+                  input(type='text' name='last_name' placeholder='Фамилия').ui-input
+                .ui-group.ui-group--labeled
+                  label Имя
+                  input(type='text' name='first_name' placeholder='Имя').ui-input
+                .ui-group.ui-group--labeled
+                  label Отчество
+                  input(type='text' name='patronymic_name' placeholder='Отчество').ui-input
+                .ui-group.ui-group--labeled
+                  label Дата рождения
+                  input(type='text' name='birthday' placeholder='E@mail.com').ui-input
+                .ui-group.ui-group--labeled
+                  label Телефон
+                  input(type='tel' name='phone' placeholder='').ui-input
+                .ui-group.ui-group--labeled
+                  label E-mail
+                  input(type='email' name='email' placeholder='E@mail.com').ui-input
+                .profile__box__cta
+                  button(type='submit').btn.btn--primary.btn--190 Сохранить
+
+
+        
+    
+                                                                                                                        
+                        
+    include shared/footer.pug
+    include shared/scripts.pug
+    

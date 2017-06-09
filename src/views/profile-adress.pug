@@ -1,0 +1,30 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.page--light-bg.header-static
+      
+      // PROFILE PAGE
+      .profile
+        .container.container--1000
+          .heading.heading--mute Личный кабинет
+          
+          // cabinet
+          .profile__cabinet
+            .profile__cabinet-nav
+              a(href='profile-personal.html') Личные данные
+              a(href='profile-orders.html') Заказы
+              a(href='#').active Адреса
+              a(href='#') Выход
+              
+            
+    
+                                                                                                                        
+                        
+    include shared/footer.pug
+    include shared/scripts.pug
+    

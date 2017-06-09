@@ -292,6 +292,14 @@ $(document).ready(function(){
     e.stopPropagation();
   });
 
+
+  // PROFILE PAGE
+  $('.profile__order__head').on('click', function(){
+    $(this).parent().toggleClass('active');
+
+    $(this).parent().find('.profile__order__toggable').slideToggle(250);
+  });
+
   // Masked input
   // $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
 

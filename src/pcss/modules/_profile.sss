@@ -86,3 +86,105 @@
       .icon-twitter
         &:hover
           color: $twitter
+
+  &__cabinet
+    margin-top: 40px
+    padding-bottom: 65px
+    display: flex
+    align-items: flex-start
+
+    &-nav
+      flex: 0 1 220px
+      padding: 8px 0
+      background: white
+      border-radius: 4px
+      box-shadow: 0px 0px 12px color(black a(20%))
+      a
+        display: block
+        transition: all $transitionSpeed $ease
+        padding: 5px 15px
+        margin-bottom: 5px
+        &:hover, &.active
+          background: #9C89B0
+          color: white
+        &:last-child
+          margin-bottom: 0
+    .profile__box
+      margin-left: 70px
+      flex: 1 1 390px
+
+  &__orders
+    flex: 0 1 670px
+    margin-left: 70px
+    &__row
+      span
+        flex: 0 1 auto
+        text-align: center
+        &:nth-child(1)
+          text-align: left
+          flex-basis: 90px
+        &:nth-child(2)
+          flex-basis: 110px
+        &:nth-child(3)
+          flex-basis: 150px
+        &:nth-child(4)
+          flex-basis: 120px
+        &:nth-child(5)
+          flex-basis: 110px
+        &:nth-child(6)
+          flex-basis: 40px
+          i.icon
+            transform: rotate(90deg)
+            transition: all $transitionSpeed $ease
+    &__thead
+      display: flex
+      padding: 15px 15px 15px 30px
+      span
+        font-size: 12px
+        color: $colorGray
+
+  &__order
+    margin-bottom: 8px
+    &__head
+      display: flex
+      padding: 25px 15px 25px 30px
+      background: white
+      border-radius: 4px
+      cursor: pointer
+      box-shadow: 0px 0px 12px color(black a(20%))
+      transition: all $transitionSpeed $ease
+      span
+        font-size: 14px
+        border-right: 1px solid $borderColor
+        transition: all $transitionSpeed $ease
+        &:nth-child(6)
+          border-right: 0
+      &:hover
+        box-shadow: none
+    &.active
+      .profile__order__head
+        background: #313131
+        color: white
+        span
+          border-color: white
+        .icon
+          transform: rotate(270deg)
+
+
+
+    &__toggable
+      display: none
+
+    &__details
+      display: flex
+      flex-wrap: wrap
+      margin-left: -4px
+      margin-right: -4px
+    &__card
+      margin-top: 8px
+      display: flex
+      flex-basis: calc(50% - 8px)
+      margin-left: 4px
+      margin-right: 4px
+      min-height: auto
+      padding: 25px
