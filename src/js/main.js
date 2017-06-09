@@ -171,64 +171,58 @@ $(document).ready(function () {
   //////////
   // MODALS
   //////////
-  $('*[data-modal]').on('click', function () {
-    // remove all active first
-    $('.modal').removeClass('opened');
+  // $('*[data-modal]').on('click', function(){
+  //   // remove all active first
+  //   $('.modal').removeClass('opened');
+  //
+  //   // find by id
+  //   var target = $(this).data('modal');
+  //   $('#'+target).addClass('opened');
+  //
+  //   window.location.hash = target;
+  // });
+  //
+  // $('.modal__close').on('click', function(){
+  //   $(this).closest('.modal').removeClass('opened');
+  //   window.location.hash = "";
+  // });
+  //
+  // // CHECK SAVED STATE
+  // if(window.location.hash) {
+  //   var hash = window.location.hash.substring(1);
+  //   $('#'+hash).addClass('opened');
+  // }
 
-    // find by id
-    var target = $(this).data('modal');
-    $('#' + target).addClass('opened');
-
-    window.location.hash = target;
-  });
-
-  $('.modal__close').on('click', function () {
-    $(this).closest('.modal').removeClass('opened');
-    window.location.hash = "";
-  });
-
-  // CHECK SAVED STATE
-  if (window.location.hash) {
-    var hash = window.location.hash.substring(1);
-    $('#' + hash).addClass('opened');
-  }
 
   // Magnific Popup
   // var startWindowScroll = 0;
-  // $('.popup-with-zoom-anim').magnificPopup({
-  //   type: 'inline',
-  //   fixedContentPos: true,
-  //   fixedBgPos: true,
-  //   overflowY: 'auto',
-  //   closeBtnInside: true,
-  //   preloader: false,
-  //   midClick: true,
-  //   removalDelay: 300,
-  //   mainClass: 'my-mfp-zoom-in',
-  //   callbacks: {
-  //     beforeOpen: function() {
-  //       startWindowScroll = _window.scrollTop();
-  //       $('html').addClass('mfp-helper');
-  //     },
-  //     close: function() {
-  //       $('html').removeClass('mfp-helper');
-  //       _window.scrollTop(startWindowScroll);
-  //     }
-  //   }
-  // });
-  //
-  // $('.popup-with-move-anim').magnificPopup({
-  //   type: 'inline',
-  //   fixedContentPos: false,
-  //   fixedBgPos: true,
-  //   overflowY: 'auto',
-  //   closeBtnInside: true,
-  //   preloader: false,
-  //   midClick: true,
-  //   removalDelay: 300,
-  //   mainClass: 'my-mfp-slide-bottom'
-  // });
-  //
+  $('.js-popup').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'modal',
+    callbacks: {
+      beforeOpen: function beforeOpen() {
+        // startWindowScroll = _window.scrollTop();
+        // $('html').addClass('mfp-helper');
+      },
+      close: function close() {
+        // $('html').removeClass('mfp-helper');
+        // _window.scrollTop(startWindowScroll);
+      }
+    }
+  });
+
+  // emulate close click
+  $('.modal__close, .js-close-modal').on('click', function () {
+    $(this).closest('.modal').find('.mfp-close').click();
+  });
+
   // $('.popup-gallery').magnificPopup({
   // 	delegate: 'a',
   // 	type: 'image',

@@ -1,0 +1,24 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.page--light-bg.header-static
+      
+      // LOGIN PAGE
+      .profile
+        .container
+          .heading.heading--mute Все модальные
+        
+          .text-center(style='padding-top: 100px; padding-bottom: 100px')
+            .flex-modals
+              a(href='#modalTestimonialLogin').btn.btn--primary.js-popup Оставить отзыв (логин)
+              a(href='#modalTestimonial').btn.btn--primary.js-popup Оставить отзыв
+            
+    
+    include shared/modal.pug
+    include shared/scripts.pug
+    include shared/footer.pug

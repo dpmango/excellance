@@ -1,0 +1,30 @@
+// MODALS
+.modal-dialog.mfp-hide#modalTestimonialLogin
+  .modal__content
+    .modal__icon
+      i.icon.icon-email
+    .modal__close
+      i.icon.icon-close
+    .modal__head ДЛЯ ДОБАВЛЕНИЯ ОТЗЫВА <br> НЕОБХОДИМО АВТОРИЗОВАТЬСЯ
+    .modal__desc Войдите на сайт если у вас есть учетная запись или зарегистрируйтесь
+    .modal__actions
+      a(href='login.html').btn.btn--primary Вход
+      a(href='login.html').modal__sublink 
+        span Регситрация
+
+
+.modal-dialog.mfp-hide#modalTestimonial
+  .modal__content
+    .modal__icon
+      i.icon.icon-email
+    .modal__close
+      i.icon.icon-close
+    form(action='#').modal__form
+      .ui-group
+        label Напишите ваш отзыв о продукте
+        textarea(rows='5' placeholder='Ваш отзыв...').ui-input
+        
+    .modal__actions
+      a(href='login.html').btn.btn--primary ОПУБЛИКОВАТЬ ОТЗЫВ
+      a(href='#').modal__sublink.js-close-modal
+        span Отмена

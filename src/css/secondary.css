@@ -271,5 +271,209 @@ button:focus {
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
+/* Styles for dialog window */
+.mfp-wrap {
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0);
+}
+html.mfp-helper {
+    height: 100%;
+}
+html.mfp-helper body {
+    overflow: hidden;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+}
+/* can be removed */
+.flex-modals {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.flex-modals .btn {
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-top: 20px;
+    -webkit-box-flex: 0;
+}
+.modal {}
+.modal__content {
+    position: relative;
+    position: relative;
+    margin: 40px auto;
+    padding: 90px 100px 50px 80px;
+    max-width: 1000px;
+    background: white;
+    text-align: left;
+}
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.modal__close:hover {
+    color: #410C50;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+.modal__icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #410C50;
+    font-size: 15px;
+}
+.modal__head {
+    letter-spacing: 3.33px;
+    font-size: 24px;
+}
+.modal__desc {
+    margin-top: 30px;
+    color: #939393;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+.modal__actions {
+    margin-top: 50px;
+    text-align: center;
+}
+.modal__sublink {
+    display: block;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.modal__sublink span {
+    display: inline-block;
+    border-bottom: 1px solid #313131;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.modal__sublink:hover {
+    color: #410C50;
+}
+.modal__sublink:hover span {
+    border-color: transparent;
+}
+.modal__form .ui-group {
+    max-width: 100%;
+}
+.modal__form .ui-group > label {
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+.modal__form .ui-group .ui-input {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+}
+@media(max-width: 768px) {
+    .modal {}
+    .modal__content {
+        padding: 90px 50px 50px 30px;
+    }
+}
+@media(max-width: 640px) {
+    .modal {}
+    .modal__head {
+        font-size: 20px;
+    }
+    .modal__desc {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+@media(max-width: 414px) {
+    .modal {}
+    .modal__content {
+        padding: 70px 25px 40px 20px;
+    }
+    .modal__icon {
+        top: 20px;
+        left: 20px;
+    }
+    .modal__close {
+        top: 15px;
+        right: 15px;
+    }
+}
+/* Generic modifiers */
+.modal button.mfp-close {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+.modal .modal-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+}
+.modal.mfp-ready .modal-dialog {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+.modal.mfp-removing .modal-dialog {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+}
+.modal.mfp-wrap {
+    z-index: 8;
+}
+.modal.mfp-bg {
+    z-index: 8;
+    background: #313131;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+.modal.mfp-ready.mfp-bg {
+    opacity: 0.96;
+}
+.modal.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+@media(max-height: 800px) {
+    .modal .mfp-container {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+}
+@media(max-width: 850px) {
+    .modal .mfp-container {
+        padding-top: 122px;
+        padding-bottom: 122px;
+    }
+}
+@media(max-width: 640px) {
+    .modal .mfp-container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
 
 /*# sourceMappingURL=secondary.css.map */

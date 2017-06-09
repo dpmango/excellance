@@ -10,53 +10,144 @@ html.mfp-helper
     height: 100%
     -webkit-transform: translateZ(0)
 
-#small-dialog
-  background: white
-  padding: 20px 30px
-  text-align: left
-  max-width: 600px
-  margin: 40px auto
-  position: relative
+// can be removed
+.flex-modals
+  display: flex
+  flex-direction: column
+  align-items: center
+  .btn
+    margin-top: 20px
+    flex: 0 1 auto
 
-// Fade-zoom animation for first dialog
 
-.my-mfp-zoom-in
-  .zoom-anim-dialog
+.modal
+  &__content
+    position: relative
+    background: white
+    padding: 90px 100px 50px 80px
+    text-align: left
+    max-width: 1000px
+    margin: 40px auto
+    position: relative
+  &__close
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+    font-size: 18px
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $colorPrimary
+      transform: scale(1.2)
+  &__icon
+    position: absolute
+    left: 30px
+    top: 30px
+    font-size: 15px
+    color: $colorPrimary
+
+  &__head
+    font-size: 24px
+    letter-spacing: 3.33px
+  &__desc
+    font-size: 18px
+    letter-spacing: 2px
+    color: $colorGray
+    margin-top: 30px
+  &__actions
+    margin-top: 50px
+    text-align: center
+  &__sublink
+    display: block
+    margin-top: 15px
+    font-size: 12px
+    text-transform: uppercase
+    transition: all $transitionSpeed $ease
+    span
+      display: inline-block
+      border-bottom: 1px solid $fontColor
+      transition: all $transitionSpeed $ease
+    &:hover
+      color: $colorPrimary
+      span
+        border-color: transparent
+
+  &__form
+    .ui-group
+      max-width: 100%
+      > label
+        font-size: 18px
+        letter-spacing: 2px
+        margin-bottom: 15px
+      .ui-input
+        width: 100%
+        border-radius: 8px
+        font-size: 16px
+
+
+@media($tablet)
+  .modal
+    &__content
+      padding: 90px 50px 50px 30px
+
+@media($mobile)
+  .modal
+    &__head
+      font-size: 20px
+    &__desc
+      font-size: 16px
+      margin-top: 20px
+
+@media($mobile-s)
+  .modal
+    &__content
+      padding: 70px 25px 40px 20px
+    &__icon
+      left: 20px
+      top: 20px
+    &__close
+      top: 15px
+      right: 15px
+
+// Generic modifiers
+.modal
+  button.mfp-close
+    opacity: 0 !important
+    pointer-events: none
+  .modal-dialog
     opacity: 0
     transition: all 0.2s ease-in-out
     transform: scale(0.8)
-  &.mfp-ready .zoom-anim-dialog
+  &.mfp-ready .modal-dialog
     opacity: 1
     transform: scale(1)
-  &.mfp-removing .zoom-anim-dialog
+  &.mfp-removing .modal-dialog
     transform: scale(0.8)
     opacity: 0
+  &.mfp-wrap
+    z-index: 8
   &.mfp-bg
+    background: #313131
+    z-index: 8
     opacity: 0
     transition: opacity 0.3s ease-out
   &.mfp-ready.mfp-bg
-    opacity: 0.8
+    opacity: 0.96
   &.mfp-removing.mfp-bg
     opacity: 0
 
 
-// Fade-move animation
+@media(height <= 800px)
+  .modal .mfp-container
+    padding-top: 200px
+    padding-bottom: 200px
 
-.my-mfp-slide-bottom
-  .zoom-anim-dialog
-    opacity: 0
-    transition: all 0.2s ease-out
-    transform: translateY(-20px) perspective(600px) rotateX(10deg)
-  &.mfp-ready .zoom-anim-dialog
-    opacity: 1
-    transform: translateY(0) perspective(600px) rotateX(0)
-  &.mfp-removing .zoom-anim-dialog
-    opacity: 0
-    transform: translateY(-10px) perspective(600px) rotateX(10deg)
-  &.mfp-bg
-    opacity: 0
-    transition: opacity 0.3s ease-out
-  &.mfp-ready.mfp-bg
-    opacity: 0.8
-  &.mfp-removing.mfp-bg
-    opacity: 0
+@media(width <= 850px)
+  .modal .mfp-container
+    padding-top: 122px
+    padding-bottom: 122px
+
+@media($mobile)
+  .modal .mfp-container
+    padding-top: 80px
+    padding-bottom: 80px
