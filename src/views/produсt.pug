@@ -1,0 +1,161 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page
+      // PRODUCT
+      .product
+        .container.container--1000
+          .product__crumbs
+            a(href='#') Каталог товаров
+            span Матирующая эмульсия
+          .product__hero
+            .product__image
+              img(src='images/goods/productHero.png' srcset='images/goods/productHero@2x.png 2x')
+            .product__params
+              .product__name МАТИРУЮЩАЯ  ЭМУЛЬСИЯ
+              .product__short ДЛЯ ЖИРНОЙ И КОМБИНИРОВАННОЙ КОЖИ
+              .product__key
+                span 50 ml
+                span Арт. ma-1233 
+              .product__cta
+                .product__cta__price 4 050 ₽
+                a(href='#').btn.btn--cart
+                  i.icon.icon-cart
+                  span В корзину
+              .product__description
+                p Многофункциональная эмульсия для радикального улучшения состояния жирной и комбинированной кожи, ее деликатного увлажнения, тонизирования и матирования. Уникальный белково-пептидный нуклеотидный комплекс Cellexon® создает идеальные условия для обменных процессов на клеточном уровне, улучшает местный иммунитет кожи и ее сопротивляемость бактериям. Комплекс растительных экстрактов и антиоксидантов обеспечивает противовоспалительное воздействие, уменьшает покраснения и способствует сужению пор. Инновационный матирующий компонент устраняет жирный блеск, абсорбируя излишки себума. Высоко- и низкомолекулярная гиалуроновые кислоты восполняют необходимое увлажнение.
+
+                p Непревзойденное ощущение свежести и сразу заметный эффект выравнивания тона - кожа гладкая и бархатистая. Идеальное средство под макияж и для подготовки лица к фотосъемке.
+              
+              .product__tabs
+                .product__tab.product__tab--collapsable
+                  .product__tab__head Активные компоненты:
+                  .product__tab__content 
+                    p Cellexon®, Высокомолекулярная гиалуроновая кислота, Низкомолекулярная гиалуроновая кислота, Изокверцетин, Витамин Е, Матирующий комплекс, Масло пассифлоры, Экстракт зеленого чая, Экстракт центеллы азиатской.  Не содержит парабенов, красителей и отдушек.
+              
+                .product__tab
+                  .product__tab__head Применение:
+                  .product__tab__content 
+                    p На предварительно очищенную кожу нанести эмульсию, распределяя массажными движениями до полного впитывания.
+              
+      
+      // CATALOG :: START
+      .catalog.catalog--similar
+        .container.container--1400
+          .text-center.subheading-gray С ЭТИМ ТОВАРОМ ПОКУПАЮТ
+          
+          .catalog__wrapper
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНО  УВЛАЖНЯЮЩИЙ КРЕМ 
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image
+                img(src='images/goods/productImg_1.png' srcset='images/goods/productImg_1@2x.png 2x')
+              
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name МАТИРУЮЩАЯ  ЭМУЛЬСИЯ
+                .catalog__card__short Для жирной и  комбинированной кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_2.png' srcset='images/goods/productImg_2@2x.png 2x')
+          
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНАЯ СЫВОРОТКА  ДЛЯ ЛИЦА <br> «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ»
+                .catalog__card__short Полностью удаляет макияж
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_3.png' srcset='images/goods/productImg_3@2x.png 2x')
+                                  
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name ДВУХФАЗНЫЙ ЛОСЬОН  ДЛЯ СНЯТИЯ МАКИЯЖА  С ГЛАЗ
+                .catalog__card__short Полностью удаляет макияж
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_4.png' srcset='images/goods/productImg_4@2x.png 2x')
+                                                                                                                
+      
+      // Product testimonials
+      .testimonials
+        .container
+          .text-center.subheading-gray Отзывы
+            span (18)
+          .testimonials__cta
+            a(href='#').btn.btn--primary.btn--shadow Оставить отзыв
+          .testimonials__wrapper
+            // item
+            .testimonials__item
+              .testimonials__item__meta
+                .testimonials__item__small 02.01.2017
+                .testimonials__item__name Марина
+                .testimonials__item__small 32 года
+                .testimonials__item__small Москва
+              .testimonials__item__content
+                p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+            // item
+            .testimonials__item
+              .testimonials__item__meta
+                .testimonials__item__small 02.01.2017
+                .testimonials__item__name ЮЛИЯ
+                .testimonials__item__small 32 года
+                .testimonials__item__small Москва
+              .testimonials__item__content
+                p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+            // item
+            .testimonials__item
+              .testimonials__item__meta
+                .testimonials__item__small 02.01.2017
+                .testimonials__item__name НАТАЛЬЯ
+                .testimonials__item__small 32 года
+                .testimonials__item__small Москва
+              .testimonials__item__content
+                p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+            // item
+            .testimonials__item
+              .testimonials__item__meta
+                .testimonials__item__small 02.01.2017
+                .testimonials__item__name АЛЕКСАНДРА
+                .testimonials__item__small 32 года
+                .testimonials__item__small Москва
+              .testimonials__item__content
+                p Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
+                                  
+                
+              
+            
+                    
+    include shared/footer.pug
+    include shared/scripts.pug
+    

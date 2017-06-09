@@ -244,8 +244,20 @@ $(document).ready(function () {
   // 	}
   // });
 
+
+  // PRODUCT PAGE
+  $('.product__tab--collapsable').on('click', function () {
+    if ($(this).is('.active')) {
+      $(this).find('.product__tab__content').slideUp();
+    } else {
+      $(this).find('.product__tab__content').slideDown();
+    }
+
+    $(this).toggleClass('active');
+  }
+
   // Masked input
-  $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
+  );$("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
   $("input[name='phone']").mask("9 (999) 999-9999");
   $("#tin").mask("99-9999999");
   $("#ssn").mask("999-99-9999");
