@@ -271,6 +271,9 @@ $(document).ready(function () {
 
   // UI
   $('.ui-select__visible').on('click', function () {
+    // hide parents
+    $(this).parent().parent().parent().find('.ui-select').removeClass('active');
+
     $(this).parent().toggleClass('active');
   });
 
@@ -287,35 +290,17 @@ $(document).ready(function () {
     $(this).closest('.ui-select').find('.ui-select__visible span').text(value);
   });
 
-  // STICKY MAP RESULTS
-  // _window.scrolled(10, function () {
-  //   var stickyEl = $('.results__map');
-  //   var windowBottomScroll = _window.scrollTop() + _window.height();
-  //   var stopPoint = _document.height() - $('footer').outerHeight();
-  //
-  //   if (windowBottomScroll >= stopPoint) {
-  //     stickyEl.addClass('results__map--stop');
-  //   } else if (windowBottomScroll < stopPoint) {
-  //     stickyEl.removeClass('results__map--stop');
-  //   }
-  // });
+  // handle outside click
+  $(document).click(function (e) {
+    var container = new Array();
+    container.push($('.ui-select'));
 
-  // OPTIONAL
-  ////////////
-
-
-  // hero parallax on mousemove
-  //
-  // var movementStrength = 50;
-  // var height = movementStrength / _window.height();
-  // var width = movementStrength / _window.width();
-  // $(".hero").mousemove(function(e){
-  //   var pageX = e.pageX - (_window.width() / 2);
-  //   var pageY = e.pageY - (_window.height() / 2);
-  //   var newvalueX = width * pageX * -1 - 25;
-  //   var newvalueY = height * pageY * -1 - 50;
-  //   $('.hero-bg').css("background-position", newvalueX+"px     "+newvalueY+"px");
-  // });
+    $.each(container, function (key, value) {
+      if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+        $(value).removeClass('active');
+      }
+    });
+  });
 
   // INPUTS FOCUS
 
