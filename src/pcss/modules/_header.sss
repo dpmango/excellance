@@ -159,26 +159,22 @@
           box-shadow: 0
           border-color: $colorPrimaryLight
 
-
   &__navi
     margin: 0
     margin-bottom: 0px
-    .header__navi
-      margin: 0 -10px
-      padding: 0
-      display: flex
-      justify-content: space-between
-      overflow-x: scroll
-      overflow-y: hidden
-      white-space: nowrap
-      padding: 20px 0 30px 0
+    margin: 0 -10px
+    padding: 0
+    display: flex
+    justify-content: space-between
+    overflow: hidden
+    padding: 20px 0 30px 0
+
     &--sticky
       flex: 0 1 100%
       margin-bottom: 0
       min-width: 0
       max-width: 1200px
-      .header__navi
-        padding: 20px 0
+      padding: 20px 0
       li
         &::after
           display: none
@@ -237,6 +233,21 @@
       &--sticky
         font-size: 15px
 
+@media(width <= 1230px)
+  .header
+    &__navi
+      &--sticky
+        li
+          font-size: 13px
+
+@media(width <= 1130px)
+  .header
+    &__navi
+      &--sticky
+        li
+          font-size: 11px
+
+
 @media($wide)
   .header
     font-size: 15px
@@ -259,11 +270,26 @@
         display: inline-block
       span
         display: none
+    &__navi
+      &--sticky
+        display: none
+    &--sticky
+      .header__hamburger
+        display: block
+      .header__logo
+        margin-right: auto
 
-
-@media($tablet)
+@media(width <= 850px)
   .header
+    &__hamburger
+      display: block
+    &__navi
+      display: none !important
+    &__lang
+      display: none
+
     &__logo
+      margin-right: auto
       .icon-logo
         size: 200px 45px
       &--small
@@ -272,8 +298,17 @@
 
     &__cta
       margin-top: 0
-    &__lang
-      margin-top: 0
+      &.searching
+        .header__account
+          transform: translate3d(0, 0px, 0)
+        .header__cart
+          transform: translate3d(0px, 0px, 0)
+        .header__search
+          &.active
+            input
+              margin-top: 0px
+      &--sticky
+        margin-left: auto
 
 @media($mobile)
   .header
@@ -284,31 +319,16 @@
     &__logo
       .icon-logo
         size: 173px 37px
-    &__lang
-      display: none
-    &__hamburger
-      display: block
-    &__navi, .scrollbar-macosx
-      display: none !important
     &__account
       margin-right: 15px
       .icon
         font-size: 25px
     &__cart
       margin-right: 15px
+    &__search
+      input
+        right: 15px
 
-    &__cta
-      &.searching
-        .header__account
-          transform: translate3d(0, 0px, 0)
-        .header__cart
-          transform: translate3d(0px, 0px, 0)
-        .header__search
-          &.active
-            input
-              margin-top: -2px
-      &--sticky
-        margin-left: auto
 
 @media($mobile-s)
   .header
@@ -343,6 +363,7 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    text-align: center
     font-size: 22px
     margin-bottom: 30px
     overflow-y: scroll
@@ -366,10 +387,10 @@
 
 
   &.active
-    opacity: 1
+    opacity: .97
     transform: translate3d(0, 0%, 0)
 
 
-@media($mobile)
+@media(width <= 1050px)
   .mobile-navi
     display: flex

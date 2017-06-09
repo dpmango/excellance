@@ -285,9 +285,14 @@ $(document).ready(function () {
   }
 
   // UI
-  $('.ui-select__visible').on('click', function () {
+  $('.ui-select__visible').on('click', function (e) {
+    var that = this;
     // hide parents
-    $(this).parent().parent().parent().find('.ui-select').removeClass('active');
+    $(this).parent().parent().parent().find('.ui-select__visible').each(function (i, val) {
+      if (!$(val).is($(that))) {
+        $(val).parent().removeClass('active');
+      }
+    });
 
     $(this).parent().toggleClass('active');
   });
