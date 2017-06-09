@@ -1,0 +1,72 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.page--light-bg.header-static
+      
+      // LOGIN PAGE
+      .profile
+        .container
+          .heading.heading--mute Вход на сайт
+        // login
+        .profile__login
+          .profile__box
+            .profile__box__heading УЖЕ ЗАРЕГИСТРИРОВАНЫ?
+            form(action='#')
+              .ui-group.ui-group--labeled
+                label E-mail
+                input(type='email' placeholder='').ui-input
+              .ui-group.ui-group--labeled
+                label Пароль
+                input(type='password' placeholder='').ui-input
+              .profile__box__cta
+                button(type='submit').btn.btn--primary.btn--190 Вход
+                a(href='#').profile__help-link
+                  span ЗАБЫЛИ ПАРОЛЬ?
+            .profile__social-login
+              .profile__social-login__heading Авторизоваться через социальные сети:
+              a(href='#')
+                i.icon.icon-facebook
+              a(href='#')
+                i.icon.icon-vk    
+              a(href='#')
+                i.icon.icon-twitter  
+        
+        // signup
+        .profile__signup
+          .profile__box
+            .profile__box__heading РЕГИСТРАЦИЯ
+            .profile__box__hint <span>*</span> - Поля обязательные к заполнению
+            form(action='#').js-registration-form
+              .ui-group.ui-group--labeled
+                label Фамилия
+                  span *
+                input(type='text' name='last_name' placeholder='').ui-input
+              .ui-group.ui-group--labeled
+                label Имя
+                  span *
+                input(type='text' name='first_name' placeholder='').ui-input
+              .ui-group.ui-group--labeled
+                label Отчество
+                input(type='text' name='patronymic_name' placeholder='').ui-input
+              .ui-group.ui-group--labeled
+                label E-mail
+                  span *
+                input(type='email' name='email' placeholder='').ui-input
+              .ui-group.ui-group--labeled
+                label Пароль
+                  span *
+                input(type='password' name='password' placeholder='').ui-input
+              .profile__box__cta
+                button(type='submit').btn.btn--primary.btn--190 Регистрация
+
+        
+                                                                                                                        
+                        
+    include shared/footer.pug
+    include shared/scripts.pug
+    

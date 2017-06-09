@@ -24,6 +24,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-twitter:before {
+  content: "\e918";
+}
+
+.icon-cellphone:before {
+  content: "\e914";
+}
+.icon-email:before {
+  content: "\e915";
+}
+.icon-placeholder:before {
+  content: "\e916";
+}
+.icon-vk:before {
+  content: "\e917";
+}
+
 .icon-cart:before {
   content: "\e909";
 }

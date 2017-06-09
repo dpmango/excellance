@@ -42,22 +42,32 @@
   width: 100%
   -webkit-appearance: none
   background: white
-  color: $grayColor
-  border: 2px solid transparent
+  border: 0px solid transparent
+  outline: 2px solid transparent
   border-radius: 30px
-  padding: 12px 15px
+  padding: 13px 15px
   box-shadow: inset 0px 0px 5px color(black a(20%))
   font-size: 14px
   transition: all $transitionSpeed $ease
   &:focus
-    box-shadow: 0
-    border-color: $colorPrimaryLight
+    box-shadow: 0 0 0px 2px $colorPrimary
 
-.js-datepicker
-  background-image: svg-load('../../images/svg/calendar.svg')
-  background-repeat: no-repeat
-  background-position: 95% center
-  background-size: 17px 17px
+  &__validation
+    font-size: 12px
+    margin-top: 10px
+    &::before
+      display: inline-block
+      content: '*'
+      font-size: 14px
+      color: $colorRed
+      margin-right: 5px
+
+//
+// .js-datepicker
+//   background-image: svg-load('../../images/svg/calendar.svg')
+//   background-repeat: no-repeat
+//   background-position: 95% center
+//   background-size: 17px 17px
 
 // Checkbox
 .ui-checkbox
@@ -136,10 +146,28 @@
 .ui-group
   margin-bottom: 20px
   max-width: 240px
+  &--labeled
+    max-width: 100%
+    > label:not(.ui-input__validation)
+      font-family: 'Roboto'
+      font-size: 14px
+      color: $colorPrimary
+      margin-bottom: 10px
+      font-weight: 600
+      display: flex
+      justify-content: space-between
+      align-items: center
+      span
+        color: $colorRed
+
   > label
     font-size: 10px
     margin-bottom: 8px
     display: block
+
+  &.has-error
+    .ui-input
+      box-shadow: 0 0 0px 2px $colorRed
 
 .ui-select
   position: relative

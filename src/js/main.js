@@ -263,10 +263,9 @@ $(document).ready(function () {
   });
 
   // Masked input
-  $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
-  $("input[name='phone']").mask("9 (999) 999-9999");
-  $("#tin").mask("99-9999999");
-  $("#ssn").mask("999-99-9999");
+  // $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+
+  $("input[type='tel']").mask("0 (000) 000-0000", { placeholder: "_ (___) ___-____" });
 
   // DATEPICKER
   $('.js-datepicker').datepicker({
@@ -274,33 +273,6 @@ $(document).ready(function () {
     range: true,
     multipleDatesSeparator: " - "
   });
-
-  // RANGESLIDER
-  var rangeSlider = document.querySelector('.js-rangeslider');
-
-  if ($('.js-rangeslider').length > 0) {
-    noUiSlider.create(rangeSlider, {
-      start: [90, 120],
-      connect: true,
-      tooltips: true,
-      step: 1,
-      // pips: { // Show a scale with the slider
-      // 	mode: 'steps',
-      // 	stepped: true,
-      // 	density: 4
-      // },
-      range: {
-        'min': [80],
-        'max': [120]
-      }
-    });
-
-    // method to get current value
-    // rangeSlider.noUiSlider.get();
-
-    // docs on noUiSlider
-    // https://refreshless.com/nouislider/slider-read-write/
-  }
 
   // UI
   $('.ui-select__visible').on('click', function (e) {
