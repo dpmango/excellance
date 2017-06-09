@@ -35,19 +35,21 @@ $(document).ready(function () {
   });
 
   // HEADER SCROLL
-  _window.scrolled(10, function () {
-    // scrolled is a constructor for scroll delay listener
-    var vScroll = _window.scrollTop();
-    var header = $('.header').not('.header--sticky');
-    var headerSticky = $('.header--sticky');
-    var headerHeight = header.height();
+  if ($('.header-static').length == 0) {
+    _window.scrolled(10, function () {
+      // scrolled is a constructor for scroll delay listener
+      var vScroll = _window.scrollTop();
+      var header = $('.header').not('.header--sticky');
+      var headerSticky = $('.header--sticky');
+      var headerHeight = header.height();
 
-    if (vScroll > headerHeight + 20) {
-      headerSticky.addClass('header--transformed');
-    } else {
-      headerSticky.removeClass('header--transformed');
-    }
-  });
+      if (vScroll > headerHeight + 20) {
+        headerSticky.addClass('header--transformed');
+      } else {
+        headerSticky.removeClass('header--transformed');
+      }
+    });
+  }
 
   // HEADER SEARCH
   $('.header__search .icon-search').on('click', function () {
