@@ -70,12 +70,13 @@ button:focus {
 .btn {
     position: relative;
     display: inline-block;
+    border: 1px solid transparent;
     border-radius: 30px;
     text-align: center;
     text-transform: uppercase;
     font-size: 12px;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 .btn span, .btn .icon {
     position: relative;
@@ -84,40 +85,31 @@ button:focus {
 .btn:focus, .btn:active {
     outline: none;
 }
-.btn:after {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    bottom: 50%;
-    left: 50%;
-    z-index: 1;
-    display: block;
-    border-radius: 30px;
-    content: ' ';
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
-}
-.btn:hover {}
-.btn:hover:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
 .btn--primary {
     padding: 15px 60px;
     background: #410C50;
     color: white;
 }
-.btn--primary:after {
-    background: #7E6884;
+.btn--primary:hover {
+    border-color: #410C50;
+    background: transparent;
+    color: #410C50;
+}
+.btn--primary.btn--invert {
+    border-color: #410C50;
+    background: transparent;
+    color: #410C50;
+}
+.btn--primary.btn--invert:hover {
+    border-color: transparent;
+    background: #410C50;
+    color: white;
 }
 .btn--cart {
     padding: 10px 25px;
     background: white;
-    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
     color: #410C50;
 }
 .btn--cart .icon {
@@ -125,23 +117,19 @@ button:focus {
     vertical-align: -3px;
     font-size: 20px;
 }
-.btn--cart:after {
-    background: #7E6884;
-}
 .btn--cart:hover {
-    color: white;
+    border-color: #410C50;
+    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
 }
 .btn--white {
     padding: 10px 22px;
-    border: 1px solid transparent;
     background: #DBDEE0;
     font-size: 10px;
 }
-.btn--white:after {
-    background: white;
-}
 .btn--white:hover {
     border-color: #999999;
+    background: transparent;
 }
 .btn--shadow {
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -150,6 +138,16 @@ button:focus {
 .btn--shadow:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
+}
+.btn.disabled, .btn:disabled {
+    background: #F9F9F9;
+    color: #999999;
+    cursor: not-allowed !important;
+}
+.btn.disabled:hover, .btn:disabled:hover {
+    border-color: transparent;
+    background: #F9F9F9;
+    color: #999999;
 }
 .hamburger {
     display: inline-block;
@@ -287,8 +285,8 @@ button:focus {
     display: block;
     font-weight: 600;
     font-size: 18px;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 .input--dynamic input {
     position: absolute;
@@ -325,8 +323,8 @@ button:focus {
             box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
     color: $grayColor;
     font-size: 14px;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
     -webkit-appearance: none;
 }
 .ui-input:focus {
@@ -387,8 +385,8 @@ button:focus {
     vertical-align: middle;
     cursor: pointer;
     cursor: pointer;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -417,8 +415,8 @@ button:focus {
     border: 1px solid rgba(236, 240, 241, 0.15);
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.5);
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 .ui-checkbox--chunk label {
     padding: 11px 15px;
@@ -473,10 +471,10 @@ button:focus {
         -ms-flex: 0 0 10px;
             flex: 0 0 10px;
     font-size: 5px;
-    -webkit-transition: -webkit-transform .25s ease-in-out;
-    transition: -webkit-transform .25s ease-in-out;
-    transition: transform .25s ease-in-out;
-    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+    -webkit-transition: -webkit-transform .15s ease-in-out;
+    transition: -webkit-transform .15s ease-in-out;
+    transition: transform .15s ease-in-out;
+    transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out;
     -webkit-box-flex: 0;
 }
 .ui-select__dropdown {
@@ -495,8 +493,8 @@ button:focus {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     font-size: 14px;
     opacity: 0;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
     -webkit-transform: translate3d(0,25px,0);
             transform: translate3d(0,25px,0);
     pointer-events: none;
@@ -505,8 +503,8 @@ button:focus {
     display: block;
     padding: 8px 15px;
     cursor: pointer;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 .ui-select__dropdown span:hover {
     background: #DBDEE0;

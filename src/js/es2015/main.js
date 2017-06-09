@@ -76,6 +76,7 @@ $(document).ready(function(){
 
   $('.hero__slider').slick({
     autoplay: true,
+    autoplaySpeed: 7000,
     dots: true,
     arrows: false,
     infinite: true,
