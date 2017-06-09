@@ -265,6 +265,33 @@ $(document).ready(function(){
     $('.testimonials__more-items').slideDown();
   });
 
+  // SERVICE PAGE
+  // toggler for first level - click for header
+  $('.service__list__item__head').on('click', function(){
+    $(this).parent().toggleClass('active');
+    $(this).parent().find('.service__list__item-list').slideToggle(350);
+    setTimeout(checkListActive, 0);
+  });
+
+  function checkListActive(){
+    if ( $('.service__list .service__list__item.active').length > 0 ){
+      $('.service__list').addClass('active');
+    } else {
+      $('.service__list').removeClass('active');
+    }
+  }
+
+  // toggler for second level - click for item
+  $('.service__list__item-list__item').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).find('.service__list__item-list__dropdown').slideToggle(200);
+  });
+
+  // office click on second level
+  $('.service__list__item-list__dropdown__office').on('click', function(e){
+    e.stopPropagation();
+  });
+
   // Masked input
   // $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
 

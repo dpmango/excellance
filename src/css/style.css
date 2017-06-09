@@ -3432,5 +3432,252 @@ body, html {
     letter-spacing: 1.5px;
     font-size: 18px;
 }
+/* Services */
+.service {}
+.service__head {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 65px;
+    max-width: 590px;
+    text-align: center;
+}
+.service__head__title {
+    letter-spacing: 5px;
+    font-size: 36px;
+    line-height: 1.2;
+}
+.service__head__desc {
+    margin-top: 35px;
+    text-align: left;
+}
+.service__head__desc p {
+    font-size: 12px;
+    line-height: 1.4;
+}
+.service__contacts {
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background: rgba(255, 255, 255, 0.7);
+}
+.service__contacts__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-right: -10px;
+    margin-left: -10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.service__contacts__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 270px;
+        -ms-flex: 0 1 270px;
+            flex: 0 1 270px;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-content: center;
+            align-content: center;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    -webkit-box-flex: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-line-pack: center;
+}
+.service__contacts__item__icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    -webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+    color: #410C50;
+    font-size: 22px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.service__contacts__item__content {
+    margin-top: 15px;
+}
+.service__contacts__item__content a {
+    display: block;
+    color: #410C50;
+    font-size: 16px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.service__contacts__item__content a:hover {
+    color: #7E6884;
+}
+.service__contacts__item__content span {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+.service__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+            align-items: center;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.service__list.active .service__list__item {
+    width: 100%;
+}
+.service__list__item {
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-bottom: 15px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-box-flex: 0;
+}
+.service__list__item__head {
+    position: relative;
+    padding: 12px 100px 12px 30px;
+    width: 405px;
+    border-radius: 4px;
+    background: #939393;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.service__list__item__head .icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+.service__list__item__head span {
+    max-width: 310px;
+}
+.service__list__item__head:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.service__list__item.active .service__list__item__head {
+    background: white;
+    color: #313131;
+}
+.service__list__item.active .service__list__item__head .icon {
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+.service__list__item-list {
+    display: none;
+    margin-top: 40px;
+}
+.service__list__item-list__item {
+    position: relative;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    color: #313131;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.service__list__item-list__item:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.service__list__item-list__item.active .service__list__item-list__head {
+    padding-bottom: 14px;
+}
+.service__list__item-list__head {
+    padding: 24px 100px 24px 65px;
+    text-transform: uppercase;
+    font-size: 16px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.service__list__item-list__dropdown {
+    display: none;
+    padding: 10px 100px 20px 65px;
+}
+.service__list__item-list__dropdown__description {
+    max-width: 450px;
+    color: #939393;
+    font-size: 12px;
+    line-height: 1.3;
+}
+.service__list__item-list__dropdown__office {
+    display: inline-block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-end;
+            align-items: flex-end;
+    margin-top: 30px;
+    width: auto;
+    color: #939393;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+}
+.service__list__item-list__dropdown__office .icon {
+    color: #410C50;
+    font-size: 20px;
+}
+.service__list__item-list__dropdown__office span {
+    display: inline-block;
+    margin-left: 10px;
+}
+.service__list__item-list__dropdown__office:hover {
+    color: #7E6884;
+}
 
 /*# sourceMappingURL=style.css.map */

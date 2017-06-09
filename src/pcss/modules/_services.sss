@@ -1,0 +1,156 @@
+// Services
+.service
+  &__head
+    padding-top: 65px
+    text-align: center
+    max-width: 590px
+    margin-left: auto
+    margin-right: auto
+    &__title
+      font-size: 36px
+      line-height: 1.2
+      letter-spacing: 5px
+    &__desc
+      margin-top: 35px
+      text-align: left
+      p
+        font-size: 12px
+        line-height: 1.4
+
+  &__contacts
+    background: color(white a(70%))
+    padding-top: 30px
+    padding-bottom: 40px
+    margin-top: 40px
+    &__wrapper
+      display: flex
+      flex-wrap: wrap
+      margin-left: -10px
+      margin-right: -10px
+      justify-content: space-between
+    &__item
+      flex: 0 1 270px
+      padding-left: 10px
+      padding-right: 10px
+      display: flex
+      flex-direction: column
+      text-align: center
+      align-content: center
+      margin-bottom: 20px
+      &__icon
+        background: white
+        size: 50px
+        border-radius: 50%
+        box-shadow: 0px 0px 14px color(black a(5%))
+        font-size: 22px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: auto
+        margin-right: auto
+        color: $colorPrimary
+      &__content
+        margin-top: 15px
+        a
+          display: block
+          font-size: 16px
+          color: $colorPrimary
+          transition: all $transitionSpeed $ease
+          &:hover
+            color: $colorPrimaryLight
+        span
+          display: inline-block
+          margin-top: 5px
+          font-size: 12px
+          line-height: 1.3
+
+  &__list
+    padding-top: 60px
+    padding-bottom: 120px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &.active
+      .service__list__item
+        width: 100%
+    &__item
+      flex: 0 0 auto
+      margin-bottom: 15px
+      transition: all $transitionSpeed $ease
+      &__head
+        position: relative
+        width: 405px
+        background: #939393
+        font-size: 16px
+        padding: 12px 100px 12px 30px
+        color: white
+        cursor: pointer
+        border-radius: 4px
+        box-shadow: 0px 0px 12px color(black a(20%))
+        transition: all $transitionSpeed $ease
+        .icon
+          position: absolute
+          right: 20px
+          top: 10px
+          font-size: 20px
+          transform: rotate(90deg)
+          transition: all $transitionSpeed $ease
+        span
+          max-width: 310px
+        &:hover
+          box-shadow: none
+      &.active
+        .service__list__item__head
+          background: white
+          color: $fontColor
+          .icon
+            transform: rotate(270deg)
+
+      &-list
+        margin-top: 40px
+        display: none
+        &__item
+          position: relative
+          background: white
+          color: $fontColor
+          border-radius: 4px
+          box-shadow: 0px 0px 12px color(black a(20%))
+          margin-bottom: 5px
+          cursor: pointer
+          transition: all $transitionSpeed $ease
+          &:hover
+            box-shadow: none
+          &.active
+            .service__list__item-list__head
+              padding-bottom: 14px
+        &__head
+          font-size: 16px
+          padding: 24px 100px 24px 65px
+          text-transform: uppercase
+          transition: all $transitionSpeed $ease
+        &__dropdown
+          padding: 10px 100px 20px 65px
+          display: none
+          &__description
+            font-size: 12px
+            max-width: 450px
+            color: $colorGray
+            line-height: 1.3
+          &__office
+            display: inline-block
+            margin-top: 30px
+            font-size: 12px
+            color: $colorGray
+            display: flex
+            align-items: flex-end
+            width: auto
+            cursor: pointer
+            transition: all $transitionSpeed $ease
+            .icon
+              font-size: 20px
+              color: $colorPrimary
+            span
+              display: inline-block
+              margin-left: 10px
+            &:hover
+              color: $colorPrimaryLight
