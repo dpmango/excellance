@@ -70,6 +70,15 @@ $(document).ready(function () {
     $('.mobile-navi').toggleClass('active');
   });
 
+  // SET ACTIVE CLASS FOR HEADING
+  $('.header__navi li').each(function (i, val) {
+    if ($(val).find('a').attr('href') == window.location.pathname.substring(1)) {
+      $(val).addClass('active');
+    } else {
+      $(val).removeClass('active');
+    }
+  });
+
   //////////
   // SLIDERS
   //////////
@@ -141,15 +150,18 @@ $(document).ready(function () {
     $(this).closest('.promo-video').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
   });
 
-  $('.js-toggleDocsSection').on('click', function () {
+  $('.js-toggleDocsSection, .text-docs__head .icon').on('click', function () {
     $(this).closest('.text-docs').toggleClass('active');
+    var btn = $('.js-toggleDocsSection');
 
-    if ($(this).find('span').text() == 'Подробнее') {
-      $(this).find('span').text('скрыть');
-      $(this).addClass('active');
+    if (btn.find('span').text() == 'Подробнее') {
+      btn.find('span').text('скрыть');
+      btn.addClass('active');
+      btn.closest('.text-docs').find('.text-docs__content').slideDown(500);
     } else {
-      $(this).find('span').text('Подробнее');
-      $(this).removeClass('active');
+      btn.find('span').text('Подробнее');
+      btn.removeClass('active');
+      btn.closest('.text-docs').find('.text-docs__content').slideUp(500);
     }
   });
 

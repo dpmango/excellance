@@ -6,7 +6,7 @@
 
 /* 1. Layout */
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Tenor+Sans|Roboto:400,500&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:400,500&subset=cyrillic');
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -972,10 +972,10 @@ button:focus {
     -webkit-transform: translate3d(0, 1px,0 );
             transform: translate3d(0, 1px,0 );
 }
-.header__navi li:hover a, .header__navi li.acitve a {
+.header__navi li:hover a, .header__navi li.active a {
     color: #7E6884;
 }
-.header__navi li:hover:after, .header__navi li.acitve:after {
+.header__navi li:hover:after, .header__navi li.active:after {
     -webkit-transform: translate3d(0, 0px,0 );
             transform: translate3d(0, 0px,0 );
 }
@@ -2478,7 +2478,6 @@ button:focus {
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
     font-size: 0;
-    font-family: 'Tenor Sans', sans-serif;
     -webkit-transition: -webkit-transform .15s ease-in-out;
     transition: -webkit-transform .15s ease-in-out;
     transition: transform .15s ease-in-out;
@@ -2523,7 +2522,6 @@ button:focus {
     margin-left: auto;
     padding-top: 35px;
     padding-left: 20px;
-    font-family: 'Tenor Sans', sans-serif;
     -webkit-box-flex: 0;
 }
 .text__content .heading {
@@ -2663,6 +2661,9 @@ button:focus {
             -ms-flex-order: 1;
         -webkit-box-flex: 1;
     }
+    .text__centred {
+        margin-top: 40px;
+    }
 }
 @media(max-width: 640px) {
     .text {}
@@ -2713,6 +2714,8 @@ button:focus {
     border-top: 1px solid #DBDEE0;
     border-bottom: 1px solid #DBDEE0;
     background: #F6F6F6;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
 }
 .text-docs .subheading {
     margin-bottom: 30px;
@@ -2722,7 +2725,7 @@ button:focus {
     transition: color .15s ease-in-out;
 }
 .text-docs p {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 12px;
     line-height: 1.2;
     -webkit-transition: color .15s ease-in-out;
@@ -2731,7 +2734,7 @@ button:focus {
 .text-docs__head {
     margin-right: auto;
     margin-left: auto;
-    padding: 45px 0 0 45px;
+    padding: 45px 0 20px 45px;
     max-width: 590px;
     text-align: center;
 }
@@ -2748,9 +2751,19 @@ button:focus {
     color: #939393;
     font-size: 10px;
     opacity: 0;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
     -webkit-transform: translateY(-50%) rotate(180deg);
         -ms-transform: translateY(-50%) rotate(180deg);
             transform: translateY(-50%) rotate(180deg);
+    pointer-events: none;
+}
+.text-docs__head .subheading .icon-dropdown:hover {
+    color: white;
+    -webkit-transform: translateY(-50%) rotate(0deg);
+        -ms-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
 }
 .text-docs__bottom {
     padding-bottom: 45px;
@@ -2766,9 +2779,8 @@ button:focus {
     background: transparent;
     color: white;
 }
-.text-docs__content .docs-list {
-    overflow: hidden;
-    height: 0;
+.text-docs__content {
+    display: none;
 }
 .text-docs.active {
     background: #313131;
@@ -2778,9 +2790,11 @@ button:focus {
 }
 .text-docs.active .text-docs__head .subheading .icon-dropdown {
     opacity: 1;
+    pointer-events: all;
 }
 .text-docs.active .docs-list {
-    height: auto;
+    -webkit-transform: translate3d(0,0px,0);
+            transform: translate3d(0,0px,0);
 }
 /* DOCS */
 .docs-list {
@@ -2791,7 +2805,6 @@ button:focus {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    margin-top: 20px;
     margin-right: -7px;
     margin-left: -7px;
     -webkit-transition: all .15s ease-in-out;
@@ -2941,7 +2954,7 @@ button:focus {
 }
 .contacts__sidebar {
     position: relative;
-    z-index: 8;
+    z-index: 2;
     overflow: visible;
     margin-top: 20px;
     padding: 40px 20px 30px 35px;
@@ -2981,6 +2994,9 @@ button:focus {
 .contacts__sidebar__group-title {
     margin-bottom: 12px;
     font-size: 14px;
+}
+.contacts__sidebar__group--condenced p, .contacts__sidebar__group--condenced span {
+    margin-bottom: 3px;
 }
 /* PRODUCTS */
 

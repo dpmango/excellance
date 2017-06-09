@@ -111,7 +111,6 @@
     display: flex
     flex-direction: column
   &__card
-    font-family: 'Tenor Sans', sans-serif
     position: relative
     min-height: 360px
     display: flex
@@ -153,7 +152,7 @@
     flex: 0 2 610px
     margin-left: auto
     padding-left: 20px
-    font-family: 'Tenor Sans', sans-serif
+
     padding-top: 35px
     .heading
       padding-right: 15%
@@ -246,6 +245,8 @@
     &__content
       order: 1
       flex: 1 1 auto
+    &__centred
+      margin-top: 40px
 
 @media($mobile)
   .text
@@ -283,17 +284,20 @@
   border-top: 1px solid $borderColor
   border-bottom: 1px solid $borderColor
   background: #F6F6F6
+  transition: all .3s ease
   &__head
     text-align: center
     max-width: 590px
     margin-left: auto
     margin-right: auto
-    padding: 45px 0 0 45px
+    padding: 45px 0 20px 45px
     .subheading
       span
         display: inline-block
         position: relative
       .icon-dropdown
+        pointer-events: none
+        cursor: pointer
         opacity: 0
         color: #939393
         position: absolute
@@ -303,6 +307,10 @@
         display: inline-block
         font-size: 10px
         margin-left: 10px
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: white
+          transform: translateY(-50%) rotate(0deg)
   &__bottom
     text-align: center
     padding-bottom: 45px
@@ -323,12 +331,11 @@
   p
     font-size: 12px
     line-height: 1.2
-    margin-bottom: 30px
+    margin-bottom: 10px
     transition: color $transitionSpeed $ease
   &__content
-    .docs-list
-      height: 0
-      overflow: hidden
+    display: none
+
 
   &.active
     background: #313131
@@ -337,8 +344,9 @@
       .subheading
         .icon-dropdown
           opacity: 1
+          pointer-events: all
     .docs-list
-      height: auto
+      transform: translate3d(0,0px,0)
 
 
 
@@ -346,7 +354,6 @@
 
 // DOCS
 .docs-list
-  margin-top: 20px
   display: flex
   flex-wrap: wrap
   margin-left: -7px
@@ -433,7 +440,7 @@
   &__sidebar
     margin-top: 20px
     position: relative
-    z-index: 8
+    z-index: 2
     max-width: 400px
     background: white
     padding: 40px 20px 30px 35px
@@ -463,3 +470,6 @@
         transition: all $transitionSpeed $ease
         &:hover
           color: $colorPrimary
+      &--condenced
+        p, span
+          margin-bottom: 3px
