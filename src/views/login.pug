@@ -15,18 +15,32 @@ doctype html
         // login
         .profile__login
           .profile__box
-            .profile__box__heading УЖЕ ЗАРЕГИСТРИРОВАНЫ?
-            form(action='#')
-              .ui-group.ui-group--labeled
-                label E-mail
-                input(type='email' placeholder='').ui-input
-              .ui-group.ui-group--labeled
-                label Пароль
-                input(type='password' placeholder='').ui-input
-              .profile__box__cta
-                button(type='submit').btn.btn--primary.btn--190 Вход
-                a(href='#').profile__help-link
-                  span ЗАБЫЛИ ПАРОЛЬ?
+            // action
+            .profile__login-action.active(data-form='login')
+              .profile__box__heading УЖЕ ЗАРЕГИСТРИРОВАНЫ?
+              form(action='#').js-login-form
+                .ui-group.ui-group--labeled
+                  label E-mail
+                  input(type='email' name='email' placeholder='').ui-input
+                .ui-group.ui-group--labeled
+                  label Пароль
+                  input(type='password' name='password' placeholder='').ui-input
+                .profile__box__cta
+                  button(type='submit').btn.btn--primary.btn--190 Вход
+                  a(href='#').profile__help-link.js-toggleLoginForm(data-form='recover')
+                    span ЗАБЫЛИ ПАРОЛЬ?
+            // action
+            .profile__login-action(data-form='recover')
+              .profile__box__heading ВОССТАНОВЛЕНИЕ ПАРОЛЯ
+              form(action='#').js-recover-form
+                .ui-group.ui-group--labeled
+                  label E-mail
+                  input(type='email' name='email' placeholder='').ui-input
+                .profile__box__cta
+                  .profile__box__sucess(data-ok) Пароль отправлен на вашу электронную почту
+                  button(type='submit').btn.btn--primary.btn--190 Восстановить пароль
+                  a(href='#').profile__help-link.js-toggleLoginForm(data-form='login')
+                    span Отмена 
             .profile__social-login
               .profile__social-login__heading Авторизоваться через социальные сети:
               a(href='#')
@@ -61,6 +75,17 @@ doctype html
                 label Пароль
                   span *
                 input(type='password' name='password' placeholder='').ui-input
+              .ui-group.ui-group--radios.ui-group--radios-required
+                .ui-radio
+                  input(type='radio' name='type' id='radio_1')
+                  label(for='radio_1') Я проффесионал в области косметологии
+                .ui-radio
+                  input(type='radio' name='type' id='radio_2')
+                  label(for='radio_2') Я приобретаю товары для персонального использования
+              .ui-radio
+                input(type='radio' name='markteting' id='radio_3')
+                label(for='radio_3') Получать рассылки от EXCELLANCE
+            
               .profile__box__cta
                 button(type='submit').btn.btn--primary.btn--190 Регистрация
 

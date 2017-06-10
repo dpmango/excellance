@@ -9,6 +9,11 @@
     padding-bottom: 40px
     padding-left: 20px
     padding-right: 20px
+    &-action
+      display: none
+      &.active
+        display: block
+
   &__signup
     padding-top: 50px
     padding-bottom: 70px
@@ -16,7 +21,7 @@
     padding-right: 20px
 
   &__box
-    max-width: 400px
+    max-width: 401px
     margin-left: auto
     margin-right: auto
     &__heading
@@ -41,10 +46,21 @@
     &__cta
       padding-top: 10px
       text-align: center
+    &__sucess
+      display: none
+      margin-left: -45px
+      margin-right: -45px
+      font-size: 18px
+      letter-spacing: 2px
+      margin-bottom: 25px
+      margin-top: -10px
+      text-align: center
+      color: $colorGray
   &__help-link
     display: block
     font-size: 12px
     margin-top: 15px
+    text-transform: uppercase
     span
       display: inline-block
       border-bottom: 1px solid $fontColor
@@ -188,3 +204,29 @@
       margin-right: 4px
       min-height: auto
       padding: 25px
+
+
+@media($mobile)
+  .profile
+    padding-top: 40px
+    &__login
+      margin-top: 35px
+      background: white
+      padding-bottom: 30px
+    &__signup
+      padding-top: 40px
+      padding-bottom: 50px
+
+    &__social-login
+
+
+
+@media(width <= 450px)
+  .profile
+    &__box
+      &__heading
+        font-size: 20px
+        letter-spacing: 2px
+      &__sucess
+        font-size: 16px
+        letter-spacing: 1.5px

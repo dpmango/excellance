@@ -1,40 +1,10 @@
 // UI
 
-// THIS IS GROUPED INPUT WHERE DOM MANIPULATIONS IS REQUIRED
-// label is used as a placeholder
-.input
-  position: relative
-  &--dynamic
-    border-bottom: 1px solid $borderColor
-    margin-bottom: 15px
-    min-height: 40px
-    label
-      display: block
-      position: absolute
-      bottom: 7px
-      font-size: 18px
-      font-weight: 600
-      transition: all $transitionSpeed $ease
-    input
-      -webkit-appearance: none
-      background: transparent
-      border: 0
-      position: absolute
-      left: 0
-      right: 0
-      bottom: 0
-      font-size: 18px
-      font-weight: 600
-      height: 30px
-      color: $grayColor
-      &:focus
-        outline: none
-  &--focused
-    label
-      font-size: 12px
-      font-weight: 400
-      color: $grayColor
-      transform: translate3d(0, -20px, 0)
+form
+  transition: all $transitionSpeed $ease
+  &.loading
+    opacity: .85
+
 
 // THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
 .ui-input
@@ -48,7 +18,8 @@
   padding: 11px 15px
   font-family: 'Playfair Display', serif
   box-shadow: inset 0px 0px 5px color(black a(20%))
-  font-size: 16px
+  font-size: 18px
+  letter-spacing: 2px
   transition: all $transitionSpeed $ease
   &:focus
     box-shadow: 0 0 0px 2px $colorPrimary
@@ -143,7 +114,62 @@
       font-size: 14px
       cursor: pointer
 
+////////
+// RADIO
+////////
+.ui-radio
+  margin-bottom: 25px
+  input
+    display: none
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    &:checked
+      + label
+        &::before
+          background-color: $colorPrimary
 
+  label
+    display: block
+    width: 100%
+    position: relative
+    cursor: pointer
+    font-size: 12px
+    padding-left: 65px
+    &::before
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      display: inline-block
+      content: ' '
+      size: 10px
+      background-color: #DADADA
+      border-radius: 50%
+      border: 3px solid white
+      cursor: pointer
+      vertical-align: middle
+      cursor: pointer
+      box-shadow: 0px 0px 10px color(black a(30%))
+      transition: all $transitionSpeed ease-in-out
+
+  &:hover
+    label
+      &::before
+        box-shadow: 0px 0px 5px color(black a(20%))
+
+@media(width <= 850px)
+  .ui-radio
+    label
+      padding-left: 40px
+
+      
+////////
+// GROUPS
+////////
 .ui-group
   margin-bottom: 20px
   max-width: 240px
@@ -161,6 +187,32 @@
       span
         color: $colorRed
 
+  &--radios
+    max-width: 590px
+    margin-right: -170px
+    padding-right: 10px
+    margin-bottom: 40px
+    border-right: 1px solid $borderColor
+    .ui-radio
+      > label
+        font-size: 18px
+        color: $colorGray
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $fontColor
+
+    &-required
+      position: relative
+      &::after
+        position: absolute
+        right: -20px
+        top: 5px
+        display: block
+        content: '*'
+        font-size: 14px
+        font-family: 'Roboto', sans-serif
+        color: $colorRed
+
   > label
     font-size: 10px
     margin-bottom: 8px
@@ -170,6 +222,26 @@
     .ui-input
       box-shadow: 0 0 0px 2px $colorRed
 
+
+@media(width <= 850px)
+  .ui-group
+    &--radios
+      max-width: 400px
+      margin-bottom: 30px
+      border-right: 0
+      padding-right: 10px
+      margin-right: 0
+      .ui-radio
+        > label
+          font-size: 14px
+      &-required
+        &::after
+          right: 0
+
+
+////////
+// SELECT
+////////
 .ui-select
   position: relative
   font-size: 12px
@@ -236,3 +308,43 @@
     &.active
       .icon-dropdown
         transform: rotate(90deg)
+
+
+
+
+
+// THIS IS GROUPED INPUT WHERE DOM MANIPULATIONS IS REQUIRED
+// label is used as a placeholder
+// .input
+//   position: relative
+//   &--dynamic
+//     border-bottom: 1px solid $borderColor
+//     margin-bottom: 15px
+//     min-height: 40px
+//     label
+//       display: block
+//       position: absolute
+//       bottom: 7px
+//       font-size: 18px
+//       font-weight: 600
+//       transition: all $transitionSpeed $ease
+//     input
+//       -webkit-appearance: none
+//       background: transparent
+//       border: 0
+//       position: absolute
+//       left: 0
+//       right: 0
+//       bottom: 0
+//       font-size: 18px
+//       font-weight: 600
+//       height: 30px
+//       color: $grayColor
+//       &:focus
+//         outline: none
+//   &--focused
+//     label
+//       font-size: 12px
+//       font-weight: 400
+//       color: $grayColor
+//       transform: translate3d(0, -20px, 0)

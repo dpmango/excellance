@@ -125,47 +125,12 @@ body, html {
 
 /* 2. Elements */
 /* UI */
-/* THIS IS GROUPED INPUT WHERE DOM MANIPULATIONS IS REQUIRED */
-/* label is used as a placeholder */
-.input {
-    position: relative;
-}
-.input--dynamic {
-    margin-bottom: 15px;
-    min-height: 40px;
-    border-bottom: 1px solid #DBDEE0;
-}
-.input--dynamic label {
-    position: absolute;
-    bottom: 7px;
-    display: block;
-    font-weight: 600;
-    font-size: 18px;
+form {
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
 }
-.input--dynamic input {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 30px;
-    border: 0;
-    background: transparent;
-    color: $grayColor;
-    font-weight: 600;
-    font-size: 18px;
-    -webkit-appearance: none;
-}
-.input--dynamic input:focus {
-    outline: none;
-}
-.input--focused label {
-    color: $grayColor;
-    font-weight: 400;
-    font-size: 12px;
-    -webkit-transform: translate3d(0, -20px, 0);
-            transform: translate3d(0, -20px, 0);
+form.loading {
+    opacity: .85;
 }
 /* THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT */
 .ui-input {
@@ -178,7 +143,8 @@ body, html {
     background: white;
     -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
             box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
+    letter-spacing: 2px;
+    font-size: 18px;
     font-family: 'Playfair Display', serif;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
@@ -298,6 +264,68 @@ body, html {
     border-color: #ECF0F1;
     background: white;
 }
+/*////// */
+/* RADIO */
+/*////// */
+.ui-radio {
+    margin-bottom: 25px;
+}
+.ui-radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+}
+.ui-radio input:checked + label {}
+.ui-radio input:checked + label:before {
+    background-color: #410C50;
+}
+.ui-radio label {
+    position: relative;
+    display: block;
+    padding-left: 65px;
+    width: 100%;
+    font-size: 12px;
+    cursor: pointer;
+}
+.ui-radio label:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #DADADA;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    content: ' ';
+    vertical-align: middle;
+    cursor: pointer;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.ui-radio:hover label {}
+.ui-radio:hover label:before {
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+@media(max-width: 850px) {
+    .ui-radio label {
+        padding-left: 40px;
+    }
+}
+/*////// */
+/* GROUPS */
+/*////// */
 .ui-group {
     margin-bottom: 20px;
     max-width: 240px;
@@ -332,10 +360,59 @@ body, html {
 .ui-group--labeled > label:not(.ui-input__validation) span {
     color: #D0011B;
 }
+.ui-group--radios {
+    margin-right: -170px;
+    margin-bottom: 40px;
+    padding-right: 10px;
+    max-width: 590px;
+    border-right: 1px solid #DBDEE0;
+}
+.ui-group--radios .ui-radio > label {
+    color: #939393;
+    font-size: 18px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.ui-group--radios .ui-radio > label:hover {
+    color: #313131;
+}
+.ui-group--radios-required {
+    position: relative;
+}
+.ui-group--radios-required:after {
+    position: absolute;
+    top: 5px;
+    right: -20px;
+    display: block;
+    color: #D0011B;
+    content: '*';
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
 .ui-group.has-error .ui-input {
     -webkit-box-shadow: 0 0 0px 2px #D0011B;
             box-shadow: 0 0 0px 2px #D0011B;
 }
+@media(max-width: 850px) {
+    .ui-group {}
+    .ui-group--radios {
+        margin-right: 0;
+        margin-bottom: 30px;
+        padding-right: 10px;
+        max-width: 400px;
+        border-right: 0;
+    }
+    .ui-group--radios .ui-radio > label {
+        font-size: 14px;
+    }
+    .ui-group--radios-required {}
+    .ui-group--radios-required:after {
+        right: 0;
+    }
+}
+/*////// */
+/* SELECT */
+/*////// */
 .ui-select {
     position: relative;
     font-size: 12px;
@@ -433,6 +510,41 @@ body, html {
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
 }
+/* THIS IS GROUPED INPUT WHERE DOM MANIPULATIONS IS REQUIRED */
+/* label is used as a placeholder */
+/* .input */
+/*   position: relative */
+/*   &--dynamic */
+/*     border-bottom: 1px solid $borderColor */
+/*     margin-bottom: 15px */
+/*     min-height: 40px */
+/*     label */
+/*       display: block */
+/*       position: absolute */
+/*       bottom: 7px */
+/*       font-size: 18px */
+/*       font-weight: 600 */
+/*       transition: all $transitionSpeed $ease */
+/*     input */
+/*       -webkit-appearance: none */
+/*       background: transparent */
+/*       border: 0 */
+/*       position: absolute */
+/*       left: 0 */
+/*       right: 0 */
+/*       bottom: 0 */
+/*       font-size: 18px */
+/*       font-weight: 600 */
+/*       height: 30px */
+/*       color: $grayColor */
+/*       &:focus */
+/*         outline: none */
+/*   &--focused */
+/*     label */
+/*       font-size: 12px */
+/*       font-weight: 400 */
+/*       color: $grayColor */
+/*       transform: translate3d(0, -20px, 0) */
 
 /* 3. Modules */
 /* HEADER */
@@ -3338,6 +3450,12 @@ body, html {
     padding-left: 20px;
     background: white;
 }
+.profile__login-action {
+    display: none;
+}
+.profile__login-action.active {
+    display: block;
+}
 .profile__signup {
     padding-top: 50px;
     padding-right: 20px;
@@ -3347,7 +3465,7 @@ body, html {
 .profile__box {
     margin-right: auto;
     margin-left: auto;
-    max-width: 400px;
+    max-width: 401px;
 }
 .profile__box__heading {
     margin-bottom: 25px;
@@ -3374,9 +3492,21 @@ body, html {
     padding-top: 10px;
     text-align: center;
 }
+.profile__box__sucess {
+    display: none;
+    margin-top: -10px;
+    margin-right: -45px;
+    margin-bottom: 25px;
+    margin-left: -45px;
+    color: #939393;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
 .profile__help-link {
     display: block;
     margin-top: 15px;
+    text-transform: uppercase;
     font-size: 12px;
 }
 .profile__help-link span {
@@ -3609,6 +3739,33 @@ body, html {
     padding: 25px;
     min-height: auto;
         -ms-flex-preferred-size: calc(50% - 8px);
+}
+@media(max-width: 640px) {
+    .profile {
+        padding-top: 40px;
+    }
+    .profile__login {
+        margin-top: 35px;
+        padding-bottom: 30px;
+        background: white;
+    }
+    .profile__signup {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .profile__social-login {}
+}
+@media(max-width: 450px) {
+    .profile {}
+    .profile__box {}
+    .profile__box__heading {
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    .profile__box__sucess {
+        letter-spacing: 1.5px;
+        font-size: 16px;
+    }
 }
 /* Services */
 .service {}

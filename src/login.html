@@ -97,20 +97,37 @@
       <!-- login-->
       <div class="profile__login">
         <div class="profile__box">
-          <div class="profile__box__heading">УЖЕ ЗАРЕГИСТРИРОВАНЫ?</div>
-          <form action="#">
-            <div class="ui-group ui-group--labeled">
-              <label>E-mail</label>
-              <input class="ui-input" type="email" placeholder="">
-            </div>
-            <div class="ui-group ui-group--labeled">
-              <label>Пароль</label>
-              <input class="ui-input" type="password" placeholder="">
-            </div>
-            <div class="profile__box__cta">
-              <button class="btn btn--primary btn--190" type="submit">Вход</button><a class="profile__help-link" href="#"><span>ЗАБЫЛИ ПАРОЛЬ?</span></a>
-            </div>
-          </form>
+          <!-- action-->
+          <div class="profile__login-action active" data-form="login">
+            <div class="profile__box__heading">УЖЕ ЗАРЕГИСТРИРОВАНЫ?</div>
+            <form class="js-login-form" action="#">
+              <div class="ui-group ui-group--labeled">
+                <label>E-mail</label>
+                <input class="ui-input" type="email" name="email" placeholder="">
+              </div>
+              <div class="ui-group ui-group--labeled">
+                <label>Пароль</label>
+                <input class="ui-input" type="password" name="password" placeholder="">
+              </div>
+              <div class="profile__box__cta">
+                <button class="btn btn--primary btn--190" type="submit">Вход</button><a class="profile__help-link js-toggleLoginForm" href="#" data-form="recover"><span>ЗАБЫЛИ ПАРОЛЬ?</span></a>
+              </div>
+            </form>
+          </div>
+          <!-- action-->
+          <div class="profile__login-action" data-form="recover">
+            <div class="profile__box__heading">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</div>
+            <form class="js-recover-form" action="#">
+              <div class="ui-group ui-group--labeled">
+                <label>E-mail</label>
+                <input class="ui-input" type="email" name="email" placeholder="">
+              </div>
+              <div class="profile__box__cta">
+                <div class="profile__box__sucess" data-ok>Пароль отправлен на вашу электронную почту</div>
+                <button class="btn btn--primary btn--190" type="submit">Восстановить пароль</button><a class="profile__help-link js-toggleLoginForm" href="#" data-form="login"><span>Отмена </span></a>
+              </div>
+            </form>
+          </div>
           <div class="profile__social-login">
             <div class="profile__social-login__heading">Авторизоваться через социальные сети:</div><a href="#"><i class="icon icon-facebook"></i></a><a href="#"><i class="icon icon-vk">   </i></a><a href="#"><i class="icon icon-twitter"> </i></a>
           </div>
@@ -141,6 +158,20 @@
             <div class="ui-group ui-group--labeled">
               <label>Пароль<span>*</span></label>
               <input class="ui-input" type="password" name="password" placeholder="">
+            </div>
+            <div class="ui-group ui-group--radios ui-group--radios-required">
+              <div class="ui-radio">
+                <input type="radio" name="type" id="radio_1">
+                <label for="radio_1">Я проффесионал в области косметологии</label>
+              </div>
+              <div class="ui-radio">
+                <input type="radio" name="type" id="radio_2">
+                <label for="radio_2">Я приобретаю товары для персонального использования</label>
+              </div>
+            </div>
+            <div class="ui-radio">
+              <input type="radio" name="markteting" id="radio_3">
+              <label for="radio_3">Получать рассылки от EXCELLANCE</label>
             </div>
             <div class="profile__box__cta">
               <button class="btn btn--primary btn--190" type="submit">Регистрация</button>

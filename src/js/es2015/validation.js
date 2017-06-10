@@ -3,8 +3,14 @@ $(document).ready(function(){
   // FORM VALIDATIONS
   ////////////////
 
+  // jQuery validate plugin
+  // https://jqueryvalidation.org
+
+
+  // GENERIC FUNCTIONS
+  ////////////////////
+
   var validateErrorPlacement = function(error, element) {
-    console.log(error);
     error.addClass('ui-input__validation');
     error.appendTo(element.parent("div"));
   }
@@ -24,7 +30,7 @@ $(document).ready(function(){
         $(form).removeClass('loading');
         var data = $.parseJSON(response);
         if (data.status == 'success') {
-          // do something I can't test yet :)
+          // do something I can't test
         } else {
             $(form).find('[data-error]').html(data.message).show();
         }
@@ -49,7 +55,10 @@ $(document).ready(function(){
   ////////
   // FORMS
 
-  // modal entry form
+
+  /////////////////////
+  // REGISTRATION FORM
+  ////////////////////
   $(".js-registration-form").validate({
     errorPlacement: validateErrorPlacement,
     highlight: validateHighlight,
@@ -85,5 +94,85 @@ $(document).ready(function(){
       // }
     }
   });
+
+
+  ///////////////
+  // LOGIN FORM
+  ///////////////
+  $(".js-login-form").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      email: {
+        required: true,
+        email: true
+      },
+      password: {
+        required: true
+      }
+    },
+    messages: {
+      email: {
+          required: "Пожалуйста, введите электронную почту",
+          email: "Email содержит неправильный формат"
+      },
+      password: {
+        required: "Введите пароль"
+      }
+    }
+  });
+
+
+  ///////////////
+  // RECOVER FORM
+  ///////////////
+  $(".js-recover-form").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitRecoverHandler,
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      email: {
+          required: "Пожалуйста, введите электронную почту",
+          email: "Email содержит неправильный формат"
+      }
+    }
+  });
+
+  // recover handler
+  var validateSubmitRecoverHandler = function(form) {
+    $(form).addClass('loading');
+
+    $.ajax({
+      type: "POST",
+      url: $(form).attr('action'),
+      data: $(form).serialize(),
+      success: function(response) {
+        $(form).removeClass('loading');
+        var data = $.parseJSON(response);
+        if (data.status == 'success') {
+          // do something I can't test
+        } else {
+            $(form).find('[data-error]').html(data.message).show();
+
+        }
+      },
+      complete: function(response){
+        // move this to sucess
+        var sucessMessage = 'Пароль отправлен на вашу электронную почту'
+        $(form).find('[data-ok]').html(sucessMessage).show();
+        $(form).find('.profile__box__cta .btn span').text('Вернуться в форму регистрации')
+        %(form).find('.profile__box__cta .profile__help-link span').text('Отправить повторно');
+      }
+    });
+  }
 
 });

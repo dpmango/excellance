@@ -33,8 +33,10 @@ $(document).ready(function(){
 	});
 
   // HEADER SCROLL
+  // add .header-static for .page or body
+  // to disable sticky header
   if ( $('.header-static').length == 0 ){
-    _window.scrolled(10, function() { // scrolled is a constructor for scroll delay listener
+    _window.scrolled(10, function() { // scrolled is a constructor for scroll delay
       var vScroll = _window.scrollTop();
       var header = $('.header').not('.header--sticky');
       var headerSticky = $('.header--sticky');
@@ -49,7 +51,6 @@ $(document).ready(function(){
     });
   }
 
-
   // HEADER SEARCH
   $('.header__search .icon-search').on('click', function(){
     $(this).parent().addClass('active');
@@ -62,19 +63,20 @@ $(document).ready(function(){
   });
 
 
-  // scrollbars
+  // SCROLLBARS
   $('.scrollbar-dynamic').scrollbar();
   $('.scrollbar-macosx').scrollbar();
 
 
-  // Hamburger
+  // HAMBURGER TOGGLER
   $('.hamburger').on('click', function(){
     $('.hamburger').toggleClass('active');
     $('.mobile-navi').toggleClass('active');
   });
 
-  // SET ACTIVE CLASS FOR HEADING
-
+  // SET ACTIVE CLASS IN HEADER
+  // * could be removed in production and server side rendering
+  // user .active for li instead
   $('.header__navi li').each(function(i,val){
     if ( $(val).find('a').attr('href') == window.location.pathname.split('/').pop() ){
       $(val).addClass('active');
@@ -86,7 +88,6 @@ $(document).ready(function(){
   //////////
   // SLIDERS
   //////////
-
   $('.hero__slider').slick({
     autoplay: true,
     autoplaySpeed: 7000,
@@ -160,6 +161,8 @@ $(document).ready(function(){
     $(this).closest('.promo-video').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
   });
 
+  // ABOUT PAGE
+  // Toggle more/less for docs
   $('.js-toggleDocsSection, .text-docs__head .icon').on('click', function(){
     $(this).closest('.text-docs').toggleClass('active');
     var btn = $('.js-toggleDocsSection');
@@ -245,8 +248,9 @@ $(document).ready(function(){
 	// 	}
 	// });
 
-
+  ///////////////
   // PRODUCT PAGE
+  ///////////////
   $('.product__tab--collapsable').on('click', function(){
     if ( $(this).is('.active') ){
       $(this).find('.product__tab__content').slideUp();
@@ -265,7 +269,10 @@ $(document).ready(function(){
     $('.testimonials__more-items').slideDown();
   });
 
+  ///////////////
   // SERVICE PAGE
+  ///////////////
+
   // toggler for first level - click for header
   $('.service__list__item__head').on('click', function(){
     $(this).parent().toggleClass('active');
@@ -292,28 +299,55 @@ $(document).ready(function(){
     e.stopPropagation();
   });
 
-
+  ///////////////
   // PROFILE PAGE
+  ///////////////
+
   $('.profile__order__head').on('click', function(){
     $(this).parent().toggleClass('active');
 
     $(this).parent().find('.profile__order__toggable').slideToggle(250);
   });
 
+
+  ///////////////
+  // LOGIN PAGE
+  ///////////////
+
+  // screen toggler
+  $('.js-toggleLoginForm').on('click', function(){
+    var target = $(this).data('form');
+
+    $('.profile__login-action').each(function(i,val){
+      if ( $(val).data('form') == target ){
+        $(val).slideDown();
+      } else {
+        $(val).slideUp();
+      }
+    });
+
+  });
+
+  // ++ validation.js for forms
+
+
+
+  ///////////////
+  // UI
+  ///////////////
   // Masked input
   // $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
 
   $("input[type='tel']").mask("0 (000) 000-0000", {placeholder: "_ (___) ___-____"});
 
-
   // DATEPICKER
-  $('.js-datepicker').datepicker({
-    language: 'en',
-    range: true,
-    multipleDatesSeparator: " - "
-  });
+  // $('.js-datepicker').datepicker({
+  //   language: 'en',
+  //   range: true,
+  //   multipleDatesSeparator: " - "
+  // });
 
-  // UI
+  // custom selects
   $('.ui-select__visible').on('click', function(e){
     var that = this
     // hide parents
@@ -351,9 +385,10 @@ $(document).ready(function(){
     });
   });
 
+
   // INPUTS FOCUS
 
-  // Codedrops based - pure javascript
+  // Codedrops - pure javascript
   (function() {
     // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
     if (!String.prototype.trim) {

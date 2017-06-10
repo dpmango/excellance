@@ -150,6 +150,8 @@ button:focus {
     color: #999999;
 }
 .btn--190 {
+    padding-right: 10px;
+    padding-left: 10px;
     min-width: 190px;
 }
 .hamburger {
