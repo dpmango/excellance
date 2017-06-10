@@ -3817,10 +3817,22 @@ form.loading {
     margin-left: 70px;
     -webkit-box-flex: 0;
 }
+.profile__orders__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
 .profile__orders__row span {
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+    padding-right: 5px;
+    padding-left: 5px;
     text-align: center;
     -webkit-box-flex: 0;
 }
@@ -3863,11 +3875,7 @@ form.loading {
             transform: rotate(90deg);
 }
 .profile__orders__thead {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 15px 15px 15px 30px;
+    padding: 15px 15px 15px 25px;
 }
 .profile__orders__thead span {
     color: #939393;
@@ -3877,11 +3885,7 @@ form.loading {
     margin-bottom: 8px;
 }
 .profile__order__head {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 25px 15px 25px 30px;
+    padding: 25px 15px 25px 25px;
     border-radius: 4px;
     background: white;
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
@@ -3895,6 +3899,9 @@ form.loading {
     font-size: 14px;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
+}
+.profile__order__head span span {
+    display: none;
 }
 .profile__order__head span:nth-child(6) {
     border-right: 0;
@@ -3945,18 +3952,6 @@ form.loading {
 }
 @media(max-width: 992px) {
     .profile {}
-    .profile__cabinet .profile__box {
-        margin-left: 40px;
-    }
-    .profile__cabinet-nav {
-        -webkit-flex: 0 1 200px;
-            -ms-flex: 0 1 200px;
-                flex: 0 1 200px;
-        -webkit-box-flex: 0;
-    }
-}
-@media(max-width: 768px) {
-    .profile {}
     .profile__cabinet {
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
@@ -3969,14 +3964,71 @@ form.loading {
         margin-left: auto;
     }
     .profile__cabinet-nav {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        -webkit-justify-content: center;
+                justify-content: center;
+        margin-top: -10px;
         margin-right: auto;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         margin-left: auto;
-        width: 220px;
+        padding: 0;
+        width: auto;
+        background: transparent;
+        -webkit-box-shadow: none;
+                box-shadow: none;
         -webkit-box-flex: 0;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+    }
+    .profile__cabinet-nav a {
+        margin-right: 15px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        background: white;
+        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    }
+    .profile__cabinet-nav a:hover, .profile__cabinet-nav a.active {
+        background: #9C89B0;
+        color: white;
+    }
+    .profile__cabinet-nav a:hover:not(.acitve) {
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+    .profile__cabinet-nav a:last-child {
+        margin-right: 0;
+    }
+    .profile__orders {
+        -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+        margin-right: auto;
+        margin-left: auto;
+        width: 670px;
+        -webkit-box-flex: 0;
+    }
+}
+@media(max-width: 768px) {
+    .profile {}
+}
+@media(max-width: 710px) {
+    .profile {}
+    .profile__orders {
+        width: 100%;
     }
 }
 @media(max-width: 640px) {
@@ -3992,7 +4044,65 @@ form.loading {
         padding-top: 40px;
         padding-bottom: 50px;
     }
-    .profile__social-login {}
+    .profile__orders {}
+    .profile__orders__row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+    }
+    .profile__orders__thead {
+        display: none;
+    }
+    .profile__order {}
+    .profile__order__head {
+        position: relative;
+        padding: 15px 15px 15px 20px;
+    }
+    .profile__order__head > span {
+        -webkit-flex: 0 0 auto !important;
+            -ms-flex: 0 0 auto !important;
+                flex: 0 0 auto !important;
+        margin-bottom: 5px;
+        border-right: 0;
+        font-size: 14px;
+        -webkit-box-flex: 0 !important;
+    }
+    .profile__order__head > span span {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        min-width: 140px;
+        border-right: 0;
+        color: #939393;
+        font-size: 12px;
+    }
+    .profile__order__head > span i.icon {
+        position: absolute;
+        top: 45%;
+        right: 20px;
+        -webkit-transform: rotate(90deg) translateY(-50%);
+            -ms-transform: rotate(90deg) translateY(-50%);
+                transform: rotate(90deg) translateY(-50%);
+    }
+}
+@media(max-width: 520px) {
+    .profile {}
+    .profile__order {}
+    .profile__order__card {
+        -webkit-flex-basis: -webkit-calc(100% - 8px);
+                flex-basis: calc(100% - 8px);
+            -ms-flex-preferred-size: calc(100% - 8px);
+    }
 }
 @media(max-width: 450px) {
     .profile {}
@@ -4004,6 +4114,20 @@ form.loading {
     .profile__box__sucess {
         letter-spacing: 1.5px;
         font-size: 16px;
+    }
+}
+@media(max-width: 414px) {
+    .profile {}
+    .profile__order {}
+    .profile__order__head {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .profile__order__head > span span {
+        min-width: 90px;
+    }
+    .profile__order__head > span i.icon {
+        right: 15px;
     }
 }
 /* Services */

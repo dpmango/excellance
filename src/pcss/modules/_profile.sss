@@ -133,9 +133,13 @@
     flex: 0 1 670px
     margin-left: 70px
     &__row
+      display: flex
+      align-items: center
       span
         flex: 0 1 auto
         text-align: center
+        padding-left: 5px
+        padding-right: 5px
         &:nth-child(1)
           text-align: left
           flex-basis: 90px
@@ -153,8 +157,7 @@
             transform: rotate(90deg)
             transition: all $transitionSpeed $ease
     &__thead
-      display: flex
-      padding: 15px 15px 15px 30px
+      padding: 15px 15px 15px 25px
       span
         font-size: 12px
         color: $colorGray
@@ -162,8 +165,7 @@
   &__order
     margin-bottom: 8px
     &__head
-      display: flex
-      padding: 25px 15px 25px 30px
+      padding: 25px 15px 25px 25px
       background: white
       border-radius: 4px
       cursor: pointer
@@ -175,6 +177,8 @@
         transition: all $transitionSpeed $ease
         &:nth-child(6)
           border-right: 0
+        span
+          display: none
       &:hover
         box-shadow: none
     &.active
@@ -185,7 +189,6 @@
           border-color: white
         .icon
           transform: rotate(270deg)
-
 
 
     &__toggable
@@ -208,24 +211,54 @@
 @media($desktop)
   .profile
     &__cabinet
-      &-nav
-        flex: 0 1 200px
-      .profile__box
-        margin-left: 40px
-
-@media($tablet)
-  .profile
-    &__cabinet
       flex-direction: column
       &-nav
         flex: 0 0 auto
-        width: 220px
+        margin-bottom: 30px
+        margin-top: -10px
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+        justify-content: center
         margin-left: auto
         margin-right: auto
-        margin-bottom: 50px
+        width: auto
+        background: transparent
+        box-shadow: none
+        padding: 0
+        a
+          background: white
+          margin-right: 15px
+          margin-bottom: 10px
+          border-radius: 4px
+          box-shadow: 0px 0px 5px color(black a(15%))
+          &:hover, &.active
+            background: #9C89B0
+            color: white
+          &:hover:not(.acitve)
+            box-shadow: none
+
+          &:last-child
+            margin-right: 0
+
       .profile__box
         margin-left: auto
         margin-right: auto
+    &__orders
+      margin-left: auto
+      margin-right: auto
+      flex: 0 1 auto
+      width: 670px
+
+
+@media($tablet)
+  .profile
+
+
+@media(width <= 710px)
+  .profile
+    &__orders
+      width: 100%
 
 
 @media($mobile)
@@ -239,9 +272,44 @@
       padding-top: 40px
       padding-bottom: 50px
 
-    &__social-login
+    &__orders
+      &__row
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+      &__thead
+        display: none
+
+    &__order
+      &__head
+        position: relative
+        padding: 15px 15px 15px 20px
+        > span
+          font-size: 14px
+          border-right: 0
+          margin-bottom: 5px
+          flex: 0 0 auto !important
+          span
+            display: inline-block
+            margin-right: 10px
+            font-size: 12px
+            color: $colorGray
+            border-right: 0
+            float: left
+            min-width: 140px
+          i.icon
+            position: absolute
+            top: 45%
+            right: 20px
+            transform: rotate(90deg) translateY(-50%)
 
 
+@media(width <= 520px)
+  .profile
+    &__order
+      &__card
+        flex-basis: calc(100% - 8px)
 
 @media(width <= 450px)
   .profile
@@ -252,3 +320,15 @@
       &__sucess
         font-size: 16px
         letter-spacing: 1.5px
+
+@media($mobile-s)
+  .profile
+    &__order
+      &__head
+        padding-left: 15px
+        padding-right: 15px
+        > span
+          span
+            min-width: 90px
+          i.icon
+            right: 15px
