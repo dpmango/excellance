@@ -34,13 +34,37 @@ doctype html
                   input(type='text' name='patronymic_name' placeholder='Отчество').ui-input
                 .ui-group.ui-group--labeled
                   label Дата рождения
-                  input(type='text' name='birthday' placeholder='E@mail.com').ui-input
-                .ui-group.ui-group--labeled
+                  input(type='text' name='birthday' placeholder='__ __ ____').ui-input.js-dateMask
+                .ui-group.ui-group--labeled.ui-group--phone
                   label Телефон
                   input(type='tel' name='phone' placeholder='').ui-input
+                  i.icon.icon-plus.js-addPhone
+                .ui-group.ui-group--labeled.js-toggablePhone
+                  label Второй Телефон
+                  input(type='tel' name='phone_1' placeholder='').ui-input
                 .ui-group.ui-group--labeled
-                  label E-mail
-                  input(type='email' name='email' placeholder='E@mail.com').ui-input
+                  label Тип кожи
+                  .ui-select
+                    input(type='hidden')
+                    .ui-select__visible
+                      span Сухая и нормальная
+                      i.icon.icon-dropdown
+                    .ui-select__dropdown
+                      span.ui-select__dropdown__placeholder Выберите тип кожи
+                      span(data-val='Сухая и нормальная').active Сухая и нормальная
+                      span(data-val='Нормальная') Нормальная
+              
+                .ui-group.ui-group--radios
+                  .ui-radio
+                    input(type='radio' name='type' id='radio_1')
+                    label(for='radio_1') Я проффесионал в области косметологии
+                  .ui-radio
+                    input(type='radio' name='type' id='radio_2')
+                    label(for='radio_2') Я приобретаю товары для персонального использования
+                .ui-radio
+                  input(type='radio' name='markteting' id='radio_3')
+                  label(for='radio_3') Получать рассылки от EXCELLANCE
+                
                 .profile__box__cta
                   button(type='submit').btn.btn--primary.btn--190 Сохранить
 

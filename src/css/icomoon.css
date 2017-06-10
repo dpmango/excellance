@@ -23,7 +23,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-plus:before {
+  content: "\e919";
+}
 .icon-twitter:before {
   content: "\e918";
 }

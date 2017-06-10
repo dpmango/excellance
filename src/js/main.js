@@ -301,6 +301,13 @@ $(document).ready(function () {
     $(this).parent().find('.profile__order__toggable').slideToggle(250);
   });
 
+  // toggle extra phone
+  $('.js-addPhone').on('click', function () {
+    $(this).fadeOut();
+
+    $('.js-toggablePhone').slideToggle(250);
+  });
+
   ///////////////
   // LOGIN PAGE
   ///////////////
@@ -325,9 +332,9 @@ $(document).ready(function () {
   // UI
   ///////////////
   // Masked input
-  // $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+  $(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
 
-  $("input[type='tel']").mask("0 (000) 000-0000", { placeholder: "_ (___) ___-____" });
+  $("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
 
   // DATEPICKER
   // $('.js-datepicker').datepicker({
@@ -352,14 +359,16 @@ $(document).ready(function () {
   $('.ui-select__dropdown span').on('click', function () {
     // parse value and toggle active
     var value = $(this).data('val');
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
+    if (value) {
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
 
-    // set visible
-    $(this).closest('.ui-select').removeClass('active');
-    $(this).closest('.ui-select').find('input').val(value);
+      // set visible
+      $(this).closest('.ui-select').removeClass('active');
+      $(this).closest('.ui-select').find('input').val(value);
 
-    $(this).closest('.ui-select').find('.ui-select__visible span').text(value);
+      $(this).closest('.ui-select').find('.ui-select__visible span').text(value);
+    }
   });
 
   // handle outside click

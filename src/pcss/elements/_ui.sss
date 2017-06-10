@@ -166,11 +166,12 @@ form
     label
       padding-left: 40px
 
-      
+
 ////////
 // GROUPS
 ////////
 .ui-group
+  position: relative
   margin-bottom: 20px
   max-width: 240px
   &--labeled
@@ -192,7 +193,6 @@ form
     margin-right: -170px
     padding-right: 10px
     margin-bottom: 40px
-    border-right: 1px solid $borderColor
     .ui-radio
       > label
         font-size: 18px
@@ -203,6 +203,7 @@ form
 
     &-required
       position: relative
+      border-right: 1px solid $borderColor
       &::after
         position: absolute
         right: -20px
@@ -222,6 +223,19 @@ form
     .ui-input
       box-shadow: 0 0 0px 2px $colorRed
 
+.js-addPhone
+  position: absolute
+  right: -40px
+  top: 40px
+  cursor: pointer
+  font-size: 20px
+  color: $colorGray
+  transition: all $transitionSpeed $ease
+  &:hover
+    color: $colorPrimary
+
+.js-toggablePhone
+  display: none
 
 @media(width <= 850px)
   .ui-group
@@ -238,6 +252,16 @@ form
         &::after
           right: 0
 
+@media($mobile)
+  .ui-group
+    &--phone
+      max-width: 360px
+
+@media(width <= 430px)
+  .ui-group
+    &--phone
+      max-width: 360px
+      margin-right: 40px
 
 ////////
 // SELECT
@@ -285,11 +309,18 @@ form
       padding: 8px 15px
       cursor: pointer
       transition: all $transitionSpeed $ease
-      &:hover
+      &:hover:not(.ui-select__dropdown__placeholder)
         background: #DBDEE0
       &.active
         background: $colorPrimary
         color: white
+        &:hover
+          background: $colorPrimary
+    &__placeholder
+      color: $colorGray
+      font-size: 12px
+      margin-top: -8px
+      cursor: default !important
 
   &.active
     .icon-dropdown

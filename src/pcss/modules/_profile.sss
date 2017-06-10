@@ -205,6 +205,28 @@
       min-height: auto
       padding: 25px
 
+@media($desktop)
+  .profile
+    &__cabinet
+      &-nav
+        flex: 0 1 200px
+      .profile__box
+        margin-left: 40px
+
+@media($tablet)
+  .profile
+    &__cabinet
+      flex-direction: column
+      &-nav
+        flex: 0 0 auto
+        width: 220px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 50px
+      .profile__box
+        margin-left: auto
+        margin-right: auto
+
 
 @media($mobile)
   .profile

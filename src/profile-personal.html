@@ -112,15 +112,37 @@
               </div>
               <div class="ui-group ui-group--labeled">
                 <label>Дата рождения</label>
-                <input class="ui-input" type="text" name="birthday" placeholder="E@mail.com">
+                <input class="ui-input js-dateMask" type="text" name="birthday" placeholder="__ __ ____">
               </div>
-              <div class="ui-group ui-group--labeled">
+              <div class="ui-group ui-group--labeled ui-group--phone">
                 <label>Телефон</label>
-                <input class="ui-input" type="tel" name="phone" placeholder="">
+                <input class="ui-input" type="tel" name="phone" placeholder=""><i class="icon icon-plus js-addPhone"></i>
+              </div>
+              <div class="ui-group ui-group--labeled js-toggablePhone">
+                <label>Второй Телефон</label>
+                <input class="ui-input" type="tel" name="phone_1" placeholder="">
               </div>
               <div class="ui-group ui-group--labeled">
-                <label>E-mail</label>
-                <input class="ui-input" type="email" name="email" placeholder="E@mail.com">
+                <label>Тип кожи</label>
+                <div class="ui-select">
+                  <input type="hidden">
+                  <div class="ui-select__visible"><span>Сухая и нормальная</span><i class="icon icon-dropdown"></i></div>
+                  <div class="ui-select__dropdown"><span class="ui-select__dropdown__placeholder">Выберите тип кожи</span><span class="active" data-val="Сухая и нормальная">Сухая и нормальная</span><span data-val="Нормальная">Нормальная</span></div>
+                </div>
+              </div>
+              <div class="ui-group ui-group--radios">
+                <div class="ui-radio">
+                  <input type="radio" name="type" id="radio_1">
+                  <label for="radio_1">Я проффесионал в области косметологии</label>
+                </div>
+                <div class="ui-radio">
+                  <input type="radio" name="type" id="radio_2">
+                  <label for="radio_2">Я приобретаю товары для персонального использования</label>
+                </div>
+              </div>
+              <div class="ui-radio">
+                <input type="radio" name="markteting" id="radio_3">
+                <label for="radio_3">Получать рассылки от EXCELLANCE</label>
               </div>
               <div class="profile__box__cta">
                 <button class="btn btn--primary btn--190" type="submit">Сохранить</button>
