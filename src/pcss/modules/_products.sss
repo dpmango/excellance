@@ -52,6 +52,11 @@
   &__image
     flex: 0 1 50%
     text-align: center
+    img
+      max-width: 100%
+    &--mobile
+      display: none
+
   &__params
     flex: 0 1 50%
   &__name
@@ -162,7 +167,7 @@
     left: 0
     right: 0
     top: 50%
-    z-index: 1
+    z-index: 5
     transform: translateY(-50%)
     > .container
       position: relative
@@ -207,6 +212,54 @@
   .product
     &__prev, &__next
       display: none
+
+@media($tablet)
+  .product
+    padding-top: 40px
+    &__hero
+      flex-direction: column
+    &__image
+      display: none
+      &--mobile
+        display: block
+    &__tags
+      margin-top: 15px
+
+@media($mobile)
+  .product
+    &__name
+      font-size: 28px
+      letter-spacing: 3px
+    &__short
+      margin-top: 20px
+      font-size: 16px
+      letter-spacing: 1.5px
+    &__key
+      flex-wrap: wrap
+      font-size: 16px
+      letter-spacing: 1.5px
+
+@media($mobile-s)
+  .product
+    &__cta
+      flex-direction: column
+      align-items: flex-start
+      margin-top: 25px
+      &__price
+        margin-bottom: 15px
+    &__name
+      text-align: center
+    &__short
+      text-align: center
+    &__tags
+      flex-direction: column
+      align-items: center
+    &__tag
+      margin-bottom: 10px
+    &__cta
+      align-items: center
+      &__price
+        margin-right: 0
 
 
 // TESTIMONIALS
@@ -289,3 +342,52 @@
         margin-right: 0
       &:hover, &.active
         color: $colorPrimary
+
+
+@media(width <= 850px)
+  .testimonials
+    &__item
+      &__meta
+        padding-left: 30px
+        flex: 0 0 170px
+        padding-right: 30px
+      &__content
+        padding-right: 30px
+
+@media($mobile)
+  .testimonials
+    &__item
+      padding-bottom: 20px
+      margin-bottom: 30px
+      &__meta
+        padding-left: 20px
+        flex: 0 0 150px
+        padding-right: 20px
+      &__content
+        padding-right: 20px
+        padding-left: 30px
+      &__name
+        font-size: 15px
+        letter-spacing: 1px
+
+@media(width <= 450px)
+  .testimonials
+    &__item
+      flex-direction: column
+      text-align: center
+      padding-left: 15px
+      padding-right: 15px
+      &__meta
+        padding-left: 0px
+        flex: 0 0 auto
+        padding-right: 0px
+        margin-bottom: 10px
+        border-right: 0
+      &__small
+        margin-bottom: 3px
+      &__name
+        margin-bottom: 5px
+
+      &__content
+        padding-right: 0px
+        padding-left: 0px
