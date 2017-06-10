@@ -1,0 +1,77 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.page--light-bg.header-static
+      
+      // PROFILE PAGE
+      .profile
+        .container.container--1000
+          .heading.heading--mute Личный кабинет
+          
+          // cabinet
+          .profile__cabinet
+            .profile__cabinet-nav
+              a(href='profile-personal.html') Личные данные
+              a(href='profile-orders.html') Заказы
+              a(href='profile-adress.html').active Адреса
+              a(href='#') Выход
+              
+            .profile__box.profile__box--adress
+              form(action='#')
+                .ui-section-label.ui-section-label--no-pad Контактное лицо
+                .ui-group.ui-group--labeled
+                  label Фамилия
+                  input(type='text' name='last_name' placeholder='Фамилия').ui-input
+                .ui-group.ui-group--labeled
+                  label Имя
+                  input(type='text' name='first_name' placeholder='Имя').ui-input
+                .ui-group.ui-group--labeled
+                  label Отчество
+                  input(type='text' name='patronymic_name' placeholder='Отчество').ui-input
+                .ui-section-label.ui-section-label--top Адрес
+                .ui-group.ui-group--labeled
+                  label Страна
+                  .ui-select
+                    input(type='hidden')
+                    .ui-select__visible
+                      span Россия
+                      i.icon.icon-dropdown
+                    .ui-select__dropdown
+                      span.ui-select__dropdown__placeholder Выберите страну
+                      span(data-val='Россия').active Россия
+                      span(data-val='Беларусь') Беларусь
+                .ui-group.ui-group--labeled
+                  label Населенный пункт
+                  input(type='text' name='city' placeholder='Москва').ui-input
+                .ui-group.ui-group--labeled
+                  label Адрес
+                  input(type='text' name='city' placeholder='ул. Волхонка').ui-input
+                .ui-group.ui-group--labeled
+                  label Дом
+                  input(type='text' name='city' placeholder='д.3, стр. 1').ui-input
+                .ui-group.ui-group--labeled
+                  label Номер квартиры или офиса
+                  input(type='text' name='city' placeholder='19').ui-input
+                .ui-group.ui-group--labeled
+                  label Индекс
+                  input(type='text' name='index' placeholder='000 000').ui-input.js-indexMask
+                .ui-group.ui-group--labeled
+                  label Телефон
+                  input(type='tel' name='phone' placeholder='').ui-input
+  
+                .profile__box__cta
+                  button(type='submit').btn.btn--primary.btn--190 Добавить адрес
+
+
+        
+    
+                                                                                                                        
+                        
+    include shared/footer.pug
+    include shared/scripts.pug
+    

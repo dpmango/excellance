@@ -440,6 +440,21 @@ form.loading {
         max-width: 360px;
     }
 }
+.ui-section-label {
+    margin-top: 32px;
+    margin-bottom: 25px;
+    color: #313131;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+.ui-section-label--top {
+    margin-top: 70px;
+}
+.ui-section-label--no-pad {
+    margin-top: 0;
+}
 /*////// */
 /* SELECT */
 /*////// */
@@ -3691,6 +3706,14 @@ form.loading {
     font-size: 14px;
     font-family: 'Roboto';
 }
+.profile__box__empty {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    color: #939393;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
 .profile__box__cta {
     padding-top: 10px;
     text-align: center;
@@ -3705,6 +3728,15 @@ form.loading {
     text-align: center;
     letter-spacing: 2px;
     font-size: 18px;
+}
+.profile__box--btn {
+    margin-right: auto;
+    margin-left: auto !important;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.profile__box--adress .ui-group {
+    min-width: 401px;
 }
 .profile__help-link {
     display: block;
@@ -3836,6 +3868,13 @@ form.loading {
     text-align: center;
     -webkit-box-flex: 0;
 }
+.profile__orders__row span i.icon {
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
 .profile__orders__row span:nth-child(1) {
     -webkit-flex-basis: 90px;
             flex-basis: 90px;
@@ -3866,13 +3905,6 @@ form.loading {
     -webkit-flex-basis: 40px;
             flex-basis: 40px;
         -ms-flex-preferred-size: 40px;
-}
-.profile__orders__row span:nth-child(6) i.icon {
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
 }
 .profile__orders__thead {
     padding: 15px 15px 15px 25px;
@@ -3950,6 +3982,40 @@ form.loading {
     min-height: auto;
         -ms-flex-preferred-size: calc(50% - 8px);
 }
+.profile__adress .profile__box {
+    margin-left: auto;
+}
+.profile__adress .profile__orders__row span {}
+.profile__adress .profile__orders__row span:nth-child(1) {
+    -webkit-flex-basis: 150px;
+            flex-basis: 150px;
+    text-align: center;
+        -ms-flex-preferred-size: 150px;
+}
+.profile__adress .profile__orders__row span:nth-child(2) {
+    -webkit-flex-basis: 210px;
+            flex-basis: 210px;
+        -ms-flex-preferred-size: 210px;
+}
+.profile__adress .profile__orders__row span:nth-child(3) {
+    -webkit-flex-basis: 120px;
+            flex-basis: 120px;
+        -ms-flex-preferred-size: 120px;
+}
+.profile__adress .profile__orders__row span:nth-child(4) {
+    -webkit-flex-basis: 110px;
+            flex-basis: 110px;
+        -ms-flex-preferred-size: 110px;
+}
+.profile__adress .profile__orders__row span:nth-child(5) {
+    -webkit-flex-basis: 40px;
+            flex-basis: 40px;
+    border-right: 0;
+        -ms-flex-preferred-size: 40px;
+}
+.profile__adress .profile__order__toggable {
+    padding-bottom: 30px;
+}
 @media(max-width: 992px) {
     .profile {}
     .profile__cabinet {
@@ -3960,8 +4026,12 @@ form.loading {
         -webkit-box-direction: normal;
     }
     .profile__cabinet .profile__box {
+        -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
         margin-right: auto;
         margin-left: auto;
+        -webkit-box-flex: 1;
     }
     .profile__cabinet-nav {
         display: -webkit-box;
@@ -4094,6 +4164,10 @@ form.loading {
             -ms-transform: rotate(90deg) translateY(-50%);
                 transform: rotate(90deg) translateY(-50%);
     }
+    .profile__adress .profile__orders__row span {}
+    .profile__adress .profile__orders__row span:nth-child(1) {
+        text-align: left;
+    }
 }
 @media(max-width: 520px) {
     .profile {}
@@ -4115,6 +4189,12 @@ form.loading {
         letter-spacing: 1.5px;
         font-size: 16px;
     }
+    .profile__box--adress {
+        width: 100%;
+    }
+    .profile__box--adress .ui-group {
+        min-width: 100%;
+    }
 }
 @media(max-width: 414px) {
     .profile {}
@@ -4127,7 +4207,7 @@ form.loading {
         min-width: 90px;
     }
     .profile__order__head > span i.icon {
-        right: 15px;
+        right: 20px;
     }
 }
 /* Services */

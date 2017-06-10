@@ -96,6 +96,247 @@
         <!-- cabinet-->
         <div class="profile__cabinet">
           <div class="profile__cabinet-nav"><a href="profile-personal.html">Личные данные</a><a href="profile-orders.html">Заказы</a><a class="active" href="#">Адреса</a><a href="#">Выход</a></div>
+          <div class="profile__orders profile__adress">
+            <!-- signle order-->
+            <div class="profile__order">
+              <div class="profile__orders__row profile__order__head"><span>Санкт-Петербург<span>Город</span></span><span>3 ул. Строителей<span>Улица</span></span><span>25<span>Адрес</span></span><span>Надежда<span>Конт. л.</span></span><span><i class="icon icon-next"></i></span></div>
+              <div class="profile__order__toggable">
+                <div class="profile__box">
+                  <form action="#">
+                    <div class="ui-section-label">Контактное лицо</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Фамилия</label>
+                      <input class="ui-input" type="text" name="last_name" placeholder="Фамилия">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Имя</label>
+                      <input class="ui-input" type="text" name="first_name" placeholder="Имя">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Отчество</label>
+                      <input class="ui-input" type="text" name="patronymic_name" placeholder="Отчество">
+                    </div>
+                    <div class="ui-section-label ui-section-label--top">Адрес</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Страна</label>
+                      <div class="ui-select">
+                        <input type="hidden">
+                        <div class="ui-select__visible"><span>Россия</span><i class="icon icon-dropdown"></i></div>
+                        <div class="ui-select__dropdown"><span class="ui-select__dropdown__placeholder">Выберите страну</span><span class="active" data-val="Россия">Россия</span><span data-val="Беларусь">Беларусь</span></div>
+                      </div>
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Населенный пункт</label>
+                      <input class="ui-input" type="text" name="city" placeholder="Москва">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Адрес</label>
+                      <input class="ui-input" type="text" name="city" placeholder="ул. Волхонка">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Дом</label>
+                      <input class="ui-input" type="text" name="city" placeholder="д.3, стр. 1">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Номер квартиры или офиса</label>
+                      <input class="ui-input" type="text" name="city" placeholder="19">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Индекс</label>
+                      <input class="ui-input js-indexMask" type="text" name="index" placeholder="000 000">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Телефон</label>
+                      <input class="ui-input" type="tel" name="phone" placeholder="">
+                    </div>
+                    <div class="profile__box__cta">
+                      <button class="btn btn--primary btn--190" type="submit">Сохранить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- signle order-->
+            <div class="profile__order">
+              <div class="profile__orders__row profile__order__head"><span>Москва<span>Город</span></span><span>ул. Волхонка<span>Улица</span></span><span>д. 3, стр. 1<span>Адрес</span></span><span>Ирина<span>Конт. л.</span></span><span><i class="icon icon-next"></i></span></div>
+              <div class="profile__order__toggable">
+                <div class="profile__box">
+                  <form action="#">
+                    <div class="ui-section-label">Контактное лицо</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Фамилия</label>
+                      <input class="ui-input" type="text" name="last_name" placeholder="Фамилия">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Имя</label>
+                      <input class="ui-input" type="text" name="first_name" placeholder="Имя">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Отчество</label>
+                      <input class="ui-input" type="text" name="patronymic_name" placeholder="Отчество">
+                    </div>
+                    <div class="ui-section-label ui-section-label--top">Адрес</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Страна</label>
+                      <div class="ui-select">
+                        <input type="hidden">
+                        <div class="ui-select__visible"><span>Россия</span><i class="icon icon-dropdown"></i></div>
+                        <div class="ui-select__dropdown"><span class="ui-select__dropdown__placeholder">Выберите страну</span><span class="active" data-val="Россия">Россия</span><span data-val="Беларусь">Беларусь</span></div>
+                      </div>
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Населенный пункт</label>
+                      <input class="ui-input" type="text" name="city" placeholder="Москва">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Адрес</label>
+                      <input class="ui-input" type="text" name="city" placeholder="ул. Волхонка">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Дом</label>
+                      <input class="ui-input" type="text" name="city" placeholder="д.3, стр. 1">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Номер квартиры или офиса</label>
+                      <input class="ui-input" type="text" name="city" placeholder="19">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Индекс</label>
+                      <input class="ui-input js-indexMask" type="text" name="index" placeholder="000 000">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Телефон</label>
+                      <input class="ui-input" type="tel" name="phone" placeholder="">
+                    </div>
+                    <div class="profile__box__cta">
+                      <button class="btn btn--primary btn--190" type="submit">Сохранить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- signle order-->
+            <div class="profile__order">
+              <div class="profile__orders__row profile__order__head"><span>Иваново<span>Город</span></span><span>ул. Героев труда<span>Улица</span></span><span>д. 5<span>Адрес</span></span><span>Надежда<span>Конт. л.</span></span><span><i class="icon icon-next"></i></span></div>
+              <div class="profile__order__toggable">
+                <div class="profile__box">
+                  <form action="#">
+                    <div class="ui-section-label">Контактное лицо</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Фамилия</label>
+                      <input class="ui-input" type="text" name="last_name" placeholder="Фамилия">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Имя</label>
+                      <input class="ui-input" type="text" name="first_name" placeholder="Имя">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Отчество</label>
+                      <input class="ui-input" type="text" name="patronymic_name" placeholder="Отчество">
+                    </div>
+                    <div class="ui-section-label ui-section-label--top">Адрес</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Страна</label>
+                      <div class="ui-select">
+                        <input type="hidden">
+                        <div class="ui-select__visible"><span>Россия</span><i class="icon icon-dropdown"></i></div>
+                        <div class="ui-select__dropdown"><span class="ui-select__dropdown__placeholder">Выберите страну</span><span class="active" data-val="Россия">Россия</span><span data-val="Беларусь">Беларусь</span></div>
+                      </div>
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Населенный пункт</label>
+                      <input class="ui-input" type="text" name="city" placeholder="Москва">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Адрес</label>
+                      <input class="ui-input" type="text" name="city" placeholder="ул. Волхонка">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Дом</label>
+                      <input class="ui-input" type="text" name="city" placeholder="д.3, стр. 1">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Номер квартиры или офиса</label>
+                      <input class="ui-input" type="text" name="city" placeholder="19">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Индекс</label>
+                      <input class="ui-input js-indexMask" type="text" name="index" placeholder="000 000">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Телефон</label>
+                      <input class="ui-input" type="tel" name="phone" placeholder="">
+                    </div>
+                    <div class="profile__box__cta">
+                      <button class="btn btn--primary btn--190" type="submit">Сохранить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- signle order-->
+            <div class="profile__order">
+              <div class="profile__orders__row profile__order__head"><span>Воронеж<span>Город</span></span><span>ул. Ленина<span>Улица</span></span><span>д. 47<span>Адрес</span></span><span>Наталья<span>Конт. л.</span></span><span><i class="icon icon-next"></i></span></div>
+              <div class="profile__order__toggable">
+                <div class="profile__box">
+                  <form action="#">
+                    <div class="ui-section-label">Контактное лицо</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Фамилия</label>
+                      <input class="ui-input" type="text" name="last_name" placeholder="Фамилия">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Имя</label>
+                      <input class="ui-input" type="text" name="first_name" placeholder="Имя">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Отчество</label>
+                      <input class="ui-input" type="text" name="patronymic_name" placeholder="Отчество">
+                    </div>
+                    <div class="ui-section-label ui-section-label--top">Адрес</div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Страна</label>
+                      <div class="ui-select">
+                        <input type="hidden">
+                        <div class="ui-select__visible"><span>Россия</span><i class="icon icon-dropdown"></i></div>
+                        <div class="ui-select__dropdown"><span class="ui-select__dropdown__placeholder">Выберите страну</span><span class="active" data-val="Россия">Россия</span><span data-val="Беларусь">Беларусь</span></div>
+                      </div>
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Населенный пункт</label>
+                      <input class="ui-input" type="text" name="city" placeholder="Москва">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Адрес</label>
+                      <input class="ui-input" type="text" name="city" placeholder="ул. Волхонка">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Дом</label>
+                      <input class="ui-input" type="text" name="city" placeholder="д.3, стр. 1">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Номер квартиры или офиса</label>
+                      <input class="ui-input" type="text" name="city" placeholder="19">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Индекс</label>
+                      <input class="ui-input js-indexMask" type="text" name="index" placeholder="000 000">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Телефон</label>
+                      <input class="ui-input" type="tel" name="phone" placeholder="">
+                    </div>
+                    <div class="profile__box__cta">
+                      <button class="btn btn--primary btn--190" type="submit">Сохранить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="profile__box profile__box--btn">
+              <div class="profile__box__cta"><a class="btn btn--primary btn--190" href="profile-add.html">Добавить адрес    </a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

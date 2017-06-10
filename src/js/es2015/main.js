@@ -344,6 +344,8 @@ $(document).ready(function(){
   ///////////////
   // Masked input
   $(".js-dateMask").mask("99.99.9999",{placeholder:"__ __ ____"});
+  $(".js-indexMask").mask("999 999",{placeholder:"000 000"});
+
 
   $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
 

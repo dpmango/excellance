@@ -21,8 +21,253 @@ doctype html
               a(href='#').active Адреса
               a(href='#') Выход
               
-            
-    
+            .profile__orders.profile__adress
+              // signle order
+              .profile__order
+                .profile__orders__row.profile__order__head
+                  span Санкт-Петербург
+                    span Город
+                  span 3 ул. Строителей
+                    span Улица
+                  span 25
+                    span Адрес
+                  span Надежда
+                    span Конт. л.
+                  span
+                    i.icon.icon-next
+                .profile__order__toggable
+                  .profile__box
+                    form(action='#')
+                      .ui-section-label Контактное лицо
+                      .ui-group.ui-group--labeled
+                        label Фамилия
+                        input(type='text' name='last_name' placeholder='Фамилия').ui-input
+                      .ui-group.ui-group--labeled
+                        label Имя
+                        input(type='text' name='first_name' placeholder='Имя').ui-input
+                      .ui-group.ui-group--labeled
+                        label Отчество
+                        input(type='text' name='patronymic_name' placeholder='Отчество').ui-input
+                      .ui-section-label.ui-section-label--top Адрес
+                      .ui-group.ui-group--labeled
+                        label Страна
+                        .ui-select
+                          input(type='hidden')
+                          .ui-select__visible
+                            span Россия
+                            i.icon.icon-dropdown
+                          .ui-select__dropdown
+                            span.ui-select__dropdown__placeholder Выберите страну
+                            span(data-val='Россия').active Россия
+                            span(data-val='Беларусь') Беларусь
+                      .ui-group.ui-group--labeled
+                        label Населенный пункт
+                        input(type='text' name='city' placeholder='Москва').ui-input
+                      .ui-group.ui-group--labeled
+                        label Адрес
+                        input(type='text' name='city' placeholder='ул. Волхонка').ui-input
+                      .ui-group.ui-group--labeled
+                        label Дом
+                        input(type='text' name='city' placeholder='д.3, стр. 1').ui-input
+                      .ui-group.ui-group--labeled
+                        label Номер квартиры или офиса
+                        input(type='text' name='city' placeholder='19').ui-input
+                      .ui-group.ui-group--labeled
+                        label Индекс
+                        input(type='text' name='index' placeholder='000 000').ui-input.js-indexMask
+                      .ui-group.ui-group--labeled
+                        label Телефон
+                        input(type='tel' name='phone' placeholder='').ui-input
+        
+                      .profile__box__cta
+                        button(type='submit').btn.btn--primary.btn--190 Сохранить
+
+              // signle order
+              .profile__order
+                .profile__orders__row.profile__order__head
+                  span Москва
+                    span Город
+                  span ул. Волхонка
+                    span Улица
+                  span д. 3, стр. 1
+                    span Адрес
+                  span Ирина
+                    span Конт. л.
+                  span
+                    i.icon.icon-next
+                .profile__order__toggable
+                  .profile__box
+                    form(action='#')
+                      .ui-section-label Контактное лицо
+                      .ui-group.ui-group--labeled
+                        label Фамилия
+                        input(type='text' name='last_name' placeholder='Фамилия').ui-input
+                      .ui-group.ui-group--labeled
+                        label Имя
+                        input(type='text' name='first_name' placeholder='Имя').ui-input
+                      .ui-group.ui-group--labeled
+                        label Отчество
+                        input(type='text' name='patronymic_name' placeholder='Отчество').ui-input
+                      .ui-section-label.ui-section-label--top Адрес
+                      .ui-group.ui-group--labeled
+                        label Страна
+                        .ui-select
+                          input(type='hidden')
+                          .ui-select__visible
+                            span Россия
+                            i.icon.icon-dropdown
+                          .ui-select__dropdown
+                            span.ui-select__dropdown__placeholder Выберите страну
+                            span(data-val='Россия').active Россия
+                            span(data-val='Беларусь') Беларусь
+                      .ui-group.ui-group--labeled
+                        label Населенный пункт
+                        input(type='text' name='city' placeholder='Москва').ui-input
+                      .ui-group.ui-group--labeled
+                        label Адрес
+                        input(type='text' name='city' placeholder='ул. Волхонка').ui-input
+                      .ui-group.ui-group--labeled
+                        label Дом
+                        input(type='text' name='city' placeholder='д.3, стр. 1').ui-input
+                      .ui-group.ui-group--labeled
+                        label Номер квартиры или офиса
+                        input(type='text' name='city' placeholder='19').ui-input
+                      .ui-group.ui-group--labeled
+                        label Индекс
+                        input(type='text' name='index' placeholder='000 000').ui-input.js-indexMask
+                      .ui-group.ui-group--labeled
+                        label Телефон
+                        input(type='tel' name='phone' placeholder='').ui-input
+        
+                      .profile__box__cta
+                        button(type='submit').btn.btn--primary.btn--190 Сохранить
+
+              // signle order
+              .profile__order
+                .profile__orders__row.profile__order__head
+                  span Иваново
+                    span Город
+                  span ул. Героев труда
+                    span Улица
+                  span д. 5
+                    span Адрес
+                  span Надежда
+                    span Конт. л.
+                  span
+                    i.icon.icon-next
+                .profile__order__toggable
+                  .profile__box
+                    form(action='#')
+                      .ui-section-label Контактное лицо
+                      .ui-group.ui-group--labeled
+                        label Фамилия
+                        input(type='text' name='last_name' placeholder='Фамилия').ui-input
+                      .ui-group.ui-group--labeled
+                        label Имя
+                        input(type='text' name='first_name' placeholder='Имя').ui-input
+                      .ui-group.ui-group--labeled
+                        label Отчество
+                        input(type='text' name='patronymic_name' placeholder='Отчество').ui-input
+                      .ui-section-label.ui-section-label--top Адрес
+                      .ui-group.ui-group--labeled
+                        label Страна
+                        .ui-select
+                          input(type='hidden')
+                          .ui-select__visible
+                            span Россия
+                            i.icon.icon-dropdown
+                          .ui-select__dropdown
+                            span.ui-select__dropdown__placeholder Выберите страну
+                            span(data-val='Россия').active Россия
+                            span(data-val='Беларусь') Беларусь
+                      .ui-group.ui-group--labeled
+                        label Населенный пункт
+                        input(type='text' name='city' placeholder='Москва').ui-input
+                      .ui-group.ui-group--labeled
+                        label Адрес
+                        input(type='text' name='city' placeholder='ул. Волхонка').ui-input
+                      .ui-group.ui-group--labeled
+                        label Дом
+                        input(type='text' name='city' placeholder='д.3, стр. 1').ui-input
+                      .ui-group.ui-group--labeled
+                        label Номер квартиры или офиса
+                        input(type='text' name='city' placeholder='19').ui-input
+                      .ui-group.ui-group--labeled
+                        label Индекс
+                        input(type='text' name='index' placeholder='000 000').ui-input.js-indexMask
+                      .ui-group.ui-group--labeled
+                        label Телефон
+                        input(type='tel' name='phone' placeholder='').ui-input
+
+                      .profile__box__cta
+                        button(type='submit').btn.btn--primary.btn--190 Сохранить
+
+              // signle order
+              .profile__order
+                .profile__orders__row.profile__order__head
+                  span Воронеж
+                    span Город
+                  span ул. Ленина
+                    span Улица
+                  span д. 47
+                    span Адрес
+                  span Наталья
+                    span Конт. л.
+                  span
+                    i.icon.icon-next
+                .profile__order__toggable
+                  .profile__box
+                    form(action='#')
+                      .ui-section-label Контактное лицо
+                      .ui-group.ui-group--labeled
+                        label Фамилия
+                        input(type='text' name='last_name' placeholder='Фамилия').ui-input
+                      .ui-group.ui-group--labeled
+                        label Имя
+                        input(type='text' name='first_name' placeholder='Имя').ui-input
+                      .ui-group.ui-group--labeled
+                        label Отчество
+                        input(type='text' name='patronymic_name' placeholder='Отчество').ui-input
+                      .ui-section-label.ui-section-label--top Адрес
+                      .ui-group.ui-group--labeled
+                        label Страна
+                        .ui-select
+                          input(type='hidden')
+                          .ui-select__visible
+                            span Россия
+                            i.icon.icon-dropdown
+                          .ui-select__dropdown
+                            span.ui-select__dropdown__placeholder Выберите страну
+                            span(data-val='Россия').active Россия
+                            span(data-val='Беларусь') Беларусь
+                      .ui-group.ui-group--labeled
+                        label Населенный пункт
+                        input(type='text' name='city' placeholder='Москва').ui-input
+                      .ui-group.ui-group--labeled
+                        label Адрес
+                        input(type='text' name='city' placeholder='ул. Волхонка').ui-input
+                      .ui-group.ui-group--labeled
+                        label Дом
+                        input(type='text' name='city' placeholder='д.3, стр. 1').ui-input
+                      .ui-group.ui-group--labeled
+                        label Номер квартиры или офиса
+                        input(type='text' name='city' placeholder='19').ui-input
+                      .ui-group.ui-group--labeled
+                        label Индекс
+                        input(type='text' name='index' placeholder='000 000').ui-input.js-indexMask
+                      .ui-group.ui-group--labeled
+                        label Телефон
+                        input(type='tel' name='phone' placeholder='').ui-input
+
+                      .profile__box__cta
+                        button(type='submit').btn.btn--primary.btn--190 Сохранить
+          
+              .profile__box.profile__box--btn
+                .profile__box__cta
+                  a(href='profile-add.html').btn.btn--primary.btn--190 Добавить адрес    
+
+
+                        
                                                                                                                         
                         
     include shared/footer.pug
