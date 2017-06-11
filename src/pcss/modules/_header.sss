@@ -40,10 +40,13 @@
 
   &__logo
     flex: 0 0 auto
+    transition: opacity $transitionSpeed $ease
     &--small
       margin-right: 3%
       .icon-logo
         size: 173px 37px
+    &:hover
+      opacity: .8
 
   &__cta
     flex: 0 1 310px
@@ -85,26 +88,35 @@
     margin-left: auto
     display: inline-block
     margin-right: 30px
-    transition: transform $transitionSpeed $ease
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $colorPrimaryLight
+      .icon
+        background-color: $colorPrimary
     .icon
       background-color: #999999
       font-size: 30px
       display: none
       transition: all $transitionSpeed $ease
-      &:hover
-        background-color: $colorPrimary
 
   &__cart
     display: inline-block
-    color: $colorGray
+    color: $colorPrimary
     margin-right: 25px
-    transition: transform $transitionSpeed $ease
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $colorPrimaryLight
     .icon
       display: none
       font-size: 18px
       vertical-align: -2px
     &__counter
       display: inline-block
+    &--empty
+      cursor: not-allowed
+      color: $colorGray
+      &:hover
+        color: $colorGray
 
   &__search
     display: inline-block

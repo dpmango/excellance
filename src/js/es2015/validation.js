@@ -204,32 +204,6 @@ $(document).ready(function(){
   });
 
   /////////////////////
-  // ORDER ADRES FORM
-  ////////////////////
-  $(".js-orderAdress-form").validate({
-    errorPlacement: validateErrorPlacement,
-    highlight: validateHighlight,
-    unhighlight: validateUnhighlight,
-    submitHandler: validateSubmitHandler,
-    rules: {
-      last_name: "required",
-      first_name: "required",
-      email: {
-        required: true,
-        email: true
-      }
-    },
-    messages: {
-      last_name: "Заполните это поле",
-      first_name: "Заполните это поле",
-      email: {
-          required: "Заполните это поле",
-          email: "Email содержит неправильный формат"
-      }
-    }
-  });
-
-  /////////////////////
   // ORDER PICKUP FORM
   ////////////////////
   $(".js-orderPickup-form").validate({
