@@ -375,6 +375,15 @@ form.loading {
         -ms-transform: scale(0);
             transform: scale(0);
 }
+.ui-radio--centred {
+    margin-top: 30px;
+}
+.ui-radio--centred label {
+    padding-left: 70px;
+}
+.ui-radio--centred label:before {
+    left: 5px;
+}
 @media(max-width: 850px) {
     .ui-radio label {
         padding-left: 40px;
@@ -446,6 +455,11 @@ form.loading {
     content: '*';
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
+}
+.ui-group--short {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 205px;
 }
 .ui-group.has-error .ui-input {
     -webkit-box-shadow: 0 0 0px 2px #D0011B;
@@ -3821,6 +3835,7 @@ form.loading {
 .profile__box__heading {
     margin-bottom: 25px;
     text-align: center;
+    text-transform: uppercase;
     letter-spacing: 3.35px;
     font-size: 24px;
     line-height: 1.45;
@@ -4610,6 +4625,160 @@ form.loading {
 .cart-summary__summ__number {
     letter-spacing: 2px;
     font-size: 16px;
+}
+.cart-scope {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-top: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+}
+.cart-scope span {
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3.3px;
+    font-size: 24px;
+}
+.cart-scope__left {
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    text-align: right;
+    -webkit-box-flex: 0;
+}
+.cart-scope__right {
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-left: 25px;
+    -webkit-box-flex: 0;
+}
+.cart-scope__right span {
+    color: #410C50;
+}
+.cart-login {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+            align-items: flex-start;
+    margin-top: 55px;
+    padding-bottom: 85px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+}
+.cart-login__left {
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    background: white;
+    -webkit-box-flex: 0;
+}
+.cart-login__left .profile__login {
+    margin-top: 0;
+    margin-right: 60px;
+    margin-left: auto;
+    max-width: 500px;
+}
+.cart-login__right {
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    -webkit-box-flex: 0;
+}
+.cart-login__right .profile__signup {
+    margin-right: auto;
+    padding: 0;
+    max-width: 500px;
+}
+.cart-login__section {
+    padding: 30px 0 30px 20px;
+    border-bottom: 1px solid #DBDEE0;
+}
+.cart-login__section .profile__box__heading {
+    padding-top: 0;
+}
+.cart-login__section:last-child {
+    border-bottom: 0;
+}
+.cart-login__section__title {
+    color: #939393;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+.cart-login__section__tip {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+.cart-login__section__dropdown {
+    display: none;
+}
+.cart-login__section__dropdown .profile__box {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.cart-login__section__cta {
+    margin-top: 25px;
+    text-align: center;
+}
+.cart-login__section__cta .btn {
+    min-width: 165px;
+}
+.cart-login__reg-help {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 15px;
+}
+.cart-login__reg-help .icon {
+    -webkit-flex: 0 0 70px;
+        -ms-flex: 0 0 70px;
+            flex: 0 0 70px;
+    color: #410C50;
+    font-size: 16px;
+    -webkit-box-flex: 0;
+}
+.cart-login__reg-help span {
+    display: inline-block;
+    font-size: 12px;
+}
+.cart-login__pickup {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-end;
+            align-items: flex-end;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-bottom: 30px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+}
+.cart-login__pickup .icon {
+    color: #410C50;
+    font-size: 24px;
+}
+.cart-login__pickup span {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: underline;
+    font-size: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -194,6 +194,13 @@ form
         transform: scale(0)
         opacity: 0
         transition: all $transitionSpeed $ease
+  &--centred
+    margin-top: 30px
+    label
+      padding-left: 70px
+      &::before
+        left: 5px
+
 
 @media(width <= 850px)
   .ui-radio
@@ -252,6 +259,11 @@ form
     font-size: 10px
     margin-bottom: 8px
     display: block
+
+  &--short
+    max-width: 205px
+    margin-left: auto
+    margin-right: auto
 
   &.has-error
     .ui-input

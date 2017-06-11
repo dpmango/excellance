@@ -415,13 +415,20 @@ $(document).ready(function () {
     if ($(this).data('action') == 'remove') {
       $(this).parent().fadeOut();
     }
-  }
+  });
+
+  $('.js-toggleCartSignupSection').on('click', function () {
+    $(this).hide();
+    $(this).closest('.cart-login__section').find('.cart-login__section__dropdown').slideDown();
+  });
 
   ///////////////
   // UI
   ///////////////
   // Masked input
-  );$(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
+  $(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
+  $(".js-dateMask2").mask("99.99.99", { placeholder: "ДД.ММ.ГГ" });
+
   $(".js-indexMask").mask("999 999", { placeholder: "000 000" });
 
   $("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
