@@ -4691,6 +4691,23 @@ form.loading {
     -webkit-box-align: start;
         -ms-flex-align: start;
 }
+.cart-login--authorized {
+    display: block;
+    margin-top: 30px;
+    background: #F6F6F6;
+}
+.cart-login--authorized .profile__signup {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 0 50px 0;
+    max-width: 500px;
+}
+.cart-login--authorized .cart-login__section {
+    padding-left: 0;
+}
+.cart-login__white-bg {
+    background: white;
+}
 .cart-login__left {
     -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
@@ -4793,6 +4810,16 @@ form.loading {
     margin-left: 15px;
     text-decoration: underline;
     font-size: 12px;
+}
+.cart-login__adress {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.cart-login__adress .profile__adress {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 670px;
 }
 
 /*# sourceMappingURL=style.css.map */

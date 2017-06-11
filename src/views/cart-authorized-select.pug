@@ -1,0 +1,97 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.page--light-bg.header-static
+      
+      // LOGIN PAGE
+      .profile
+        .container
+          .heading.heading--mute Оформление заказа
+          .cart-scope
+            .cart-scope__left
+              span Товары:
+              span Сумма заказа:
+            .cart-scope__right
+              span 6
+              span 25 458 ₽
+        
+        .cart-login.cart-login--authorized
+          .cart-login__white-bg
+            .container
+              .cart-login__adress
+                .cart-login__section__title Выберите адрес
+              
+                .profile__orders.profile__adress
+                  // signle order
+                  .profile__order
+                    .profile__orders__row.profile__order__head
+                      span Санкт-Петербург
+                        span Город
+                      span 3 ул. Строителей
+                        span Улица
+                      span 25
+                        span Адрес
+                      span Надежда
+                        span Конт. л.
+                      span
+                        i.icon.icon-next
+
+                  // signle order
+                  .profile__order
+                    .profile__orders__row.profile__order__head
+                      span Москва
+                        span Город
+                      span ул. Волхонка
+                        span Улица
+                      span д. 3, стр. 1
+                        span Адрес
+                      span Ирина
+                        span Конт. л.
+                      span
+                        i.icon.icon-next
+
+                  // signle order
+                  .profile__order
+                    .profile__orders__row.profile__order__head
+                      span Иваново
+                        span Город
+                      span ул. Героев труда
+                        span Улица
+                      span д. 5
+                        span Адрес
+                      span Надежда
+                        span Конт. л.
+                      span
+                        i.icon.icon-next
+
+                  // signle order
+                  .profile__order
+                    .profile__orders__row.profile__order__head
+                      span Воронеж
+                        span Город
+                      span ул. Ленина
+                        span Улица
+                      span д. 47
+                        span Адрес
+                      span Наталья
+                        span Конт. л.
+                      span
+                        i.icon.icon-next
+
+                .cart-login__section__cta
+                  a(href='cart-authorized-select.html').btn.btn--white Указать другой адрес
+              
+                .profile__box.profile__box--btn
+                  .profile__box__cta
+                    a(href='#).btn.btn--primary.btn--190 Оформить
+                
+                                                                                                              
+                        
+    include shared/footer.pug
+    include shared/scripts.pug
+    

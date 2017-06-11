@@ -20,133 +20,38 @@ doctype html
               span 6
               span 25 458 ₽
         
-        .cart-login
-          .cart-login__left
-              
-            // login
-            .profile__login
-              .profile__box
-                // action
-                .profile__login-action.active(data-form='login')
-                  .profile__box__heading Войти
-                  form(action='#').js-login-form
-                    .ui-group.ui-group--labeled
-                      label E-mail
-                      input(type='email' name='email' placeholder='').ui-input
-                    .ui-group.ui-group--labeled
-                      label Пароль
-                      input(type='password' name='password' placeholder='').ui-input
-                    .profile__box__cta
-                      button(type='submit').btn.btn--primary.btn--190 Вход
-                      a(href='#').profile__help-link.js-toggleLoginForm(data-form='recover')
-                        span ЗАБЫЛИ ПАРОЛЬ?
-                // action
-                .profile__login-action(data-form='recover')
-                  .profile__box__heading ВОССТАНОВЛЕНИЕ ПАРОЛЯ
-                  form(action='#').js-recover-form
-                    .ui-group.ui-group--labeled
-                      label E-mail
-                      input(type='email' name='email' placeholder='').ui-input
-                    .profile__box__cta
-                      .profile__box__sucess(data-ok) Пароль отправлен на вашу электронную почту
-                      button(type='submit').btn.btn--primary.btn--190 Восстановить пароль
-                      a(href='#').profile__help-link.js-toggleLoginForm(data-form='login')
-                        span Отмена 
-                .profile__social-login
-                  .profile__social-login__heading Авторизоваться через социальные сети:
-                  a(href='#')
-                    i.icon.icon-facebook
-                  a(href='#')
-                    i.icon.icon-vk    
-                  a(href='#')
-                    i.icon.icon-twitter  
-          
-          .cart-login__right
-            // signup
-            .profile__signup
-              // section
-              .cart-login__section
-                .profile__box
-                  .profile__box__heading Без РЕГИСТРАЦИИ
-                  .cart-login__section__title Доставка
-                  .cart-login__section__cta
-                    a(href='#').btn.btn--white.js-toggleCartSignupSection Указать адрес
-                .cart-login__section__dropdown
+        .cart-login.cart-login--authorized
+          .cart-login__white-bg
+            .container
+              // signup
+              .profile__signup
+                // section
+                .cart-login__section
                   .profile__box
-                    .profile__box__hint <span>*</span> - Поля обязательные к заполнению
-                    form(action='#').js-orderAdress-form
-                      .ui-group.ui-group--labeled
-                        label Фамилия
-                          span *
-                        input(type='text' name='last_name' placeholder='').ui-input
-                      .ui-group.ui-group--labeled
-                        label Имя
-                          span *
-                        input(type='text' name='first_name' placeholder='').ui-input
-                      .ui-group.ui-group--labeled
-                        label E-mail
-                          span *
-                        input(type='email' name='email' placeholder='').ui-input
+                    .cart-login__section__title Доставка
+                    .cart-login__section__cta
+                      a(href='cart-authorized-select.html').btn.btn--white Выбрать адрес
+                  
+                // section
+                .cart-login__section
+                  .profile__box
+                    .cart-login__section__title Самовывоз
+                    .cart-login__section__tip Забрать из пункта самовывоза
+                    .cart-login__section__cta
+                      a(href='#').btn.btn--white.js-toggleCartSignupSection Оформить
+                  .cart-login__section__dropdown
+                    .profile__box
+                      form(action='#').js-orderPickup-form
+                        .cart-login__pickup
+                          i.icon.icon-placeholder
+                          span Москва, ул. Верейская, д. 29 строение 33
                           
-                      .ui-group.ui-group--labeled
-                        label Страна
-                        .ui-select
-                          input(type='hidden')
-                          .ui-select__visible
-                            span Россия
-                            i.icon.icon-dropdown
-                          .ui-select__dropdown
-                            span.ui-select__dropdown__placeholder Выберите страну
-                            span(data-val='Россия').active Россия
-                            span(data-val='Беларусь') Беларусь
-                      .ui-group.ui-group--labeled
-                        label Населенный пункт
-                        input(type='text' name='city' placeholder='Москва').ui-input
-                      .ui-group.ui-group--labeled
-                        label Адрес
-                        input(type='text' name='city' placeholder='ул. Волхонка').ui-input
-                      .ui-group.ui-group--labeled
-                        label Дом
-                        input(type='text' name='city' placeholder='д.3, стр. 1').ui-input
-                      .ui-group.ui-group--labeled
-                        label Номер квартиры или офиса
-                        input(type='text' name='city' placeholder='19').ui-input
-                      .ui-group.ui-group--labeled
-                        label Индекс
-                        input(type='text' name='index' placeholder='000 000').ui-input.js-indexMask
-                      .ui-group.ui-group--labeled
-                        label Телефон
-                        input(type='tel' name='phone' placeholder='').ui-input
-                      .ui-radio.ui-radio--centred
-                        input(type='radio' name='markteting' id='radio_3')
-                        label(for='radio_3') Получать рассылки от EXCELLANCE
-                      .cart-login__reg-help
-                        i.icon.icon-email
-                        span Ориентрировочная дата доставки будет показана вам на шаге подтверждения заказа.
-                        
-                      .profile__box__cta
-                        button(type='submit').btn.btn--primary.btn--190 Оформить
-              
-              // section
-              .cart-login__section
-                .profile__box
-                  .cart-login__section__title Самовывоз
-                  .cart-login__section__tip Забрать из пункта самовывоза
-                  .cart-login__section__cta
-                    a(href='#').btn.btn--white.js-toggleCartSignupSection Оформить
-                .cart-login__section__dropdown
-                  .profile__box
-                    form(action='#').js-orderPickup-form
-                      .cart-login__pickup
-                        i.icon.icon-placeholder
-                        span Москва, ул. Верейская, д. 29 строение 33
-                        
-                      .ui-group.ui-group--labeled.ui-group--short
-                        label Введите дату
-                        input(type='text' name='pickup_date' placeholder='__ __ ____').ui-input.js-dateMask2
-                        
-                      .profile__box__cta
-                        button(type='submit').btn.btn--primary.btn--190 Оформить
+                        .ui-group.ui-group--labeled.ui-group--short
+                          label Введите дату
+                          input(type='text' name='pickup_date' placeholder='__ __ ____').ui-input.js-dateMask2
+                          
+                        .profile__box__cta
+                          button(type='submit').btn.btn--primary.btn--190 Оформить
                       
                   
                   
