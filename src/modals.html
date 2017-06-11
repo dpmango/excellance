@@ -94,7 +94,7 @@
       <div class="container">
         <div class="heading heading--mute">Все модальные</div>
         <div class="text-center" style="padding-top: 100px; padding-bottom: 100px;">
-          <div class="flex-modals"><a class="btn btn--primary js-popup" href="#modalTestimonialLogin">Оставить отзыв (логин)</a><a class="btn btn--primary js-popup" href="#modalTestimonial">Оставить отзыв</a><a class="btn btn--primary js-blur" href="#modalGuide">Диагностика</a></div>
+          <div class="flex-modals"><a class="btn btn--primary js-popup" href="#modalTestimonialLogin">Оставить отзыв (логин)</a><a class="btn btn--primary js-popup" href="#modalTestimonial">Оставить отзыв</a><a class="btn btn--primary js-blur" href="#modalGuide">Диагностика</a><a class="btn btn--primary js-blur" href="#modalGuideResults">Результаты диагностики</a><a class="btn btn--primary js-popup" href="#modalThanks">Спасибо за заказ</a></div>
         </div>
       </div>
     </div>
@@ -109,6 +109,7 @@
       <div class="modal__actions"><a class="btn btn--primary" href="login.html">Вход</a><a class="modal__sublink" href="login.html"> <span>Регситрация</span></a></div>
     </div>
   </div>
+  <!-- MODAL TESTIMONIALS WRITE-->
   <div class="modal-dialog mfp-hide" id="modalTestimonial">
     <div class="modal__content">
       <div class="modal__icon"><i class="icon icon-email"></i></div>
@@ -122,7 +123,18 @@
       <div class="modal__actions"><a class="btn btn--primary" href="login.html">ОПУБЛИКОВАТЬ ОТЗЫВ</a><a class="modal__sublink js-close-modal" href="#"><span>Отмена</span></a></div>
     </div>
   </div>
-  <!-- MODAL -->
+  <!-- MODAL THANKS-->
+  <div class="modal-dialog mfp-hide" id="modalThanks">
+    <div class="modal__content">
+      <div class="modal__icon"><i class="icon icon-email"></i></div>
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__head">Спасибо за заказ!</div>
+      <div class="modal__desc">Заказ № 34678</div>
+      <div class="modal__help-text">Иформация о заказе отправлена на вашу почту email@email.com</div>
+      <div class="modal__actions"><a class="btn btn--primary btn--190 js-close-modal" href="#">OK</a></div>
+    </div>
+  </div>
+  <!-- MODAL GUIDE-->
   <div class="modal-dialog mfp-hide" id="modalGuide">
     <div class="modal__section">
       <div class="modal__close"><i class="icon icon-close"></i></div>
@@ -266,6 +278,101 @@
             </div>
             <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-results-guide" href="#">Показать результат</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL GUIDE RESULTS-->
+  <div class="modal-dialog mfp-hide" id="modalGuideResults">
+    <div class="modal__guide__results-head">
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__heading">ПОДБОР СРЕДСТВА  ДЛЯ ДОМАШНЕГО УХОДА ЗА КОЖЕЙ</div>
+    </div>
+    <div class="modal__guide__results">
+      <div class="modal__guide__results-sidebar">
+        <div class="modal__guide__results-sidebar__title">РЕЗУЛЬТАТ ТЕСТА</div>
+        <div class="modal__guide__results-sidebar__text">Мы подобрали для вас рекомендации для ежедневного ухода за кожей. Рекомендации состоят из 7 шагов ежедневного ухода.</div>
+        <div class="modal__guide__results-sidebar__tabs">
+          <div class="modal__guide__results-sidebar__tab active" data-tab="1">1. Утренний уход</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="2">2. Очищение</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="3">3. Орбитальная область</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="4">4. Вечерний уход</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="5">5. Глубокое очищение</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="6">6. Маска</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="7">7. Дополнительный уход</div>
+        </div>
+      </div>
+      <div class="modal__guide__results-content active" data-tab="1">
+        <div class="modal__heading">Утренний уход</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="2">
+        <div class="modal__heading">Очищение</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удлярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="3">
+        <div class="modal__heading">Орбитальная область</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярног последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="4">
+        <div class="modal__heading">Вечерний уход</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом in with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="5">
+        <div class="modal__heading">Глубокое очищение</div>
+        <div class="modal__guide__results-content__text">Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="6">
+        <div class="modal__heading">Маска</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="7">
+        <div class="modal__heading">Дополнительный уход</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте  Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+    </div>
+    <div class="modal__guide__results-catalog active" data-tab="1">
+      <div class="modal__guide__results-catalog__placeholder"></div>
+      <div class="modal__guide__catalog">
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image" href="#"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></a>
+        </div>
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_2.png" srcset="images/goods/productImg_2@2x.png 2x"></a>
+        </div>
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_3.png" srcset="images/goods/productImg_3@2x.png 2x"></a>
+        </div>
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_4.png" srcset="images/goods/productImg_4@2x.png 2x"></a>
         </div>
       </div>
     </div>

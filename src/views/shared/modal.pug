@@ -12,7 +12,7 @@
       a(href='login.html').modal__sublink 
         span Регситрация
 
-
+// MODAL TESTIMONIALS WRITE
 .modal-dialog.mfp-hide#modalTestimonial
   .modal__content
     .modal__icon
@@ -29,7 +29,25 @@
       a(href='#').modal__sublink.js-close-modal
         span Отмена
 
-// MODAL 
+
+// MODAL THANKS
+.modal-dialog.mfp-hide#modalThanks
+  .modal__content
+    .modal__icon
+      i.icon.icon-email
+    .modal__close
+      i.icon.icon-close
+    .modal__head Спасибо за заказ!
+    .modal__desc Заказ № 34678
+    .modal__help-text Иформация о заказе отправлена на вашу почту email@email.com
+    .modal__actions
+      a(href='#').btn.btn--primary.btn--190.js-close-modal OK
+
+
+
+
+
+// MODAL GUIDE
 .modal-dialog.mfp-hide#modalGuide
   .modal__section
     .modal__close
@@ -160,3 +178,108 @@
             a(href='#').btn.btn--white.js-prev-guide Предыдущий вопрос
             a(href='#').btn.btn--primary.js-results-guide Показать результат
             a(href='#').btn.btn--white.js-reset-guide Начать тест заново
+
+
+// MODAL GUIDE RESULTS
+.modal-dialog.mfp-hide#modalGuideResults
+  .modal__guide__results-head
+    .modal__close
+      i.icon.icon-close
+    .modal__heading ПОДБОР СРЕДСТВА  ДЛЯ ДОМАШНЕГО УХОДА ЗА КОЖЕЙ
+  .modal__guide__results
+    .modal__guide__results-sidebar
+      .modal__guide__results-sidebar__title РЕЗУЛЬТАТ ТЕСТА
+      .modal__guide__results-sidebar__text Мы подобрали для вас рекомендации для ежедневного ухода за кожей. Рекомендации состоят из 7 шагов ежедневного ухода.
+      .modal__guide__results-sidebar__tabs
+        .modal__guide__results-sidebar__tab(data-tab='1').active 1. Утренний уход
+        .modal__guide__results-sidebar__tab(data-tab='2') 2. Очищение
+        .modal__guide__results-sidebar__tab(data-tab='3') 3. Орбитальная область
+        .modal__guide__results-sidebar__tab(data-tab='4') 4. Вечерний уход
+        .modal__guide__results-sidebar__tab(data-tab='5') 5. Глубокое очищение
+        .modal__guide__results-sidebar__tab(data-tab='6') 6. Маска
+        .modal__guide__results-sidebar__tab(data-tab='7') 7. Дополнительный уход
+        
+        
+    .modal__guide__results-content.active(data-tab='1')
+      .modal__heading Утренний уход
+      .modal__guide__results-content__text Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.
+    .modal__guide__results-content(data-tab='2')
+      .modal__heading Очищение
+      .modal__guide__results-content__text Для вашего типа кожи подойдут гелевые препараты, которые мягко удлярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.
+    .modal__guide__results-content(data-tab='3')
+      .modal__heading Орбитальная область
+      .modal__guide__results-content__text Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярног последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.
+    .modal__guide__results-content(data-tab='4')
+      .modal__heading Вечерний уход
+      .modal__guide__results-content__text Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом in with Lemongrass.
+    .modal__guide__results-content(data-tab='5')
+      .modal__heading Глубокое очищение
+      .modal__guide__results-content__text Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.
+    .modal__guide__results-content(data-tab='6')
+      .modal__heading Маска
+      .modal__guide__results-content__text Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с
+    .modal__guide__results-content(data-tab='7')
+      .modal__heading Дополнительный уход
+      .modal__guide__results-content__text Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте  Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.
+
+
+  .modal__guide__results-catalog.active(data-tab='1')
+    .modal__guide__results-catalog__placeholder
+    .modal__guide__catalog
+      // card
+      .catalog__card
+        .catalog__card__info
+          a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+          .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+          .catalog__card__short 50 ml
+          .catalog__card__cta
+            .catalog__card__price 4 050 ₽
+            a(href='#')
+              i.icon.icon-cart
+              
+        a(href='#').catalog__card__image
+          img(src='images/goods/productImg_1.png' srcset='images/goods/productImg_1@2x.png 2x')
+        
+      // card
+      .catalog__card
+        .catalog__card__info
+          a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ
+          .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+          .catalog__card__short 50 ml
+          .catalog__card__cta
+            .catalog__card__price 4 050 ₽
+            a(href='#')
+              i.icon.icon-cart
+              
+        a(href='#').catalog__card__image.catalog__card__image--vertical
+          img(src='images/goods/productImg_2.png' srcset='images/goods/productImg_2@2x.png 2x')
+    
+      // card
+      .catalog__card
+        .catalog__card__info
+          a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+          .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+          .catalog__card__short 50 ml
+          .catalog__card__cta
+            .catalog__card__price 4 050 ₽
+            a(href='#')
+              i.icon.icon-cart
+              
+        a(href='#').catalog__card__image.catalog__card__image--vertical
+          img(src='images/goods/productImg_3.png' srcset='images/goods/productImg_3@2x.png 2x')
+                            
+      // card
+      .catalog__card
+        .catalog__card__info
+          a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+          .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+          .catalog__card__short 50 ml
+          .catalog__card__cta
+            .catalog__card__price 4 050 ₽
+            a(href='#')
+              i.icon.icon-cart
+              
+        a(href='#').catalog__card__image.catalog__card__image--vertical
+          img(src='images/goods/productImg_4.png' srcset='images/goods/productImg_4@2x.png 2x')
+                  
+      

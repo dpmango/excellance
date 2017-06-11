@@ -353,6 +353,11 @@ html.mfp-helper body {
     color: #410C50;
     font-size: 15px;
 }
+.modal__heading {
+    letter-spacing: 5px;
+    font-size: 36px;
+    line-height: 1;
+}
 .modal__head {
     letter-spacing: 3.33px;
     font-size: 24px;
@@ -368,6 +373,10 @@ html.mfp-helper body {
     letter-spacing: 2px;
     font-size: 18px;
     line-height: 1.3;
+}
+.modal__help-text {
+    margin-top: 25px;
+    font-size: 12px;
 }
 .modal__actions {
     margin-top: 50px;
@@ -512,6 +521,136 @@ html.mfp-helper body {
     border-color: transparent;
     background: #939393;
     color: #313131;
+}
+.modal__guide__results-head {
+    position: relative;
+    position: relative;
+    margin: 8px auto 8px auto;
+    padding: 80px 80px 35px 80px;
+    max-width: 1000px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.modal__guide__results {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 8px auto 8px auto;
+    max-width: 1000px;
+    text-align: left;
+}
+.modal__guide__results-sidebar {
+    -webkit-flex: 0 1 365px;
+        -ms-flex: 0 1 365px;
+            flex: 0 1 365px;
+    margin-right: 8px;
+    padding: 20px 0px 10px 0px;
+    max-width: 365px;
+    border-radius: 4px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    -webkit-box-flex: 0;
+}
+.modal__guide__results-sidebar__title {
+    padding-right: 32px;
+    padding-left: 32px;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+.modal__guide__results-sidebar__text {
+    margin-top: 15px;
+    padding-right: 32px;
+    padding-left: 32px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+.modal__guide__results-sidebar__tabs {
+    margin-top: 15px;
+}
+.modal__guide__results-sidebar__tab {
+    margin-bottom: 3px;
+    padding: 5px 32px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.modal__guide__results-sidebar__tab.active, .modal__guide__results-sidebar__tab:hover {
+    background: #DBDEE0;
+}
+.modal__guide__results-content {
+    display: none;
+    -webkit-flex: 0 1 630px;
+        -ms-flex: 0 1 630px;
+            flex: 0 1 630px;
+    padding: 50px 80px 40px 40px;
+    max-width: 630px;
+    border-radius: 4px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    -webkit-box-flex: 0;
+}
+.modal__guide__results-content.active {
+    display: block;
+}
+.modal__guide__results-content__text {
+    margin-top: 25px;
+    max-width: 366px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+.modal__guide__results-catalog {
+    display: none;
+    margin: 8px auto;
+    max-width: 1000px;
+}
+.modal__guide__results-catalog.active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.modal__guide__results-catalog__placeholder {
+    -webkit-flex: 0 1 365px;
+        -ms-flex: 0 1 365px;
+            flex: 0 1 365px;
+    margin-right: 8px;
+    max-width: 365px;
+    -webkit-box-flex: 0;
+}
+.modal__guide__catalog {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 636px;
+        -ms-flex: 0 1 636px;
+            flex: 0 1 636px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-right: -3px;
+    margin-left: -3px;
+    max-width: 636px;
+    -webkit-box-flex: 0;
+}
+.modal__guide__catalog .catalog__card {
+    -webkit-flex: 0 1 -webkit-calc(50% - 6px);
+        -ms-flex: 0 1 calc(50% - 6px);
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: calc(50% - 6px);
+    -webkit-box-flex: 0;
 }
 @media(max-width: 768px) {
     .modal {}

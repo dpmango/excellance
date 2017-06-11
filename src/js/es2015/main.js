@@ -289,6 +289,30 @@ $(document).ready(function(){
       }, 350);
     }
 
+  });
+
+  // modal results tab
+  $('.modal__guide__results-sidebar__tab').on('click', function(){
+    var selectedTab = $(this).data('tab');
+
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    $('.modal__guide__results-content').each(function(i,val){
+      if ( $(val).data('tab') == selectedTab ){
+        $(val).addClass('active');
+      } else {
+        $(val).removeClass('active')
+      }
+    });
+
+    $('.modal__guide__results-catalog').each(function(i,val){
+      if ( $(val).data('tab') == selectedTab ){
+        $(val).addClass('active');
+      } else {
+        $(val).removeClass('active')
+      }
+    });
 
   });
 
