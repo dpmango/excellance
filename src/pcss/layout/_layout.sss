@@ -48,8 +48,11 @@ body, html
 //header offset
 .page
   margin-top: 255px
+  transition: filter .35s linear
   &--light-bg
     background: #F6F6F6
+  &--blur
+    filter: blur(30px)
 
 @media(height <= 800px)
   .page

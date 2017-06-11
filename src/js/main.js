@@ -222,9 +222,65 @@ $(document).ready(function () {
     }
   });
 
+  $('.js-blur').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'modal modal--blur',
+    callbacks: {
+      beforeOpen: function beforeOpen() {
+        $('.page').addClass('page--blur');
+      },
+      close: function close() {
+        $('.page').removeClass('page--blur');
+      }
+    }
+  });
+
   // emulate close click
   $('.modal__close, .js-close-modal').on('click', function () {
     $(this).closest('.modal').find('.mfp-close').click();
+  });
+
+  // GUIDE CARD SWTICHER
+  $('.modal__guide__form__cta .btn').on('click', function () {
+    var currentSlideID = $(this).closest('.modal__guide__card').data('question');
+    var currentSlide = $('.modal__guide__card[data-question="' + parseInt(currentSlideID) + '"]');
+    var nextSlide = $('.modal__guide__card[data-question="' + parseInt(currentSlideID + 1) + '"]');
+    var prevSlide = $('.modal__guide__card[data-question="' + parseInt(currentSlideID - 1) + '"]');
+
+    if ($(this).is('.js-next-guide') && nextSlide) {
+      // animate next slide
+      nextSlide.addClass('shuffle');
+      setTimeout(function () {
+        nextSlide.removeClass('shuffle').removeClass('modal__guide__card--right').addClass('modal__guide__card--visible');
+      }, 350);
+
+      // hide current slide
+      currentSlide.addClass('shuffle-next');
+      setTimeout(function () {
+        currentSlide.removeClass('shuffle-next').removeClass('modal__guide__card--visible').addClass('modal__guide__card--left');
+      }, 350);
+    }
+
+    if ($(this).is('.js-prev-guide') && prevSlide) {
+      // animate next slide
+      prevSlide.addClass('shuffle');
+      setTimeout(function () {
+        prevSlide.removeClass('shuffle').removeClass('modal__guide__card--left').addClass('modal__guide__card--visible');
+      }, 350);
+
+      // hide current slide
+      currentSlide.addClass('shuffle-prev');
+      setTimeout(function () {
+        currentSlide.removeClass('shuffle-prev').removeClass('modal__guide__card--visible').addClass('modal__guide__card--right');
+      }, 350);
+    }
   });
 
   // $('.popup-gallery').magnificPopup({

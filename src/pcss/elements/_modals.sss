@@ -29,6 +29,16 @@ html.mfp-helper
     max-width: 1000px
     margin: 40px auto
     position: relative
+  &__section
+    position: relative
+    background: white
+    padding: 60px 40px 65px 32px
+    text-align: left
+    max-width: 365px
+    margin: 40px auto 8px auto
+    position: relative
+    border-radius: 4px
+    box-shadow: 0px 0px 12px color(black a(20%))
   &__close
     position: absolute
     right: 20px
@@ -54,6 +64,12 @@ html.mfp-helper
     letter-spacing: 2px
     color: $colorGray
     margin-top: 30px
+  &__text
+    font-size: 18px
+    letter-spacing: 2px
+    text-transform: uppercase
+    line-height: 1.3
+
   &__actions
     margin-top: 50px
     text-align: center
@@ -83,6 +99,84 @@ html.mfp-helper
         width: 100%
         border-radius: 8px
         font-size: 16px
+
+  &__guide
+    position: relative
+    max-width: 365px
+    margin-left: auto
+    margin-right: auto
+    min-height: 650px
+    &__card
+      position: absolute
+      top: 50%
+      right: 0
+      min-height: 600px
+      background: white
+      padding: 45px 40px 75px 32px
+      text-align: left
+      max-width: 365px
+      margin: 0px auto 8px auto
+      border-radius: 4px
+      box-shadow: 0px 0px 12px color(black a(20%))
+      &--right
+        pointer-events: none
+        filter: blur(2px)
+        transform: translate3d(20px,-50%,0)
+        z-index: 1
+        &.shuffle
+          animation-name: shuffleRight
+          animation-duration: .35s
+          animation-timing-function: ease-in
+      &--left
+        pointer-events: none
+        filter: blur(2px)
+        transform: translate3d(-20px,-50%,0)
+        z-index: 2
+        &.shuffle
+          animation-name: shuffleLeft
+          animation-duration: .35s
+          animation-timing-function: ease-in
+      &--visible
+        z-index: 5
+        pointer-events: all
+        transform: translate3d(0,-50%,0)
+        &.shuffle-next
+          animation-name: shuffleOutNext
+          animation-duration: .35s
+          animation-timing-function: ease-in
+      &.shuffle-prev
+        animation-name: shuffleOutPrev
+        animation-duration: .35s
+        animation-timing-function: ease-in
+
+    &__progress
+      font-size: 12px
+      color: $colorGray
+      margin-top: 8px
+    &__form
+      margin-top: 25px
+
+      &__cta
+        margin-top: 25px
+        .btn
+          font-size: 12px
+          min-width: 220px
+          padding: 10px
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+          &.js-reset-guide
+            color: $colorGray
+            border: 1px solid $colorGray
+            background: transparent
+            text-transform: none
+            min-width: 140px
+            &:hover
+              background: $colorGray
+              border-color: transparent
+              color: $fontColor
+
+
 
 
 @media($tablet)
@@ -135,6 +229,10 @@ html.mfp-helper
     opacity: 0.96
   &.mfp-removing.mfp-bg
     opacity: 0
+
+  &--blur
+    &.mfp-bg
+      background: transparent
 
 
 @media(height <= 800px)

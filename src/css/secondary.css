@@ -319,6 +319,18 @@ html.mfp-helper body {
     background: white;
     text-align: left;
 }
+.modal__section {
+    position: relative;
+    position: relative;
+    margin: 40px auto 8px auto;
+    padding: 60px 40px 65px 32px;
+    max-width: 365px;
+    border-radius: 4px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
 .modal__close {
     position: absolute;
     top: 20px;
@@ -350,6 +362,12 @@ html.mfp-helper body {
     color: #939393;
     letter-spacing: 2px;
     font-size: 18px;
+}
+.modal__text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 1.3;
 }
 .modal__actions {
     margin-top: 50px;
@@ -387,6 +405,113 @@ html.mfp-helper body {
     width: 100%;
     border-radius: 8px;
     font-size: 16px;
+}
+.modal__guide {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 650px;
+    max-width: 365px;
+}
+.modal__guide__card {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0px auto 8px auto;
+    padding: 45px 40px 75px 32px;
+    min-height: 600px;
+    max-width: 365px;
+    border-radius: 4px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.modal__guide__card--right {
+    z-index: 1;
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    -webkit-transform: translate3d(20px,-50%,0);
+            transform: translate3d(20px,-50%,0);
+    pointer-events: none;
+}
+.modal__guide__card--right.shuffle {
+    -webkit-animation-name: shuffleRight;
+            animation-name: shuffleRight;
+    -webkit-animation-duration: .35s;
+            animation-duration: .35s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+.modal__guide__card--left {
+    z-index: 2;
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    -webkit-transform: translate3d(-20px,-50%,0);
+            transform: translate3d(-20px,-50%,0);
+    pointer-events: none;
+}
+.modal__guide__card--left.shuffle {
+    -webkit-animation-name: shuffleLeft;
+            animation-name: shuffleLeft;
+    -webkit-animation-duration: .35s;
+            animation-duration: .35s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+.modal__guide__card--visible {
+    z-index: 5;
+    -webkit-transform: translate3d(0,-50%,0);
+            transform: translate3d(0,-50%,0);
+    pointer-events: all;
+}
+.modal__guide__card--visible.shuffle-next {
+    -webkit-animation-name: shuffleOutNext;
+            animation-name: shuffleOutNext;
+    -webkit-animation-duration: .35s;
+            animation-duration: .35s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+.modal__guide__card.shuffle-prev {
+    -webkit-animation-name: shuffleOutPrev;
+            animation-name: shuffleOutPrev;
+    -webkit-animation-duration: .35s;
+            animation-duration: .35s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+.modal__guide__progress {
+    margin-top: 8px;
+    color: #939393;
+    font-size: 12px;
+}
+.modal__guide__form {
+    margin-top: 25px;
+}
+.modal__guide__form__cta {
+    margin-top: 25px;
+}
+.modal__guide__form__cta .btn {
+    margin-bottom: 15px;
+    padding: 10px;
+    min-width: 220px;
+    font-size: 12px;
+}
+.modal__guide__form__cta .btn:last-child {
+    margin-bottom: 0;
+}
+.modal__guide__form__cta .btn.js-reset-guide {
+    min-width: 140px;
+    border: 1px solid #939393;
+    background: transparent;
+    color: #939393;
+    text-transform: none;
+}
+.modal__guide__form__cta .btn.js-reset-guide:hover {
+    border-color: transparent;
+    background: #939393;
+    color: #313131;
 }
 @media(max-width: 768px) {
     .modal {}
@@ -459,6 +584,10 @@ html.mfp-helper body {
 .modal.mfp-removing.mfp-bg {
     opacity: 0;
 }
+.modal--blur {}
+.modal--blur.mfp-bg {
+    background: transparent;
+}
 @media(max-height: 800px) {
     .modal .mfp-container {
         padding-top: 200px;
@@ -475,6 +604,167 @@ html.mfp-helper body {
     .modal .mfp-container {
         padding-top: 80px;
         padding-bottom: 80px;
+    }
+}
+/* Keyframes */
+@-webkit-keyframes shuffleRight {
+    0% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(20px,-50%,0);
+                transform: translate3d(20px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(100px, -55%, 0);
+                transform: translate3d(100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+}
+@keyframes shuffleRight {
+    0% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(20px,-50%,0);
+                transform: translate3d(20px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(100px, -55%, 0);
+                transform: translate3d(100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+}
+@-webkit-keyframes shuffleLeft {
+    0% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(-20px,-50%,0);
+                transform: translate3d(-20px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(-100px, -55%, 0);
+                transform: translate3d(-100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+}
+@keyframes shuffleLeft {
+    0% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(-20px,-50%,0);
+                transform: translate3d(-20px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(-100px, -55%, 0);
+                transform: translate3d(-100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+}
+@-webkit-keyframes shuffleOutNext {
+    0% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(-100px, -55%, 0);
+                transform: translate3d(-100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(-20px,-50%,0);
+                transform: translate3d(-20px,-50%,0);
+    }
+}
+@keyframes shuffleOutNext {
+    0% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(-100px, -55%, 0);
+                transform: translate3d(-100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(-20px,-50%,0);
+                transform: translate3d(-20px,-50%,0);
+    }
+}
+@-webkit-keyframes shuffleOutPrev {
+    0% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(100px, -55%, 0);
+                transform: translate3d(100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(20px,-50%,0);
+                transform: translate3d(20px,-50%,0);
+    }
+}
+@keyframes shuffleOutPrev {
+    0% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(0px,-50%,0);
+                transform: translate3d(0px,-50%,0);
+    }
+    50% {
+        -webkit-filter: blur(1px);
+                filter: blur(1px);
+        -webkit-transform: translate3d(100px, -55%, 0);
+                transform: translate3d(100px, -55%, 0);
+    }
+    100% {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+        -webkit-transform: translate3d(20px,-50%,0);
+                transform: translate3d(20px,-50%,0);
     }
 }
 

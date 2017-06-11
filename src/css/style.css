@@ -63,9 +63,17 @@ body, html {
 /*header offset */
 .page {
     margin-top: 255px;
+    -webkit-transition: -webkit-filter .35s linear;
+    transition: -webkit-filter .35s linear;
+    transition: filter .35s linear;
+    transition: filter .35s linear, -webkit-filter .35s linear;
 }
 .page--light-bg {
     background: #F6F6F6;
+}
+.page--blur {
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
 }
 @media(max-height: 800px) {
     .page {
@@ -317,6 +325,55 @@ form.loading {
 .ui-radio:hover label:before {
     -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.ui-radio--modal {
+    margin-bottom: 15px;
+}
+.ui-radio--modal input {}
+.ui-radio--modal input:checked + label {}
+.ui-radio--modal input:checked + label:before {
+    background: white;
+}
+.ui-radio--modal input:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+.ui-radio--modal label {
+    padding-left: 25px;
+    color: #313131;
+    line-height: 1.3;
+}
+.ui-radio--modal label:before {
+    top: 0;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    background: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+}
+.ui-radio--modal label:after {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #3996C4;
+    content: ' ';
+    opacity: 0;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
 }
 @media(max-width: 850px) {
     .ui-radio label {

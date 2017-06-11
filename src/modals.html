@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div><a class="header__logo" href="homepage.html"><i class="icon icon-logo"></i></a>
-        <div class="header__cta"><a class="header__account" href="#"><i class="icon icon-account"></i><span>мой аккаунт</span></a><a class="header__cart" href="#"><i class="icon icon-cart"></i><span>Корзина</span>
+        <div class="header__cta"><a class="header__account" href="profile-personal.html"><i class="icon icon-account"></i><span>мой аккаунт</span></a><a class="header__cart" href="cart.html"><i class="icon icon-cart"></i><span>Корзина</span>
             <div class="header__cart__counter">(0)</div></a>
           <form class="header__search" action="#">
             <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
@@ -67,7 +67,7 @@
           <li><a href="smi.html">СМИ о нас</a></li>
           <li><a href="contacts.html">Адреса</a></li>
         </ul>
-        <div class="header__cta header__cta--sticky"><a class="header__account" href="#"><i class="icon icon-account"></i></a><a class="header__cart" href="#"><i class="icon icon-cart"></i>
+        <div class="header__cta header__cta--sticky"><a class="header__account" href="profile-personal.html"><i class="icon icon-account"></i></a><a class="header__cart" href="cart.html"><i class="icon icon-cart"></i>
             <div class="header__cart__counter">(0)</div></a>
           <form class="header__search" action="#">
             <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
@@ -94,7 +94,7 @@
       <div class="container">
         <div class="heading heading--mute">Все модальные</div>
         <div class="text-center" style="padding-top: 100px; padding-bottom: 100px;">
-          <div class="flex-modals"><a class="btn btn--primary js-popup" href="#modalTestimonialLogin">Оставить отзыв (логин)</a><a class="btn btn--primary js-popup" href="#modalTestimonial">Оставить отзыв</a></div>
+          <div class="flex-modals"><a class="btn btn--primary js-popup" href="#modalTestimonialLogin">Оставить отзыв (логин)</a><a class="btn btn--primary js-popup" href="#modalTestimonial">Оставить отзыв</a><a class="btn btn--primary js-blur" href="#modalGuide">Диагностика</a></div>
         </div>
       </div>
     </div>
@@ -120,6 +120,154 @@
         </div>
       </form>
       <div class="modal__actions"><a class="btn btn--primary" href="login.html">ОПУБЛИКОВАТЬ ОТЗЫВ</a><a class="modal__sublink js-close-modal" href="#"><span>Отмена</span></a></div>
+    </div>
+  </div>
+  <!-- MODAL -->
+  <div class="modal-dialog mfp-hide" id="modalGuide">
+    <div class="modal__section">
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__text">ПОДБОР СРЕДСТВА  ДЛЯ ДОМАШНЕГО УХОДА ЗА КОЖЕЙ</div>
+    </div>
+    <div class="modal__guide">
+      <div class="modal__guide__card modal__guide__card--visible" data-question="1">
+        <div class="modal__text">Выберите утверждение, которое характеризует Вашу кожу лучше всего:</div>
+        <div class="modal__guide__progress">Вопрос 1 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_1">
+              <label for="question_1_1">нормальная (кожа упругая, чистая, без участков шелушения, имеет здоровый лоск. После очищения всегда комфортные ощущения) </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_2">
+              <label for="question_1_2">- сухая (кожа тонкая, имеются участки шелушения, покраснения. После умывания отмечается чувство стянутости) </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_3">
+              <label for="question_1_3">жирная (кожа плотная, пористая, тусклая, имеется жирный блеск и воспалительные элементы. После очищения нет ощущения полной чистоты) </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_4">
+              <label for="question_1_4">комбинированная (жирный блеск в Т-зоне (лоб, нос, подбородок), в области щек кожа нормальная или склонная к сухости. После очищения комфортные ощущения)</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-close-modal" href="#">Вернуться в каталог</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right" data-question="2">
+        <div class="modal__text">Какое очищение кожи лица Вы предпочитаете:</div>
+        <div class="modal__guide__progress">Вопрос 2 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_1">
+              <label for="question_2_1">предпочитаю  умываться водой, после очищения всегда комфортные ощущения </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_2">
+              <label for="question_2_2">предпочитаю очищение кожи водой, но после умывания есть ощущение стянутости, сухости</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_3">
+              <label for="question_2_3">предпочитаю очищение водой, но после очищения нет ощущения полной чистоты </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_4">
+              <label for="question_2_4">предпочитаю минимизировать контакт кожи с водой/ или предпочитаю очищение без воды </label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right" data-question="3">
+        <div class="modal__text">Имеются ли у Вас воспалительные элементы на лице</div>
+        <div class="modal__guide__progress">Вопрос 3 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_3" id="question_3_1">
+              <label for="question_3_1">нет, не бывает никогда </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_3" id="question_3_2">
+              <label for="question_3_2">периодически появляются единичные высыпания </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_3" id="question_3_3">
+              <label for="question_3_3">постоянно имеются воспалительные элементы</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right" data-question="4">
+        <div class="modal__text">Оцените тонус и тургор Вашей кожи</div>
+        <div class="modal__guide__progress">Вопрос 4 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_4" id="question_4_1">
+              <label for="question_4_1">тонус кожи хороший , морщин нет</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_4" id="question_4_2">
+              <label for="question_4_2">тонус кожи хороший, имеется незначительное количество мимических морщин, в основном в области глаз, лба </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_4" id="question_4_3">
+              <label for="question_4_3">кожа дряблая, атоничная, имеются глубокие мимические морщины (заломы)</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right" data-question="5">
+        <div class="modal__text">Имеется ли у Вас на коже лица пигментные пятна</div>
+        <div class="modal__guide__progress">Вопрос 5 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_5" id="question_5_1">
+              <label for="question_5_1">пигментных пятен, веснушек нет</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_5" id="question_5_2">
+              <label for="question_5_2">да, имеются участки пигментации (пигментные пятна, веснушки)</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right" data-question="6">
+        <div class="modal__text">Ваша кожа вокруг глаз</div>
+        <div class="modal__guide__progress">Вопрос 6 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_1">
+              <label for="question_6_1">плотная.  Морщины, темные круги, отечность отсутствуют экспресс-корректор для зоны вокруг глаз</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_2">
+              <label for="question_6_2">тонкая, сухая. Имеются мимические морщины</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_3">
+              <label for="question_6_3">склонна к отечности и появлению темных кругов </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_4">
+              <label for="question_6_4">тонкая.  Имеются мимические морщины, темные круги, есть  склонность к отечности. </label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-results-guide" href="#">Показать результат</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
   <!-- SECONDARY STYLES-->
