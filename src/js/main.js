@@ -409,10 +409,19 @@ $(document).ready(function () {
 
 
   ///////////////
+  // CART PAGE
+  ///////////////
+  $('.catalog__card .icon-close').on('click', function () {
+    if ($(this).data('action') == 'remove') {
+      $(this).parent().fadeOut();
+    }
+  }
+
+  ///////////////
   // UI
   ///////////////
   // Masked input
-  $(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
+  );$(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
   $(".js-indexMask").mask("999 999", { placeholder: "000 000" });
 
   $("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
@@ -462,6 +471,26 @@ $(document).ready(function () {
         $(value).removeClass('active');
       }
     });
+  });
+
+  // numeric input
+  $('.catalog__card__counter span').on('click', function (e) {
+    var element = $(this).parent().find('input');
+    var currentValue = parseInt($(this).parent().find('input').val()) || 0;
+
+    if ($(this).data('action') == 'minus') {
+      if (currentValue <= 1) {
+        return false;
+      } else {
+        element.val(currentValue - 1);
+      }
+    } else if ($(this).data('action') == 'plus') {
+      if (currentValue >= 99) {
+        return false;
+      } else {
+        element.val(currentValue + 1);
+      }
+    }
   });
 
   // INPUTS FOCUS

@@ -1,0 +1,200 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.header-static.page--light-bg
+      
+      // CATALOG :: START
+      .catalog
+        .container
+          .catalog__wrapper
+            .catalog__card.catalog__card--cart.cart-summary
+              .cart-summary__title в корзине 6 товаров
+              .ui-group
+                label Промокод на скидку
+                input(type='text' name='promo' placeholder='').ui-input
+              
+              .cart-summary__summ
+                .cart-summary__summ__label Сумма:
+                .cart-summary__summ__number 25 458 ₽
+                
+              a(href='#').btn.btn--primary.btn--190
+                span Оформить заказ
+            
+            // card
+            .catalog__card
+              i.icon.icon-close(data-action='remove')
+              .catalog__card__info    
+                a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta.catalog__card__cta--cart
+                  .catalog__card__price 4 050 ₽
+                  .catalog__card__counter
+                    span(data-action='minus') -
+                    input(type='text' name='amount' value='1' maxlength='2')
+                    span(data-action='plus') +
+                  
+                    
+              a(href='#').catalog__card__image
+                img(src='images/goods/productImg_1.png' srcset='images/goods/productImg_1@2x.png 2x')
+              
+            // card
+            .catalog__card
+              i.icon.icon-close(data-action='remove')
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta.catalog__card__cta--cart
+                  .catalog__card__price 4 050 ₽
+                  .catalog__card__counter
+                    span(data-action='minus') -
+                    input(type='text' name='amount' value='1' maxlength='2')
+                    span(data-action='plus') +
+                  
+                    
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_2.png' srcset='images/goods/productImg_2@2x.png 2x')
+          
+            // card
+            .catalog__card
+              i.icon.icon-close(data-action='remove')
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta.catalog__card__cta--cart
+                  .catalog__card__price 4 050 ₽
+                  .catalog__card__counter
+                    span(data-action='minus') -
+                    input(type='text' name='amount' value='1' maxlength='2')
+                    span(data-action='plus') +
+                  
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_3.png' srcset='images/goods/productImg_3@2x.png 2x')
+                                  
+            // card
+            .catalog__card
+              i.icon.icon-close(data-action='remove')
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta.catalog__card__cta--cart
+                  .catalog__card__price 4 050 ₽
+                  .catalog__card__counter
+                    span(data-action='minus') -
+                    input(type='text' name='amount' value='1' maxlength='2')
+                    span(data-action='plus') +
+                  
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_4.png' srcset='images/goods/productImg_4@2x.png 2x')
+                                        
+            // card
+            .catalog__card
+              i.icon.icon-close(data-action='remove')
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta.catalog__card__cta--cart
+                  .catalog__card__price 4 050 ₽
+                  .catalog__card__counter
+                    span(data-action='minus') -
+                    input(type='text' name='amount' value='1' maxlength='2')
+                    span(data-action='plus') +
+                  
+                    
+              a(href='#').catalog__card__image
+                img(src='images/goods/productImg_1.png' srcset='images/goods/productImg_1@2x.png 2x')
+
+            // card
+            .catalog__card
+              i.icon.icon-close(data-action='remove')
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta.catalog__card__cta--cart
+                  .catalog__card__price 4 050 ₽
+                  .catalog__card__counter
+                    span(data-action='minus') -
+                    input(type='text' name='amount' value='1' maxlength='2')
+                    span(data-action='plus') +
+                  
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_4.png' srcset='images/goods/productImg_4@2x.png 2x')
+                          
+        
+      // CATALOG :: START
+      .catalog.catalog--similar.catalog--similar-pad
+        .container.container--1400
+          .text-center.subheading-gray Рекомендации для вас
+          
+          .catalog__wrapper
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНО  УВЛАЖНЯЮЩИЙ КРЕМ 
+                .catalog__card__short Поддержание комфортного  уровня увлажненности кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image
+                img(src='images/goods/productImg_1.png' srcset='images/goods/productImg_1@2x.png 2x')
+              
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name МАТИРУЮЩАЯ  ЭМУЛЬСИЯ
+                .catalog__card__short Для жирной и  комбинированной кожи
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_2.png' srcset='images/goods/productImg_2@2x.png 2x')
+          
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name ИНТЕНСИВНАЯ СЫВОРОТКА  ДЛЯ ЛИЦА <br> «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ»
+                .catalog__card__short Полностью удаляет макияж
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_3.png' srcset='images/goods/productImg_3@2x.png 2x')
+                                  
+            // card
+            .catalog__card
+              .catalog__card__info
+                a(href='#').catalog__card__name ДВУХФАЗНЫЙ ЛОСЬОН  ДЛЯ СНЯТИЯ МАКИЯЖА  С ГЛАЗ
+                .catalog__card__short Полностью удаляет макияж
+                .catalog__card__short 50 ml
+                .catalog__card__cta
+                  .catalog__card__price 4 050 ₽
+                  a(href='#')
+                    i.icon.icon-cart
+                    
+              a(href='#').catalog__card__image.catalog__card__image--vertical
+                img(src='images/goods/productImg_4.png' srcset='images/goods/productImg_4@2x.png 2x')
+                                                                                                                
+                  
+                                    
+    include shared/footer.pug
+    include shared/scripts.pug
+    

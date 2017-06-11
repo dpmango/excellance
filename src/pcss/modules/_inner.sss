@@ -22,6 +22,8 @@
           transform: translate3d(0,0,0)
           opacity: 1
 
+  &--similar-pad
+    padding-bottom: 70px
 
   &__wrapper
     display: flex
@@ -45,6 +47,13 @@
       padding: 30px 35px 25px 35px
       .btn
         max-width: 165px
+    &--cart
+      padding: 40px 35px 25px 35px
+      .ui-input
+        font-size: 14px
+        padding-top: 8px
+        padding-bottom: 8px
+        max-width: 190px
     &__tip
       font-size: 10px
       margin-bottom: 10px
@@ -62,11 +71,20 @@
       transition: all $transitionSpeed $ease
       &:hover
         color: $colorPrimary
-
     &__short
       font-size: 12px
       color: $colorGray
       margin-top: 8px
+    .icon-close
+      position: absolute
+      right: 15px
+      top: 15px
+      font-size: 18px
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $colorPrimary
+        transform: scale(1.1)
     &__cta
       margin-top: 5px
       display: flex
@@ -78,12 +96,44 @@
         transition: color $transitionSpeed $ease
         &:hover
           color: $colorPrimaryLight
+      &--cart
+        flex-direction: column
+        .catalog__card__price
+          border-length: 0
+
 
     &__price
       font-size: 16px
       letter-spacing: 2px
       padding-right: 8px
       border-right: 1px solid $borderColor
+    &__counter
+      display: flex
+      align-items: center
+      margin-left: -8px
+      margin-top: 2px
+      span
+        display: inline-block
+        padding: 8px
+        font-size: 12px
+        color: $colorGray
+        cursor: pointer
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $fontColor
+
+      input
+        border: 0
+        background: transparent
+        width: 25px
+        margin-left: -7px
+        margin-right: -7px
+        text-align: center
+        padding: 5px
+        color: #410C50
+        font-size: 12px
+        font-family: 'Playfair'
+
 
     &__image
       text-align: right
@@ -128,6 +178,9 @@
         flex: 0 1 calc(50% - 6px)
         &:nth-child(4)
           display: flex
+
+    &--similar-pad
+      padding-bottom: 45px
 
 @media(width <= 520px)
   .catalog
