@@ -444,6 +444,23 @@ $(document).ready(function(){
   });
 
   ///////////////
+  // CONTACT PAGE
+  ///////////////
+
+  // mobile toggeler
+  $('.contacts__sidebar__toggle').on('click', function(){
+    $(this).parent().find('.contacts__sidebar__group:not(.contacts__sidebar__group--condenced)').slideToggle();
+    $(this).toggleClass('active');
+    if ( $(this).find('span').text() == 'Показать' ){
+      $(this).find('span').text('Скрыть');
+    } else {
+      $(this).find('span').text('Показать');
+    }
+
+  });
+
+
+  ///////////////
   // PROFILE PAGE
   ///////////////
 

@@ -609,3 +609,85 @@
       &--condenced
         p, span
           margin-bottom: 3px
+
+    &__toggle
+      display: none
+      margin-top: 20px
+      text-align: center
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      .icon
+        transform: rotate(-270deg)
+        display: inline-block
+        margin-right: 10px
+        font-size: 12px
+        transition: all $transitionSpeed $ease
+      span
+        font-size: 14px
+      &.active
+        .icon
+          transform: rotate(-90deg)
+
+
+
+@media($tablet)
+  .contacts
+    display: flex
+    flex-direction: column-reverse
+    &__map
+      position: relative
+      min-height: 450px
+      height: 80vh
+    &__sidebar
+      max-width: 120%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding: 30px 20px 20px 25px
+      margin-left: -10px
+      margin-right: -10px
+      margin-bottom: 20px
+      &__heading
+        flex: 0 1 100%
+        padding-left: 10px
+        padding-right: 10px
+      .ui-group
+        flex: 0 1 50%
+        padding-left: 10px
+        padding-right: 10px
+      &__group
+        flex: 0 1 50%
+        padding-left: 10px
+        padding-right: 10px
+        &--condenced
+          margin-top: 0
+
+@media(width >= 568px)
+  .contacts
+    &__sidebar
+      &__group
+        display: block !important
+
+@media(width <= 568px)
+  .contacts
+    &__sidebar
+      flex-direction: column
+      &__heading
+        flex: 0 0 auto
+      .ui-group
+        flex: 0 0 auto
+      &__group
+        flex: 0 0 auto
+        margin-top: 20px
+        display: none
+        &--condenced
+          display: block
+
+      &__toggle
+        display: block
+
+
+@media($mobile-s)
+  .contacts
+    &__sidebar
+      padding-left: 15px
