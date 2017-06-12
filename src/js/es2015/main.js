@@ -260,21 +260,44 @@ $(document).ready(function(){
     var currentSlide = $('.modal__guide__card[data-question="'+ parseInt(currentSlideID )  +'"]')
     var nextSlide = $('.modal__guide__card[data-question="'+ parseInt(currentSlideID + 1)  +'"]')
     var prevSlide = $('.modal__guide__card[data-question="'+ parseInt(currentSlideID - 1)  +'"]')
+    var nextSlideNext = $('.modal__guide__card[data-question="'+ parseInt(currentSlideID + 2)  +'"]')
+    var prevSlideNext = $('.modal__guide__card[data-question="'+ parseInt(currentSlideID - 2)  +'"]')
+    var selected = false
 
+    // next slide
     if ( $(this).is('.js-next-guide') && nextSlide ){
-      // animate next slide
-      nextSlide.addClass('shuffle');
-      setTimeout(function(){
-        nextSlide.removeClass('shuffle').removeClass('modal__guide__card--right').addClass('modal__guide__card--visible');
-      }, 350);
+      // validate is selected
+      if ( $(this).closest('.modal__guide__card').find('input:checked').length > 0 ){
+        selected = true;
+        $(this).closest('.modal__guide__card').find('.modal__guide__form__validation').fadeOut();
+      } else {
+        $(this).closest('.modal__guide__card').find('.modal__guide__form__validation').fadeIn();
+      }
 
-      // hide current slide
-      currentSlide.addClass('shuffle-next')
-      setTimeout(function(){
-        currentSlide.removeClass('shuffle-next').removeClass('modal__guide__card--visible').addClass('modal__guide__card--left');
-      }, 350);
+      if ( selected ){
+        // animate next slide
+        nextSlide.addClass('shuffle');
+        setTimeout(function(){
+          nextSlide.removeClass('shuffle').removeClass('modal__guide__card--right').addClass('modal__guide__card--visible');
+        }, 350);
+
+        // hide current slide
+        currentSlide.addClass('shuffle-next')
+        setTimeout(function(){
+          currentSlide.removeClass('shuffle-next').removeClass('modal__guide__card--visible').addClass('modal__guide__card--left');
+          // remove 0 opacity on next el
+          if (nextSlideNext){
+            nextSlideNext.removeClass('modal__guide__card--invis')
+          }
+          if (prevSlideNext){
+            prevSlide.addClass('modal__guide__card--invis')
+          }
+        }, 350);
+
+      }
     }
 
+    // previous slide
     if ( $(this).is('.js-prev-guide') && prevSlide ){
       // animate next slide
       prevSlide.addClass('shuffle');
@@ -286,10 +309,48 @@ $(document).ready(function(){
       currentSlide.addClass('shuffle-prev')
       setTimeout(function(){
         currentSlide.removeClass('shuffle-prev').removeClass('modal__guide__card--visible').addClass('modal__guide__card--right');
+        // remove 0 opacity on next el
+        if (nextSlideNext){
+          nextSlide.addClass('modal__guide__card--invis')
+        }
+        if (prevSlideNext){
+          prevSlideNext.removeClass('modal__guide__card--invis')
+        }
       }, 350);
     }
 
+    // reset action
+    if ( $(this).is('.js-reset-guide') ){
+      $('.modal__guide__card').each(function(i,val){
+        var dataQuestion = $(val).data('question')
+        // null all classes
+        $(val)
+          .removeClass('modal__guide__card--invis')
+          .removeClass('modal__guide__card--left')
+          .removeClass('modal__guide__card--right')
+          .removeClass('modal__guide__card--visible')
+          .removeClass('shuffle')
+          .removeClass('shuffle-next')
+          .removeClass('shuffle-prev')
+
+        //null radios
+        $(val).find('input:checked').prop('checked',false)
+
+        // set defaults
+        if ( dataQuestion == 1 ){
+          $(val).addClass('modal__guide__card--visible');
+        } else if ( dataQuestion > 1 && dataQuestion < 3 ){
+          $(val).addClass('modal__guide__card--right')
+        } else if ( dataQuestion >= 3 ){
+          console.log( $(val).data('question') );
+          $(val).addClass('modal__guide__card--invis').addClass('modal__guide__card--right')
+        }
+      });
+
+    }
+
   });
+
 
   // modal results tab
   $('.modal__guide__results-sidebar__tab').on('click', function(){

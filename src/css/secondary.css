@@ -428,20 +428,25 @@ html.mfp-helper body {
     right: 0;
     margin: 0px auto 8px auto;
     padding: 45px 40px 75px 32px;
-    min-height: 600px;
+    min-height: 620px;
     max-width: 365px;
     border-radius: 4px;
     background: white;
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
     text-align: left;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+.modal__guide__card--invis {
+    opacity: 0;
 }
 .modal__guide__card--right {
     z-index: 1;
     -webkit-filter: blur(2px);
             filter: blur(2px);
-    -webkit-transform: translate3d(20px,-50%,0);
-            transform: translate3d(20px,-50%,0);
+    -webkit-transform: translate3d(30px,-50%,0) scale(0.96);
+            transform: translate3d(30px,-50%,0) scale(0.96);
     pointer-events: none;
 }
 .modal__guide__card--right.shuffle {
@@ -456,8 +461,8 @@ html.mfp-helper body {
     z-index: 2;
     -webkit-filter: blur(2px);
             filter: blur(2px);
-    -webkit-transform: translate3d(-20px,-50%,0);
-            transform: translate3d(-20px,-50%,0);
+    -webkit-transform: translate3d(-30px,-50%,0) scale(0.96);
+            transform: translate3d(-30px,-50%,0) scale(0.96);
     pointer-events: none;
 }
 .modal__guide__card--left.shuffle {
@@ -470,8 +475,8 @@ html.mfp-helper body {
 }
 .modal__guide__card--visible {
     z-index: 5;
-    -webkit-transform: translate3d(0,-50%,0);
-            transform: translate3d(0,-50%,0);
+    -webkit-transform: translate3d(0,-50%,0) scale(1);
+            transform: translate3d(0,-50%,0) scale(1);
     pointer-events: all;
 }
 .modal__guide__card--visible.shuffle-next {
@@ -497,6 +502,13 @@ html.mfp-helper body {
 }
 .modal__guide__form {
     margin-top: 25px;
+}
+.modal__guide__form__validation {
+    display: none;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    color: #D0011B;
+    font-size: 10px;
 }
 .modal__guide__form__cta {
     margin-top: 25px;
@@ -681,6 +693,18 @@ html.mfp-helper body {
         top: 15px;
         right: 15px;
     }
+    .modal__text {
+        font-size: 16px;
+    }
+    .modal__section {
+        padding: 40px 30px 45px 30px;
+    }
+    .modal__guide {}
+    .modal__guide__card {
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 35px 30px 45px 30px;
+    }
 }
 /* Generic modifiers */
 .modal button.mfp-close {
@@ -750,160 +774,160 @@ html.mfp-helper body {
     0% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(20px,-50%,0);
-                transform: translate3d(20px,-50%,0);
+        -webkit-transform: translate3d(30px,-50%,0) scale(0.96);
+                transform: translate3d(30px,-50%,0) scale(0.96);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(100px, -55%, 0);
-                transform: translate3d(100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(100px, -55%, 0) scale(0.98) rotate(5deg);
+                transform: translate3d(100px, -55%, 0) scale(0.98) rotate(5deg);
     }
     100% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
 }
 @keyframes shuffleRight {
     0% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(20px,-50%,0);
-                transform: translate3d(20px,-50%,0);
+        -webkit-transform: translate3d(30px,-50%,0) scale(0.96);
+                transform: translate3d(30px,-50%,0) scale(0.96);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(100px, -55%, 0);
-                transform: translate3d(100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(100px, -55%, 0) scale(0.98) rotate(5deg);
+                transform: translate3d(100px, -55%, 0) scale(0.98) rotate(5deg);
     }
     100% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
 }
 @-webkit-keyframes shuffleLeft {
     0% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(-20px,-50%,0);
-                transform: translate3d(-20px,-50%,0);
+        -webkit-transform: translate3d(-30px,-50%,0) scale(0.96);
+                transform: translate3d(-30px,-50%,0) scale(0.96);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(-100px, -55%, 0);
-                transform: translate3d(-100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(-100px, -55%, 0) scale(0.98) rotate(-5deg);
+                transform: translate3d(-100px, -55%, 0) scale(0.98) rotate(-5deg);
     }
     100% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
 }
 @keyframes shuffleLeft {
     0% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(-20px,-50%,0);
-                transform: translate3d(-20px,-50%,0);
+        -webkit-transform: translate3d(-30px,-50%,0) scale(0.96);
+                transform: translate3d(-30px,-50%,0) scale(0.96);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(-100px, -55%, 0);
-                transform: translate3d(-100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(-100px, -55%, 0) scale(0.98) rotate(-5deg);
+                transform: translate3d(-100px, -55%, 0) scale(0.98) rotate(-5deg);
     }
     100% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
 }
 @-webkit-keyframes shuffleOutNext {
     0% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(-100px, -55%, 0);
-                transform: translate3d(-100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(-100px, -55%, 0) scale(0.98);
+                transform: translate3d(-100px, -55%, 0) scale(0.98);
     }
     100% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(-20px,-50%,0);
-                transform: translate3d(-20px,-50%,0);
+        -webkit-transform: translate3d(-30px,-50%,0) scale(0.96);
+                transform: translate3d(-30px,-50%,0) scale(0.96);
     }
 }
 @keyframes shuffleOutNext {
     0% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(-100px, -55%, 0);
-                transform: translate3d(-100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(-100px, -55%, 0) scale(0.98);
+                transform: translate3d(-100px, -55%, 0) scale(0.98);
     }
     100% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(-20px,-50%,0);
-                transform: translate3d(-20px,-50%,0);
+        -webkit-transform: translate3d(-30px,-50%,0) scale(0.96);
+                transform: translate3d(-30px,-50%,0) scale(0.96);
     }
 }
 @-webkit-keyframes shuffleOutPrev {
     0% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(100px, -55%, 0);
-                transform: translate3d(100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(100px, -55%, 0) scale(0.98);
+                transform: translate3d(100px, -55%, 0) scale(0.98);
     }
     100% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(20px,-50%,0);
-                transform: translate3d(20px,-50%,0);
+        -webkit-transform: translate3d(30px,-50%,0) scale(0.96);
+                transform: translate3d(30px,-50%,0) scale(0.96);
     }
 }
 @keyframes shuffleOutPrev {
     0% {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
-        -webkit-transform: translate3d(0px,-50%,0);
-                transform: translate3d(0px,-50%,0);
+        -webkit-transform: translate3d(0px,-50%,0) scale(1);
+                transform: translate3d(0px,-50%,0) scale(1);
     }
     50% {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        -webkit-transform: translate3d(100px, -55%, 0);
-                transform: translate3d(100px, -55%, 0);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: translate3d(100px, -55%, 0) scale(0.98);
+                transform: translate3d(100px, -55%, 0) scale(0.98);
     }
     100% {
         -webkit-filter: blur(2px);
                 filter: blur(2px);
-        -webkit-transform: translate3d(20px,-50%,0);
-                transform: translate3d(20px,-50%,0);
+        -webkit-transform: translate3d(30px,-50%,0) scale(0.96);
+                transform: translate3d(30px,-50%,0) scale(0.96);
     }
 }
 

@@ -29,7 +29,6 @@
       a(href='#').modal__sublink.js-close-modal
         span Отмена
 
-
 // MODAL THANKS
 .modal-dialog.mfp-hide#modalThanks
   .modal__content
@@ -42,9 +41,6 @@
     .modal__help-text Иформация о заказе отправлена на вашу почту email@email.com
     .modal__actions
       a(href='#').btn.btn--primary.btn--190.js-close-modal OK
-
-
-
 
 
 // MODAL GUIDE
@@ -60,6 +56,7 @@
       .modal__guide__progress Вопрос 1 из 6
       .modal__guide__form
         form(action='#')
+          .modal__guide__form__validation Выберите ответ для продолжения
           .ui-radio.ui-radio--modal
             input(type='radio' name='question_1' id='question_1_1')
             label(for='question_1_1') нормальная (кожа упругая, чистая, без участков шелушения, имеет здоровый лоск. После очищения всегда комфортные ощущения) 
@@ -82,6 +79,7 @@
       .modal__guide__progress Вопрос 2 из 6
       .modal__guide__form
         form(action='#')
+          .modal__guide__form__validation Выберите ответ для продолжения
           .ui-radio.ui-radio--modal
             input(type='radio' name='question_2' id='question_2_1')
             label(for='question_2_1') предпочитаю  умываться водой, после очищения всегда комфортные ощущения 
@@ -100,11 +98,12 @@
             a(href='#').btn.btn--white.js-reset-guide Начать тест заново
     
     // next card    
-    .modal__guide__card.modal__guide__card--right(data-question='3')
+    .modal__guide__card.modal__guide__card--right.modal__guide__card--invis(data-question='3')
       .modal__text Имеются ли у Вас воспалительные элементы на лице
       .modal__guide__progress Вопрос 3 из 6
       .modal__guide__form
         form(action='#')
+          .modal__guide__form__validation Выберите ответ для продолжения
           .ui-radio.ui-radio--modal
             input(type='radio' name='question_3' id='question_3_1')
             label(for='question_3_1') нет, не бывает никогда 
@@ -120,11 +119,12 @@
             a(href='#').btn.btn--primary.js-next-guide Следующий вопрос
             a(href='#').btn.btn--white.js-reset-guide Начать тест заново
     // next card    
-    .modal__guide__card.modal__guide__card--right(data-question='4')
+    .modal__guide__card.modal__guide__card--right.modal__guide__card--invis(data-question='4')
       .modal__text Оцените тонус и тургор Вашей кожи
       .modal__guide__progress Вопрос 4 из 6
       .modal__guide__form
         form(action='#')
+          .modal__guide__form__validation Выберите ответ для продолжения
           .ui-radio.ui-radio--modal
             input(type='radio' name='question_4' id='question_4_1')
             label(for='question_4_1') тонус кожи хороший , морщин нет
@@ -140,11 +140,12 @@
             a(href='#').btn.btn--primary.js-next-guide Следующий вопрос
             a(href='#').btn.btn--white.js-reset-guide Начать тест заново
     // next card    
-    .modal__guide__card.modal__guide__card--right(data-question='5')
+    .modal__guide__card.modal__guide__card--right.modal__guide__card--invis(data-question='5')
       .modal__text Имеется ли у Вас на коже лица пигментные пятна
       .modal__guide__progress Вопрос 5 из 6
       .modal__guide__form
         form(action='#')
+          .modal__guide__form__validation Выберите ответ для продолжения
           .ui-radio.ui-radio--modal
             input(type='radio' name='question_5' id='question_5_1')
             label(for='question_5_1') пигментных пятен, веснушек нет
@@ -156,11 +157,12 @@
             a(href='#').btn.btn--primary.js-next-guide Следующий вопрос
             a(href='#').btn.btn--white.js-reset-guide Начать тест заново
     // next card    
-    .modal__guide__card.modal__guide__card--right(data-question='6')
+    .modal__guide__card.modal__guide__card--right.modal__guide__card--invis(data-question='6')
       .modal__text Ваша кожа вокруг глаз
       .modal__guide__progress Вопрос 6 из 6
       .modal__guide__form
         form(action='#')
+          .modal__guide__form__validation Выберите ответ для продолжения
           .ui-radio.ui-radio--modal
             input(type='radio' name='question_6' id='question_6_1')
             label(for='question_6_1') плотная.  Морщины, темные круги, отечность отсутствуют экспресс-корректор для зоны вокруг глаз
