@@ -1,0 +1,278 @@
+<!DOCTYPE html><!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Excellance</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content=""><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+  <!-- HEADER::START-->
+  <div class="header">
+    <div class="container container--fluid">
+      <div class="header__top">
+        <div class="header__hamburger">
+          <div class="hamburger hamburger--collapse">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div><a class="header__logo" href="homepage.html"><i class="icon icon-logo"></i></a>
+        <div class="header__cta"><a class="header__account" href="profile-personal.html"><i class="icon icon-account"></i><span>мой аккаунт</span></a><a class="header__cart header__cart--empty" href="cart.html"><i class="icon icon-cart"></i><span>Корзина</span>
+            <div class="header__cart__counter">(0)</div></a>
+          <form class="header__search" action="#">
+            <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="header__navi">
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="services.html">Профессиональный уход </a></li>
+        <li><a href="inovation.html">инновация Cellexon </a></li>
+        <li><a href="about.html">О компании</a></li>
+        <li><a href="smi.html">СМИ о нас</a></li>
+        <li><a href="contacts.html">Адреса</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Sticky Header-->
+  <header class="header header--sticky">
+    <div class="container container--fluid">
+      <div class="header__line">
+        <div class="header__hamburger">
+          <div class="hamburger hamburger--collapse">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div><a class="header__logo header__logo--small" href="homepage.html"><i class="icon icon-logo"></i></a>
+        <ul class="header__navi header__navi--sticky">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="services.html">Профессиональный уход </a></li>
+          <li><a href="inovation.html">инновация Cellexon </a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="smi.html">СМИ о нас</a></li>
+          <li><a href="contacts.html">Адреса</a></li>
+        </ul>
+        <div class="header__cta header__cta--sticky"><a class="header__account" href="profile-personal.html"><i class="icon icon-account"></i></a><a class="header__cart header__cart--empty" href="cart.html"><i class="icon icon-cart"></i>
+            <div class="header__cart__counter">(0)</div></a>
+          <form class="header__search" action="#">
+            <input type="text" autofill="0" placeholder="поиск..."><i class="icon icon-search"></i><i class="icon icon-close"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile navi-->
+  <div class="mobile-navi">
+    <ul class="mobile-navi__list">
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="services.html">Профессиональный уход </a></li>
+      <li><a href="inovation.html">инновация Cellexon </a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="smi.html">СМИ о нас</a></li>
+      <li><a href="contacts.html">Адреса</a></li>
+    </ul>
+    <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div>
+  </div>
+  <div class="page page--light-bg header-static">
+    <!-- LOGIN PAGE-->
+    <div class="profile">
+      <div class="container">
+        <div class="heading heading--mute">Оформление заказа</div>
+        <div class="cart-scope">
+          <div class="cart-scope__left"><span>Товары:</span><span>Сумма заказа:</span></div>
+          <div class="cart-scope__right"><span>6</span><span>25 458 ₽</span></div>
+        </div>
+      </div>
+      <div class="cart-login">
+        <div class="cart-login__left">
+          <!-- login-->
+          <div class="profile__login">
+            <div class="profile__box">
+              <!-- action-->
+              <div class="profile__login-action active" data-form="login">
+                <div class="profile__box__heading">Войти</div>
+                <form class="js-login-form" action="#">
+                  <div class="ui-group ui-group--labeled">
+                    <label>E-mail</label>
+                    <input class="ui-input" type="email" name="email" placeholder="">
+                  </div>
+                  <div class="ui-group ui-group--labeled">
+                    <label>Пароль</label>
+                    <input class="ui-input" type="password" name="password" placeholder="">
+                  </div>
+                  <div class="profile__box__cta">
+                    <button class="btn btn--primary btn--190" type="submit">Вход</button><a class="profile__help-link js-toggleLoginForm" href="#" data-form="recover"><span>ЗАБЫЛИ ПАРОЛЬ?</span></a>
+                  </div>
+                </form>
+              </div>
+              <!-- action-->
+              <div class="profile__login-action" data-form="recover">
+                <div class="profile__box__heading">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</div>
+                <form class="js-recover-form" action="#">
+                  <div class="ui-group ui-group--labeled">
+                    <label>E-mail</label>
+                    <input class="ui-input" type="email" name="email" placeholder="">
+                  </div>
+                  <div class="profile__box__cta">
+                    <div class="profile__box__sucess" data-ok>Пароль отправлен на вашу электронную почту</div>
+                    <button class="btn btn--primary btn--190" type="submit">Восстановить пароль</button><a class="profile__help-link js-toggleLoginForm" href="#" data-form="login"><span>Отмена </span></a>
+                  </div>
+                </form>
+              </div>
+              <div class="profile__social-login">
+                <div class="profile__social-login__heading">Авторизоваться через социальные сети:</div><a href="#"><i class="icon icon-facebook"></i></a><a href="#"><i class="icon icon-vk">   </i></a><a href="#"><i class="icon icon-twitter"> </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-login__right">
+          <!-- signup-->
+          <div class="profile__signup">
+            <!-- section-->
+            <div class="cart-login__section">
+              <div class="profile__box">
+                <div class="profile__box__heading">Без РЕГИСТРАЦИИ</div>
+                <div class="cart-login__section__title">Доставка</div>
+                <div class="cart-login__section__cta"><a class="btn btn--white js-toggleCartSignupSection" href="#">Указать адрес</a></div>
+              </div>
+              <div class="cart-login__section__dropdown">
+                <div class="profile__box">
+                  <div class="profile__box__hint"><span>*</span> - Поля обязательные к заполнению</div>
+                  <form class="js-orderAdress-form" action="#">
+                    <div class="ui-group ui-group--labeled">
+                      <label>Фамилия<span>*</span></label>
+                      <input class="ui-input" type="text" name="last_name" placeholder="">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Имя<span>*</span></label>
+                      <input class="ui-input" type="text" name="first_name" placeholder="">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>E-mail<span>*</span></label>
+                      <input class="ui-input" type="email" name="email" placeholder="">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Страна</label>
+                      <div class="ui-select">
+                        <input type="hidden">
+                        <div class="ui-select__visible"><span>Россия</span><i class="icon icon-dropdown"></i></div>
+                        <div class="ui-select__dropdown"><span class="ui-select__dropdown__placeholder">Выберите страну</span><span class="active" data-val="Россия">Россия</span><span data-val="Беларусь">Беларусь</span></div>
+                      </div>
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Населенный пункт</label>
+                      <input class="ui-input" type="text" name="city" placeholder="Москва">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Адрес</label>
+                      <input class="ui-input" type="text" name="city" placeholder="ул. Волхонка">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Дом</label>
+                      <input class="ui-input" type="text" name="city" placeholder="д.3, стр. 1">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Номер квартиры или офиса</label>
+                      <input class="ui-input" type="text" name="city" placeholder="19">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Индекс</label>
+                      <input class="ui-input js-indexMask" type="text" name="index" placeholder="000 000">
+                    </div>
+                    <div class="ui-group ui-group--labeled">
+                      <label>Телефон</label>
+                      <input class="ui-input" type="tel" name="phone" placeholder="">
+                    </div>
+                    <div class="ui-radio ui-radio--centred">
+                      <input type="radio" name="markteting" id="radio_3">
+                      <label for="radio_3">Получать рассылки от EXCELLANCE</label>
+                    </div>
+                    <div class="cart-login__reg-help"><i class="icon icon-email"></i><span>Ориентрировочная дата доставки будет показана вам на шаге подтверждения заказа.</span></div>
+                    <div class="profile__box__cta">
+                      <button class="btn btn--primary btn--190" type="submit">Оформить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- section-->
+            <div class="cart-login__section">
+              <div class="profile__box">
+                <div class="cart-login__section__title">Самовывоз</div>
+                <div class="cart-login__section__tip">Забрать из пункта самовывоза</div>
+                <div class="cart-login__section__cta"><a class="btn btn--white js-toggleCartSignupSection" href="#">Оформить</a></div>
+              </div>
+              <div class="cart-login__section__dropdown">
+                <div class="profile__box">
+                  <form class="js-orderPickup-form" action="#">
+                    <div class="cart-login__pickup"><i class="icon icon-placeholder"></i><span>Москва, ул. Верейская, д. 29 строение 33</span></div>
+                    <div class="ui-group ui-group--labeled ui-group--short">
+                      <label>Введите дату</label>
+                      <input class="ui-input js-dateMask2" type="text" name="pickup_date" placeholder="__ __ ____">
+                    </div>
+                    <div class="profile__box__cta">
+                      <button class="btn btn--primary btn--190" type="submit">Оформить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER::START-->
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__links-wrapper">
+        <div class="footer__links">
+          <div class="footer__heading">Категории товаров</div>
+          <div class="footer__links-list"><a href="#">Очищение и тонизирование</a><a href="#">Увлажнение и баланс</a><a href="#">Клеточное восстановление  и защита</a><a href="#">Защита вокруг глаз</a><a href="#">Уход для тела</a></div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__heading">Категории товаров</div>
+          <div class="footer__links-list"><a href="#">Доставка и оплата</a><a href="#">Правила возврата товара</a><a href="#">Новости</a><a href="#">Адреса магазинов</a><a href="#">Адреса салонов</a></div>
+        </div>
+      </div>
+      <!-- content col-->
+      <div class="footer__content">
+        <div class="footer__subscribe">
+          <div class="footer__heading">Подписаться на рассылку</div>
+          <div class="footer__subscribe__note">Подпишитесь на новостную рассылку и получайте бонусы и эксклюзивные предложения от Excellance Moscow!</div>
+          <form class="footer__subscribe__form" action="#">
+            <label>Ваш e-mail:</label>
+            <div class="footer__subscribe__form-container">
+              <input class="ui-input" type="email">
+              <button class="btn btn--primary" type="submit"> <span>Подписаться</span></button>
+            </div>
+          </form>
+        </div>
+        <!-- socials-->
+        <div class="footer__socials">
+          <div class="footer__heading">Присоединяйтесь!</div><a href="#"><i class="icon icon-facebook"></i></a><a href="#"><i class="icon icon-instagram"></i></a>
+        </div>
+        <!-- contacts-->
+        <div class="footer__contacts">
+          <div class="footer__heading">Служба поддержки клиентов</div><a class="footer__phone" href="tel:84953800353">+7 495 380 03 53</a><a class="footer__email" href="mailto:EMAIL@EXCELLANCE.RU">EMAIL@EXCELLANCE.RU</a>
+          <p>Служба поддержки работает с пн по пт с 10 до 18</p>
+          <p>ООО «Мирани», 121357, Москва, ул. Верейская, д.29, <br> стр. 134, БЦ «Верейская плаза III» </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- SECONDARY STYLES-->
+  <link rel="stylesheet" href="css/secondary.css">
+  <!-- SCRIPTS-->
+  <script src="js/scripts.min.js"></script>
+</body>

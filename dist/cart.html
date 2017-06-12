@@ -83,44 +83,111 @@
     </ul>
     <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div>
   </div>
-  <div class="page">
+  <div class="page header-static page--light-bg">
     <!-- CATALOG :: START-->
     <div class="catalog">
       <div class="container">
         <div class="catalog__wrapper">
-          <div class="catalog__card catalog__card--filter">
-            <!-- group-->
+          <div class="catalog__card catalog__card--cart cart-summary">
+            <div class="cart-summary__title">в корзине 6 товаров</div>
             <div class="ui-group">
-              <label>Линия ухода</label>
-              <div class="ui-select">
-                <input type="hidden">
-                <div class="ui-select__visible"><span>Очищение и тонизирование</span><i class="icon icon-dropdown"></i></div>
-                <div class="ui-select__dropdown"><span data-val="очищение и тонизирование">очищение и тонизирование</span><span data-val="увлажнение и баланс">увлажнение и баланс</span><span data-val="клеточное восстановление">клеточное восстановление</span><span data-val="уход вокруг глаз">уход вокруг глаз</span><span data-val="уход для тела">уход для тела</span></div>
-              </div>
+              <label>Промокод на скидку</label>
+              <input class="ui-input" type="text" name="promo" placeholder="">
             </div>
-            <!-- group-->
-            <div class="ui-group">
-              <label>Тип средства</label>
-              <div class="ui-select">
-                <input type="hidden">
-                <div class="ui-select__visible"><span>Все средства</span><i class="icon icon-dropdown"></i></div>
-                <div class="ui-select__dropdown"><span data-val="очищение и тонизирование">очищение и тонизирование</span><span data-val="увлажнение и баланс">увлажнение и баланс</span><span data-val="клеточное восстановление">клеточное восстановление</span><span data-val="уход вокруг глаз">уход вокруг глаз</span><span data-val="уход для тела">уход для тела</span></div>
-              </div>
-            </div>
-            <!-- group-->
-            <div class="ui-group">
-              <label>Тип кожи</label>
-              <div class="ui-select">
-                <input type="hidden">
-                <div class="ui-select__visible"><span>Сухая и нормальная</span><i class="icon icon-dropdown"></i></div>
-                <div class="ui-select__dropdown"><span data-val="очищение и тонизирование">очищение и тонизирование</span><span data-val="увлажнение и баланс">увлажнение и баланс</span><span data-val="клеточное восстановление">клеточное восстановление</span><span data-val="уход вокруг глаз">уход вокруг глаз</span><span data-val="уход для тела">уход для тела</span></div>
-              </div>
-            </div>
-            <div class="catalog__card__tip">Индивидуальный подбор препаратов</div><a class="btn btn--white" href="#"><span>Онлайн консультант</span></a>
+            <div class="cart-summary__summ">
+              <div class="cart-summary__summ__label">Сумма:</div>
+              <div class="cart-summary__summ__number">25 458 ₽</div>
+            </div><a class="btn btn--primary btn--190" href="#"><span>Оформить заказ</span></a>
           </div>
           <!-- card-->
-          <div class="catalog__card">
+          <div class="catalog__card"><i class="icon icon-close" data-action="remove"></i>
+            <div class="catalog__card__info">   <a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta catalog__card__cta--cart">
+                <div class="catalog__card__price">4 050 ₽</div>
+                <div class="catalog__card__counter"><span data-action="minus">-</span>
+                  <input type="text" name="amount" value="1" maxlength="2"><span data-action="plus">+</span>
+                </div>
+              </div>
+            </div><a class="catalog__card__image" href="#"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></a>
+          </div>
+          <!-- card-->
+          <div class="catalog__card"><i class="icon icon-close" data-action="remove"></i>
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ</a>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta catalog__card__cta--cart">
+                <div class="catalog__card__price">4 050 ₽</div>
+                <div class="catalog__card__counter"><span data-action="minus">-</span>
+                  <input type="text" name="amount" value="1" maxlength="2"><span data-action="plus">+</span>
+                </div>
+              </div>
+            </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_2.png" srcset="images/goods/productImg_2@2x.png 2x"></a>
+          </div>
+          <!-- card-->
+          <div class="catalog__card"><i class="icon icon-close" data-action="remove"></i>
             <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta catalog__card__cta--cart">
+                <div class="catalog__card__price">4 050 ₽</div>
+                <div class="catalog__card__counter"><span data-action="minus">-</span>
+                  <input type="text" name="amount" value="1" maxlength="2"><span data-action="plus">+</span>
+                </div>
+              </div>
+            </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_3.png" srcset="images/goods/productImg_3@2x.png 2x"></a>
+          </div>
+          <!-- card-->
+          <div class="catalog__card"><i class="icon icon-close" data-action="remove"></i>
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta catalog__card__cta--cart">
+                <div class="catalog__card__price">4 050 ₽</div>
+                <div class="catalog__card__counter"><span data-action="minus">-</span>
+                  <input type="text" name="amount" value="1" maxlength="2"><span data-action="plus">+</span>
+                </div>
+              </div>
+            </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_4.png" srcset="images/goods/productImg_4@2x.png 2x"></a>
+          </div>
+          <!-- card-->
+          <div class="catalog__card"><i class="icon icon-close" data-action="remove"></i>
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta catalog__card__cta--cart">
+                <div class="catalog__card__price">4 050 ₽</div>
+                <div class="catalog__card__counter"><span data-action="minus">-</span>
+                  <input type="text" name="amount" value="1" maxlength="2"><span data-action="plus">+</span>
+                </div>
+              </div>
+            </div><a class="catalog__card__image" href="#"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></a>
+          </div>
+          <!-- card-->
+          <div class="catalog__card"><i class="icon icon-close" data-action="remove"></i>
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+              <div class="catalog__card__short">50 ml</div>
+              <div class="catalog__card__cta catalog__card__cta--cart">
+                <div class="catalog__card__price">4 050 ₽</div>
+                <div class="catalog__card__counter"><span data-action="minus">-</span>
+                  <input type="text" name="amount" value="1" maxlength="2"><span data-action="plus">+</span>
+                </div>
+              </div>
+            </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_4.png" srcset="images/goods/productImg_4@2x.png 2x"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CATALOG :: START-->
+    <div class="catalog catalog--similar catalog--similar-pad">
+      <div class="container container--1400">
+        <div class="text-center subheading-gray">Рекомендации для вас</div>
+        <div class="catalog__wrapper">
+          <!-- card-->
+          <div class="catalog__card">
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО  УВЛАЖНЯЮЩИЙ КРЕМ </a>
               <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
               <div class="catalog__card__short">50 ml</div>
               <div class="catalog__card__cta">
@@ -130,8 +197,8 @@
           </div>
           <!-- card-->
           <div class="catalog__card">
-            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ</a>
-              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">МАТИРУЮЩАЯ  ЭМУЛЬСИЯ</a>
+              <div class="catalog__card__short">Для жирной и  комбинированной кожи</div>
               <div class="catalog__card__short">50 ml</div>
               <div class="catalog__card__cta">
                 <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
@@ -140,8 +207,8 @@
           </div>
           <!-- card-->
           <div class="catalog__card">
-            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
-              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНАЯ СЫВОРОТКА  ДЛЯ ЛИЦА <br> «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ»</a>
+              <div class="catalog__card__short">Полностью удаляет макияж</div>
               <div class="catalog__card__short">50 ml</div>
               <div class="catalog__card__cta">
                 <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
@@ -150,43 +217,13 @@
           </div>
           <!-- card-->
           <div class="catalog__card">
-            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
-              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ДВУХФАЗНЫЙ ЛОСЬОН  ДЛЯ СНЯТИЯ МАКИЯЖА  С ГЛАЗ</a>
+              <div class="catalog__card__short">Полностью удаляет макияж</div>
               <div class="catalog__card__short">50 ml</div>
               <div class="catalog__card__cta">
                 <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
               </div>
             </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_4.png" srcset="images/goods/productImg_4@2x.png 2x"></a>
-          </div>
-          <!-- card-->
-          <div class="catalog__card">
-            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
-              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
-              <div class="catalog__card__short">50 ml</div>
-              <div class="catalog__card__cta">
-                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
-              </div>
-            </div><a class="catalog__card__image" href="#"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></a>
-          </div>
-          <!-- card-->
-          <div class="catalog__card">
-            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
-              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
-              <div class="catalog__card__short">50 ml</div>
-              <div class="catalog__card__cta">
-                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
-              </div>
-            </div><a class="catalog__card__image" href="#"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></a>
-          </div>
-          <!-- card-->
-          <div class="catalog__card">
-            <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
-              <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
-              <div class="catalog__card__short">50 ml</div>
-              <div class="catalog__card__cta">
-                <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
-              </div>
-            </div><a class="catalog__card__image" href="#"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></a>
           </div>
         </div>
       </div>
