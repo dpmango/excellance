@@ -4505,17 +4505,16 @@ form.loading {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-align-items: center;
-            align-items: center;
     padding-top: 60px;
     padding-bottom: 120px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
 }
 .service__list.active .service__list__item {
     width: 100%;
+}
+.service__list.active .service__list__item__head {
+    margin-left: 0;
 }
 .service__list__item {
     -webkit-flex: 0 0 auto;
@@ -4528,6 +4527,8 @@ form.loading {
 }
 .service__list__item__head {
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
     padding: 12px 100px 12px 30px;
     width: 405px;
     border-radius: 4px;
@@ -4570,6 +4571,7 @@ form.loading {
 .service__list__item-list {
     display: none;
     margin-top: 40px;
+    margin-bottom: 30px;
 }
 .service__list__item-list__item {
     position: relative;
@@ -4635,6 +4637,125 @@ form.loading {
 }
 .service__list__item-list__dropdown__office:hover {
     color: #7E6884;
+}
+@media(max-width: 850px) {
+    .service {}
+    .service__head {
+        padding-top: 35px;
+    }
+    .service__head__title {
+        letter-spacing: 3.3px;
+        font-size: 32px;
+    }
+    .service__head__desc {
+        margin-top: 30px;
+    }
+    .service__contacts {}
+    .service__contacts__wrapper {
+        -webkit-justify-content: center;
+                justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+    }
+    .service__contacts__item {
+        -webkit-flex: 0 1 -webkit-calc(33.3% - 14px);
+            -ms-flex: 0 1 calc(33.3% - 14px);
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: calc(33.3% - 14px);
+        padding-right: 7px;
+        padding-left: 7px;
+        -webkit-box-flex: 0;
+    }
+    .service__contacts__item__content {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 270px;
+    }
+}
+@media(max-width: 640px) {
+    .service {}
+    .service__contacts {}
+    .service__contacts__item {
+        -webkit-flex: 0 1 -webkit-calc(50% - 14px);
+            -ms-flex: 0 1 calc(50% - 14px);
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: calc(50% - 14px);
+        -webkit-box-flex: 0;
+    }
+    .service__contacts__item:nth-child(1) {
+        -webkit-order: 1;
+                order: 1;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+    }
+    .service__contacts__item:nth-child(2) {
+        -webkit-order: 3;
+                order: 3;
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+    }
+    .service__contacts__item:nth-child(3) {
+        -webkit-order: 2;
+                order: 2;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+    }
+    .service__list {
+        padding-bottom: 80px;
+    }
+    .service__list__item {}
+    .service__list__item__head {
+        padding-left: 20px;
+    }
+    .service__list__item-list {
+        margin-top: 25px;
+    }
+    .service__list__item-list__head {
+        padding: 20px 60px 20px 45px;
+        font-size: 14px;
+    }
+    .service__list__item-list__dropdown {
+        padding: 10px 60px 15px 45px;
+    }
+}
+@media(max-width: 435px) {
+    .service {}
+    .service__list {}
+    .service__list__item {}
+    .service__list__item__head {
+        width: 100%;
+    }
+}
+@media(max-width: 414px) {
+    .service {}
+    .service__contacts {}
+    .service__contacts__item {
+        -webkit-flex: 0 1 -webkit-calc(100% - 14px);
+            -ms-flex: 0 1 calc(100% - 14px);
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: calc(100% - 14px);
+        margin-top: 20px;
+        -webkit-box-flex: 0;
+    }
+    .service__list {
+        padding-top: 40px;
+    }
+}
+@media(max-width: 375px) {
+    .service {}
+    .service__list {}
+    .service__list__item {}
+    .service__list__item-list {}
+    .service__list__item-list__head {
+        padding: 20px 40px 20px 20px;
+        font-size: 14px;
+    }
+    .service__list__item-list__dropdown {
+        padding: 10px 40px 15px 20px;
+    }
 }
 /* CART */
 .cart-summary .btn {

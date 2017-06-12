@@ -69,10 +69,11 @@
     padding-bottom: 120px
     display: flex
     flex-direction: column
-    align-items: center
     &.active
       .service__list__item
         width: 100%
+        &__head
+          margin-left: 0
     &__item
       flex: 0 0 auto
       margin-bottom: 15px
@@ -83,6 +84,8 @@
         background: #939393
         font-size: 16px
         padding: 12px 100px 12px 30px
+        margin-left: auto
+        margin-right: auto
         color: white
         cursor: pointer
         border-radius: 4px
@@ -108,6 +111,7 @@
 
       &-list
         margin-top: 40px
+        margin-bottom: 30px
         display: none
         &__item
           position: relative
@@ -154,3 +158,81 @@
               margin-left: 10px
             &:hover
               color: $colorPrimaryLight
+
+
+@media(width <= 850px)
+  .service
+    &__head
+      padding-top: 35px
+      &__title
+        font-size: 32px
+        letter-spacing: 3.3px
+      &__desc
+        margin-top: 30px
+    &__contacts
+      &__wrapper
+        justify-content: center
+      &__item
+        padding-left: 7px
+        padding-right: 7px
+        flex: 0 1 calc(33.3% - 14px)
+        &__content
+          max-width: 270px
+          margin-left: auto
+          margin-right: auto
+
+
+@media($mobile)
+  .service
+    &__contacts
+      &__item
+        flex: 0 1 calc(50% - 14px)
+        &:nth-child(1)
+          order: 1
+        &:nth-child(2)
+          order: 3
+        &:nth-child(3)
+          order: 2
+    &__list
+      padding-bottom: 80px
+      &__item
+        &__head
+          padding-left: 20px
+        &-list
+          margin-top: 25px
+          &__head
+            font-size: 14px
+            padding: 20px 60px 20px 45px
+          &__dropdown
+            padding: 10px 60px 15px 45px
+
+
+@media(width <= 435px)
+  .service
+    &__list
+      &__item
+        &__head
+          width: 100%
+
+
+@media($mobile-s)
+  .service
+    &__contacts
+      &__item
+        flex: 0 1 calc(100% - 14px)
+        margin-top: 20px
+
+    &__list
+      padding-top: 40px
+
+
+@media(width <= 375px)
+  .service
+    &__list
+      &__item
+        &-list
+          &__head
+            font-size: 14px
+            padding: 20px 40px 20px 20px
+          &__dropdown
+            padding: 10px 40px 15px 20px
