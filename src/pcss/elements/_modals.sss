@@ -247,7 +247,7 @@ html.mfp-helper
       padding: 50px 80px 40px 40px
       text-align: left
       max-width: 630px
-      flex: 0 1 630px
+      flex: 0 2 630px
       border-radius: 4px
       box-shadow: 0px 0px 12px color(black a(20%))
       &.active
@@ -281,12 +281,49 @@ html.mfp-helper
         flex: 0 1 calc(50% - 6px)
 
 
+@media($desktop)
+  .modal
+    &__guide
+      &__results-head
+        padding: 60px 60px 40px 60px
+    &__heading
+      font-size: 32px
+      letter-spacing: 4px
 
+@media(width <= 900px)
+  .modal
+    &__guide
+      &__results-catalog
+        &__placeholder
+          display: none
+      &__catalog
+        margin-left: auto
+        margin-right: auto
 
 @media($tablet)
   .modal
     &__content
       padding: 90px 50px 50px 30px
+    &__heading
+      font-size: 28px
+      letter-spacing: 3.3px
+    &__guide
+      &__results-head
+        padding: 50px 40px 40px 40px
+      &__results-sidebar
+        &__title
+          padding-left: 25px
+          padding-right: 25px
+        &__text
+          padding-left: 25px
+          padding-right: 25px
+        &__tab
+          padding: 4px 15px 4px 25px
+          font-size: 15px
+          letter-spacing: 1.5px
+      &__results-content
+        padding: 30px 40px 30px 30px
+
 
 @media($mobile)
   .modal
@@ -295,6 +332,32 @@ html.mfp-helper
     &__desc
       font-size: 16px
       margin-top: 20px
+    &__heading
+      font-size: 24px
+      letter-spacing: 2px
+    &__guide
+      &__results-head
+        padding: 50px 30px 40px 30px
+
+
+@media(width <= 568px)
+  .modal
+    &__guide
+      &__results
+        flex-direction: column
+      &__results-sidebar
+        flex: 0 0 auto
+        margin-right: 0
+      &__results-content
+        margin-top: 8px
+        flex: 0 0 auto
+
+
+@media(width <= 520px)
+  .modal__guide__catalog
+    .catalog__card
+      flex: 0 1 calc(100% - 6px)
+
 
 @media($mobile-s)
   .modal
@@ -316,7 +379,8 @@ html.mfp-helper
         margin-left: 10px
         margin-right: 10px
         padding: 35px 30px 45px 30px
-
+      &__results-head
+        padding: 50px 20px 30px 20px
 
 // Generic modifiers
 .modal
