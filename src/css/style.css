@@ -4025,8 +4025,7 @@ form.loading {
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding: 5px;
     text-align: center;
     -webkit-box-flex: 0;
 }
@@ -4069,7 +4068,7 @@ form.loading {
         -ms-flex-preferred-size: 40px;
 }
 .profile__orders__thead {
-    padding: 15px 15px 15px 25px;
+    padding: 10px 15px 10px 25px;
 }
 .profile__orders__thead span {
     color: #939393;
@@ -4079,7 +4078,7 @@ form.loading {
     margin-bottom: 8px;
 }
 .profile__order__head {
-    padding: 25px 15px 25px 25px;
+    padding: 20px 15px 20px 25px;
     border-radius: 4px;
     background: white;
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
@@ -4177,6 +4176,23 @@ form.loading {
 }
 .profile__adress .profile__order__toggable {
     padding-bottom: 30px;
+}
+.profile__adress--selectable .profile__order__head span {}
+.profile__adress--selectable .profile__order__head span:nth-child(5) .icon {
+    color: white;
+    font-size: 0;
+    -webkit-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+            transform: translateX(8px);
+}
+.profile__adress--selectable .profile__order__head:hover {
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+.profile__adress--selectable .profile__order {}
+.profile__adress--selectable .profile__order.active .profile__order__head span {}
+.profile__adress--selectable .profile__order.active .profile__order__head span:nth-child(5) .icon {
+    font-size: 12px;
 }
 @media(max-width: 992px) {
     .profile {}
@@ -4305,6 +4321,7 @@ form.loading {
             -ms-flex: 0 0 auto !important;
                 flex: 0 0 auto !important;
         margin-bottom: 5px;
+        padding: 0;
         border-right: 0;
         font-size: 14px;
         -webkit-box-flex: 0 !important;
@@ -4679,6 +4696,27 @@ form.loading {
 .cart-scope__right span {
     color: #410C50;
 }
+@media(max-width: 1200px) {
+    .cart-scope span {
+        font-size: 22px;
+    }
+}
+@media(max-width: 768px) {
+    .cart-scope span {
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+}
+@media(max-width: 414px) {
+    .cart-scope span {
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+    .cart-scope__right {
+        margin-left: 15px;
+    }
+}
 .cart-login {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4706,7 +4744,44 @@ form.loading {
     padding-left: 0;
 }
 .cart-login__white-bg {
+    position: relative;
     background: white;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+.cart-login__white-bg--toggable {
+    padding-bottom: 35px;
+}
+.cart-login__white-bg--toggable .profile__box:not(.profile__box--btn) {
+    display: none;
+}
+.cart-login__white-bg--toggable .cart-login__section__cta {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.cart-login__white-bg--toggable.active {
+    padding-top: 40px;
+    padding-bottom: 0;
+    background: #F6F6F6;
+}
+.cart-login__white-bg--toggable.active .profile__box--btn {
+    margin-top: 20px;
+}
+.cart-login__white-bg--toggable.active .profile__box--btn .btn {
+    background: white;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+    color: #313131;
+}
+.cart-login__white-bg--toggable.active:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 40px;
+    background: white;
+    content: ' ';
 }
 .cart-login__left {
     -webkit-flex: 0 1 50%;
@@ -4761,7 +4836,7 @@ form.loading {
     padding-bottom: 20px;
 }
 .cart-login__section__cta {
-    margin-top: 25px;
+    padding-top: 25px;
     text-align: center;
 }
 .cart-login__section__cta .btn {
@@ -4813,7 +4888,7 @@ form.loading {
 }
 .cart-login__adress {
     padding-top: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 .cart-login__adress .profile__adress {
     margin-top: 30px;

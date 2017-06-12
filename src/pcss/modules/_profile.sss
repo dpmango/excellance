@@ -154,8 +154,7 @@
       span
         flex: 0 1 auto
         text-align: center
-        padding-left: 5px
-        padding-right: 5px
+        padding: 5px
         &:nth-child(1)
           text-align: left
           flex-basis: 90px
@@ -173,7 +172,7 @@
           transform: rotate(90deg)
           transition: all $transitionSpeed $ease
     &__thead
-      padding: 15px 15px 15px 25px
+      padding: 10px 15px 10px 25px
       span
         font-size: 12px
         color: $colorGray
@@ -181,7 +180,7 @@
   &__order
     margin-bottom: 8px
     &__head
-      padding: 25px 15px 25px 25px
+      padding: 20px 15px 20px 25px
       background: white
       border-radius: 4px
       cursor: pointer
@@ -245,6 +244,24 @@
 
     .profile__order__toggable
       padding-bottom: 30px
+
+    &--selectable
+      .profile__order__head
+        span
+          &:nth-child(5)
+            .icon
+              font-size: 0
+              color: white
+              transform: translateX(8px)
+        &:hover
+          box-shadow: 0px 0px 6px color(black a(10%))
+      .profile__order
+        &.active
+          .profile__order__head
+            span
+              &:nth-child(5)
+                .icon
+                  font-size: 12px
 
 @media($desktop)
   .profile
@@ -327,6 +344,7 @@
         > span
           font-size: 14px
           border-right: 0
+          padding: 0
           margin-bottom: 5px
           flex: 0 0 auto !important
           span

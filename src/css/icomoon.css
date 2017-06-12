@@ -23,6 +23,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-tick:before {
+  content: "\e91a";
+}
+
 .icon-plus:before {
   content: "\e919";
 }

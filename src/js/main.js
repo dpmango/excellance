@@ -376,9 +376,15 @@ $(document).ready(function () {
   ///////////////
 
   $('.profile__order__head').on('click', function () {
-    $(this).parent().toggleClass('active');
-
-    $(this).parent().find('.profile__order__toggable').slideToggle(250);
+    // check if selectable
+    if ($(this).closest('.profile__orders').is('.profile__adress--selectable')) {
+      $(this).closest('.profile__orders').find('input[type=hidden]').val($(this).parent().data('select-id') || 0);
+      $(this).closest('.profile__orders').find('.profile__order').removeClass('active');
+      $(this).parent().addClass('active');
+    } else {
+      $(this).parent().toggleClass('active');
+      $(this).parent().find('.profile__order__toggable').slideToggle(250);
+    }
   });
 
   // toggle extra phone
@@ -420,6 +426,13 @@ $(document).ready(function () {
   $('.js-toggleCartSignupSection').on('click', function () {
     $(this).hide();
     $(this).closest('.cart-login__section').find('.cart-login__section__dropdown').slideDown();
+  });
+
+  // cart adress for aithorized users
+  $('.js-toggleCartAdressSection').on('click', function () {
+    $(this).hide();
+    $(this).closest('.cart-login__white-bg--toggable').addClass('active');
+    $(this).closest('.cart-login__white-bg--toggable').find('.profile__box').slideDown();
   });
 
   ///////////////
