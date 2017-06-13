@@ -244,26 +244,30 @@ $(document).ready(function(){
       beforeOpen: function() {
         // startWindowScroll = _window.scrollTop();
         // $('html').addClass('mfp-helper');
+        modalOpened = true;
       },
       open: function() {
         var pdf = this.currItem.el.data('pdf');
         if (pdf){
           this.currItem.inlineElement.find('object').attr('data', pdf );
           this.currItem.inlineElement.find('object a').attr('href', pdf )
-
         }
+        setModalOffset();
       },
       close: function() {
         // $('html').removeClass('mfp-helper');
         // _window.scrollTop(startWindowScroll);
+        modalOpened = false;
       }
     }
   });
 
+  var modalOpened = false
+
   $('.js-blur').magnificPopup({
     type: 'inline',
-    fixedContentPos: true,
-    fixedBgPos: true,
+    fixedContentPos: false,
+    fixedBgPos: false,
     overflowY: 'auto',
     closeBtnInside: true,
     preloader: false,
@@ -274,11 +278,35 @@ $(document).ready(function(){
       beforeOpen: function() {
         $('.page').addClass('page--blur');
         $('.footer').addClass('footer--blur');
+        modalOpened = true;
+      },
+      open: function() {
+        setModalOffset();
       },
       close: function() {
         $('.page').removeClass('page--blur');
         $('.footer').removeClass('footer--blur');
+        modalOpened = false;
       }
+    }
+  });
+
+  function setModalOffset(){
+    var scrollTop = _window.scrollTop();
+    var headerHeight = $('.header').height();
+    var setOffeset = 0;
+
+    if (scrollTop < headerHeight){
+      setOffeset = headerHeight - scrollTop
+    } else {
+      setOffeset = 0
+    }
+    console.log(setOffeset);
+    $('.modal .mfp-content').css('padding-top', setOffeset + 'px')
+  }
+  _window.resized(50, function(){
+    if (modalOpened){
+      setModalOffset();
     }
   });
 
