@@ -176,7 +176,7 @@
                   
           .modal__guide__form__cta
             a(href='#').btn.btn--white.js-prev-guide Предыдущий вопрос
-            a(href='#').btn.btn--primary.js-results-guide Показать результат
+            a(href='#modalGuideResults').btn.btn--primary.js-blur Показать результат
             a(href='#').btn.btn--white.js-reset-guide Начать тест заново
 
 
@@ -282,4 +282,18 @@
         a(href='#').catalog__card__image.catalog__card__image--vertical
           img(src='images/goods/productImg_4.png' srcset='images/goods/productImg_4@2x.png 2x')
                   
+      
+
+// MODAL PDF
+.modal-dialog.mfp-hide#modalPdf
+  .modal__content.modal__content--pdf
+    .modal__close
+      i.icon.icon-close
+    .modal__pdf
+      object(data='pdf/test.pdf', type='application/pdf', width='100%', height='100%')
+        p
+          | Если вы не можете просмотреть файл - 
+          a(href='pdf/test.pdf' target='_blank') ссылка на скачиваение
+    .modal__actions
+      a(href='#').btn.btn--primary.btn--190.js-close-modal Закрыть
       

@@ -41,7 +41,7 @@
       <ul class="header__navi">
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="services.html">Профессиональный уход </a></li>
-        <li><a href="inovation.html">инновация Cellexon </a></li>
+        <li><a href="inovation.html">Инновация Cellexon </a></li>
         <li><a href="about.html">О компании</a></li>
         <li><a href="smi.html">СМИ о нас</a></li>
         <li><a href="contacts.html">Адреса</a></li>
@@ -62,7 +62,7 @@
         <ul class="header__navi header__navi--sticky">
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="services.html">Профессиональный уход </a></li>
-          <li><a href="inovation.html">инновация Cellexon </a></li>
+          <li><a href="inovation.html">Инновация Cellexon </a></li>
           <li><a href="about.html">О компании</a></li>
           <li><a href="smi.html">СМИ о нас</a></li>
           <li><a href="contacts.html">Адреса</a></li>
@@ -81,7 +81,7 @@
     <ul class="mobile-navi__list">
       <li><a href="catalog.html">Каталог</a></li>
       <li><a href="services.html">Профессиональный уход </a></li>
-      <li><a href="inovation.html">инновация Cellexon </a></li>
+      <li><a href="inovation.html">Инновация Cellexon </a></li>
       <li><a href="about.html">О компании</a></li>
       <li><a href="smi.html">СМИ о нас</a></li>
       <li><a href="contacts.html">Адреса</a></li>
@@ -121,7 +121,7 @@
                 <div class="ui-select__dropdown"><span data-val="очищение и тонизирование">очищение и тонизирование</span><span data-val="увлажнение и баланс">увлажнение и баланс</span><span data-val="клеточное восстановление">клеточное восстановление</span><span data-val="уход вокруг глаз">уход вокруг глаз</span><span data-val="уход для тела">уход для тела</span></div>
               </div>
             </div>
-            <div class="catalog__card__tip">Индивидуальный подбор препаратов</div><a class="btn btn--white" href="#"><span>Онлайн консультант</span></a>
+            <div class="catalog__card__tip">Индивидуальный подбор препаратов</div><a class="btn btn--white js-blur" href="#modalGuide"><span>Онлайн консультант</span></a>
           </div>
           <!-- card-->
           <div class="catalog__card">
@@ -236,6 +236,302 @@
       </div>
     </div>
   </footer>
+  <!-- MODALS-->
+  <div class="modal-dialog mfp-hide" id="modalTestimonialLogin">
+    <div class="modal__content">
+      <div class="modal__icon"><i class="icon icon-email"></i></div>
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__head">ДЛЯ ДОБАВЛЕНИЯ ОТЗЫВА <br> НЕОБХОДИМО АВТОРИЗОВАТЬСЯ</div>
+      <div class="modal__desc">Войдите на сайт если у вас есть учетная запись или зарегистрируйтесь</div>
+      <div class="modal__actions"><a class="btn btn--primary" href="login.html">Вход</a><a class="modal__sublink" href="login.html"> <span>Регситрация</span></a></div>
+    </div>
+  </div>
+  <!-- MODAL TESTIMONIALS WRITE-->
+  <div class="modal-dialog mfp-hide" id="modalTestimonial">
+    <div class="modal__content">
+      <div class="modal__icon"><i class="icon icon-email"></i></div>
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <form class="modal__form" action="#">
+        <div class="ui-group">
+          <label>Напишите ваш отзыв о продукте</label>
+          <textarea class="ui-input" rows="5" placeholder="Ваш отзыв..."></textarea>
+        </div>
+      </form>
+      <div class="modal__actions"><a class="btn btn--primary" href="login.html">ОПУБЛИКОВАТЬ ОТЗЫВ</a><a class="modal__sublink js-close-modal" href="#"><span>Отмена</span></a></div>
+    </div>
+  </div>
+  <!-- MODAL THANKS-->
+  <div class="modal-dialog mfp-hide" id="modalThanks">
+    <div class="modal__content">
+      <div class="modal__icon"><i class="icon icon-email"></i></div>
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__head">Спасибо за заказ!</div>
+      <div class="modal__desc">Заказ № 34678</div>
+      <div class="modal__help-text">Иформация о заказе отправлена на вашу почту email@email.com</div>
+      <div class="modal__actions"><a class="btn btn--primary btn--190 js-close-modal" href="#">OK</a></div>
+    </div>
+  </div>
+  <!-- MODAL GUIDE-->
+  <div class="modal-dialog mfp-hide" id="modalGuide">
+    <div class="modal__section">
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__text">ПОДБОР СРЕДСТВА  ДЛЯ ДОМАШНЕГО УХОДА ЗА КОЖЕЙ</div>
+    </div>
+    <div class="modal__guide">
+      <div class="modal__guide__card modal__guide__card--visible" data-question="1">
+        <div class="modal__text">Выберите утверждение, которое характеризует Вашу кожу лучше всего:</div>
+        <div class="modal__guide__progress">Вопрос 1 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="modal__guide__form__validation">Выберите ответ для продолжения</div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_1">
+              <label for="question_1_1">нормальная (кожа упругая, чистая, без участков шелушения, имеет здоровый лоск. После очищения всегда комфортные ощущения) </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_2">
+              <label for="question_1_2">- сухая (кожа тонкая, имеются участки шелушения, покраснения. После умывания отмечается чувство стянутости) </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_3">
+              <label for="question_1_3">жирная (кожа плотная, пористая, тусклая, имеется жирный блеск и воспалительные элементы. После очищения нет ощущения полной чистоты) </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_1" id="question_1_4">
+              <label for="question_1_4">комбинированная (жирный блеск в Т-зоне (лоб, нос, подбородок), в области щек кожа нормальная или склонная к сухости. После очищения комфортные ощущения)</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-close-modal" href="#">Вернуться в каталог</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right" data-question="2">
+        <div class="modal__text">Какое очищение кожи лица Вы предпочитаете:</div>
+        <div class="modal__guide__progress">Вопрос 2 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="modal__guide__form__validation">Выберите ответ для продолжения</div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_1">
+              <label for="question_2_1">предпочитаю  умываться водой, после очищения всегда комфортные ощущения </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_2">
+              <label for="question_2_2">предпочитаю очищение кожи водой, но после умывания есть ощущение стянутости, сухости</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_3">
+              <label for="question_2_3">предпочитаю очищение водой, но после очищения нет ощущения полной чистоты </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_2" id="question_2_4">
+              <label for="question_2_4">предпочитаю минимизировать контакт кожи с водой/ или предпочитаю очищение без воды </label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right modal__guide__card--invis" data-question="3">
+        <div class="modal__text">Имеются ли у Вас воспалительные элементы на лице</div>
+        <div class="modal__guide__progress">Вопрос 3 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="modal__guide__form__validation">Выберите ответ для продолжения</div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_3" id="question_3_1">
+              <label for="question_3_1">нет, не бывает никогда </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_3" id="question_3_2">
+              <label for="question_3_2">периодически появляются единичные высыпания </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_3" id="question_3_3">
+              <label for="question_3_3">постоянно имеются воспалительные элементы</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right modal__guide__card--invis" data-question="4">
+        <div class="modal__text">Оцените тонус и тургор Вашей кожи</div>
+        <div class="modal__guide__progress">Вопрос 4 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="modal__guide__form__validation">Выберите ответ для продолжения</div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_4" id="question_4_1">
+              <label for="question_4_1">тонус кожи хороший , морщин нет</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_4" id="question_4_2">
+              <label for="question_4_2">тонус кожи хороший, имеется незначительное количество мимических морщин, в основном в области глаз, лба </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_4" id="question_4_3">
+              <label for="question_4_3">кожа дряблая, атоничная, имеются глубокие мимические морщины (заломы)</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right modal__guide__card--invis" data-question="5">
+        <div class="modal__text">Имеется ли у Вас на коже лица пигментные пятна</div>
+        <div class="modal__guide__progress">Вопрос 5 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="modal__guide__form__validation">Выберите ответ для продолжения</div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_5" id="question_5_1">
+              <label for="question_5_1">пигментных пятен, веснушек нет</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_5" id="question_5_2">
+              <label for="question_5_2">да, имеются участки пигментации (пигментные пятна, веснушки)</label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-next-guide" href="#">Следующий вопрос</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+      <!-- next card    -->
+      <div class="modal__guide__card modal__guide__card--right modal__guide__card--invis" data-question="6">
+        <div class="modal__text">Ваша кожа вокруг глаз</div>
+        <div class="modal__guide__progress">Вопрос 6 из 6</div>
+        <div class="modal__guide__form">
+          <form action="#">
+            <div class="modal__guide__form__validation">Выберите ответ для продолжения</div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_1">
+              <label for="question_6_1">плотная.  Морщины, темные круги, отечность отсутствуют экспресс-корректор для зоны вокруг глаз</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_2">
+              <label for="question_6_2">тонкая, сухая. Имеются мимические морщины</label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_3">
+              <label for="question_6_3">склонна к отечности и появлению темных кругов </label>
+            </div>
+            <div class="ui-radio ui-radio--modal">
+              <input type="radio" name="question_6" id="question_6_4">
+              <label for="question_6_4">тонкая.  Имеются мимические морщины, темные круги, есть  склонность к отечности. </label>
+            </div>
+            <div class="modal__guide__form__cta"><a class="btn btn--white js-prev-guide" href="#">Предыдущий вопрос</a><a class="btn btn--primary js-blur" href="#modalGuideResults">Показать результат</a><a class="btn btn--white js-reset-guide" href="#">Начать тест заново</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL GUIDE RESULTS-->
+  <div class="modal-dialog mfp-hide" id="modalGuideResults">
+    <div class="modal__guide__results-head">
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__heading">ПОДБОР СРЕДСТВА  ДЛЯ ДОМАШНЕГО УХОДА ЗА КОЖЕЙ</div>
+    </div>
+    <div class="modal__guide__results">
+      <div class="modal__guide__results-sidebar">
+        <div class="modal__guide__results-sidebar__title">РЕЗУЛЬТАТ ТЕСТА</div>
+        <div class="modal__guide__results-sidebar__text">Мы подобрали для вас рекомендации для ежедневного ухода за кожей. Рекомендации состоят из 7 шагов ежедневного ухода.</div>
+        <div class="modal__guide__results-sidebar__tabs">
+          <div class="modal__guide__results-sidebar__tab active" data-tab="1">1. Утренний уход</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="2">2. Очищение</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="3">3. Орбитальная область</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="4">4. Вечерний уход</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="5">5. Глубокое очищение</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="6">6. Маска</div>
+          <div class="modal__guide__results-sidebar__tab" data-tab="7">7. Дополнительный уход</div>
+        </div>
+      </div>
+      <div class="modal__guide__results-content active" data-tab="1">
+        <div class="modal__heading">Утренний уход</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="2">
+        <div class="modal__heading">Очищение</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удлярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="3">
+        <div class="modal__heading">Орбитальная область</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярног последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="4">
+        <div class="modal__heading">Вечерний уход</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом in with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="5">
+        <div class="modal__heading">Глубокое очищение</div>
+        <div class="modal__guide__results-content__text">Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="6">
+        <div class="modal__heading">Маска</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте Медовое мыло для жирной кожи Fresh Honey Cleansing Gel, Ароматерапевтическое очищающее молочко для жирной кожи Fresh Aroma Therapeutic Cleansing Milk for oily skin или Натуральный очищающий гель для всех типов кожи Fresh Pure & Natural Cleanser. Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с</div>
+      </div>
+      <div class="modal__guide__results-content" data-tab="7">
+        <div class="modal__heading">Дополнительный уход</div>
+        <div class="modal__guide__results-content__text">Для вашего типа кожи подойдут гелевые препараты, которые мягко удалят загрязнения и излишки кожного сала. Для регулярного умывания используйте  Чтобы восстановить на коже кислотно-щелочной баланс и убрать последствия воздействия жесткой водопроводной воды, рекомендуем тонизировать кожу Очищающий тоник с лемонграссом для жирной кожи Purifying Toner for oily skin with Lemongrass.</div>
+      </div>
+    </div>
+    <div class="modal__guide__results-catalog active" data-tab="1">
+      <div class="modal__guide__results-catalog__placeholder"></div>
+      <div class="modal__guide__catalog">
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image" href="#"><img src="images/goods/productImg_1.png" srcset="images/goods/productImg_1@2x.png 2x"></a>
+        </div>
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ «КЛЕТОЧНОЕ ВОССТАНОВЛЕНИЕ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_2.png" srcset="images/goods/productImg_2@2x.png 2x"></a>
+        </div>
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_3.png" srcset="images/goods/productImg_3@2x.png 2x"></a>
+        </div>
+        <!-- card-->
+        <div class="catalog__card">
+          <div class="catalog__card__info"><a class="catalog__card__name" href="#">ИНТЕНСИВНО <br>  УВЛАЖНЯЮЩИЙ КРЕМ УВЛАЖНЯЮЩИЙ КРЕМ</a>
+            <div class="catalog__card__short">Поддержание комфортного  уровня увлажненности кожи</div>
+            <div class="catalog__card__short">50 ml</div>
+            <div class="catalog__card__cta">
+              <div class="catalog__card__price">4 050 ₽</div><a href="#"><i class="icon icon-cart"></i></a>
+            </div>
+          </div><a class="catalog__card__image catalog__card__image--vertical" href="#"><img src="images/goods/productImg_4.png" srcset="images/goods/productImg_4@2x.png 2x"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL PDF-->
+  <div class="modal-dialog mfp-hide" id="modalPdf">
+    <div class="modal__content modal__content--pdf">
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__pdf">
+        <object data="pdf/test.pdf" type="application/pdf" width="100%" height="100%">
+          <p>Если вы не можете просмотреть файл - <a href="pdf/test.pdf" target="_blank">ссылка на скачиваение</a></p>
+        </object>
+      </div>
+      <div class="modal__actions"><a class="btn btn--primary btn--190 js-close-modal" href="#">Закрыть</a></div>
+    </div>
+  </div>
   <!-- SECONDARY STYLES-->
   <!--build:css css/secondary.css-->
   <link rel="stylesheet" href="css/secondary.css" type="text/css">

@@ -60,62 +60,62 @@ doctype html
             p Развернутый отчет о беспрецедентных по масштабности испытаниях – в открытом доступе  
           .text-docs__content
             .docs-list
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_1.png' srcset='images/docs/docsImg_1@2x.png 2x')
                 .docs-list__card__title Журнал <br> Эстетическая медицина
                 .docs-list__card__meta №2 2015
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_2.png' srcset='images/docs/docsImg_2@2x.png 2x')
                 .docs-list__card__title Исследование Клиническая  эффективность Excellance <br> после лазерных процедур
                 .docs-list__card__meta №2 2015
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_3.png' srcset='images/docs/docsImg_3@2x.png 2x')
                 .docs-list__card__title Клиническое исследование <br> «Изучение эффективности, <br> безопасности
                 .docs-list__card__meta 2014
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_4.png' srcset='images/docs/docsImg_4@2x.png 2x')
                 .docs-list__card__title Журнал <br> Эстетическая медицина
                 .docs-list__card__meta 2014
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_5.png' srcset='images/docs/docsImg_5@2x.png 2x')
                 .docs-list__card__title Журнал <br> Косметика и медицина
                 .docs-list__card__meta 2014
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_6.png' srcset='images/docs/docsImg_6@2x.png 2x')
                 .docs-list__card__title Журнал <br> Эстетическая медицина
                 .docs-list__card__meta №2 2015
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_7.png' srcset='images/docs/docsImg_7@2x.png 2x')
                 .docs-list__card__title Исследование Клиническая  эффективность Excellance <br> после лазерных процедур
                 .docs-list__card__meta №2 2015
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_8.png' srcset='images/docs/docsImg_8@2x.png 2x')
                 .docs-list__card__title Клиническое исследование <br> «Изучение эффективности, <br> безопасности
                 .docs-list__card__meta 2014
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_9.png' srcset='images/docs/docsImg_9@2x.png 2x')
                 .docs-list__card__title Журнал <br> Эстетическая медицина
                 .docs-list__card__meta 2014
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_10.png' srcset='images/docs/docsImg_10@2x.png 2x')
                 .docs-list__card__title Журнал <br> Косметика и медицина
                 .docs-list__card__meta 2014  
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_11.png' srcset='images/docs/docsImg_11@2x.png 2x')
                 .docs-list__card__title Журнал <br> Эстетическая медицина
                 .docs-list__card__meta 2014
-              a(href='#').docs-list__card
+              a(href='#modalPdf' data-pdf='pdf/2016_Web_Design_Report_by_Avocode.pdf').docs-list__card.js-popup
                 .docs-list__card__image
                   img(src='images/docs/docsImg_12.png' srcset='images/docs/docsImg_12@2x.png 2x')
                 .docs-list__card__title Журнал <br> Косметика и медицина
@@ -124,7 +124,8 @@ doctype html
           .text-docs__bottom
             a(href='#').btn.btn--primary.btn--shadow.js-toggleDocsSection
               span Подробнее
-            
+    
+    include shared/modal.pug      
     include shared/footer.pug
     include shared/scripts.pug
     

@@ -29,6 +29,8 @@ html.mfp-helper
     max-width: 1000px
     margin: 40px auto
     position: relative
+    &--pdf
+      padding: 80px 50px 50px 50px
   &__section
     position: relative
     background: white
@@ -280,6 +282,13 @@ html.mfp-helper
       .catalog__card
         flex: 0 1 calc(50% - 6px)
 
+  &__pdf
+    min-height: 500px
+    height: calc(100vh - 100px)
+    display: flex
+    flex-direction: column
+    object
+      flex: 1
 
 @media($desktop)
   .modal
