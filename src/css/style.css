@@ -3196,6 +3196,14 @@ form.loading {
             flex: 1 1 0%;
     -webkit-box-flex: 1;
 }
+.contacts__map__tooltip {
+    color: #939393;
+    font-size: 10px;
+    line-height: 1.7;
+}
+.contacts__map__tooltip span {
+    color: #313131;
+}
 .contacts__sidebar {
     position: relative;
     z-index: 2;

@@ -23,7 +23,8 @@ doctype html
             .ui-group
               label Выберите город
               .ui-select.ui-select--right
-                input(type='hidden')
+                form(action='#').js-toggleGoogleMap
+                  input(type='hidden')
                 .ui-select__visible
                   span Москва
                   i.icon.icon-dropdown

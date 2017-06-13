@@ -212,4 +212,35 @@ $(document).ready(function () {
       pickup_date: "Введите дату самовывоза"
     }
   });
+
+  /////////////////////
+  // ORDER PICKUP FORM
+  ////////////////////
+  $(".js-serviceOrder-form").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      last_name: "required",
+      first_name: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      phone: validatePhone
+    },
+    messages: {
+      last_name: "Заполните это поле",
+      first_name: "Заполните это поле",
+      email: {
+        required: "Заполните это поле",
+        email: "Email содержит неправильный формат"
+      },
+      phone: {
+        required: "Заполните это поле",
+        minlength: "Введите корректный телефон"
+      }
+    }
+  });
 });

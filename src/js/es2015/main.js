@@ -606,7 +606,7 @@ $(document).ready(function(){
 
       // set visible
       $(this).closest('.ui-select').removeClass('active');
-      $(this).closest('.ui-select').find('input').val(value);
+      $(this).closest('.ui-select').find('input').val(value).trigger('change');
 
       $(this).closest('.ui-select').find('.ui-select__visible span').text(value);
     }
@@ -645,6 +645,20 @@ $(document).ready(function(){
       }
     });
 
+
+  // GOOGLE MAP
+  $('.js-toggleGoogleMap input[type=hidden]').on('change', function() {
+    var city = $(this).val()
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({'address': city
+    }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+      } else {
+        // something is wrong
+      }
+    });
+  });
 
   // INPUTS FOCUS
 

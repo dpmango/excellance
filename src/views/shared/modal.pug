@@ -297,3 +297,61 @@
     .modal__actions
       a(href='#').btn.btn--primary.btn--190.js-close-modal Закрыть
       
+
+
+// ORDER SERVICE
+.modal-dialog.mfp-hide#modalServiceOrder
+  .modal__content
+    .modal__icon
+      i.icon.icon-email
+    .modal__close
+      i.icon.icon-close
+    .modal__head Записаться на процедуру
+    .profile__box.modal__form-contact
+      form(action='#').js-serviceOrder-form
+        .ui-group.ui-group--labeled
+          label Фамилия
+            span *
+          input(type='text' name='last_name' placeholder='').ui-input
+        .ui-group.ui-group--labeled
+          label Имя
+            span *
+          input(type='text' name='first_name' placeholder='').ui-input
+        .ui-group.ui-group--labeled
+          label Отчество
+          input(type='text' name='patronimyc' placeholder='').ui-input
+        .ui-group.ui-group--labeled
+          label E-mail
+            span *
+          input(type='email' name='email' placeholder='').ui-input
+        .ui-group.ui-group--labeled
+          label Телефон
+            span *
+          input(type='tel' name='phone' placeholder='').ui-input
+        .cart-login__pickup
+          i.icon.icon-placeholder
+          span Москва, ул. Верейская, д. 29 строение 33
+          
+        .ui-group.ui-group--labeled.ui-group--short
+          label Введите дату
+          input(type='text' name='pickup_date' placeholder='__ __ ____').ui-input.js-dateMask2
+          
+              
+        .profile__box__cta
+          button(type='submit').btn.btn--primary.btn--190 Записаться
+
+
+// MODAL THANKS
+.modal-dialog.mfp-hide#modalServiceOrderThanks
+  .modal__content
+    .modal__icon
+      i.icon.icon-email
+    .modal__close
+      i.icon.icon-close
+    .modal__head Спасибо за заказ!
+    .modal__help-text 
+      p Вам на почту отправлено письмо с подтверждением записи.
+
+      p В ближайшее время наш менеджер свяжется с вами и уточнит детали и время!
+    .modal__actions
+      a(href='#').btn.btn--primary.btn--190.js-close-modal OK

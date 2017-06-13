@@ -441,6 +441,59 @@
       <div class="modal__actions"><a class="btn btn--primary btn--190 js-close-modal" href="#">Закрыть</a></div>
     </div>
   </div>
+  <!-- ORDER SERVICE-->
+  <div class="modal-dialog mfp-hide" id="modalServiceOrder">
+    <div class="modal__content">
+      <div class="modal__icon"><i class="icon icon-email"></i></div>
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__head">Записаться на процедуру</div>
+      <div class="profile__box modal__form-contact">
+        <form class="js-serviceOrder-form" action="#">
+          <div class="ui-group ui-group--labeled">
+            <label>Фамилия<span>*</span></label>
+            <input class="ui-input" type="text" name="last_name" placeholder="">
+          </div>
+          <div class="ui-group ui-group--labeled">
+            <label>Имя<span>*</span></label>
+            <input class="ui-input" type="text" name="first_name" placeholder="">
+          </div>
+          <div class="ui-group ui-group--labeled">
+            <label>Отчество</label>
+            <input class="ui-input" type="text" name="patronimyc" placeholder="">
+          </div>
+          <div class="ui-group ui-group--labeled">
+            <label>E-mail<span>*</span></label>
+            <input class="ui-input" type="email" name="email" placeholder="">
+          </div>
+          <div class="ui-group ui-group--labeled">
+            <label>Телефон<span>*</span></label>
+            <input class="ui-input" type="tel" name="phone" placeholder="">
+          </div>
+          <div class="cart-login__pickup"><i class="icon icon-placeholder"></i><span>Москва, ул. Верейская, д. 29 строение 33</span></div>
+          <div class="ui-group ui-group--labeled ui-group--short">
+            <label>Введите дату</label>
+            <input class="ui-input js-dateMask2" type="text" name="pickup_date" placeholder="__ __ ____">
+          </div>
+          <div class="profile__box__cta">
+            <button class="btn btn--primary btn--190" type="submit">Записаться</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL THANKS-->
+  <div class="modal-dialog mfp-hide" id="modalServiceOrderThanks">
+    <div class="modal__content">
+      <div class="modal__icon"><i class="icon icon-email"></i></div>
+      <div class="modal__close"><i class="icon icon-close"></i></div>
+      <div class="modal__head">Спасибо за заказ!</div>
+      <div class="modal__help-text"> 
+        <p>Вам на почту отправлено письмо с подтверждением записи.</p>
+        <p>В ближайшее время наш менеджер свяжется с вами и уточнит детали и время!</p>
+      </div>
+      <div class="modal__actions"><a class="btn btn--primary btn--190 js-close-modal" href="#">OK</a></div>
+    </div>
+  </div>
   <!-- FOOTER::START-->
   <footer class="footer">
     <div class="footer__wrapper">

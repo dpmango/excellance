@@ -5,6 +5,8 @@
 
 google.maps.event.addDomListener(window, 'load', init);
 
+var map;
+
 function init() {
   // Basic options for a simple Google Map
   // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -31,11 +33,13 @@ function init() {
   var mapElement = document.querySelector('.js-googleMap');
 
   // Create the Google Map using our element and options defined above
-  var map = new google.maps.Map(mapElement, mapOptions);
+  map = new google.maps.Map(mapElement, mapOptions);
 
   // name, lat, lng, icon
-  var markers = [['Office', 55.751244, 37.618423, 1], ['Office 2', 55.851244, 37.698423, 0], ['Office 3', 55.751244, 37.728423, 0], ['Office 4', 55.751244, 37.528423, 0], ['Office 5', 55.81244, 37.598423, 0]];
+  var markers = [['Office', 55.751244, 37.618423, 1, "<div class='contacts__map__tooltip'> <span>Александр Тодчук Studio</span> <br> Хорошевское шоссе д.80 <br> +7 (499) 195 29 91</div>"], ['Office 2', 55.851244, 37.698423, 0, "<div class='contacts__map__tooltip'> <span>Александр Тодчук Studio</span> <br> Хорошевское шоссе д.80 <br> +7 (499) 195 29 91</div>"], ['Office 3', 55.751244, 37.728423, 0, "<div class='contacts__map__tooltip'> <span>Александр Тодчук Studio</span> <br> Хорошевское шоссе д.80 <br> +7 (499) 195 29 91</div>"], ['Office 4', 55.751244, 37.528423, 0, "<div class='contacts__map__tooltip'> <span>Александр Тодчук Studio</span> <br> Хорошевское шоссе д.80 <br> +7 (499) 195 29 91</div>"], ['Office 5', 55.81244, 37.598423, 0, "<div class='contacts__map__tooltip'> <span>Александр Тодчук Studio</span> <br> Хорошевское шоссе д.80 <br> +7 (499) 195 29 91</div>"]];
   var markerIcons = ['images/svg/marker.svg', 'images/svg/marker-main.svg'];
+
+  var infowindow = new google.maps.InfoWindow();
 
   for (var i = 0; i < markers.length; i++) {
     var office = markers[i];
@@ -45,8 +49,12 @@ function init() {
       icon: markerIcons[office[3]],
       title: office[0]
     });
+    var message = office[4] || "";
+    google.maps.event.addListener(marker, 'click', function (e) {
+      infowindow.setContent(message);
+      infowindow.open(map, this);
+    });
   }
-
   // var markers = locations.map(function(location, i) {
   //   return new google.maps.Marker({
   //     position: location,
