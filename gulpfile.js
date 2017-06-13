@@ -65,7 +65,7 @@ gulp.task('build', function (callback) {
     'pug',
     'postcss',
     'babel',
-    ['useref', 'images', 'fonts'],
+    ['useref', 'images', 'fonts', 'pdf'],
     'cssnano',
     callback
   )
@@ -153,59 +153,6 @@ gulp.task('babel', function() {
 });
 
 
-gulp.task('svg-min', function () {
-  return gulp.src(['./src/images/svg/*.svg'])
-    .pipe(svgmin({
-        plugins: [{
-            removeDoctype: false
-        }, {
-            removeComments: false
-        }, {
-            cleanupNumericValues: {
-                floatPrecision: 2
-            }
-        }, {
-            convertColors: {
-                names2hex: false,
-                rgb2hex: false
-            }
-        }]
-    }))
-    .pipe(gulp.dest('./src/images/svg/min'));
-});
-
-gulp.task('iconfont', function(done){
-  var iconStream = gulp.src(['./src/images/svg/min/*.svg'])
-      .pipe(iconfont({
-        fontName: 'IconFont',
-        prependUnicode: false,
-        normalize: true,
-        fontHeight: 1001,
-        formats: ['ttf', 'eot', 'woff', 'svg'],
-        timestamp: runTimestamp, // recommended to get consistent builds when watching files
-      }))
-
-  async.parallel([
-    function handleGlyphs (cb) {
-      iconStream.on('glyphs', function(glyphs, options) {
-        gulp.src('./src/pcss/tpl/_iconfont.sss')
-          .pipe(consolidate('lodash', {
-            glyphs: glyphs,
-            fontName: 'IconFont',
-            fontPath: '../fonts/',
-            className: 'icon'
-          }))
-          .pipe(gulp.dest('./src/pcss/elements'))
-          .on('finish', cb);
-      });
-    },
-    function handleFonts (cb) {
-      iconStream
-        .pipe(gulp.dest('./src/fonts/'))
-        .on('finish', cb);
-    }
-  ], done);
-});
 
 
 /////
@@ -246,6 +193,12 @@ gulp.task('fonts', function() {
   return gulp.src('./src/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
 })
+
+gulp.task('pdf', function() {
+  return gulp.src('./src/pdf/**/*')
+  .pipe(gulp.dest('dist/pdf'))
+})
+
 
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);

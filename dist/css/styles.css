@@ -904,7 +904,14 @@ img.mfp-img {
 
 /* 1. Layout */
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:400,500&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic');
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/PlayfairDisplay-Regular.otf')  format('opentype'),
+       url('../fonts/PlayfairDisplay-Regular.woff') format('woff'), url('../fonts/PlayfairDisplay-Regular.ttf')  format('truetype'), url('../fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+}
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2156,6 +2163,14 @@ form.loading {
     padding-bottom: 60px;
     background: white;
     color: #410C50;
+    -webkit-transition: -webkit-filter .35s linear;
+    transition: -webkit-filter .35s linear;
+    transition: filter .35s linear;
+    transition: filter .35s linear, -webkit-filter .35s linear;
+}
+.footer--blur {
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
 }
 .footer__wrapper {
     display: -webkit-box;
@@ -2507,19 +2522,31 @@ form.loading {
 @media(max-width: 640px) {
     .hero {}
     .hero__bg {
-        background-position: 60% bottom;
+        background-position: left center;
     }
     .hero__content {
-        -webkit-justify-content: flex-start;
-                justify-content: flex-start;
-        padding-top: 100px;
-        max-width: 340px;
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
+        -webkit-justify-content: center;
+                justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 60px;
+        max-width: 500px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
     }
     .hero__title {
-        letter-spacing: 1.67px;
-        font-size: 25px;
+        letter-spacing: 2px;
+        font-size: 32px;
+    }
+    .hero__subtitle {
+        font-size: 20px;
+    }
+}
+@media(max-width: 480px) {
+    .hero {}
+    .hero__title {
+        letter-spacing: 1.5px;
+        font-size: 26px;
     }
     .hero__subtitle {
         font-size: 18px;
@@ -2527,17 +2554,6 @@ form.loading {
 }
 @media(max-width: 414px) {
     .hero {}
-    .hero__content {
-        -webkit-align-items: flex-start;
-                align-items: flex-start;
-        max-width: 240px;
-        text-align: left;
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-    }
-    .hero__subtitle {
-        display: none;
-    }
     .hero__cta {
         margin-top: 30px;
     }
