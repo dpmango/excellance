@@ -54,14 +54,15 @@ $(document).ready(function(){
   // HEADER HOVER
   var dataHover;
   $('.header__navi li').mouseenter(function(){
+    var headerType = $(this).closest('.header');
     var parseDataHover = $(this).data('hover');
     if ( parseDataHover ){
       dataHover = parseDataHover;
       // calculate padding
-      setUl2Padding();
-      $('.header__dropdown').addClass('active');
+      setUl2Padding(headerType);
+      headerType.find('.header__dropdown').addClass('active');
     } else {
-      $('.header__dropdown').removeClass('active');
+      headerType.find('.header__dropdown').removeClass('active');
     }
   });
 
@@ -72,11 +73,12 @@ $(document).ready(function(){
     $(this).removeClass('active');
   });
 
-  function setUl2Padding(){
+  function setUl2Padding(headerType){
     if (dataHover){
-      var calculatedPad = $('.header__navi li[data-hover='+ dataHover +']').position().left
-      var ul = $('.header__dropdown ul[data-hover='+ dataHover +']');
+      var calculatedPad = headerType.find('.header__navi li[data-hover='+ dataHover +']').position().left
+      var ul = headerType.find('.header__dropdown ul[data-hover='+ dataHover +']');
       var ulWidth = ul.width();
+      headerType.find('.header__dropdown').css('top', headerType.height())
       ul.css('padding-left', calculatedPad + 'px')
     }
   }
