@@ -320,11 +320,12 @@ $(document).ready(function () {
     var scrollTop = _window.scrollTop();
     var headerHeight = $('.header').height();
     var setOffeset = 0;
-
-    if (scrollTop < headerHeight) {
+    console.log(scrollTop);
+    console.log(headerHeight);
+    if (headerHeight > scrollTop) {
       setOffeset = headerHeight - scrollTop;
     } else {
-      setOffeset = 0;
+      setOffeset = 60;
     }
     console.log(setOffeset);
     $('.modal .mfp-content').css('padding-top', setOffeset + 'px');

@@ -147,6 +147,7 @@
             color: $colorGray
             display: flex
             align-items: flex-end
+            flex-wrap: wrap
             width: auto
             cursor: pointer
             transition: all $transitionSpeed $ease
@@ -158,14 +159,22 @@
               margin-left: 10px
               border-bottom: 1px solid $colorGray
               transition: all $transitionSpeed $ease
+            a
+              flex: 1 1 auto
+              display: flex
+              align-items: flex-end
             &__cta
+              margin-top: 10px
               margin-left: 15px
               display: inline-block
               color: $colorPrimary
               span
-                border-bottom: 1px solid $colorPrimary
+                border-bottom: 1px solid $colorPrimary !important
               .icon
                 margin-left: 10px
+              &:hover
+                span
+                  border-color: transparent !important
 
             &:hover
               color: $colorPrimaryLight
@@ -218,6 +227,11 @@
             padding: 20px 60px 20px 45px
           &__dropdown
             padding: 10px 60px 15px 45px
+            &__office
+              a:not(.service__list__item-list__dropdown__office__cta)
+                span
+                  text-decoration: underline
+                  border-bottom: 0
 
 
 @media(width <= 435px)
