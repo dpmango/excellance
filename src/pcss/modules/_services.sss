@@ -150,14 +150,27 @@
             width: auto
             cursor: pointer
             transition: all $transitionSpeed $ease
-            .icon
+            .icon-placeholder
               font-size: 20px
               color: $colorPrimary
             span
               display: inline-block
               margin-left: 10px
+              border-bottom: 1px solid $colorGray
+              transition: all $transitionSpeed $ease
+            &__cta
+              margin-left: 15px
+              display: inline-block
+              color: $colorPrimary
+              span
+                border-bottom: 1px solid $colorPrimary
+              .icon
+                margin-left: 10px
+
             &:hover
               color: $colorPrimaryLight
+              span
+                border-color: transparent
 
 
 @media(width <= 850px)

@@ -1,0 +1,154 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    // HEADER::START
+    .header
+      .container.container--fluid
+        .header__top
+          .header__hamburger
+            .hamburger.hamburger--collapse
+              .hamburger-box
+                .hamburger-inner
+                  
+          .header__lang
+            a(href='#').active Ru
+            a(href='#') En
+            a(href='#') Ch
+          a.header__logo(href='homepage.html')
+            i.icon.icon-logo
+          .header__cta
+            a(href='profile-personal.html').header__account
+              i.icon.icon-account
+              span мой аккаунт
+            a(href='cart.html').header__cart.header__cart--empty
+              i.icon.icon-cart
+              span Корзина
+              .header__cart__counter (0)
+            form(action='#').header__search
+              input(type='text' autofill='0' placeholder='поиск...')
+              i.icon.icon-search
+              i.icon.icon-close
+      
+      .header__dropdown
+        ul(data-hover='6')
+          li
+            a(href='contacts.html') Точки продаж
+          li
+            a(href='contacts.html') Салоны
+                        
+      .container
+        ul.header__navi
+          li.header__navi__special
+            a(href='#') Новинки
+          li
+            a(href='catalog.html') Каталог
+          li
+            a(href='services.html') Профессиональный уход 
+          li
+            a(href='inovation.html') Инновация Cellexon 
+          li
+            a(href='about.html') О компании
+          li
+            a(href='smi.html') СМИ о нас
+          li(data-hover='6')
+            a(href='contacts.html') Адреса      
+            
+    // Sticky Header
+    header.header.header--sticky
+      .container.container--fluid
+        .header__line
+          .header__hamburger
+            .hamburger.hamburger--collapse
+              .hamburger-box
+                .hamburger-inner
+          a.header__logo.header__logo--small(href='homepage.html')
+            i.icon.icon-logo
+        
+          ul.header__navi.header__navi--sticky
+            li.header__navi__special
+              a(href='#') Новинки
+            li
+              a(href='catalog.html') Каталог
+            li
+              a(href='services.html') Профессиональный уход 
+            li
+              a(href='inovation.html') Инновация Cellexon 
+            li
+              a(href='about.html') О компании
+            li
+              a(href='smi.html') СМИ о нас
+            li
+              a(href='contacts.html') Адреса
+          
+          .header__cta.header__cta--sticky
+            a(href='profile-personal.html').header__account
+              i.icon.icon-account
+            a(href='cart.html').header__cart.header__cart--empty
+              i.icon.icon-cart
+              .header__cart__counter (0)
+            form(action='#').header__search
+              input(type='text' autofill='0' placeholder='поиск...')
+              i.icon.icon-search
+              i.icon.icon-close
+
+    // Mobile navi
+    .mobile-navi
+      ul.mobile-navi__list
+        li.header__navi__special
+          a(href='#') Новинки
+        li
+          a(href='catalog.html') Каталог
+        li
+          a(href='services.html') Профессиональный уход 
+        li
+          a(href='inovation.html') Инновация Cellexon 
+        li
+          a(href='about.html') О компании
+        li
+          a(href='smi.html') СМИ о нас
+        li
+          a(href='contacts.html') Адреса
+      .header__lang
+        a(href='#').active Ru
+        a(href='#') En
+        a(href='#') Ch
+
+    .page
+      
+      // HERO ::START
+      .hero
+        .hero__slider.dots--center
+          .hero__slide
+            .hero__bg
+              // image is optional - it's used to set .hero__bg background-image property
+              img(src='images/homepageBanner.png' srcset='images/homepageBanner@2x.png 2x').hero__bg--desktop
+              img(src='images/homepageMobBanner.png' srcset='images/homepageMobBanner@2x.png 2x').hero__bg--mobile
+            .container
+              .hero__content
+                .hero__title Роскошный уход <br> для молодости кожи
+                .hero__subtitle Основан на научном подходе
+                .hero__cta
+                  a(href='#').btn.btn--primary 
+                    span Подробнее
+          // slide
+          .hero__slide
+            .hero__bg
+              // image is optional - it's used to set .hero__bg background-image property
+              img(src='images/homepageBanner.png' srcset='images/homepageBanner@2x.png 2x').hero__bg--desktop
+              img(src='images/homepageMobBanner.png' srcset='images/homepageMobBanner@2x.png 2x').hero__bg--mobile
+            .container
+              .hero__content
+                .hero__title Роскошный уход <br> для молодости кожи
+                .hero__subtitle Основан на научном подходе
+                .hero__cta
+                  a(href='#').btn.btn--primary 
+                    span Подробнее
+      
+      div(style='height: 200vh')              
+  
+  
+    include shared/scripts.pug

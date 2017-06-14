@@ -56,9 +56,13 @@ doctype html
                     span Омолаживающий уход «Клеточное восстановление»
                   .service__list__item-list__dropdown
                     .service__list__item-list__dropdown__description Абсолютный «элексир молодости»! Заметный и пролонгированный anti-age эффект: улучшается цвета лица, разглаживается микрорельеф, кожа наполняется жизненной энергией. Интенсивное очищение, увлажнение и питание в исполнении бестселлеров марки.
-                    .service__list__item-list__dropdown__office
+                    a(href='#modalServiceOrder').service__list__item-list__dropdown__office.js-popup
                       i.icon.icon-placeholder
-                      span Найти ближайший салон
+                      span Ближайний салон: ул. Верейская, д.29, стр.134-33, БЦ «Верейская Плаза 3»
+                      .service__list__item-list__dropdown__office__cta
+                        span ЗАПИСАТЬСЯ НА ПРОЦЕДУРУ
+                        i.icon.icon-next
+                          
                 // next item
                 .service__list__item-list__item
                   .service__list__item-list__head
@@ -256,7 +260,7 @@ doctype html
                       i.icon.icon-placeholder
                       span Найти ближайший салон                    
                                 
-                                
+    include shared/modal.pug
     include shared/footer.pug
     include shared/scripts.pug
     

@@ -25,7 +25,14 @@
           input(type='text' autofill='0' placeholder='поиск...')
           i.icon.icon-search
           i.icon.icon-close
-            
+  
+  .header__dropdown
+    ul(data-hover='6')
+      li
+        a(href='contacts.html') Точки продаж
+      li
+        a(href='contacts.html') Салоны
+                    
   .container
     ul.header__navi
       li
@@ -38,8 +45,8 @@
         a(href='about.html') О компании
       li
         a(href='smi.html') СМИ о нас
-      li
-        a(href='contacts.html') Адреса
+      li(data-hover='6')
+        a(href='contacts.html') Адреса      
         
 // Sticky Header
 header.header.header--sticky

@@ -12,6 +12,8 @@
   text-transform: uppercase
   border-bottom: 1px solid $colorPrimary
   box-shadow: 0px 0px 10px color(black a(10%))
+  .container--fluid
+    position: relative
   &__top
     display: flex
     justify-content: space-between
@@ -178,27 +180,28 @@
     padding: 0
     display: flex
     justify-content: space-between
-    overflow: hidden
-    padding: 20px 0 30px 0
-
+    padding: 10px 0 0px 0
     &--sticky
       flex: 0 1 100%
       margin-bottom: 0
       min-width: 0
       max-width: 1200px
-      padding: 20px 0
+      padding: 10px 0 0px 0
       li
+        padding-bottom: 10px
         &::after
           display: none
 
     li
       position: relative
       display: inline-block
+      padding-bottom: 20px
+      text-align: center
       &::after
         display: block
         content: ' '
         position: absolute
-        bottom: -30px
+        bottom: 0px
         left: 10px
         right: 10px
         height: 1px
@@ -211,8 +214,13 @@
         a
           color: $colorPrimaryLight
       a
+        display: inline-block
         transition: all $transitionSpeed $ease
         padding: 10px
+      &.header__navi__special
+        a
+          color: white
+          background: $colorPrimary
 
   &--sticky
     position: fixed
@@ -224,6 +232,38 @@
   &--transformed
     opacity: 1
     transform: translate3d(0, 0px, 0)
+
+  &__dropdown
+    position: absolute
+    left: 0
+    right: 0
+    top: 253px
+    background: white
+    border-top: 1px solid $colorPrimary
+    transform: translate3d(0,20px,0)
+    opacity: 0
+    z-index: 9
+    pointer-events: none
+    transition: all $transitionSpeed $ease
+    &.active
+      opacity: 1
+      transform: translate3d(0,0,0)
+      pointer-events: all
+    ul
+      margin: 0
+      z-index: 3
+      padding: 15px 0
+      li
+        display: block
+        font-size: 17px
+        a
+          display: inline-block
+          padding: 5px 10px
+          color: $fontColor
+          transition: all $transitionSpeed $ease
+          &:hover
+            color: $colorPrimaryLight
+
 
   &__line
     padding: 20px 0
@@ -237,6 +277,8 @@
     &__top
       padding-top: 35px
       margin-bottom: 30px
+    &__dropdown
+      top: 203px
 
 
 @media($hd)
@@ -265,6 +307,10 @@
     font-size: 15px
     &__cta
       font-size: 17px
+    &__dropdown
+      ul
+        li
+          font-size: 15px
 
 
 @media(width <= 1050px)
@@ -298,6 +344,8 @@
     &__navi
       display: none !important
     &__lang
+      display: none
+    &__dropdown
       display: none
 
     &__logo
