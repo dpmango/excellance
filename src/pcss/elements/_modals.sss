@@ -234,6 +234,7 @@ html.mfp-helper
       &__tabs
         margin-top: 15px
       &__tab
+        position: relative
         font-size: 16px
         letter-spacing: 2px
         padding: 5px 32px
@@ -242,6 +243,14 @@ html.mfp-helper
         transition: all $transitionSpeed $ease
         &.active, &:hover
           background: #DBDEE0
+        span
+          display: inline-block
+          &:first-child
+            position: absolute
+            left: 32px
+            top: 4px
+          &:last-child
+            padding-left: 18px
 
 
     &__results-content
@@ -331,6 +340,10 @@ html.mfp-helper
           padding: 4px 15px 4px 25px
           font-size: 15px
           letter-spacing: 1.5px
+          span
+            &:first-child
+              left: 25px
+
       &__results-content
         padding: 30px 40px 30px 30px
 
