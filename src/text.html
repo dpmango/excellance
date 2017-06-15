@@ -6,7 +6,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Excellance</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <!--build:css css/styles.css-->
+  <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css">
+  <link rel="stylesheet" href="components/magnific-popup/dist/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!--endbuild-->
   <meta name="description" content=""><!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -95,103 +100,31 @@
     </ul>
     <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div>
   </div>
-  <div class="page page--light-bg header-static">
-    <!-- LOGIN PAGE-->
-    <div class="profile">
+  <div class="page header-static">
+    <!-- TEXT PAGE :: START-->
+    <div class="text text--no-bg">
       <div class="container">
-        <div class="heading heading--mute">Оформление заказа</div>
-        <div class="cart-scope">
-          <div class="cart-scope__left"><span>Товары:</span><span>Сумма заказа:</span></div>
-          <div class="cart-scope__right"><span>6</span><span>25 458 ₽</span></div>
-        </div>
-      </div>
-      <div class="cart-login cart-login--authorized">
-        <div class="cart-login__white-bg">
-          <div class="container">
-            <div class="cart-login__adress">
-              <div class="cart-login__section__title">Выберите адрес</div>
-              <div class="profile__orders profile__adress profile__adress--selectable">
-                <!-- populated from selected data id-->
-                <input type="hidden" name="selected_adress">
-                <!-- signle order-->
-                <div class="profile__order" data-select-id="1">
-                  <div class="profile__orders__row profile__order__head"><span>Санкт-Петербург<span>Город</span></span><span>3 ул. Строителей<span>Улица</span></span><span>25<span>Адрес</span></span><span>Надежда<span>Конт. л.</span></span><span><i class="icon icon-tick"></i></span></div>
-                </div>
-                <!-- signle order-->
-                <div class="profile__order" data-select-id="2">
-                  <div class="profile__orders__row profile__order__head"><span>Москва<span>Город</span></span><span>ул. Волхонка<span>Улица</span></span><span>д. 3, стр. 1<span>Адрес</span></span><span>Ирина<span>Конт. л.</span></span><span><i class="icon icon-tick"></i></span></div>
-                </div>
-                <!-- signle order-->
-                <div class="profile__order" data-select-id="3">
-                  <div class="profile__orders__row profile__order__head"><span>Иваново<span>Город</span></span><span>ул. Героев труда<span>Улица</span></span><span>д. 5<span>Адрес</span></span><span>Надежда<span>Конт. л.</span></span><span><i class="icon icon-tick"></i></span></div>
-                </div>
-                <!-- signle order-->
-                <div class="profile__order" data-select-id="4">
-                  <div class="profile__orders__row profile__order__head"><span>Воронеж<span>Город</span></span><span>ул. Ленина<span>Улица</span></span><span>д. 47<span>Адрес</span></span><span>Наталья<span>Конт. л.</span></span><span><i class="icon icon-tick"></i></span></div>
-                </div>
+        <div class="text__wrapper">
+          <!-- sidebar-->
+          <div class="text__sidebar"><a class="text__card" href="#">
+              <div class="text__card__info">
+                <div class="text__card__name">О компании</div>
+                <div class="text__card__short">История создания Cellexon® началась с удивительного открытия в области клинической медицины…</div>
               </div>
+              <div class="text__card__image"><img src="images/textcard_About.png" srcset="images/textcard_About@2x.png 2x"></div></a><a class="text__card" href="#">
+              <div class="text__card__info">
+                <div class="text__card__name">Новости и публикации  в прессе</div>
+                <div class="text__card__short">Последние упоминания о бренде в средствах массовой информации.</div>
+              </div>
+              <div class="text__card__image"><img src="images/textcardNews.png" srcset="images/textcardNews@2x.png 2x"></div></a></div>
+          <!-- content-->
+          <div class="text__content">
+            <div class="heading text-center">TEXT PAGE</div>
+            <div class="text__content__paragraph">
+              <p>История создания Cellexon® началась с удивительного открытия в области клинической медицины. Более 10 лет ведущие специалисты одной из крупнейших фармацевтических компаний «Фарм-Синтез» посвятили масштабным исследованиям белково-пептидного компонента одного из жизненно важных фармацевтических препаратов, применяемых для восстановления нервных тканей головного и спинного мозга. В ходе его испытаний российские ученые заметили уникальное свойство этого компонента восстанавливать клетки не только нервной, но и кожной ткани и создали на его основе инновационную «формулу молодости» - белково-пептидный нуклеотидный комплекс Cellexon®. </p>
+              <p>Патент № 2428196 принадлежит российской компании «Фарм-Синтез» и подтверждает, что в ближайшие 20 лет никто не сможет повторить феномен Cellexon®.</p>
             </div>
-          </div>
-        </div>
-        <div class="cart-login__white-bg cart-login__white-bg--toggable">
-          <div class="container">
-            <div class="profile__box">
-              <form action="#">
-                <div class="ui-section-label">Контактное лицо</div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Фамилия</label>
-                  <input class="ui-input" type="text" name="last_name" placeholder="Фамилия">
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Имя</label>
-                  <input class="ui-input" type="text" name="first_name" placeholder="Имя">
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Отчество</label>
-                  <input class="ui-input" type="text" name="patronymic_name" placeholder="Отчество">
-                </div>
-                <div class="ui-section-label ui-section-label--top">Адрес</div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Страна</label>
-                  <div class="ui-select">
-                    <input type="hidden">
-                    <div class="ui-select__visible"><span>Россия</span><i class="icon icon-dropdown"></i></div>
-                    <div class="ui-select__dropdown"><span class="ui-select__dropdown__placeholder">Выберите страну</span><span class="active" data-val="Россия">Россия</span><span data-val="Беларусь">Беларусь</span></div>
-                  </div>
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Населенный пункт</label>
-                  <input class="ui-input" type="text" name="city" placeholder="Москва">
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Адрес</label>
-                  <input class="ui-input" type="text" name="city" placeholder="ул. Волхонка">
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Дом</label>
-                  <input class="ui-input" type="text" name="city" placeholder="д.3, стр. 1">
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Номер квартиры или офиса</label>
-                  <input class="ui-input" type="text" name="city" placeholder="19">
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Индекс</label>
-                  <input class="ui-input js-indexMask" type="text" name="index" placeholder="000 000">
-                </div>
-                <div class="ui-group ui-group--labeled">
-                  <label>Телефон</label>
-                  <input class="ui-input" type="tel" name="phone" placeholder="">
-                </div>
-                <div class="profile__box__cta">
-                  <button class="btn btn--primary btn--190" type="submit">Сохранить</button>
-                </div>
-              </form>
-            </div>
-            <div class="cart-login__section__cta js-toggleCartAdressSection"><a class="btn btn--white" href="#">Указать другой адрес</a></div>
-            <div class="profile__box profile__box--btn">
-              <div class="profile__box__cta"><a class="btn btn--primary btn--190" href="profile-add.html">Оформить  </a></div>
-            </div>
+            <div class="text__content__paragraph text__content__paragraph--banner"><img src="https://placehold.it/590x230"></div>
           </div>
         </div>
       </div>
@@ -237,7 +170,22 @@
     </div>
   </footer>
   <!-- SECONDARY STYLES-->
-  <link rel="stylesheet" href="css/secondary.css">
+  <!--build:css css/secondary.css-->
+  <link rel="stylesheet" href="css/secondary.css" type="text/css">
+  <link rel="stylesheet" href="css/icomoon.css" type="text/css">
+  <!--endbuild-->
   <!-- SCRIPTS-->
-  <script src="js/scripts.min.js"></script>
+  <!--build:js js/scripts.min.js-->
+  <script src="components/jquery/dist/jquery.min.js"></script>
+  <script src="components/slick-carousel/slick/slick.min.js"></script>
+  <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="components/air-datepicker/dist/js/datepicker.min.js"></script>
+  <script src="components/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+  <script src="components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+  <script src="components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="js/libs/jquery.scrollbar.min.js"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+  <!--endbuild-->
 </body>

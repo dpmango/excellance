@@ -32,6 +32,12 @@
         </div>
       </div>
     </div>
+    <div class="header__dropdown">
+      <ul data-hover="6">
+        <li><a href="contacts.html">Точки продаж</a></li>
+        <li><a href="contacts.html">Салоны</a></li>
+      </ul>
+    </div>
     <div class="container">
       <ul class="header__navi">
         <li><a href="catalog.html">Каталог</a></li>
@@ -39,7 +45,7 @@
         <li><a href="inovation.html">Инновация Cellexon </a></li>
         <li><a href="about.html">О компании</a></li>
         <li><a href="smi.html">СМИ о нас</a></li>
-        <li><a href="contacts.html">Адреса</a></li>
+        <li data-hover="6"><a href="contacts.html">Адреса      </a></li>
       </ul>
     </div>
   </div>
@@ -54,13 +60,19 @@
             </div>
           </div>
         </div><a class="header__logo header__logo--small" href="homepage.html"><i class="icon icon-logo"></i></a>
+        <div class="header__dropdown">
+          <ul data-hover="6">
+            <li><a href="contacts.html">Точки продаж</a></li>
+            <li><a href="contacts.html">Салоны</a></li>
+          </ul>
+        </div>
         <ul class="header__navi header__navi--sticky">
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="services.html">Профессиональный уход </a></li>
           <li><a href="inovation.html">Инновация Cellexon </a></li>
           <li><a href="about.html">О компании</a></li>
           <li><a href="smi.html">СМИ о нас</a></li>
-          <li><a href="contacts.html">Адреса</a></li>
+          <li data-hover="6"><a href="contacts.html">Адреса</a></li>
         </ul>
         <div class="header__cta header__cta--sticky"><a class="header__account" href="profile-personal.html"><i class="icon icon-account"></i></a><a class="header__cart header__cart--empty" href="cart.html"><i class="icon icon-cart"></i>
             <div class="header__cart__counter">(0)</div></a>
@@ -98,7 +110,9 @@
           <div class="ui-group">
             <label>Выберите город</label>
             <div class="ui-select ui-select--right">
-              <input type="hidden">
+              <form class="js-toggleGoogleMap" action="#">
+                <input type="hidden">
+              </form>
               <div class="ui-select__visible"><span>Москва</span><i class="icon icon-dropdown"></i></div>
               <div class="ui-select__dropdown"><span class="active" data-val="Москва">Москва</span><span data-val="Санкт-Петербург">Санкт-Петербург</span><span data-val="Волгоград">Волгоград</span><span data-val="Екатеринбург">Екатеринбург</span><span data-val="Казань">Казань</span><span data-val="Мурманск">Мурманск</span><span data-val="Нижний Новгород">Нижний Новгород</span><span data-val="Пятигорск">Пятигорск</span><span data-val="Ростов-на-дону">Ростов-на-дону</span><span data-val="Саратов">Саратов</span><span data-val="Сочи">Сочи</span><span data-val="Тюмень">Тюмень</span><span data-val="Хабаровск">Хабаровск</span></div>
             </div>

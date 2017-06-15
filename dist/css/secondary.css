@@ -318,7 +318,7 @@ html.mfp-helper body {
     margin: 40px auto;
     padding: 90px 100px 50px 80px;
     max-width: 1000px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     text-align: left;
 }
 .modal__content--pdf {
@@ -419,6 +419,9 @@ html.mfp-helper body {
     width: 100%;
     border-radius: 8px;
     font-size: 16px;
+}
+.modal__form-contact {
+    margin-top: 30px;
 }
 .modal__guide {
     position: relative;
@@ -869,24 +872,6 @@ html.mfp-helper body {
 .modal--blur {}
 .modal--blur.mfp-bg {
     background: transparent;
-}
-@media(max-height: 800px) {
-    .modal .mfp-container {
-        padding-top: 200px;
-        padding-bottom: 200px;
-    }
-}
-@media(max-width: 850px) {
-    .modal .mfp-container {
-        padding-top: 122px;
-        padding-bottom: 122px;
-    }
-}
-@media(max-width: 640px) {
-    .modal .mfp-container {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
 }
 /* Keyframes */
 @-webkit-keyframes shuffleRight {

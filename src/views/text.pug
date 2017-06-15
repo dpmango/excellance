@@ -1,0 +1,41 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.header-static
+      
+      // TEXT PAGE :: START
+      .text.text--no-bg
+        .container
+          .text__wrapper
+            // sidebar
+            .text__sidebar
+              a(href='#').text__card
+                .text__card__info
+                  .text__card__name О компании
+                  .text__card__short История создания Cellexon® началась с удивительного открытия в области клинической медицины…
+                .text__card__image
+                  img(src='images/textcard_About.png' srcset='images/textcard_About@2x.png 2x')
+              a(href='#').text__card
+                .text__card__info
+                  .text__card__name Новости и публикации  в прессе
+                  .text__card__short Последние упоминания о бренде в средствах массовой информации.
+                .text__card__image
+                  img(src='images/textcardNews.png' srcset='images/textcardNews@2x.png 2x')
+            
+            // content
+            .text__content
+              .heading.text-center TEXT PAGE
+              .text__content__paragraph
+                p История создания Cellexon® началась с удивительного открытия в области клинической медицины. Более 10 лет ведущие специалисты одной из крупнейших фармацевтических компаний «Фарм-Синтез» посвятили масштабным исследованиям белково-пептидного компонента одного из жизненно важных фармацевтических препаратов, применяемых для восстановления нервных тканей головного и спинного мозга. В ходе его испытаний российские ученые заметили уникальное свойство этого компонента восстанавливать клетки не только нервной, но и кожной ткани и создали на его основе инновационную «формулу молодости» - белково-пептидный нуклеотидный комплекс Cellexon®. 
+
+                p Патент № 2428196 принадлежит российской компании «Фарм-Синтез» и подтверждает, что в ближайшие 20 лет никто не сможет повторить феномен Cellexon®.
+              .text__content__paragraph.text__content__paragraph--banner
+                img(src='https://placehold.it/590x230')
+                  
+    include shared/footer.pug
+    include shared/scripts.pug

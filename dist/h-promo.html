@@ -40,6 +40,7 @@
     </div>
     <div class="container">
       <ul class="header__navi">
+        <li class="header__navi__special"><a href="#">Новинки</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="services.html">Профессиональный уход </a></li>
         <li><a href="inovation.html">Инновация Cellexon </a></li>
@@ -60,19 +61,14 @@
             </div>
           </div>
         </div><a class="header__logo header__logo--small" href="homepage.html"><i class="icon icon-logo"></i></a>
-        <div class="header__dropdown">
-          <ul data-hover="6">
-            <li><a href="contacts.html">Точки продаж</a></li>
-            <li><a href="contacts.html">Салоны</a></li>
-          </ul>
-        </div>
         <ul class="header__navi header__navi--sticky">
+          <li class="header__navi__special"><a href="#">Новинки</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="services.html">Профессиональный уход </a></li>
           <li><a href="inovation.html">Инновация Cellexon </a></li>
           <li><a href="about.html">О компании</a></li>
           <li><a href="smi.html">СМИ о нас</a></li>
-          <li data-hover="6"><a href="contacts.html">Адреса</a></li>
+          <li><a href="contacts.html">Адреса</a></li>
         </ul>
         <div class="header__cta header__cta--sticky"><a class="header__account" href="profile-personal.html"><i class="icon icon-account"></i></a><a class="header__cart header__cart--empty" href="cart.html"><i class="icon icon-cart"></i>
             <div class="header__cart__counter">(0)</div></a>
@@ -86,6 +82,7 @@
   <!-- Mobile navi-->
   <div class="mobile-navi">
     <ul class="mobile-navi__list">
+      <li class="header__navi__special"><a href="#">Новинки</a></li>
       <li><a href="catalog.html">Каталог</a></li>
       <li><a href="services.html">Профессиональный уход </a></li>
       <li><a href="inovation.html">Инновация Cellexon </a></li>
@@ -95,63 +92,39 @@
     </ul>
     <div class="header__lang"><a class="active" href="#">Ru</a><a href="#">En</a><a href="#">Ch</a></div>
   </div>
-  <div class="page page--light-bg header-static">
-    <!-- PROFILE PAGE-->
-    <div class="profile">
-      <div class="container container--1000">
-        <div class="heading heading--mute">Личный кабинет</div>
-        <!-- cabinet-->
-        <div class="profile__cabinet">
-          <div class="profile__cabinet-nav"><a href="profile-personal.html">Личные данные</a><a href="profile-orders.html">Заказы</a><a class="active" href="#">Адреса</a><a href="#">Выход</a></div>
-          <div class="profile__box">
-            <div class="profile__box__empty">У вас нет ни одного заказа</div>
-            <div class="profile__box__cta">
-              <button class="btn btn--primary btn--190" type="submit">перейти в каталог</button>
+  <div class="page">
+    <!-- HERO ::START-->
+    <div class="hero">
+      <div class="hero__slider dots--center">
+        <div class="hero__slide">
+          <div class="hero__bg">
+            <!-- image is optional - it's used to set .hero__bg background-image property--><img class="hero__bg--desktop" src="images/homepageBanner.png" srcset="images/homepageBanner@2x.png 2x"><img class="hero__bg--mobile" src="images/homepageMobBanner.png" srcset="images/homepageMobBanner@2x.png 2x">
+          </div>
+          <div class="container">
+            <div class="hero__content">
+              <div class="hero__title">Роскошный уход <br> для молодости кожи</div>
+              <div class="hero__subtitle">Основан на научном подходе</div>
+              <div class="hero__cta"><a class="btn btn--primary" href="#"> <span>Подробнее</span></a></div>
+            </div>
+          </div>
+        </div>
+        <!-- slide-->
+        <div class="hero__slide">
+          <div class="hero__bg">
+            <!-- image is optional - it's used to set .hero__bg background-image property--><img class="hero__bg--desktop" src="images/homepageBanner.png" srcset="images/homepageBanner@2x.png 2x"><img class="hero__bg--mobile" src="images/homepageMobBanner.png" srcset="images/homepageMobBanner@2x.png 2x">
+          </div>
+          <div class="container">
+            <div class="hero__content">
+              <div class="hero__title">Роскошный уход <br> для молодости кожи</div>
+              <div class="hero__subtitle">Основан на научном подходе</div>
+              <div class="hero__cta"><a class="btn btn--primary" href="#"> <span>Подробнее</span></a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div style="height: 200vh;">             </div>
   </div>
-  <!-- FOOTER::START-->
-  <footer class="footer">
-    <div class="footer__wrapper">
-      <div class="footer__links-wrapper">
-        <div class="footer__links">
-          <div class="footer__heading">Категории товаров</div>
-          <div class="footer__links-list"><a href="#">Очищение и тонизирование</a><a href="#">Увлажнение и баланс</a><a href="#">Клеточное восстановление  и защита</a><a href="#">Защита вокруг глаз</a><a href="#">Уход для тела</a></div>
-        </div>
-        <div class="footer__links">
-          <div class="footer__heading">Категории товаров</div>
-          <div class="footer__links-list"><a href="#">Доставка и оплата</a><a href="#">Правила возврата товара</a><a href="#">Новости</a><a href="#">Адреса магазинов</a><a href="#">Адреса салонов</a></div>
-        </div>
-      </div>
-      <!-- content col-->
-      <div class="footer__content">
-        <div class="footer__subscribe">
-          <div class="footer__heading">Подписаться на рассылку</div>
-          <div class="footer__subscribe__note">Подпишитесь на новостную рассылку и получайте бонусы и эксклюзивные предложения от Excellance Moscow!</div>
-          <form class="footer__subscribe__form" action="#">
-            <label>Ваш e-mail:</label>
-            <div class="footer__subscribe__form-container">
-              <input class="ui-input" type="email">
-              <button class="btn btn--primary" type="submit"> <span>Подписаться</span></button>
-            </div>
-          </form>
-        </div>
-        <!-- socials-->
-        <div class="footer__socials">
-          <div class="footer__heading">Присоединяйтесь!</div><a href="#"><i class="icon icon-facebook"></i></a><a href="#"><i class="icon icon-instagram"></i></a>
-        </div>
-        <!-- contacts-->
-        <div class="footer__contacts">
-          <div class="footer__heading">Служба поддержки клиентов</div><a class="footer__phone" href="tel:84953800353">+7 495 380 03 53</a><a class="footer__email" href="mailto:EMAIL@EXCELLANCE.RU">EMAIL@EXCELLANCE.RU</a>
-          <p>Служба поддержки работает с пн по пт с 10 до 18</p>
-          <p>ООО «Мирани», 121357, Москва, ул. Верейская, д.29, <br> стр. 134, БЦ «Верейская плаза III» </p>
-        </div>
-      </div>
-    </div>
-  </footer>
   <!-- SECONDARY STYLES-->
   <link rel="stylesheet" href="css/secondary.css">
   <!-- SCRIPTS-->
