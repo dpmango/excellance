@@ -35,20 +35,33 @@ $(document).ready(function(){
   // HEADER SCROLL
   // add .header-static for .page or body
   // to disable sticky header
-  if ( $('.header-static').length == 0 ){
+  if ( $('.header-static').length == 0){
     _window.scrolled(10, function() { // scrolled is a constructor for scroll delay
       var vScroll = _window.scrollTop();
       var header = $('.header').not('.header--sticky');
       var headerSticky = $('.header--sticky');
       var headerHeight = header.height();
 
-      if ( vScroll > headerHeight + 20){
+      if ( vScroll > headerHeight + 20 && !modalOpened){
         headerSticky.addClass('header--transformed');
       } else {
         headerSticky.removeClass('header--transformed');
       }
-
     });
+  }
+
+  function toggleHeaderForModal(){
+    var vScroll = _window.scrollTop();
+    var header = $('.header').not('.header--sticky');
+    var headerSticky = $('.header--sticky');
+    var headerHeight = header.height();
+    if ( vScroll > headerHeight + 20){
+      if (modalOpened){
+        headerSticky.removeClass('header--transformed');
+      } else {
+        headerSticky.addClass('header--transformed');
+      }
+    }
   }
 
   // HEADER HOVER
@@ -289,11 +302,13 @@ $(document).ready(function(){
           this.currItem.inlineElement.find('object a').attr('href', pdf )
         }
         setModalOffset();
+        toggleHeaderForModal();
       },
       close: function() {
         // $('html').removeClass('mfp-helper');
         // _window.scrollTop(startWindowScroll);
         modalOpened = false;
+        toggleHeaderForModal();
       }
     }
   });
@@ -318,11 +333,13 @@ $(document).ready(function(){
       },
       open: function() {
         setModalOffset();
+        toggleHeaderForModal();
       },
       close: function() {
         $('.page').removeClass('page--blur');
         $('.footer').removeClass('footer--blur');
         modalOpened = false;
+        toggleHeaderForModal();
       }
     }
   });

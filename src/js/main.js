@@ -45,12 +45,26 @@ $(document).ready(function () {
       var headerSticky = $('.header--sticky');
       var headerHeight = header.height();
 
-      if (vScroll > headerHeight + 20) {
+      if (vScroll > headerHeight + 20 && !modalOpened) {
         headerSticky.addClass('header--transformed');
       } else {
         headerSticky.removeClass('header--transformed');
       }
     });
+  }
+
+  function toggleHeaderForModal() {
+    var vScroll = _window.scrollTop();
+    var header = $('.header').not('.header--sticky');
+    var headerSticky = $('.header--sticky');
+    var headerHeight = header.height();
+    if (vScroll > headerHeight + 20) {
+      if (modalOpened) {
+        headerSticky.removeClass('header--transformed');
+      } else {
+        headerSticky.addClass('header--transformed');
+      }
+    }
   }
 
   // HEADER HOVER
@@ -280,11 +294,13 @@ $(document).ready(function () {
           this.currItem.inlineElement.find('object a').attr('href', pdf);
         }
         setModalOffset();
+        toggleHeaderForModal();
       },
       close: function close() {
         // $('html').removeClass('mfp-helper');
         // _window.scrollTop(startWindowScroll);
         modalOpened = false;
+        toggleHeaderForModal();
       }
     }
   });
@@ -309,11 +325,13 @@ $(document).ready(function () {
       },
       open: function open() {
         setModalOffset();
+        toggleHeaderForModal();
       },
       close: function close() {
         $('.page').removeClass('page--blur');
         $('.footer').removeClass('footer--blur');
         modalOpened = false;
+        toggleHeaderForModal();
       }
     }
   });
