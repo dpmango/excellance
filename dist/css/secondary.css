@@ -595,6 +595,7 @@ html.mfp-helper body {
     margin-top: 15px;
 }
 .modal__guide__results-sidebar__tab {
+    position: relative;
     margin-bottom: 3px;
     padding: 5px 32px;
     letter-spacing: 2px;
@@ -602,6 +603,17 @@ html.mfp-helper body {
     cursor: pointer;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
+}
+.modal__guide__results-sidebar__tab span {
+    display: inline-block;
+}
+.modal__guide__results-sidebar__tab span:first-child {
+    position: absolute;
+    top: 4px;
+    left: 32px;
+}
+.modal__guide__results-sidebar__tab span:last-child {
+    padding-left: 18px;
 }
 .modal__guide__results-sidebar__tab.active, .modal__guide__results-sidebar__tab:hover {
     background: #DBDEE0;
@@ -741,6 +753,10 @@ html.mfp-helper body {
         padding: 4px 15px 4px 25px;
         letter-spacing: 1.5px;
         font-size: 15px;
+    }
+    .modal__guide__results-sidebar__tab span {}
+    .modal__guide__results-sidebar__tab span:first-child {
+        left: 25px;
     }
     .modal__guide__results-content {
         padding: 30px 40px 30px 30px;

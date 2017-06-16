@@ -50,7 +50,6 @@ gulp.task('default', function (callback) {
 // Watch
 gulp.task('watch', function(){
   // uncomment to use with sass
-  //gulp.watch('./src/sass/**/*.+(scss|sass)', ['sass']);
   gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug-watch']);
   gulp.watch('./src/js/es2015/*.js', ['babel']);
@@ -97,30 +96,6 @@ gulp.task('postcss', function() {
       .pipe( sourcemaps.init() )
       .pipe( postcss(processors, { parser: sugarss }) )
       .pipe(rename({ extname: '.css' }))
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('./src/css') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
-
-gulp.task('sass', function() {
-  return gulp.src('./src/sass/style.+(scss|sass)')
-      .pipe( sourcemaps.init() )
-      .pipe( sass({ includePaths : ['./src/sass'] }) )
-      .pipe( postcss(processors) )
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('./src/css') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
-
-gulp.task('bootstrap', function() {
-  return gulp.src('./src/sass/bootstrap.+(scss|sass)')
-      .pipe( sourcemaps.init() )
-      .pipe( sass({ includePaths : ['./src/sass'] }) )
-      .pipe( postcss(processors) )
       .pipe( sourcemaps.write('.') )
       .pipe( gulp.dest('./src/css') )
       .pipe(browserSync.reload({
