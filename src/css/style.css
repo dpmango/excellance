@@ -1952,7 +1952,6 @@ form.loading {
         -ms-flex-align: stretch;
 }
 .bestsellers__slider .slick-slide {
-    height: auto !important;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
 }
@@ -1988,6 +1987,7 @@ form.loading {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    display: flex !important;
     -webkit-flex: 1 1 100%;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
@@ -1995,17 +1995,12 @@ form.loading {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 10px 0;
+    height: auto !important;
     text-align: center;
     cursor: pointer !important;
     -webkit-box-flex: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-}
-.bestsellers__card.slick-active {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
 }
 .bestsellers__card:after {
     position: absolute;
@@ -2031,7 +2026,6 @@ form.loading {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: auto;
-    min-height: 310px;
     -webkit-transition: -webkit-transform .15s ease-in-out;
     transition: -webkit-transform .15s ease-in-out;
     transition: transform .15s ease-in-out;
@@ -2052,6 +2046,7 @@ form.loading {
     position: relative;
     z-index: 2;
     margin-top: 10px;
+    min-height: 40px;
     letter-spacing: 1.5px;
     font-size: 12px;
 }

@@ -252,7 +252,6 @@
       display: flex
       align-items: stretch
     .slick-slide
-      height: auto !important
       transition: all $transitionSpeed $ease
     &__nav
       > .container
@@ -283,8 +282,8 @@
     padding: 10px 0
     text-align: center
     cursor: pointer !important
-    &.slick-active
-      display: flex !important
+    height: auto !important
+    display: flex !important
     &::after
       display: block
       content: ' '
@@ -296,7 +295,6 @@
       position: relative
       z-index: 2
       margin-top: auto
-      min-height: 310px
       display: flex
       flex-direction: column
       transition: transform $transitionSpeed $ease
@@ -311,10 +309,12 @@
       font-size: 12px
       letter-spacing: 1.5px
       margin-top: 10px
+      min-height: 40px
     &__cta
       position: relative
       z-index: 2
       margin: 10px auto 0px auto
+
       opacity: 0
       transform: translate3d(0, 20px, 0)
       transition: all $transitionSpeed $ease
